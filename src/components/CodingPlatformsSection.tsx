@@ -1,10 +1,10 @@
-import { Github, Code, Trophy, BookOpen } from "lucide-react";
+import { Github, Code, BookOpen, FileDown } from "lucide-react";
 
 const platforms = [
-  { name: "GitHub", icon: Github, url: "https://cute23.vercel.app" },
-  { name: "LeetCode", icon: Code, url: "https://cute23.vercel.app" },
-  { name: "Unstop", icon: Trophy, url: "https://cute23.vercel.app" },
-  { name: "TakeUforward", icon: BookOpen, url: "https://cute23.vercel.app" },
+  { name: "GitHub", icon: Github, url: "https://cute23.vercel.app", isDownload: false },
+  { name: "LeetCode", icon: Code, url: "https://cute23.vercel.app", isDownload: false },
+  { name: "TakeUforward", icon: BookOpen, url: "https://cute23.vercel.app", isDownload: false },
+  { name: "My Resume", icon: FileDown, url: "/Ujwal_Resume.pdf", isDownload: true },
 ];
 
 const CodingPlatformsSection = () => {
@@ -16,8 +16,9 @@ const CodingPlatformsSection = () => {
           <a
             key={platform.name}
             href={platform.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={platform.isDownload ? "_self" : "_blank"}
+            rel={platform.isDownload ? undefined : "noopener noreferrer"}
+            download={platform.isDownload ? "Ujwal_Resume.pdf" : undefined}
             className="glass-card-hover flex flex-col items-center justify-center gap-2 p-4 text-center"
           >
             <platform.icon className="w-6 h-6 text-primary" />
