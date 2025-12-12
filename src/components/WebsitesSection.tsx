@@ -1,37 +1,11 @@
 import { Globe, Sparkles, Play, Eye, Heart } from "lucide-react";
-import ujwalPhoto from "@/assets/ujwal-photo.jpg";
 
 const websites = [
-  { 
-    name: "Wanderlust Adventures", 
-    icon: Globe, 
-    url: "https://cute23.vercel.app",
-    image: ujwalPhoto
-  },
-  { 
-    name: "CuteList", 
-    icon: Heart, 
-    url: "https://cute23.vercel.app",
-    image: ujwalPhoto
-  },
-  { 
-    name: "LoopPlay", 
-    icon: Play, 
-    url: "https://cute23.vercel.app",
-    image: ujwalPhoto
-  },
-  { 
-    name: "Dream Visualizer", 
-    icon: Eye, 
-    url: "https://cute23.vercel.app",
-    image: ujwalPhoto
-  },
-  { 
-    name: "MediSoul", 
-    icon: Sparkles, 
-    url: "https://cute23.vercel.app",
-    image: ujwalPhoto
-  },
+  { name: "Wanderlust Adventures", icon: Globe, url: "https://cute23.vercel.app" },
+  { name: "CuteList", icon: Heart, url: "https://cute23.vercel.app" },
+  { name: "LoopPlay", icon: Play, url: "https://cute23.vercel.app" },
+  { name: "Dream Visualizer", icon: Eye, url: "https://cute23.vercel.app" },
+  { name: "MediSoul", icon: Sparkles, url: "https://cute23.vercel.app" },
 ];
 
 const WebsitesSection = () => {
@@ -47,15 +21,8 @@ const WebsitesSection = () => {
             rel="noopener noreferrer"
             className="glass-button group"
           >
-            <div className="w-8 h-8 rounded-lg overflow-hidden border border-primary/20 flex-shrink-0">
-              <img 
-                src={site.image} 
-                alt={site.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <site.icon className="w-5 h-5 text-primary" />
             <span className="font-medium flex-1 text-left">{site.name}</span>
-            <site.icon className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
           </a>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, CheckCircle } from "lucide-react";
 
 const reasonOptions = [
   "Just Exploring",
@@ -12,20 +12,49 @@ const reasonOptions = [
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    // Form will naturally submit to Formspree
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      await fetch("https://formspree.io/f/mjknjgqo", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  if (isSubmitted) {
+    return (
+      <section className="w-full fade-in-up stagger-6">
+        <h2 className="section-heading text-center">Get in Touch</h2>
+        <div className="glass-card p-8 text-center">
+          <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Form Submitted Successfully!</h3>
+          <p className="text-muted-foreground">Thanks for reaching out. I'll get back to you soon!</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="w-full fade-in-up stagger-6">
       <h2 className="section-heading text-center">Get in Touch</h2>
       <form
-        action="https://formspree.io/f/mjknjgqo"
-        method="POST"
-        className="glass-card p-5 space-y-4"
         onSubmit={handleSubmit}
+        className="glass-card p-5 space-y-4"
       >
         {/* Name */}
         <div>
@@ -67,8 +96,9 @@ const ContactSection = () => {
             name="reason"
             required
             className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all appearance-none cursor-pointer"
+            defaultValue=""
           >
-            <option value="" disabled selected className="text-muted-foreground">
+            <option value="" disabled className="text-muted-foreground">
               Select an option
             </option>
             {reasonOptions.map((option) => (
