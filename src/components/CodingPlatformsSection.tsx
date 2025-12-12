@@ -1,10 +1,10 @@
 import { Github, Code, BookOpen, FileDown } from "lucide-react";
 
 const platforms = [
-  { name: "GitHub", icon: Github, url: "https://cute23.vercel.app", isDownload: false },
-  { name: "LeetCode", icon: Code, url: "https://cute23.vercel.app", isDownload: false },
-  { name: "TakeUforward", icon: BookOpen, url: "https://cute23.vercel.app", isDownload: false },
   { name: "My Resume", icon: FileDown, url: "/Ujwal_Resume.pdf", isDownload: true },
+  { name: "GitHub", icon: Github, url: "https://github.com/ujwalx23", isDownload: false },
+  { name: "LeetCode", icon: Code, url: "https://leetcode.com/u/UjwalSingh23/", isDownload: false },
+  { name: "TakeUforward", icon: BookOpen, url: "https://takeuforward.org/profile/Ujwal%20Singh", isDownload: false },
 ];
 
 const CodingPlatformsSection = () => {

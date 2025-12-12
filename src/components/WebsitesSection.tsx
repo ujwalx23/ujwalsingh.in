@@ -1,11 +1,10 @@
-import { Globe, Sparkles, Play, Eye, Heart } from "lucide-react";
+import { Plane, CheckSquare, Play, Sparkles } from "lucide-react";
 
 const websites = [
-  { name: "Wanderlust Adventures", icon: Globe, url: "https://cute23.vercel.app" },
-  { name: "CuteList", icon: Heart, url: "https://cute23.vercel.app" },
-  { name: "LoopPlay", icon: Play, url: "https://cute23.vercel.app" },
-  { name: "Dream Visualizer", icon: Eye, url: "https://cute23.vercel.app" },
-  { name: "MediSoul", icon: Sparkles, url: "https://cute23.vercel.app" },
+  { name: "Wanderlust Adventures", icon: Plane, url: "https://wanderlustadventures23.vercel.app/" },
+  { name: "CuteList", icon: CheckSquare, url: "https://cute23.vercel.app/" },
+  { name: "LoopPlay", icon: Play, url: "https://loopplay23.vercel.app/" },
+  { name: "MediSoul", icon: Sparkles, url: "https://medisoul23.vercel.app/" },
 ];
 
 const WebsitesSection = () => {

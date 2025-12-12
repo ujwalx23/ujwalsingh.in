@@ -19,7 +19,7 @@ const AboutSection = () => {
             Talk to my AI twin — it answers like me!
           </p>
           <a
-            href="https://cute23.vercel.app"
+            href="https://app.botpress.cloud/"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-button bg-primary/10 border-primary/30 hover:bg-primary/20 text-sm py-3"
