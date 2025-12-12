@@ -19,7 +19,7 @@ const AboutSection = () => {
             Talk to my AI twin — it answers like me!
           </p>
           <a
-            href="https://app.botpress.cloud/"
+            href="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/12/12/12/20251212120356-KRFZ3H1Z.json"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-button bg-primary/10 border-primary/30 hover:bg-primary/20 text-sm py-3"
