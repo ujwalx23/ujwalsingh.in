@@ -38,33 +38,33 @@ const RedditIcon = () => (
 );
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com" },
-  { name: "Threads", icon: ThreadsIcon, url: "https://www.instagram.com" },
-  { name: "Pinterest", icon: PinterestIcon, url: "https://www.instagram.com" },
-  { name: "LinkedIn", icon: Linkedin, url: "https://www.instagram.com" },
-  { name: "YouTube", icon: Youtube, url: "https://www.instagram.com" },
-  { name: "X (Twitter)", icon: XIcon, url: "https://www.instagram.com" },
-  { name: "Discord", icon: DiscordIcon, url: "https://www.instagram.com" },
-  { name: "Quora", icon: QuoraIcon, url: "https://www.instagram.com" },
-  { name: "Reddit", icon: RedditIcon, url: "https://www.instagram.com" },
+  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/ujwalx23/" },
+  { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
+  { name: "Pinterest", icon: PinterestIcon, url: "https://in.pinterest.com/UjwalSingh23/" },
+  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/" },
+  { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
+  { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
+  { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
+  { name: "Quora", icon: QuoraIcon, url: "https://www.quora.com/profile/UJWAL-SINGH-85" },
+  { name: "Reddit", icon: RedditIcon, url: "https://www.reddit.com/user/UjwalSingh45/" },
 ];
 
 const SocialMediaSection = () => {
   return (
     <section className="w-full fade-in-up stagger-2">
       <h2 className="section-heading text-center">Social Media</h2>
-      <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-2 gap-3">
         {socialLinks.map((link, index) => (
           <a
             key={link.name}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-button"
+            className="glass-card-hover flex items-center justify-center gap-2 p-4 text-center"
             style={{ animationDelay: `${0.1 + index * 0.05}s` }}
           >
             <link.icon />
-            <span className="font-medium">{link.name}</span>
+            <span className="text-sm font-medium">{link.name}</span>
           </a>
         ))}
       </div>
