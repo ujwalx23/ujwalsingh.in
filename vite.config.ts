@@ -17,8 +17,8 @@ export default defineConfig(({ mode }) => ({
       registerType: "autoUpdate",
       includeAssets: ["favicon.png", "pwa-icon-192.png", "pwa-icon-512.png", "Ujwal_Resume.pdf"],
       manifest: {
-        name: "Ujwal Singh | Links",
-        short_name: "Ujwal Links",
+        name: "Ujwal Singh | Social",
+        short_name: "Ujwal Social",
         description: "Connect with Ujwal Singh - Creator, Developer, and AI Enthusiast",
         theme_color: "#fff5f0",
         background_color: "#fff5f0",
