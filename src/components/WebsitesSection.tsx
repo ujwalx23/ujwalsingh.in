@@ -48,27 +48,29 @@ const websites = [
 const WebsitesSection = () => {
   return (
     <section className="w-full fade-in-up stagger-3">
-      <h2 className="section-heading text-center mb-4">
+      <h2 className="section-heading text-center mb-6">
         My Websites
       </h2>
 
-      <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {websites.map((site) => (
           <a
             key={site.name}
             href={site.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card flex gap-3 p-3 rounded-xl transition-transform hover:scale-[1.01]"
+            className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.02]"
           >
+            {/* Image on top */}
             <img
               src={site.img}
               alt={site.name}
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover flex-shrink-0"
+              className="w-full h-40 object-cover"
             />
 
-            <div className="flex flex-col justify-center gap-1">
-              <h3 className="text-sm sm:text-base font-semibold">
+            {/* Content below image */}
+            <div className="p-3 flex flex-col gap-1">
+              <h3 className="font-semibold text-sm sm:text-base">
                 {site.name}
               </h3>
 
