@@ -53,18 +53,18 @@ const SocialMediaSection = () => {
   return (
     <section className="w-full fade-in-up stagger-2">
       <h2 className="section-heading text-center">Social Media</h2>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-2 sm:gap-3">
         {socialLinks.map((link, index) => (
           <a
             key={link.name}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card-hover flex items-center justify-center gap-2 p-4 text-center"
+            className="glass-card-hover flex items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 text-center min-h-[52px]"
             style={{ animationDelay: `${0.1 + index * 0.05}s` }}
           >
             <link.icon />
-            <span className="text-sm font-medium">{link.name}</span>
+            <span className="text-xs sm:text-sm font-medium truncate">{link.name}</span>
           </a>
         ))}
       </div>
