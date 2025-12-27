@@ -4,42 +4,42 @@ const websites = [
   {
     name: "Wanderlust Adventures",
     description:
-      "A travel platform dedicated to exploring India’s cultural heritage, landscapes, and hidden adventures. Includes destination guides, interactive experiences, and inspiration for curious travelers.",
+      "A travel platform dedicated to exploring the cultural heritage, landscapes, and adventures across India.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
     url: "https://wanderlustadventures23.vercel.app/",
   },
   {
     name: "Delve Together",
     description:
-      "A calm, collaborative space to understand world events through live rooms and thoughtful discussion. Designed for meaningful conversations without the noise and chaos of social media.",
+      "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
     url: "https://delvetogether.vercel.app",
   },
   {
     name: "CuteList",
     description:
-      "A cute and organized task management app that helps users plan daily responsibilities, stay consistent, and feel motivated through a simple and friendly interface.",
+      "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
     url: "https://cute23.vercel.app/",
   },
   {
     name: "Newsnap",
     description:
-      "A credibility-driven, short-form global news platform focused on verified information, quick reading, and clarity—helping users stay informed without misinformation overload.",
+      "A credibility-driven, short-form global news platform designed to provide trustworthy information.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
     url: "https://newsnapglobal.vercel.app",
   },
   {
     name: "LoopPlay",
     description:
-      "A personal arcade featuring 23 lightweight and addictive mini-games, built for quick fun, instant replayability, and stress-free entertainment across devices.",
+      "A personal arcade featuring 23 addictive, lightweight mini-games designed for quick bursts of fun and replayability.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828043282.png",
     url: "https://loopplay23.vercel.app/",
   },
   {
     name: "MediSoul",
     description:
-      "An AI-powered personal medical companion offering symptom insights, health tracking, and supportive guidance to help users better understand their well-being. (Under Development)",
+      "An AI-powered personal medical companion that provides instant health insights, symptom checking, and track records. (Under Development)",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
     url: "https://medisoul23.vercel.app/",
   },
@@ -68,13 +68,13 @@ const WebsitesSection = () => {
               className="w-full h-44 sm:h-48 object-cover"
             />
 
-            {/* Content */}
+            {/* Text */}
             <div className="p-4 flex flex-col gap-2">
-              <h3 className="font-semibold text-base sm:text-lg">
+              <h3 className="font-semibold text-base sm:text-lg tracking-wide">
                 {site.name}
               </h3>
 
-              <p className="text-sm sm:text-base opacity-80 leading-relaxed">
+              <p className="text-sm sm:text-base opacity-80 leading-[1.65]">
                 {site.description}
               </p>
             </div>
