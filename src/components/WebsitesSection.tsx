@@ -5,42 +5,42 @@ const websites = [
     name: "Wanderlust Adventures",
     description:
       "A travel platform dedicated to exploring the cultural heritage, landscapes, and adventures across India.",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
     url: "https://wanderlustadventures23.vercel.app/",
   },
   {
     name: "Delve Together",
     description:
       "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
     url: "https://delvetogether.vercel.app",
   },
   {
     name: "CuteList",
     description:
       "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
     url: "https://cute23.vercel.app/",
   },
   {
     name: "Newsnap",
     description:
       "A credibility-driven, short-form global news platform designed to provide trustworthy information.",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
     url: "https://newsnapglobal.vercel.app",
   },
   {
     name: "LoopPlay",
     description:
       "A personal arcade featuring 23 addictive, lightweight mini-games designed for quick bursts of fun and replayability.",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828043282.png",
     url: "https://loopplay23.vercel.app/",
   },
   {
-    name: "MediSoul",
+    name: "MediSoul (Under Development)",
     description:
-      "An AI-powered personal medical companion providing instant health insights and symptom tracking. (Working)",
-    img: "https://www.dpmanual.com/wp-content/uploads/2017/07/How-Do-I-Feel-Real-Again.jpg",
+      "An AI-powered personal medical companion providing instant health insights and symptom tracking.",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
     url: "https://medisoul23.vercel.app/",
   },
 ];
@@ -61,14 +61,14 @@ const WebsitesSection = () => {
             rel="noopener noreferrer"
             className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.02]"
           >
-            {/* Image on top */}
+            {/* Image */}
             <img
               src={site.img}
               alt={site.name}
               className="w-full h-40 object-cover"
             />
 
-            {/* Content below image */}
+            {/* Text */}
             <div className="p-3 flex flex-col gap-1">
               <h3 className="font-semibold text-sm sm:text-base">
                 {site.name}
