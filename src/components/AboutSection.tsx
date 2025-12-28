@@ -6,7 +6,7 @@ const AboutSection = () => {
       <h2 className="section-heading text-center">About Me</h2>
       <div className="glass-card p-4 sm:p-5">
         <p className="text-foreground/90 text-center mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
-          Hi, I'm Ujwal 👋 I specialize in building websites, apps, games, and AI-powered tools. I focus on creating efficient, user-friendly, and scalable solutions while exploring innovative technologies to deliver high-quality digital experiences.
+          Hi, I'm Ujwal Singh👋 I specialize in building websites, apps, games, and AI-powered tools. I focus on creating efficient, user-friendly, and scalable solutions while exploring innovative technologies to deliver high-quality digital experiences.
         </p>
         
         {/* Chat with AI section */}
