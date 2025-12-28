@@ -62,11 +62,13 @@ const WebsitesSection = () => {
             className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.03]"
           >
             {/* Image */}
-            <img
-              src={site.img}
-              alt={site.name}
-              className="w-full h-56 sm:h-64 object-cover"
-            />
+            <div className="w-full bg-gray-100 flex justify-center items-center">
+              <img
+                src={site.img}
+                alt={site.name}
+                className="w-full sm:w-auto max-h-80 object-contain"
+              />
+            </div>
 
             {/* Text */}
             <div className="p-5 flex flex-col gap-3">
