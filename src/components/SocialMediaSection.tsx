@@ -38,14 +38,15 @@ const RedditIcon = () => (
 );
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/ujwalx23/" },
-  { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
-  { name: "Pinterest", icon: PinterestIcon, url: "https://in.pinterest.com/UjwalSingh23/" },
+
   { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/" },
   { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
   { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
-  { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
   { name: "Quora", icon: QuoraIcon, url: "https://www.quora.com/profile/UJWAL-SINGH-85" },
+  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/ujwalx23/" },
+  { name: "Pinterest", icon: PinterestIcon, url: "https://in.pinterest.com/UjwalSingh23/" },
+  { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
+  { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
   { name: "Reddit", icon: RedditIcon, url: "https://www.reddit.com/user/UjwalSingh45/" },
 ];
 
