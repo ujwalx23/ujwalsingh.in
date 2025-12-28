@@ -20,9 +20,9 @@ const Index = () => {
         
         <div className="space-y-6 sm:space-y-8 mt-4 sm:mt-6">
           <AboutSection />
+          <WebsitesSection />
           <SocialMediaSection />
           <CodingPlatformsSection />
-          <WebsitesSection />
           <ContactSection />
         </div>
 
