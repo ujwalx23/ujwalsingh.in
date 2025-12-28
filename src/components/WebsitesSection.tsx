@@ -37,9 +37,9 @@ const websites = [
     url: "https://loopplay23.vercel.app/",
   },
   {
-    name: "MediSoul",
+    name: "MediSoul (UNDER DEVELOPMENT)",
     description:
-      "An AI-powered personal medical companion that provides instant health insights, symptom checking, and track records. (Under Development)",
+      "An AI-powered personal medical companion that provides instant health insights, symptom checking, and track records.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
     url: "https://medisoul23.vercel.app/",
   },
@@ -47,12 +47,12 @@ const websites = [
 
 const WebsitesSection = () => {
   return (
-    <section className="w-full fade-in-up stagger-3">
-      <h2 className="section-heading text-center mb-6">
+    <section className="w-full fade-in-up stagger-3 px-4 sm:px-8">
+      <h2 className="section-heading text-center mb-8 text-2xl sm:text-3xl font-bold">
         My Websites
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="flex flex-col gap-6">
         {websites.map((site) => (
           <a
             key={site.name}
@@ -65,16 +65,16 @@ const WebsitesSection = () => {
             <img
               src={site.img}
               alt={site.name}
-              className="w-full h-44 sm:h-48 object-cover"
+              className="w-full h-56 sm:h-64 object-cover"
             />
 
             {/* Text */}
-            <div className="p-4 flex flex-col gap-2">
-              <h3 className="font-semibold text-base sm:text-lg tracking-wide">
+            <div className="p-5 flex flex-col gap-3">
+              <h3 className="font-semibold text-lg sm:text-xl tracking-wide">
                 {site.name}
               </h3>
 
-              <p className="text-sm sm:text-base opacity-80 leading-[1.65]">
+              <p className="text-base sm:text-lg opacity-85 leading-7">
                 {site.description}
               </p>
             </div>
