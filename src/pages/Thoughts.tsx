@@ -1,12 +1,36 @@
 import { Quote } from "lucide-react";
 
 const thoughts = [
-  { id: 1, quote: "Everyone has the same eyes, but not the same view." },
-  { id: 2, quote: "Is waiting really a good thing?" },
-  { id: 3, quote: "Pain is certain. Pain will go, but success will remain." },
-  { id: 4, quote: "Khud ko akela hokar kiske paas dekhte ho?" },
-  { id: 5, quote: "Discipline beats motivation. Just keep going, even on days you feel low." },
-  { id: 6, quote: "Be kind. It’s okay if someone doesn’t meet your expectations." },
+  {
+    id: 1,
+    quote: "Everyone has the same eyes, but not the same view.",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 2,
+    quote: "Is waiting really a good thing?",
+    author: "Unknown",
+  },
+  {
+    id: 3,
+    quote: "Pain is certain. Pain will go, but success will remain.",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 4,
+    quote: "Khud ko akela hokar kiske paas dekhte ho?",
+    author: "Anonymous",
+  },
+  {
+    id: 5,
+    quote: "Discipline beats motivation. Just keep going, even on days you feel low.",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 6,
+    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.",
+    author: "Ujwal Singh",
+  },
 ];
 
 const Thoughts = () => {
@@ -35,7 +59,7 @@ const Thoughts = () => {
             </blockquote>
 
             <p className="text-sm text-muted-foreground mt-4 pt-4 border-t border-primary/10">
-              — Ujwal Singh
+              — {thought.author}
             </p>
           </div>
         ))}
