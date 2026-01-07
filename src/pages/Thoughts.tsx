@@ -9,7 +9,7 @@ const thoughts = [
   {
     id: 2,
     quote: "Is waiting really a good thing?",
-    author: "Unknown",
+    author: "Ujwal Singh",
   },
   {
     id: 3,
