@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 const thoughts = [
   {
     id: 1,
-    quote: "Everyone has the same eyes, but not the same view.",
+    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.",
     author: "Ujwal Singh",
   },
   {
@@ -28,7 +28,7 @@ const thoughts = [
   },
   {
     id: 6,
-    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.",
+    quote: "What if there is no other universe and this is the only one?",
     author: "Ujwal Singh",
   },
 ];
