@@ -1,4 +1,4 @@
-import { Home, User, Globe, Share2, Mail, Quote, Sparkles } from "lucide-react";
+import { Home, User, Globe, Share2, Mail, BookOpen, Quote, Menu } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
   Sidebar,
@@ -18,6 +18,7 @@ const menuItems = [
   { title: "About Me", url: "/about", icon: User },
   { title: "My Websites", url: "/websites", icon: Globe },
   { title: "Social Links", url: "/social", icon: Share2 },
+  { title: "Blogs", url: "/blogs", icon: BookOpen },
   { title: "Thoughts", url: "/thoughts", icon: Quote },
   { title: "Contact Me", url: "/contact", icon: Mail },
 ];
@@ -27,36 +28,31 @@ export function AppSidebar() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <Sidebar collapsible="icon" className="border-r border-primary/10 bg-gradient-to-b from-background to-primary/5">
-      <SidebarHeader className="p-4 border-b border-primary/10">
+    <Sidebar collapsible="icon" className="border-r border-primary/10">
+      <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
+          <span className="text-2xl">✨</span>
           {!isCollapsed && (
-            <div>
-              <span className="font-bold text-lg gradient-text block leading-tight">Ujwal Singh</span>
-              <span className="text-xs text-muted-foreground">Creator & Developer</span>
-            </div>
+            <span className="font-bold text-lg gradient-text">Ujwal Singh</span>
           )}
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="px-2 py-4">
+      <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-1">
+            <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild tooltip={item.title}>
                     <NavLink
                       to={item.url}
                       end={item.url === "/"}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 hover:bg-primary/10 text-foreground/80 hover:text-foreground"
-                      activeClassName="bg-gradient-to-r from-primary/20 to-secondary/10 text-primary font-semibold shadow-sm border border-primary/20"
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all hover:bg-primary/10"
+                      activeClassName="bg-primary/20 text-primary font-medium"
                     >
                       <item.icon className="w-5 h-5 shrink-0" />
-                      {!isCollapsed && <span className="text-sm">{item.title}</span>}
+                      {!isCollapsed && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -66,16 +62,11 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4 border-t border-primary/10">
+      <SidebarFooter className="p-4">
         {!isCollapsed && (
-          <div className="text-center">
-            <p className="text-xs text-muted-foreground">
-              © 2024 Ujwal Singh
-            </p>
-            <p className="text-[10px] text-muted-foreground/60 mt-1">
-              Built with ❤️
-            </p>
-          </div>
+          <p className="text-xs text-muted-foreground text-center">
+            © 2024 Ujwal Singh
+          </p>
         )}
       </SidebarFooter>
     </Sidebar>

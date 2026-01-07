@@ -1,8 +1,7 @@
-import { ExternalLink, ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import ujwalPhoto from "@/assets/ujwal-photo-2.jpg";
 
 // Icons for social links
 const LinkedInIcon = () => (
@@ -42,12 +41,12 @@ const GitHubIcon = () => (
 );
 
 const socialLinks = [
-  { name: "LinkedIn", icon: LinkedInIcon, url: "https://www.linkedin.com/in/ujwalsingh23/", color: "hover:bg-blue-500/20 hover:border-blue-500/40" },
-  { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23", color: "hover:bg-slate-500/20 hover:border-slate-500/40" },
-  { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764", color: "hover:bg-indigo-500/20 hover:border-indigo-500/40" },
-  { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/ujwalx23/", color: "hover:bg-pink-500/20 hover:border-pink-500/40" },
-  { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g", color: "hover:bg-red-500/20 hover:border-red-500/40" },
-  { name: "GitHub", icon: GitHubIcon, url: "https://github.com/ujwalx23", color: "hover:bg-gray-500/20 hover:border-gray-500/40" },
+  { name: "LinkedIn", icon: LinkedInIcon, url: "https://www.linkedin.com/in/ujwalsingh23/" },
+  { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
+  { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
+  { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/ujwalx23/" },
+  { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
+  { name: "GitHub", icon: GitHubIcon, url: "https://github.com/ujwalx23" },
 ];
 
 const projects = [
@@ -72,94 +71,50 @@ const projects = [
 ];
 
 const thoughts = [
-  { id: 1, quote: "Build things that matter, not just things that work." },
-  { id: 2, quote: "Every line of code is a step towards solving someone's problem." },
-  { id: 3, quote: "Consistency beats intensity. Show up every day." },
+  { id: 1, quote: "Build things that matter, not just things that work.", author: "Ujwal Singh" },
+  { id: 2, quote: "Every line of code is a step towards solving someone's problem.", author: "Ujwal Singh" },
+  { id: 3, quote: "Consistency beats intensity. Show up every day.", author: "Ujwal Singh" },
+];
+
+const blogs = [
+  {
+    id: 1,
+    title: "Getting Started with AI Development",
+    excerpt: "My journey into AI-powered applications and what I learned along the way.",
+    date: "Dec 2024",
+  },
+  {
+    id: 2,
+    title: "Building Scalable Web Apps",
+    excerpt: "Best practices for creating efficient and maintainable web applications.",
+    date: "Nov 2024",
+  },
+  {
+    id: 3,
+    title: "The Power of Consistency",
+    excerpt: "How showing up daily transformed my development skills and mindset.",
+    date: "Oct 2024",
+  },
 ];
 
 const Home = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto space-y-16 md:space-y-20">
+    <div className="w-full max-w-7xl mx-auto space-y-12">
       {/* Hero Section */}
-      <section className="text-center py-10 md:py-16 fade-in-up relative">
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-        </div>
-        <Sparkles className="w-8 h-8 text-primary mx-auto mb-4 animate-pulse" />
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold gradient-text mb-4 relative">
+      <section className="text-center py-8 md:py-12 fade-in-up">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4">
           Ujwal Singh
         </h1>
-        <p className="text-muted-foreground text-lg md:text-xl font-medium mb-2">
+        <p className="text-muted-foreground text-lg md:text-xl font-medium">
           Creator • Developer • AI Enthusiast
         </p>
-      </section>
-
-      {/* About Me Mini Section */}
-      <section className="fade-in-up">
-        <div className="glass-card p-6 md:p-8">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <img
-              src={ujwalPhoto}
-              alt="Ujwal Singh"
-              className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-primary/20 shadow-lg"
-            />
-            <div className="text-center md:text-left flex-1">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">Hey, I'm Ujwal! 👋</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                A passionate developer and creator building digital experiences that matter. 
-                I love exploring AI, crafting web applications, and sharing ideas with the world.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
-                >
-                  Learn More About Me <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a
-                  href="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/12/12/12/20251212120356-KRFZ3H1Z.json"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary/10 text-secondary font-medium hover:bg-secondary/20 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Chat with AI Ujwal
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Links Section */}
-      <section className="fade-in-up">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Connect With Me</h2>
-          <Link to="/social" className="flex items-center gap-1 text-primary hover:underline text-sm font-medium">
-            View All <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`glass-card flex items-center justify-center gap-3 p-4 md:p-5 transition-all duration-300 border border-transparent ${link.color}`}
-            >
-              <link.icon />
-              <span className="font-medium text-sm md:text-base">{link.name}</span>
-            </a>
-          ))}
-        </div>
       </section>
 
       {/* Projects Section */}
       <section className="fade-in-up">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Featured Projects</h2>
-          <Link to="/websites" className="flex items-center gap-1 text-primary hover:underline text-sm font-medium">
+          <Link to="/websites" className="flex items-center gap-1 text-primary hover:underline text-sm">
             View All <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -170,22 +125,46 @@ const Home = () => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-muted">
+              <div className="aspect-video overflow-hidden bg-muted">
                 <img
                   src={project.img}
                   alt={project.name}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                   {project.name}
-                  <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                <p className="text-sm text-muted-foreground">{project.description}</p>
               </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Social Links Section */}
+      <section className="fade-in-up">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Connect With Me</h2>
+          <Link to="/social" className="flex items-center gap-1 text-primary hover:underline text-sm">
+            View All <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card-hover flex items-center justify-center gap-3 p-4 min-h-[60px]"
+            >
+              <link.icon />
+              <span className="font-medium">{link.name}</span>
             </a>
           ))}
         </div>
@@ -195,22 +174,41 @@ const Home = () => {
       <section className="fade-in-up">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Thoughts</h2>
-          <Link to="/thoughts" className="flex items-center gap-1 text-primary hover:underline text-sm font-medium">
+          <Link to="/thoughts" className="flex items-center gap-1 text-primary hover:underline text-sm">
             View All <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {thoughts.map((thought) => (
-            <div key={thought.id} className="glass-card p-6 hover:shadow-lg transition-all duration-300">
-              <blockquote className="text-lg italic leading-relaxed">"{thought.quote}"</blockquote>
-              <p className="text-sm text-muted-foreground mt-4">— Ujwal Singh</p>
+            <div key={thought.id} className="glass-card p-6">
+              <blockquote className="text-lg italic mb-3">"{thought.quote}"</blockquote>
+              <p className="text-sm text-muted-foreground">— {thought.author}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* Blogs Section */}
+      <section className="fade-in-up">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Latest Blogs</h2>
+          <Link to="/blogs" className="flex items-center gap-1 text-primary hover:underline text-sm">
+            View All <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {blogs.map((blog) => (
+            <Link key={blog.id} to="/blogs" className="glass-card-hover p-6 block">
+              <span className="text-xs text-muted-foreground">{blog.date}</span>
+              <h3 className="font-semibold text-lg mt-1 mb-2">{blog.title}</h3>
+              <p className="text-sm text-muted-foreground">{blog.excerpt}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="max-w-2xl mx-auto fade-in-up">
+      <section className="max-w-xl mx-auto">
         <ContactSection />
       </section>
 

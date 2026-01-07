@@ -1,5 +1,4 @@
-import { Instagram, Linkedin, Youtube, Github, Code, BookOpen, FileDown, LucideIcon } from "lucide-react";
-import React from "react";
+import { Instagram, Linkedin, Youtube, Github, Code, BookOpen, FileDown } from "lucide-react";
 
 // Custom icons
 const ThreadsIcon = () => (
@@ -38,20 +37,7 @@ const RedditIcon = () => (
   </svg>
 );
 
-type SocialLink = {
-  name: string;
-  icon: LucideIcon | React.FC;
-  url: string;
-};
-
-type CodingPlatform = {
-  name: string;
-  icon: LucideIcon;
-  url: string;
-  isDownload: boolean;
-};
-
-const socialLinks: SocialLink[] = [
+const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/" },
   { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
   { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
@@ -63,7 +49,7 @@ const socialLinks: SocialLink[] = [
   { name: "Reddit", icon: RedditIcon, url: "https://www.reddit.com/user/UjwalSingh45/" },
 ];
 
-const codingPlatforms: CodingPlatform[] = [
+const codingPlatforms = [
   { name: "My Resume", icon: FileDown, url: "/Ujwal_Resume.pdf", isDownload: true },
   { name: "GitHub", icon: Github, url: "https://github.com/ujwalx23", isDownload: false },
   { name: "LeetCode", icon: Code, url: "https://leetcode.com/u/UjwalSingh23/", isDownload: false },
@@ -81,22 +67,19 @@ const Social = () => {
       <section className="fade-in-up">
         <h2 className="text-2xl font-bold mb-6">Social Media</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {socialLinks.map((link, index) => {
-            const IconComponent = link.icon;
-            return (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card-hover flex items-center gap-3 p-4 min-h-[70px]"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <IconComponent className="w-6 h-6 shrink-0" />
-                <span className="font-medium truncate">{link.name}</span>
-              </a>
-            );
-          })}
+          {socialLinks.map((link, index) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card-hover flex items-center gap-3 p-4 min-h-[70px]"
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
+              {typeof link.icon === 'function' ? <link.icon /> : <link.icon className="w-6 h-6 shrink-0" />}
+              <span className="font-medium truncate">{link.name}</span>
+            </a>
+          ))}
         </div>
       </section>
 
