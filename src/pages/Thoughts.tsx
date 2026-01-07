@@ -20,7 +20,7 @@ const Thoughts = () => {
         Short reflections, honest thoughts, and things I remind myself of.
       </p>
 
-      {/* 2 columns on mobile/tablet, 4 on desktop */}
+      {/* 2 columns on mobile, 4 columns on desktop */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {thoughts.map((thought, index) => (
           <div
