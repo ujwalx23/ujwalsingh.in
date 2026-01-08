@@ -7,7 +7,6 @@ const Footer = () => {
       <p className="text-center text-[10px] sm:text-xs text-muted-foreground mt-1">
  Explore my projects, socials, and conversations with my AI twin - and whatever I’m building next.
 </p>
-      </p>
     </footer>
   );
 };
