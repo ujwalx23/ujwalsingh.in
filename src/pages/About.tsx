@@ -12,7 +12,7 @@ const About = () => {
             <img
               src={ujwalPhoto}
               alt="Ujwal Singh"
-              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl object-cover shadow-lg border-4 border-primary/20"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl object-cover object-top shadow-lg border-4 border-primary/20"
             />
           </div>
 
@@ -43,37 +43,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="glass-card p-6 md:p-8 fade-in-up">
-        <h2 className="text-2xl font-bold mb-6">What I Do</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🌐 Web Development</h3>
-            <p className="text-sm text-muted-foreground">
-              Building responsive, modern web applications with React, TypeScript, and cutting-edge frameworks.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🤖 AI Integration</h3>
-            <p className="text-sm text-muted-foreground">
-              Integrating AI-powered features and chatbots to enhance user experiences and automation.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🎮 Game Development</h3>
-            <p className="text-sm text-muted-foreground">
-              Creating fun, engaging mini-games and interactive experiences for the web.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">📱 App Development</h3>
-            <p className="text-sm text-muted-foreground">
-              Developing cross-platform applications with modern tools and frameworks.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Chat with AI Section */}
       <section className="glass-card p-6 md:p-8 fade-in-up">
         <div className="flex items-center gap-3 mb-4">
@@ -93,6 +62,37 @@ const About = () => {
           <span>Start Chatting</span>
           <ExternalLink className="w-4 h-4" />
         </a>
+      </section>
+
+      {/* Interests Section */}
+      <section className="glass-card p-6 md:p-8 fade-in-up">
+        <h2 className="text-2xl font-bold mb-6">My Interests</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+            <h3 className="font-semibold text-lg mb-2">🌐 Web & Technology</h3>
+            <p className="text-sm text-muted-foreground">
+              Passionate about building modern web apps, exploring new frameworks, and staying updated with tech trends.
+            </p>
+          </div>
+          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+            <h3 className="font-semibold text-lg mb-2">🤖 Artificial Intelligence</h3>
+            <p className="text-sm text-muted-foreground">
+              Fascinated by AI and its potential to transform industries and enhance everyday experiences.
+            </p>
+          </div>
+          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+            <h3 className="font-semibold text-lg mb-2">🎮 Gaming & Entertainment</h3>
+            <p className="text-sm text-muted-foreground">
+              Love playing and creating games, exploring interactive storytelling and game design concepts.
+            </p>
+          </div>
+          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+            <h3 className="font-semibold text-lg mb-2">✈️ Travel & Exploration</h3>
+            <p className="text-sm text-muted-foreground">
+              Enjoy discovering new places, cultures, and experiences that broaden my perspective.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

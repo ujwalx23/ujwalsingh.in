@@ -22,15 +22,15 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const YouTubeIcon = () => (
+const ThreadsIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.182.408-2.256 1.332-3.023.88-.73 2.087-1.146 3.497-1.212.982-.046 1.898.04 2.738.259-.082-.783-.319-1.408-.713-1.876-.505-.6-1.286-.91-2.32-.921h-.048c-.795.003-1.81.222-2.508.917l-1.417-1.428c1.043-1.038 2.457-1.587 4.09-1.587h.075c1.6.018 2.905.545 3.88 1.566.945.99 1.475 2.378 1.575 4.129.168.053.335.111.499.174 1.326.503 2.394 1.329 3.09 2.39.87 1.326 1.086 2.977.607 4.647-.732 2.556-2.882 4.387-6.063 5.163-1.202.293-2.49.429-3.834.386zm1.106-10.553c-.781.036-1.442.217-1.906.52-.392.254-.625.58-.658.918-.04.432.156.838.553 1.143.488.374 1.192.545 1.981.482 1.076-.086 1.9-.466 2.45-1.131.392-.474.64-1.086.747-1.833-.928-.195-1.995-.236-3.167-.099z"/>
   </svg>
 );
 
-const DiscordIcon = () => (
+const PinterestIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-    <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
   </svg>
 );
 
@@ -42,11 +42,11 @@ const GitHubIcon = () => (
 
 const socialLinks = [
   { name: "LinkedIn", icon: LinkedInIcon, url: "https://www.linkedin.com/in/ujwalsingh23/" },
-  { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
-  { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
-  { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/ujwalx23/" },
-  { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
   { name: "GitHub", icon: GitHubIcon, url: "https://github.com/ujwalx23" },
+  { name: "Pinterest", icon: PinterestIcon, url: "https://in.pinterest.com/UjwalSingh23/" },
+  { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/ujwalx23/" },
+  { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
+  { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
 ];
 
 const projects = [
@@ -57,16 +57,16 @@ const projects = [
     url: "https://wanderlustadventures23.vercel.app/",
   },
   {
-    name: "Delve Together",
-    description: "A collaborative space for understanding world events through live discussions.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
-    url: "https://delvetogether.vercel.app",
+    name: "CuteList",
+    description: "A task management app designed to help users manage daily tasks in a cute way.",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
+    url: "https://cute23.vercel.app/",
   },
   {
-    name: "LoopPlay",
-    description: "A personal arcade featuring 23 addictive, lightweight mini-games.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828043282.png",
-    url: "https://loopplay23.vercel.app/",
+    name: "Newsnap",
+    description: "A credibility-driven, short-form global news platform for trustworthy information.",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
+    url: "https://newsnapglobal.vercel.app",
   },
 ];
 
@@ -74,27 +74,6 @@ const thoughts = [
   { id: 1, quote: "Build things that matter, not just things that work.", author: "Ujwal Singh" },
   { id: 2, quote: "Every line of code is a step towards solving someone's problem.", author: "Ujwal Singh" },
   { id: 3, quote: "Consistency beats intensity. Show up every day.", author: "Ujwal Singh" },
-];
-
-const blogs = [
-  {
-    id: 1,
-    title: "Getting Started with AI Development",
-    excerpt: "My journey into AI-powered applications and what I learned along the way.",
-    date: "Dec 2024",
-  },
-  {
-    id: 2,
-    title: "Building Scalable Web Apps",
-    excerpt: "Best practices for creating efficient and maintainable web applications.",
-    date: "Nov 2024",
-  },
-  {
-    id: 3,
-    title: "The Power of Consistency",
-    excerpt: "How showing up daily transformed my development skills and mindset.",
-    date: "Oct 2024",
-  },
 ];
 
 const Home = () => {
@@ -108,42 +87,6 @@ const Home = () => {
         <p className="text-muted-foreground text-lg md:text-xl font-medium">
           Creator • Developer • AI Enthusiast
         </p>
-      </section>
-
-      {/* Projects Section */}
-      <section className="fade-in-up">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Featured Projects</h2>
-          <Link to="/websites" className="flex items-center gap-1 text-primary hover:underline text-sm">
-            View All <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <a
-              key={project.name}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform"
-            >
-              <div className="aspect-video overflow-hidden bg-muted">
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                  {project.name}
-                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </h3>
-                <p className="text-sm text-muted-foreground">{project.description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
       </section>
 
       {/* Social Links Section */}
@@ -170,6 +113,42 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section className="fade-in-up">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Featured Projects</h2>
+          <Link to="/websites" className="flex items-center gap-1 text-primary hover:underline text-sm">
+            View All <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <a
+              key={project.name}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform"
+            >
+              <div className="w-full overflow-hidden bg-muted">
+                <img
+                  src={project.img}
+                  alt={project.name}
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+                  {project.name}
+                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                </h3>
+                <p className="text-sm text-muted-foreground">{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       {/* Thoughts Section */}
       <section className="fade-in-up">
         <div className="flex items-center justify-between mb-6">
@@ -184,25 +163,6 @@ const Home = () => {
               <blockquote className="text-lg italic mb-3">"{thought.quote}"</blockquote>
               <p className="text-sm text-muted-foreground">— {thought.author}</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Blogs Section */}
-      <section className="fade-in-up">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Latest Blogs</h2>
-          <Link to="/blogs" className="flex items-center gap-1 text-primary hover:underline text-sm">
-            View All <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {blogs.map((blog) => (
-            <Link key={blog.id} to="/blogs" className="glass-card-hover p-6 block">
-              <span className="text-xs text-muted-foreground">{blog.date}</span>
-              <h3 className="font-semibold text-lg mt-1 mb-2">{blog.title}</h3>
-              <p className="text-sm text-muted-foreground">{blog.excerpt}</p>
-            </Link>
           ))}
         </div>
       </section>

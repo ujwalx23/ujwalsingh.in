@@ -1,4 +1,4 @@
-import { Home, User, Globe, Share2, Mail, BookOpen, Quote, Menu } from "lucide-react";
+import { Home, User, Globe, Share2, Mail, Quote } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
   Sidebar,
@@ -18,7 +18,6 @@ const menuItems = [
   { title: "About Me", url: "/about", icon: User },
   { title: "My Websites", url: "/websites", icon: Globe },
   { title: "Social Links", url: "/social", icon: Share2 },
-  { title: "Blogs", url: "/blogs", icon: BookOpen },
   { title: "Thoughts", url: "/thoughts", icon: Quote },
   { title: "Contact Me", url: "/contact", icon: Mail },
 ];

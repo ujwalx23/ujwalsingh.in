@@ -62,11 +62,11 @@ const Websites = () => {
             className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform fade-in-up"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className="aspect-video overflow-hidden bg-muted">
+            <div className="w-full overflow-hidden bg-muted">
               <img
                 src={site.img}
                 alt={site.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="p-5">

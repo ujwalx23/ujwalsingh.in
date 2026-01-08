@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Youtube, Github, Code, BookOpen, FileDown } from "lucide-react";
+import { ComponentType } from "react";
 
 // Custom icons
 const ThreadsIcon = () => (
@@ -37,7 +38,20 @@ const RedditIcon = () => (
   </svg>
 );
 
-const socialLinks = [
+interface SocialLink {
+  name: string;
+  icon: ComponentType<{ className?: string }>;
+  url: string;
+}
+
+interface CodingPlatform {
+  name: string;
+  icon: ComponentType<{ className?: string }>;
+  url: string;
+  isDownload: boolean;
+}
+
+const socialLinks: SocialLink[] = [
   { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/" },
   { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
   { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
@@ -49,7 +63,7 @@ const socialLinks = [
   { name: "Reddit", icon: RedditIcon, url: "https://www.reddit.com/user/UjwalSingh45/" },
 ];
 
-const codingPlatforms = [
+const codingPlatforms: CodingPlatform[] = [
   { name: "My Resume", icon: FileDown, url: "/Ujwal_Resume.pdf", isDownload: true },
   { name: "GitHub", icon: Github, url: "https://github.com/ujwalx23", isDownload: false },
   { name: "LeetCode", icon: Code, url: "https://leetcode.com/u/UjwalSingh23/", isDownload: false },
@@ -67,19 +81,22 @@ const Social = () => {
       <section className="fade-in-up">
         <h2 className="text-2xl font-bold mb-6">Social Media</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {socialLinks.map((link, index) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card-hover flex items-center gap-3 p-4 min-h-[70px]"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              {typeof link.icon === 'function' ? <link.icon /> : <link.icon className="w-6 h-6 shrink-0" />}
-              <span className="font-medium truncate">{link.name}</span>
-            </a>
-          ))}
+          {socialLinks.map((link, index) => {
+            const IconComponent = link.icon;
+            return (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card-hover flex items-center gap-3 p-4 min-h-[70px]"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <IconComponent className="w-6 h-6 shrink-0" />
+                <span className="font-medium truncate">{link.name}</span>
+              </a>
+            );
+          })}
         </div>
       </section>
 
@@ -87,20 +104,23 @@ const Social = () => {
       <section className="fade-in-up">
         <h2 className="text-2xl font-bold mb-6">Profiles & Coding Platforms</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {codingPlatforms.map((platform, index) => (
-            <a
-              key={platform.name}
-              href={platform.url}
-              target={platform.isDownload ? "_self" : "_blank"}
-              rel={platform.isDownload ? undefined : "noopener noreferrer"}
-              download={platform.isDownload ? "Ujwal_Resume.pdf" : undefined}
-              className="glass-card-hover flex flex-col items-center justify-center gap-3 p-5 min-h-[100px]"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <platform.icon className="w-8 h-8 text-primary" />
-              <span className="font-medium text-center">{platform.name}</span>
-            </a>
-          ))}
+          {codingPlatforms.map((platform, index) => {
+            const IconComponent = platform.icon;
+            return (
+              <a
+                key={platform.name}
+                href={platform.url}
+                target={platform.isDownload ? "_self" : "_blank"}
+                rel={platform.isDownload ? undefined : "noopener noreferrer"}
+                download={platform.isDownload ? "Ujwal_Resume.pdf" : undefined}
+                className="glass-card-hover flex flex-col items-center justify-center gap-3 p-5 min-h-[100px]"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <IconComponent className="w-8 h-8 text-primary" />
+                <span className="font-medium text-center">{platform.name}</span>
+              </a>
+            );
+          })}
         </div>
       </section>
     </div>
