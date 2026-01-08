@@ -8,6 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarHeader,
   useSidebar,
 } from "@/components/ui/sidebar";
 
@@ -26,7 +27,16 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon" className="border-r border-primary/10 bg-gradient-to-b from-background to-primary/5">
-      <SidebarContent className="pt-6">
+      <SidebarHeader className="p-4 border-b border-primary/10">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">✨</span>
+          {!isCollapsed && (
+            <span className="font-bold text-lg gradient-text">Ujwal Singh</span>
+          )}
+        </div>
+      </SidebarHeader>
+
+      <SidebarContent className="pt-4">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1 px-2">
