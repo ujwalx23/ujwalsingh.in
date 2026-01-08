@@ -71,9 +71,9 @@ const projects = [
 ];
 
 const thoughts = [
-  { id: 1, quote: "Build things that matter, not just things that work.", author: "Ujwal Singh" },
-  { id: 2, quote: "Every line of code is a step towards solving someone's problem.", author: "Ujwal Singh" },
-  { id: 3, quote: "Consistency beats intensity. Show up every day.", author: "Ujwal Singh" },
+  { id: 1, quote: "Be kind. It's okay if someone doesn't meet your expectations.", author: "Ujwal Singh" },
+  { id: 2, quote: "Is waiting really a good thing?", author: "Ujwal Singh" },
+  { id: 3, quote: "Pain is certain. Pain will go, but success will remain.", author: "Ujwal Singh" },
 ];
 
 const Home = () => {
