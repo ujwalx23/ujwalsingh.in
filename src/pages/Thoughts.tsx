@@ -8,13 +8,13 @@ const thoughts = [
   },
   {
     id: 2,
-    quote: "Is waiting really a good thing?",
+    quote: "What if there is no other universe and this is the only one you get!?",
     author: "Ujwal Singh",
   },
   {
     id: 3,
     quote: "Pain is certain. Pain will go, but success will remain.",
-    author: "Ujwal Singh",
+    author: "Anonymous",
   },
   {
     id: 4,
@@ -23,12 +23,12 @@ const thoughts = [
   },
   {
     id: 5,
-    quote: "Discipline beats motivation. Just keep going, even on days you feel low.",
-    author: "Ujwal Singh",
+    quote: "You miss 100% of the shots you don’t take.",
+    author: "Wayne Gretzky",
   },
   {
     id: 6,
-    quote: "What if there is no other universe and this is the only one?",
+    quote: "Just keep going, even on days you feel low!",
     author: "Ujwal Singh",
   },
 ];
