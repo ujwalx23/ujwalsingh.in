@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const reasonOptions = [
   "Just Exploring",
@@ -19,8 +20,19 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const reason = formData.get("reason") as string;
 
     try {
+      // Save to database
+      const { error } = await supabase
+        .from("contact_submissions")
+        .insert({ name, email, reason });
+
+      if (error) throw error;
+
+      // Also send to Formspree as backup/notification
       await fetch("https://formspree.io/f/mjknjgqo", {
         method: "POST",
         body: formData,
