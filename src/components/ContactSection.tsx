@@ -23,12 +23,15 @@ const ContactSection = () => {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const reason = formData.get("reason") as string;
+    const message = (formData.get("message") as string) || null;
 
     try {
       // Save to database
       const { error } = await supabase
-        .from("contact_submissions")
-        .insert({ name, email, reason });
+        // NOTE: table is intentionally separate from the Contact page
+        // (typed as any to avoid stale generated DB types in the repo)
+        .from("contact_submissions_home" as any)
+        .insert({ name, email, reason, message });
 
       if (error) throw error;
 
