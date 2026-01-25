@@ -41,60 +41,6 @@ export type Database = {
         }
         Relationships: []
       }
-      contact_submissions_home: {
-        Row: {
-          created_at: string
-          email: string
-          id: string
-          message: string | null
-          name: string
-          reason: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-          id?: string
-          message?: string | null
-          name: string
-          reason: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          id?: string
-          message?: string | null
-          name?: string
-          reason?: string
-        }
-        Relationships: []
-      }
-      contact_submissions_page: {
-        Row: {
-          created_at: string
-          email: string
-          id: string
-          message: string | null
-          name: string
-          reason: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-          id?: string
-          message?: string | null
-          name: string
-          reason: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          id?: string
-          message?: string | null
-          name?: string
-          reason?: string
-        }
-        Relationships: []
-      }
     }
     Views: {
       [_ in never]: never
