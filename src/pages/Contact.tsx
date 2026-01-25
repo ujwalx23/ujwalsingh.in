@@ -28,7 +28,9 @@ const Contact = () => {
     try {
       // Save to database
       const { error } = await supabase
-        .from("contact_submissions")
+        // NOTE: table is intentionally separate from the homepage contact section
+        // (typed as any to avoid stale generated DB types in the repo)
+        .from("contact_submissions_page" as any)
         .insert({ name, email, reason, message });
 
       if (error) throw error;
