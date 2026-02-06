@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const thoughts = [
   {
@@ -36,6 +37,13 @@ const thoughts = [
 const Thoughts = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4">
+      <SEO
+        title="Thoughts & Reflections | Ujwal Singh"
+        description="Short reflections, honest thoughts, and motivational quotes from Ujwal Singh. Discover insights and things I remind myself of."
+        path="/thoughts"
+        keywords="Ujwal Singh thoughts, motivational quotes, developer reflections"
+      />
+      
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-2 fade-in-up">
         Thoughts
       </h1>

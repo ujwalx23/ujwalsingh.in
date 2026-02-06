@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const websites = [
   {
@@ -48,6 +49,13 @@ const websites = [
 const Websites = () => {
   return (
     <div className="w-full max-w-7xl mx-auto">
+      <SEO
+        title="My Websites & Projects | Ujwal Singh Portfolio"
+        description="Explore web projects by Ujwal Singh including Wanderlust Adventures, CuteList, Newsnap, LoopPlay, and more. View my portfolio of web applications and tools."
+        path="/websites"
+        keywords="Ujwal Singh projects, web developer portfolio, React projects, Wanderlust Adventures, CuteList, Newsnap"
+      />
+      
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
         My Websites
       </h1>
