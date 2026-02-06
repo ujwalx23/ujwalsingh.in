@@ -2,6 +2,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 // Icons for social links
 const LinkedInIcon = () => (
@@ -79,6 +80,13 @@ const thoughts = [
 const Home = () => {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-12">
+      <SEO
+        title="Ujwal Singh | Software Developer, Creator & AI Enthusiast"
+        description="Official website of Ujwal Singh, a software developer and AI enthusiast. Explore projects, social links, and work in web development and artificial intelligence."
+        path="/"
+        keywords="Ujwal Singh, software developer, AI enthusiast, web developer portfolio, Ujwal Singh projects"
+      />
+      
       {/* Hero Section */}
       <section className="text-center py-8 md:py-12 fade-in-up">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4">
