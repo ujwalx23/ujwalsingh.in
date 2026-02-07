@@ -4,15 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ujwal Singh</title>
+  <link rel="canonical" href="https://ujwalsingh.in/" />
   <script>
-    // SPA redirect for GitHub Pages and similar static hosts
-    // Redirects all 404s to the main index with the path preserved
-    const path = window.location.pathname + window.location.search + window.location.hash;
-    window.location.replace('/' + '?redirect=' + encodeURIComponent(path));
+    // SPA redirect - preserves the path for client-side routing
+    // This handles direct navigation to routes in static hosting environments
+    (function() {
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      var repo = '';
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        repo +
+        l.pathname.slice(pathSegmentsToKeep) +
+        (l.search ? l.search : '') +
+        l.hash
+      );
+    }());
   </script>
   <meta http-equiv="refresh" content="0;url=/">
+  <meta name="robots" content="noindex">
 </head>
 <body>
-  <p>Redirecting...</p>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/">
+    <p>Redirecting to <a href="/">Ujwal Singh</a>...</p>
+  </noscript>
 </body>
 </html>
