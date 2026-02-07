@@ -1,0 +1,6 @@
+# Redirect www to non-www (301 permanent redirect)
+https://www.ujwalsingh.in/*  https://ujwalsingh.in/:splat  301!
+http://www.ujwalsingh.in/*   https://ujwalsingh.in/:splat  301!
+
+# SPA fallback - serve index.html for all routes (200 OK, not redirect)
+/*    /index.html   200

@@ -1,8 +1,12 @@
+# Robots.txt for https://ujwalsingh.in
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +16,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap location (non-www canonical domain)
+Sitemap: https://ujwalsingh.in/sitemap.xml
+
+# Host directive for canonical domain
+Host: https://ujwalsingh.in
