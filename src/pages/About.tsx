@@ -1,5 +1,5 @@
 import { MessageCircle, Download, ExternalLink } from "lucide-react";
-import ujwalPhoto from "@/assets/ujwal-photo-2.jpg";
+import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
 import SEO from "@/components/SEO";
 
 const About = () => {
@@ -19,7 +19,7 @@ const About = () => {
             <img
               src={ujwalPhoto}
               alt="Ujwal Singh"
-              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl object-cover object-top shadow-lg border-4 border-primary/20"
+              className="w-48 h-56 md:w-64 md:h-80 rounded-2xl object-cover object-[center_20%] shadow-lg border-4 border-primary/20"
             />
           </div>
 
