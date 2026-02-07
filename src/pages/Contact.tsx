@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import SEO from "@/components/SEO";
 
 const reasonOptions = [
   "Just Exploring",
@@ -53,12 +52,6 @@ const Contact = () => {
   if (isSubmitted) {
     return (
       <div className="w-full max-w-2xl mx-auto">
-        <SEO
-          title="Contact Ujwal Singh | Get in Touch"
-          description="Contact Ujwal Singh for collaborations, questions, or just to say hi. I typically respond within 24-48 hours."
-          path="/contact"
-          keywords="contact Ujwal Singh, hire developer, collaboration"
-        />
         <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
           Contact Me
         </h1>
@@ -75,13 +68,6 @@ const Contact = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      <SEO
-        title="Contact Ujwal Singh | Get in Touch"
-        description="Contact Ujwal Singh for collaborations, questions, or just to say hi. I typically respond within 24-48 hours."
-        path="/contact"
-        keywords="contact Ujwal Singh, hire developer, collaboration"
-      />
-      
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
         Contact Me
       </h1>
