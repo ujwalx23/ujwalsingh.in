@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import PageSEO from "@/components/PageSEO";
 
 const websites = [
   {
@@ -48,6 +49,12 @@ const websites = [
 const Websites = () => {
   return (
     <div className="w-full max-w-7xl mx-auto">
+      <PageSEO
+        title="Projects by Ujwal Singh | Web Apps & Digital Products"
+        description="Explore websites and projects built by Ujwal Singh including Wanderlust Adventures, CuteList, Newsnap, LoopPlay, and more."
+        path="/websites"
+        keywords="Ujwal Singh projects, web apps, Wanderlust Adventures, CuteList, Newsnap"
+      />
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
         My Websites
       </h1>

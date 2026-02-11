@@ -37,8 +37,13 @@ const RedditIcon = () => (
   </svg>
 );
 
-const socialLinks = [
+const OrcidIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+    <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.238-3.722-3.806-3.722h-2.513z"/>
+  </svg>
+);
 
+const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/" },
   { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
   { name: "Discord", icon: DiscordIcon, url: "https://discord.com/users/1243952128272371764" },
@@ -48,6 +53,7 @@ const socialLinks = [
   { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
   { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g" },
   { name: "Reddit", icon: RedditIcon, url: "https://www.reddit.com/user/UjwalSingh45/" },
+  { name: "ORCID", icon: OrcidIcon, url: "https://orcid.org/0009-0004-0490-010X" },
 ];
 
 const SocialMediaSection = () => {
