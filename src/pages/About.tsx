@@ -1,5 +1,5 @@
 import { MessageCircle, Download, ExternalLink } from "lucide-react";
-import ujwalPhoto from "@/assets/ujwal-photo-2.jpg";
+import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
 
 const About = () => {
   return (
