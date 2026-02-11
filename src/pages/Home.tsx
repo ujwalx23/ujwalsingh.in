@@ -2,6 +2,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 
 // Icons for social links
 const LinkedInIcon = () => (
@@ -22,9 +23,9 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const ThreadsIcon = () => (
+const OrcidIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.182.408-2.256 1.332-3.023.88-.73 2.087-1.146 3.497-1.212.982-.046 1.898.04 2.738.259-.082-.783-.319-1.408-.713-1.876-.505-.6-1.286-.91-2.32-.921h-.048c-.795.003-1.81.222-2.508.917l-1.417-1.428c1.043-1.038 2.457-1.587 4.09-1.587h.075c1.6.018 2.905.545 3.88 1.566.945.99 1.475 2.378 1.575 4.129.168.053.335.111.499.174 1.326.503 2.394 1.329 3.09 2.39.87 1.326 1.086 2.977.607 4.647-.732 2.556-2.882 4.387-6.063 5.163-1.202.293-2.49.429-3.834.386zm1.106-10.553c-.781.036-1.442.217-1.906.52-.392.254-.625.58-.658.918-.04.432.156.838.553 1.143.488.374 1.192.545 1.981.482 1.076-.086 1.9-.466 2.45-1.131.392-.474.64-1.086.747-1.833-.928-.195-1.995-.236-3.167-.099z"/>
+    <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.238-3.722-3.806-3.722h-2.513z"/>
   </svg>
 );
 
@@ -45,7 +46,7 @@ const socialLinks = [
   { name: "GitHub", icon: GitHubIcon, url: "https://github.com/ujwalx23" },
   { name: "Pinterest", icon: PinterestIcon, url: "https://in.pinterest.com/UjwalSingh23/" },
   { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/ujwalx23/" },
-  { name: "Threads", icon: ThreadsIcon, url: "https://www.threads.com/@ujwalx23" },
+  { name: "ORCID", icon: OrcidIcon, url: "https://orcid.org/0009-0004-0490-010X" },
   { name: "X (Twitter)", icon: XIcon, url: "https://x.com/UJWALSINGH23" },
 ];
 
@@ -79,7 +80,26 @@ const thoughts = [
 const Home = () => {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-12">
-      {/* Hero Section */}
+      <PageSEO
+        title="Ujwal Singh | Software Developer, Creator & AI Enthusiast"
+        description="Official website of Ujwal Singh. Explore projects, connect on social media, and discover work in web development and artificial intelligence."
+        path="/"
+        keywords="Ujwal Singh, software developer, AI enthusiast, web developer, portfolio"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Ujwal Singh",
+          url: "https://ujwalsingh.in",
+          jobTitle: "Software Developer",
+          sameAs: [
+            "https://www.linkedin.com/in/ujwalsingh23/",
+            "https://github.com/ujwalx23",
+            "https://www.instagram.com/ujwalx23/",
+            "https://x.com/UJWALSINGH23",
+            "https://orcid.org/0009-0004-0490-010X",
+          ],
+        }}
+      />
       <section className="text-center py-8 md:py-12 fade-in-up">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4">
           Ujwal Singh

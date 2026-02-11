@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import PageSEO from "@/components/PageSEO";
 
 const reasonOptions = [
   "Just Exploring",
@@ -68,6 +69,12 @@ const Contact = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
+      <PageSEO
+        title="Contact Ujwal Singh | Get in Touch"
+        description="Reach out to Ujwal Singh for collaboration, questions, or just to say hi. Typically responds within 24-48 hours."
+        path="/contact"
+        keywords="contact Ujwal Singh, collaboration, web developer contact"
+      />
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
         Contact Me
       </h1>

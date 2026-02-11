@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import PageSEO from "@/components/PageSEO";
 
 const thoughts = [
   {
@@ -36,6 +37,12 @@ const thoughts = [
 const Thoughts = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4">
+      <PageSEO
+        title="Thoughts by Ujwal Singh | Reflections & Quotes"
+        description="Short reflections, honest thoughts, and quotes by Ujwal Singh. Personal insights on life, motivation, and growth."
+        path="/thoughts"
+        keywords="Ujwal Singh thoughts, quotes, reflections, motivation"
+      />
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-2 fade-in-up">
         Thoughts
       </h1>

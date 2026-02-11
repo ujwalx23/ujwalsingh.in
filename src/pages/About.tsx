@@ -1,10 +1,15 @@
 import { MessageCircle, Download, ExternalLink } from "lucide-react";
 import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
-
+import PageSEO from "@/components/PageSEO";
 const About = () => {
   return (
     <div className="w-full max-w-4xl mx-auto space-y-8">
-      {/* Profile Section */}
+      <PageSEO
+        title="About Ujwal Singh | Developer, Creator & AI Enthusiast"
+        description="Learn about Ujwal Singh — a software developer passionate about web development, AI, gaming, and travel. Download resume and chat with an AI twin."
+        path="/about"
+        keywords="Ujwal Singh about, developer bio, AI enthusiast, resume"
+      />
       <section className="glass-card p-6 md:p-8 fade-in-up">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Photo */}
