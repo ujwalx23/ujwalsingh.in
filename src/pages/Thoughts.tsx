@@ -36,7 +36,7 @@ const thoughts = [
     id: 7,
     quote: "Be consistent in your work and keep improving step by step. Don’t stay stuck on the same thing for too long. Small daily efforts make a big difference in the long run.",
     author: "Om Tiwari",
-    };
+    },
 ];
 
 const Thoughts = () => {
