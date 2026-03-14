@@ -64,10 +64,10 @@ const projects = [
     url: "https://cute23.vercel.app/",
   },
   {
-    name: "Newsnap",
-    description: "A credibility-driven, short-form global news platform for trustworthy information.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
-    url: "https://newsnapglobal.vercel.app",
+    name: "MediSoul",
+    description: "An AI-powered personal medical companion for instant health insights and symptom checking.",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
+    url: "https://medisoul23.vercel.app/",
   },
 ];
 

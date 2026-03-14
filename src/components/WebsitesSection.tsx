@@ -43,6 +43,20 @@ const websites = [
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
     url: "https://medisoul23.vercel.app/",
   },
+  {
+    name: "Rim Weather Guide",
+    description:
+      "A weather forecasting platform providing accurate weather data and smart travel tips for any place in the world.",
+    img: "/images/rim-weather.png",
+    url: "https://rim-weather-guide.vercel.app/",
+  },
+  {
+    name: "Appliance Care (SIEMENS)",
+    description:
+      "A professional washing machine repair and service platform with booking, warranty tracking, and multi-brand support.",
+    img: "/images/appliance-care.png",
+    url: "https://appliance-care.vercel.app/",
+  },
 ];
 
 const WebsitesSection = () => {
