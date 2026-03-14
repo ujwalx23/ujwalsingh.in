@@ -1,18 +1,22 @@
-import { MessageCircle, Download, ExternalLink } from "lucide-react";
+import { Download } from "lucide-react";
 import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
 import PageSEO from "@/components/PageSEO";
+
 const About = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-8">
+    <div className="w-full max-w-4xl mx-auto space-y-10">
+
       <PageSEO
         title="About Ujwal Singh | Developer, Creator & AI Enthusiast"
-        description="Learn about Ujwal Singh — a software developer passionate about web development, AI, gaming, and travel. Download resume and chat with an AI twin."
+        description="Learn about Ujwal Singh — a software developer passionate about web development, AI, gaming, and travel."
         path="/about"
-        keywords="Ujwal Singh about, developer bio, AI enthusiast, resume"
+        keywords="Ujwal Singh developer portfolio"
       />
+
+      {/* Intro Section */}
       <section className="glass-card p-6 md:p-8 fade-in-up">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Photo */}
+
           <div className="shrink-0">
             <img
               src={ujwalPhoto}
@@ -21,21 +25,21 @@ const About = () => {
             />
           </div>
 
-          {/* Info */}
           <div className="text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-3">
               Ujwal Singh
             </h1>
+
             <p className="text-muted-foreground text-lg mb-4">
               Creator • Developer • AI Enthusiast
             </p>
+
             <p className="text-foreground/90 leading-relaxed mb-6">
-              Hi, I'm Ujwal Singh 👋 I specialize in building websites, apps, games, and AI-powered tools. 
-              I focus on creating efficient, user-friendly, and scalable solutions while exploring innovative 
-              technologies to deliver high-quality digital experiences.
+              Hi, I'm Ujwal Singh 👋 I enjoy building websites, apps, games,
+              and AI-powered tools. I like turning ideas into real digital
+              experiences and exploring new technologies along the way.
             </p>
 
-            {/* Resume Download */}
             <a
               href="/Ujwal_Resume.pdf"
               download="Ujwal_Resume.pdf"
@@ -47,41 +51,74 @@ const About = () => {
           </div>
         </div>
       </section>
-{/* Interests Section */}
-<section className="glass-card p-6 md:p-8 fade-in-up">
-  <h2 className="text-2xl font-bold mb-6">What I Enjoy Exploring</h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Interests Section */}
+      <section className="glass-card p-6 md:p-8 fade-in-up">
+        <h2 className="text-2xl font-bold mb-6">Interests</h2>
 
-    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
-      <h3 className="font-semibold text-lg mb-2">🚀 Building Digital Products</h3>
-      <p className="text-sm text-muted-foreground">
-        I enjoy turning ideas into real digital experiences — from websites and tools to experimental platforms.
-      </p>
-    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
-      <h3 className="font-semibold text-lg mb-2">🤖 Exploring AI</h3>
-      <p className="text-sm text-muted-foreground">
-        I love experimenting with AI tools, conversational systems, and creative ways technology can assist humans.
-      </p>
-    </div>
+          <div className="p-5 rounded-xl border border-primary/10 hover:border-primary/40 transition">
+            <h3 className="font-semibold text-lg mb-2"> Building Products</h3>
+            <p className="text-sm text-muted-foreground">
+              I enjoy creating websites, tools, and digital experiences
+              that solve real problems.
+            </p>
+          </div>
 
-    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
-      <h3 className="font-semibold text-lg mb-2">🎨 UI & Creative Web Design</h3>
-      <p className="text-sm text-muted-foreground">
-        Designing clean interfaces and smooth user experiences is something I truly enjoy.
-      </p>
-    </div>
+          <div className="p-5 rounded-xl border border-primary/10 hover:border-primary/40 transition">
+            <h3 className="font-semibold text-lg mb-2"> AI Exploration</h3>
+            <p className="text-sm text-muted-foreground">
+              I like experimenting with AI tools and exploring how
+              technology can assist humans in creative ways.
+            </p>
+          </div>
 
-    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
-      <h3 className="font-semibold text-lg mb-2">🌍 Curiosity & Exploration</h3>
-      <p className="text-sm text-muted-foreground">
-        I enjoy discovering new ideas, technologies, and places that expand my perspective.
-      </p>
-    </div>
+          <div className="p-5 rounded-xl border border-primary/10 hover:border-primary/40 transition">
+            <h3 className="font-semibold text-lg mb-2"> Games & Creativity</h3>
+            <p className="text-sm text-muted-foreground">
+              Gaming and building small fun projects inspire my
+              creativity and problem-solving.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-xl border border-primary/10 hover:border-primary/40 transition">
+            <h3 className="font-semibold text-lg mb-2"> Exploration</h3>
+            <p className="text-sm text-muted-foreground">
+              I enjoy discovering new places, ideas, and perspectives
+              that broaden how I think and create.
+            </p>
+          </div>
+
         </div>
       </section>
+
+      {/* Beyond the Code */}
+      <section className="glass-card p-6 md:p-10 fade-in-up text-center">
+        <h2 className="text-2xl font-bold mb-6">Beyond the Code</h2>
+
+        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          When I'm not coding, you'll probably find me playing sports,
+          going on small adventures, or randomly exploring new places.
+        </p>
+
+        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
+          I also love rainy weather — there's something about rain
+          that makes everything feel calmer and more creative.
+        </p>
+
+        <p className="text-sm text-muted-foreground mt-6 italic">
+          Sports • Adventure • Random Exploration • Rain Lover
+        </p>
+      </section>
+
+      {/* Ending Line */}
+      <section className="text-center py-6 fade-in-up">
+        <p className="text-muted-foreground italic">
+          Still exploring. Still building. Still curious.
+        </p>
+      </section>
+
     </div>
   );
 };
