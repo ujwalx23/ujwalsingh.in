@@ -78,27 +78,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Chat with AI Section */}
-      <section className="glass-card p-6 md:p-8 fade-in-up">
-        <div className="flex items-center gap-3 mb-4">
-          <MessageCircle className="w-6 h-6 text-primary" />
-          <h2 className="text-2xl font-bold">Chat with Ujwal (AI)</h2>
-        </div>
-        <p className="text-muted-foreground mb-6">
-          Talk to my AI twin — it answers like me! Ask questions about my work, projects, or just have a conversation.
-        </p>
-        <a
-          href="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/12/12/12/20251212120356-KRFZ3H1Z.json"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 glass-button bg-primary/20 border-primary/40 hover:bg-primary/30 px-6 py-3"
-        >
-          <MessageCircle className="w-5 h-5" />
-          <span>Start Chatting</span>
-          <ExternalLink className="w-4 h-4" />
-        </a>
-      </section>
     </div>
   );
 };
