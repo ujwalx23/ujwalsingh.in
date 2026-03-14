@@ -47,35 +47,39 @@ const About = () => {
           </div>
         </div>
       </section>
+{/* Interests Section */}
+<section className="glass-card p-6 md:p-8 fade-in-up">
+  <h2 className="text-2xl font-bold mb-6">What I Enjoy Exploring</h2>
 
-      {/* Interests Section */}
-      <section className="glass-card p-6 md:p-8 fade-in-up">
-        <h2 className="text-2xl font-bold mb-6">My Interests</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🌐 Web & Technology</h3>
-            <p className="text-sm text-muted-foreground">
-              Passionate about building modern web apps, exploring new frameworks, and staying updated with tech trends.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🤖 Artificial Intelligence</h3>
-            <p className="text-sm text-muted-foreground">
-              Fascinated by AI and its potential to transform industries and enhance everyday experiences.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">🎮 Gaming & Entertainment</h3>
-            <p className="text-sm text-muted-foreground">
-              Love playing and creating games, exploring interactive storytelling and game design concepts.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-            <h3 className="font-semibold text-lg mb-2">✈️ Travel & Exploration</h3>
-            <p className="text-sm text-muted-foreground">
-              Enjoy discovering new places, cultures, and experiences that broaden my perspective.
-            </p>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
+      <h3 className="font-semibold text-lg mb-2">🚀 Building Digital Products</h3>
+      <p className="text-sm text-muted-foreground">
+        I enjoy turning ideas into real digital experiences — from websites and tools to experimental platforms.
+      </p>
+    </div>
+
+    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
+      <h3 className="font-semibold text-lg mb-2">🤖 Exploring AI</h3>
+      <p className="text-sm text-muted-foreground">
+        I love experimenting with AI tools, conversational systems, and creative ways technology can assist humans.
+      </p>
+    </div>
+
+    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
+      <h3 className="font-semibold text-lg mb-2">🎨 UI & Creative Web Design</h3>
+      <p className="text-sm text-muted-foreground">
+        Designing clean interfaces and smooth user experiences is something I truly enjoy.
+      </p>
+    </div>
+
+    <div className="p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition">
+      <h3 className="font-semibold text-lg mb-2">🌍 Curiosity & Exploration</h3>
+      <p className="text-sm text-muted-foreground">
+        I enjoy discovering new ideas, technologies, and places that expand my perspective.
+      </p>
+    </div>
         </div>
       </section>
     </div>
