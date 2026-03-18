@@ -15,7 +15,7 @@ import {
 const menuItems = [
   { title: "Home", url: "/", icon: Home },
   { title: "About Me", url: "/about", icon: User },
-  { title: "My Websites", url: "/websites", icon: Globe },
+  { title: "My Projects", url: "/websites", icon: Globe },
   { title: "Social Links", url: "/social", icon: Share2 },
   { title: "Thoughts", url: "/thoughts", icon: Quote },
   { title: "Contact Me", url: "/contact", icon: Mail },

@@ -63,7 +63,7 @@ const WebsitesSection = () => {
   return (
     <section className="w-full fade-in-up stagger-3 px-4 sm:px-8">
       <h2 className="section-heading text-center mb-8 text-2xl sm:text-3xl font-bold">
-        My Websites
+        My Projects
       </h2>
 
       <div className="flex flex-col gap-6">
