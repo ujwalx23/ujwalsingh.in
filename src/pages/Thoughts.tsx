@@ -38,7 +38,7 @@ const thoughts = [
     author: "Ujwal Singh",
     }, {
     id: 8,
-    quote: "There is no point going back so just keep moving forward- Don't hurt youself buddy!",
+    quote: "There is no point going back so just keep moving forward- Don't hurt youself buddy.",
     author: "Ujwal Singh",
     },
   
