@@ -38,7 +38,7 @@ const thoughts = [
     author: "Om Tiwari",
     }, {
     id: 8,
-    quote: "My eyes refuse to see her leave, So the tears came to blur my vision",
+    quote: "My eyes refuse to see her leave, So the tears came to blur my vision.",
     author: "Ujwal Singh",
     },
   
