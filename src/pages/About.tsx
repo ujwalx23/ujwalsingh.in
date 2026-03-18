@@ -46,7 +46,7 @@ const funFacts = [
   { icon: CloudRain, text: "Rain, calm vibes & getting lost in my thoughts" },
   { icon: MapPin, text: "Exploring random places without fixed plans" },
   { icon: Gamepad2, text: "Gaming to disconnect and reset" },
-  { icon: Music, text: "Music is always on — mood & focus both" },
+  { icon: Music, text: "Music is always been a thing where I feel safe" },
   { icon: Mountain, text: "Love a bit of adventure and new experiences" },
   { icon: PenLine, text: "Writing thoughts and things I don’t say out loud" },
 ];
