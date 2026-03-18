@@ -43,12 +43,12 @@ const timeline = [
 ];
 
 const funFacts = [
-  { icon: CloudRain, text: "Rain, calm vibes & getting lost in my thoughts" },
-  { icon: MapPin, text: "Exploring random places without fixed plans" },
-  { icon: Gamepad2, text: "Gaming to disconnect and reset" },
+  { icon: CloudRain, text: "Rain, quiet vibes & getting lost in my own thoughts" },
+  { icon: MapPin, text: "Exploring random places without any fixed plan" },
+  { icon: Gamepad2, text: "Gaming to escape reality and reset my mind" },
   { icon: Music, text: "Music is always been a thing where I feel safe" },
-  { icon: Mountain, text: "Love a bit of adventure and new experiences" },
-  { icon: PenLine, text: "Writing thoughts and things I don’t say out loud" },
+  { icon: Mountain, text: "Love lots of adventure and new experiences" },
+  { icon: PenLine, text: "Writing things I don’t usually say out loud" },
 ];
 
 const About = () => {
