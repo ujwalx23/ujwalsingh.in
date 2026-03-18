@@ -70,7 +70,7 @@ const Websites = () => {
         keywords="Ujwal Singh projects, web apps, Wanderlust Adventures, CuteList, Newsnap"
       />
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
-        My Websites
+        My Projects
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
