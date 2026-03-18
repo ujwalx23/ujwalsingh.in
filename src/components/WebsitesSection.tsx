@@ -76,7 +76,7 @@ const WebsitesSection = () => {
             className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.03]"
           >
             {/* Image */}
-            <div className="w-full bg-gray-100 flex justify-center items-center">
+            <div className="w-full bg-muted flex justify-center items-center">
               <img
                 src={site.img}
                 alt={site.name}
