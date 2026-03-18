@@ -34,11 +34,11 @@ const thoughts = [
   },
     {
     id: 7,
-    quote: "Be consistent in your work and keep improving step by step. Don’t stay stuck on the same thing for too long. Small daily efforts make a big difference in the long run.",
-    author: "Om Tiwari",
+    quote: "Unfortunately, there will be no evidence that you tried if you don’t make it.",
+    author: "Ujwal Singh",
     }, {
     id: 8,
-    quote: "My eyes refuse to see her leave, So the tears came to blur my vision",
+    quote: "There is no point going back so just keep moving forward- Don't hurt youself buddy!",
     author: "Ujwal Singh",
     },
   
