@@ -138,7 +138,7 @@ const Home = () => {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Featured Projects</h2>
           <Link to="/websites" className="flex items-center gap-1 text-primary hover:underline text-sm">
-            All Projects <ArrowRight className="w-4 h-4" />
+            View All <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
