@@ -32,16 +32,16 @@ const thoughts = [
     quote: "Just keep going, even on days you feel low!",
     author: "Ujwal Singh",
   },
-    {
+  {
     id: 7,
     quote: "Be consistent in your work and keep improving step by step. Don’t stay stuck on the same thing for too long. Small daily efforts make a big difference in the long run.",
     author: "Om Tiwari",
-    }, {
+  },
+  {
     id: 8,
-    quote: "My eyes refuse to see her leav, So the tears came to blur my vision.",
+    quote: "My eyes refused to see her leave, so the tears came to blur my vision.",
     author: "Ujwal Singh",
-    },
-  
+  },
 ];
 
 const Thoughts = () => {
@@ -61,7 +61,6 @@ const Thoughts = () => {
         Short reflections, honest thoughts, and things I remind myself of.
       </p>
 
-      {/* 2 columns on mobile, 4 columns on desktop */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {thoughts.map((thought, index) => (
           <div
