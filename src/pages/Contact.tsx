@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
+import { Send, CheckCircle, Mail, MessageSquare, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import PageSEO from "@/components/PageSEO";
 
@@ -91,6 +91,14 @@ const Contact = () => {
               I'd love to hear from you! Whether you have a question, want to collaborate, 
               or just want to say hi, feel free to reach out.
             </p>
+            <div className="mt-4 space-y-2">
+              <a href="mailto:siemensservices.in@gmail.com" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <Mail className="w-4 h-4" /> siemensservices.in@gmail.com
+              </a>
+              <a href="tel:+917977339435" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <Phone className="w-4 h-4" /> +91 7977339435
+              </a>
+            </div>
           </div>
 
           <div className="glass-card p-6">

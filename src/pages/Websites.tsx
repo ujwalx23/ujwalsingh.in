@@ -45,11 +45,11 @@ const websites = [
     url: "https://medisoul23.vercel.app/",
   },
   {
-    name: "Rim Weather Guide",
+    name: "Climora",
     description:
       "A weather forecasting platform providing accurate weather data and smart travel tips for any place in the world.",
     img: "/images/rim-weather.png",
-    url: "https://rim-weather-guide.vercel.app/",
+    url: "https://climorainfo.vercel.app/",
   },
   {
     name: "Appliance Care (SIEMENS)",
