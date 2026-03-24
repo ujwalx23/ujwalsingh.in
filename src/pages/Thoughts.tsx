@@ -2,14 +2,46 @@ import { Quote } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 
 const thoughts = [
-  { id: 1, quote: "Don't wait for the perfect moment. Take the moment and make it perfect.", author: "Ujwal Singh" },
-  { id: 2, quote: "The only limit to your impact is your imagination and commitment.", author: "Ujwal Singh" },
-  { id: 3, quote: "Sometimes the hardest part isn't letting go but learning to start over.", author: "Ujwal Singh" },
-  { id: 4, quote: "Your energy introduces you before you even speak.", author: "Anonymous" },
-  { id: 5, quote: "Build things that matter. The rest is just noise.", author: "Ujwal Singh" },
-  { id: 6, quote: "Growth begins where comfort ends. Embrace the discomfort.", author: "Ujwal Singh" },
-  { id: 7, quote: "Not every storm comes to disrupt your life. Some come to clear your path.", author: "Anonymous" },
-  { id: 8, quote: "Stay curious, stay humble, and never stop creating.", author: "Ujwal Singh" },
+  {
+    id: 1,
+    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 2,
+    quote: "What if there is no other universe and this is the only one you get!?",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 3,
+    quote: "Pain is certain. Pain will go, but success will remain.",
+    author: "Anonymous",
+  },
+  {
+    id: 4,
+    quote: "Khud ko akela hokar kiske paas dekhte ho?",
+    author: "Anonymous",
+  },
+  {
+    id: 5,
+    quote: "You miss 100% of the shots you don’t take.",
+    author: "Wayne Gretzky",
+  },
+  {
+    id: 6,
+    quote: "Just keep going, even on days you feel low!",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 7,
+    quote: "Unfortunately, there will be no evidence that you tried if you don’t make it.",
+    author: "Ujwal Singh",
+  },
+  {
+    id: 8,
+    quote: "There is no point going back so just keep moving forward- Don't hurt youself buddy!",
+    author: "Ujwal Singh",
+  },
 ];
 
 const Thoughts = () => {
