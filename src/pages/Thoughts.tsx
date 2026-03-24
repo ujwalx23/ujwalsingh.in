@@ -4,7 +4,7 @@ import PageSEO from "@/components/PageSEO";
 const thoughts = [
   {
     id: 1,
-    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.",
+    quote: "Be kind. It’s okay if someone doesn’t meet your expectations.test",
     author: "Ujwal Singh",
   },
   {
