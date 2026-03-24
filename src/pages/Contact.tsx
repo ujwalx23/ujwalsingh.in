@@ -92,8 +92,8 @@ const Contact = () => {
               or just want to say hi, feel free to reach out.
             </p>
             <div className="mt-4 space-y-2">
-              <a href="mailto:siemensservices.in@gmail.com" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                <Mail className="w-4 h-4" /> siemensservices.in@gmail.com
+              <a href="mailto:ujwalsingh164@gmail.com" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <Mail className="w-4 h-4" /> ujwalsingh164@gmail.com
               </a>
               <a href="tel:+917977339435" className="flex items-center gap-2 text-sm text-primary hover:underline">
                 <Phone className="w-4 h-4" /> +91 7977339435

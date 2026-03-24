@@ -48,7 +48,7 @@ const websites = [
     name: "Climora",
     description:
       "A weather forecasting platform providing accurate weather data and smart travel tips for any place in the world.",
-    img: "/images/rim-weather.png",
+    img: "/images/climora.png",
     url: "https://climorainfo.vercel.app/",
   },
   {

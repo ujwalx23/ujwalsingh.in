@@ -72,9 +72,9 @@ const projects = [
 ];
 
 const thoughts = [
-  { id: 1, quote: "Be kind. It's okay if someone doesn't meet your expectations.", author: "Ujwal Singh" },
-  { id: 2, quote: "Is waiting really a good thing?", author: "Ujwal Singh" },
-  { id: 3, quote: "Pain is certain. Pain will go, but success will remain.", author: "Ujwal Singh" },
+  { id: 1, quote: "Don't wait for the perfect moment. Take the moment and make it perfect.", author: "Ujwal Singh" },
+  { id: 2, quote: "The only limit to your impact is your imagination and commitment.", author: "Ujwal Singh" },
+  { id: 3, quote: "Build things that matter. The rest is just noise.", author: "Ujwal Singh" },
 ];
 
 const Home = () => {
