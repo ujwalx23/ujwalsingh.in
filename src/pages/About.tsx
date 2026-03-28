@@ -24,7 +24,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-5 sm:space-y-8">
+    <div className="w-full max-w-4xl mx-auto space-y-5 sm:space-y-8 overflow-x-hidden">
 
       <PageSEO
         title="About Ujwal Singh | Developer, Creator & AI Enthusiast"
@@ -34,16 +34,16 @@ const About = () => {
       />
 
       {/* Intro Section — mobile-first stacked layout */}
-      <section className="glass-card p-5 sm:p-6 md:p-8 fade-in-up">
-        <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-5 sm:gap-8">
+      <section className="glass-card p-4 sm:p-6 md:p-8 fade-in-up overflow-hidden">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4 sm:gap-8">
           <div className="shrink-0">
             <img
               src={ujwalPhoto}
               alt="Ujwal Singh"
-              className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl object-cover object-top shadow-lg border-4 border-primary/20"
+              className="w-28 h-28 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-2xl object-cover object-top shadow-lg border-4 border-primary/20"
             />
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 w-full">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-2 sm:mb-3">
               Ujwal Singh
             </h1>
@@ -92,14 +92,14 @@ const About = () => {
         </div>
         <div className="overflow-x-auto -mx-1 rounded-xl border border-border/50 bg-card/50 p-2 sm:p-4">
           <img
-            src="https://ghchart.rshah.org/e8622b/UjjwalSingh-2"
+            src="https://ghchart.rshah.org/e8622b/ujwalx23"
             alt="Ujwal Singh's GitHub Contribution Chart"
             className="w-full min-w-[580px] h-auto"
           />
         </div>
         <div className="mt-3 flex justify-end">
           <a
-            href="https://github.com/UjjwalSingh-2"
+            href="https://github.com/ujwalx23"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-primary hover:underline"
