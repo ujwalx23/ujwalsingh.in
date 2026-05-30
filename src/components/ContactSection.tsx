@@ -14,12 +14,14 @@ const ContactSection = () => {
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
+    const reason = formData.get("reason") as string;
     const message = formData.get("message") as string;
 
     const newSubmission = {
       id: `msg_${Date.now()}`,
       name,
       email,
+      reason,
       message,
       timestamp: new Date().toISOString()
     };
@@ -42,6 +44,8 @@ const ContactSection = () => {
       setIsSubmitted(true);
     }, 600);
   };
+
+  const reasonOptions: string[] = t("contact.reasonOptions") || [];
 
   if (isSubmitted) {
     return (
@@ -74,7 +78,7 @@ const ContactSection = () => {
             name="name"
             required
             className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all"
-            placeholder={t("contact.nameLabel")}
+            placeholder={t("contact.namePlaceholder")}
           />
         </div>
 
@@ -89,14 +93,44 @@ const ContactSection = () => {
             name="email"
             required
             className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all"
-            placeholder="your@email.com"
+            placeholder={t("contact.emailPlaceholder")}
           />
+        </div>
+
+        {/* Describe Yourself */}
+        <div className="space-y-1">
+          <label htmlFor="reason" className="block text-xs font-semibold text-foreground/80">
+            {t("contact.reasonLabel")}
+          </label>
+          <div className="relative">
+            <select
+              id="reason"
+              name="reason"
+              required
+              className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all appearance-none cursor-pointer"
+              defaultValue=""
+            >
+              <option value="" disabled className="text-muted-foreground text-xs">
+                {t("contact.reasonPlaceholder")}
+              </option>
+              {reasonOptions.map((option) => (
+                <option key={option} value={option} className="bg-background text-foreground text-xs">
+                  {option}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground">
+              <svg className="fill-current h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </div>
+          </div>
         </div>
 
         {/* Message */}
         <div className="space-y-1">
           <label htmlFor="message" className="block text-xs font-semibold text-foreground/80">
-            {t("contact.msgLabel")}
+            {t("contact.msgLabel")} *
           </label>
           <textarea
             id="message"
@@ -104,7 +138,7 @@ const ContactSection = () => {
             required
             rows={4}
             className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all resize-none"
-            placeholder="Type your message..."
+            placeholder={t("contact.msgPlaceholder")}
           />
         </div>
 

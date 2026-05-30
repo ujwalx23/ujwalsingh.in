@@ -141,7 +141,7 @@ const Home = () => {
       description: language === "en" ? "AI-powered medical assistant for instant health insights and symptom checking." :
                    language === "fr" ? "Assistant médical alimenté par l'IA pour des informations de santé instantanées." :
                    language === "es" ? "Asistente médico impulsado por IA para información de salud instantánea." :
-                   language === "zh" ? "AI 驱动的医疗助手，提供即时健康分析与症状评估。" :
+                   language === "zh" ? "AI 驱动的医疗助手，提供即时健康 analysis 与症状评估。" :
                    "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
       img: "/images/medisoul.png",
       url: "https://cure23.vercel.app/",
@@ -190,33 +190,6 @@ const Home = () => {
     }
   ];
 
-  const metrics = [
-    {
-      value: "10+",
-      label: language === "en" ? "Digital Products" :
-             language === "fr" ? "Produits numériques" :
-             language === "es" ? "Productos digitales" :
-             language === "zh" ? "数字产品" :
-             "डिजिटल उत्पाद"
-    },
-    {
-      value: "5+",
-      label: language === "en" ? "Locales Translated" :
-             language === "fr" ? "Langues traduites" :
-             language === "es" ? "Idiomas traducidos" :
-             language === "zh" ? "支持语言" :
-             "अनुवादित भाषाएं"
-    },
-    {
-      value: "100%",
-      label: language === "en" ? "Offline Capable" :
-             language === "fr" ? "Hors ligne" :
-             language === "es" ? "Capaz fuera de línea" :
-             language === "zh" ? "离线支持" :
-             "ऑफ़लाइन सक्षम"
-    }
-  ];
-
   // Localized preview section headers
   const aboutMeTitle = language === "en" ? "About Me" :
                        language === "fr" ? "À propos de moi" :
@@ -252,7 +225,7 @@ const Home = () => {
                     language === "fr" ? "Modèles d'ingénierie modernes utilisés pour créer des applications évolutives." :
                     language === "es" ? "Patrones de ingeniería modernos utilizados para crear aplicaciones escalables." :
                     language === "zh" ? "用于构建可扩展应用程序的现代工程设计模式。" :
-                    "स्केलेबल एप्लिकेशन बनाने के लिए उपयोग किए जाने वाले आधुनिक इंजीनियरिंग पैटर्न।";
+                    "स्केलेबल एप्लिकेशन बनाने के लिए उपयोग किए जाने वाले आधुनिक...।";
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-16 px-1 sm:px-0 animate-in fade-in duration-300">
@@ -278,22 +251,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Metrics Section */}
-      <section className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center fade-in-up stagger-1">
-        {metrics.map((metric) => (
-          <div key={metric.label} className="glass-card p-4 border border-primary/10">
-            <div className="text-2xl sm:text-3xl font-extrabold gradient-text font-display">
-              {metric.value}
-            </div>
-            <div className="text-[10px] sm:text-xs text-muted-foreground font-semibold uppercase tracking-wider mt-1">
-              {metric.label}
-            </div>
-          </div>
-        ))}
-      </section>
-
       {/* About Me Preview Card Section */}
-      <section className="fade-in-up stagger-2">
+      <section className="fade-in-up stagger-1">
         <div className="glass-card p-6 md:p-8 border border-primary/10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
           <div className="shrink-0 relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-accent opacity-20 blur-xl rounded-2xl group-hover:opacity-30 transition-opacity duration-500" />
@@ -333,7 +292,7 @@ const Home = () => {
       </section>
 
       {/* Social Links */}
-      <section className="fade-in-up stagger-3">
+      <section className="fade-in-up stagger-2">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.connectTitle")}</h2>
@@ -360,7 +319,7 @@ const Home = () => {
       </section>
 
       {/* Capabilities/Focus Section */}
-      <section className="fade-in-up stagger-4">
+      <section className="fade-in-up stagger-3">
         <div className="mb-6">
           <h2 className="text-xl sm:text-2xl font-bold">{focusTitle}</h2>
           <p className="text-xs text-muted-foreground mt-0.5">{focusDesc}</p>
@@ -384,7 +343,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects Grid */}
-      <section className="fade-in-up stagger-5">
+      <section className="fade-in-up stagger-4">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.projectsTitle")}</h2>
@@ -430,7 +389,7 @@ const Home = () => {
       </section>
 
       {/* Reflections Preview Section */}
-      <section className="fade-in-up stagger-6">
+      <section className="fade-in-up stagger-5">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{thoughtsWallTitle}</h2>
@@ -470,7 +429,7 @@ const Home = () => {
       </section>
 
       {/* Simplified Contact Me Wrapper */}
-      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-7">
+      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-6">
         <ContactSection />
       </section>
     </div>

@@ -8,6 +8,7 @@ interface Message {
   email: string;
   message: string;
   timestamp: string;
+  reason?: string;
 }
 
 interface Thought {
@@ -217,8 +218,15 @@ export default function Admin() {
                   >
                     <Trash2 className="w-3.5 h-3.5" />
                   </button>
-                  <div className="text-[10px] font-bold text-primary mb-1">
-                    {msg.name} ({msg.email})
+                  <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap pr-6">
+                    <div className="text-[10px] font-bold text-primary">
+                      {msg.name} ({msg.email})
+                    </div>
+                    {msg.reason && (
+                      <span className="text-[9px] font-semibold bg-primary/10 border border-primary/20 text-primary px-1.5 py-0.5 rounded-md">
+                        {msg.reason}
+                      </span>
+                    )}
                   </div>
                   <p className="text-xs text-foreground/90 whitespace-pre-wrap leading-relaxed pr-6">
                     {msg.message}

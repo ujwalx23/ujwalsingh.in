@@ -232,12 +232,9 @@ const Thoughts = () => {
               return (
                 <div
                   key={thought.id}
-                  className={`hover-lift glass-card p-5 flex flex-col justify-between hover:border-primary/25 border ${gradientClass} ${
-                    isEven ? "animate-float-slow" : ""
-                  }`}
+                  className={`hover-lift glass-card p-5 flex flex-col justify-between hover:border-primary/25 border ${gradientClass}`}
                   style={{ 
-                    animationDelay: `${index * 0.15}s`,
-                    animationDuration: isEven ? `${6 + (index % 3)}s` : undefined
+                    animationDelay: `${index * 0.05}s`
                   }}
                 >
                   <div className="space-y-2">
