@@ -33,12 +33,16 @@ export function Navbar() {
   // Close desktop dropdown on click outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      // If the target is no longer in the document (e.g. unmounted during render), ignore it
+      if (!document.contains(target)) return;
+      
+      if (dropdownRef.current && !dropdownRef.current.contains(target)) {
         setLangDropdownOpen(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   const handleLanguageChange = (lang: Language) => {
@@ -88,7 +92,11 @@ export function Navbar() {
           {/* Language selector */}
           <div className="relative" ref={dropdownRef}>
             <button
-              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setLangDropdownOpen(!langDropdownOpen);
+              }}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-primary/10 bg-card/60 text-xs font-semibold text-muted-foreground hover:text-foreground hover:border-primary/25 transition-all cursor-pointer"
             >
               <Languages className="w-3.5 h-3.5" />
@@ -97,11 +105,15 @@ export function Navbar() {
             </button>
 
             {langDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-40 py-1 rounded-xl bg-card/95 backdrop-blur-xl border border-primary/15 shadow-xl animate-in fade-in duration-200">
+              <div className="absolute right-0 mt-2 w-40 py-1 rounded-xl bg-card/95 backdrop-blur-xl border border-primary/15 shadow-xl animate-in fade-in duration-200 z-50">
                 {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleLanguageChange(lang.code);
+                    }}
                     className={`w-full text-left px-4 py-2 text-xs font-semibold hover:bg-primary/10 transition-colors cursor-pointer ${
                       language === lang.code ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"
                     }`}
