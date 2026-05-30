@@ -27,6 +27,7 @@ export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [showMobileLangs, setShowMobileLangs] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close desktop dropdown on click outside
@@ -117,53 +118,87 @@ export function Navbar() {
       </header>
 
       {/* ─── MOBILE SCROLLABLE TAB BAR (Relocated Capsule Nav) ─── */}
-      <nav className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[94%] h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto scrollbar-none px-4 gap-4 justify-start">
-        {/* Navigation Links */}
-        {menuItems.map((item) => {
-          const isActive = location.pathname === item.url;
-          const Icon = item.icon;
-          return (
-            <Link
-              key={item.key}
-              to={item.url}
-              className={`flex flex-col items-center justify-center gap-1 py-1 px-2 rounded-xl transition-all cursor-pointer shrink-0 ${
-                isActive 
-                  ? "text-primary scale-105" 
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? "scale-110" : ""}`} />
-              <span className="text-[9px] font-bold tracking-wider">{t(`nav.${item.key}`)}</span>
-            </Link>
-          );
-        })}
+      <div className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[94%]">
+        <nav className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto scrollbar-none px-4 gap-4 justify-start relative">
+          {!showMobileLangs ? (
+            <>
+              {/* Navigation Links */}
+              {menuItems.map((item) => {
+                const isActive = location.pathname === item.url;
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.key}
+                    to={item.url}
+                    className={`flex flex-col items-center justify-center gap-1 py-1 px-2 rounded-xl transition-all cursor-pointer shrink-0 ${
+                      isActive 
+                        ? "text-primary scale-105" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? "scale-110" : ""}`} />
+                    <span className="text-[9px] font-bold tracking-wider">{t(`nav.${item.key}`)}</span>
+                  </Link>
+                );
+              })}
 
-        {/* Divider */}
-        <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+              {/* Divider */}
+              <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
 
-        {/* Language selector pills inside scrollable bar */}
-        {LANGUAGES.map((lang) => (
-          <button
-            key={lang.code}
-            onClick={() => handleLanguageChange(lang.code)}
-            className={`flex flex-col items-center justify-center px-2.5 py-1 rounded-xl cursor-pointer transition-all shrink-0 text-xs font-bold ${
-              language === lang.code
-                ? "bg-primary/20 text-primary border border-primary/20"
-                : "text-muted-foreground hover:text-foreground border border-transparent"
-            }`}
-          >
-            <span className="uppercase">{lang.code}</span>
-          </button>
-        ))}
+              {/* Language Button Toggle */}
+              <button
+                onClick={() => setShowMobileLangs(true)}
+                className="flex flex-col items-center justify-center gap-1 py-1 px-2 rounded-xl transition-all text-muted-foreground hover:text-foreground cursor-pointer shrink-0"
+              >
+                <Languages className="w-5 h-5" />
+                <span className="text-[9px] font-bold tracking-wider uppercase">{language}</span>
+              </button>
+            </>
+          ) : (
+            <>
+              {/* Back Button */}
+              <button
+                onClick={() => setShowMobileLangs(false)}
+                className="flex items-center gap-1 py-1 px-2 rounded-xl transition-all text-primary hover:text-primary/80 cursor-pointer shrink-0 text-xs font-bold"
+              >
+                <span>← {language === "zh" ? "返回" : language === "hi" ? "पीछे" : "Back"}</span>
+              </button>
 
-        {/* Divider */}
-        <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+              {/* Divider */}
+              <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
 
-        {/* Theme Toggle inside scrollable bar */}
-        <div className="shrink-0 flex items-center justify-center">
-          <ThemeToggle />
-        </div>
-      </nav>
+              {/* Horizontal Language Options */}
+              {LANGUAGES.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    handleLanguageChange(lang.code);
+                    setShowMobileLangs(false);
+                  }}
+                  className={`flex flex-col items-center justify-center px-2.5 py-1 rounded-xl cursor-pointer transition-all shrink-0 text-xs font-bold ${
+                    language === lang.code
+                      ? "bg-primary/20 text-primary border border-primary/20"
+                      : "text-muted-foreground hover:text-foreground border border-transparent"
+                  }`}
+                >
+                  <span className="uppercase">{lang.code}</span>
+                </button>
+              ))}
+            </>
+          )}
+
+          {/* Divider */}
+          <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+
+          {/* Theme Toggle */}
+          <div className="shrink-0 flex items-center justify-center">
+            <ThemeToggle />
+          </div>
+
+          {/* Scroll fade overlay inside capsule */}
+          <div className="absolute right-1 top-1 bottom-1 w-10 pointer-events-none bg-gradient-to-l from-card/85 via-card/30 to-transparent rounded-r-2xl z-20" />
+        </nav>
+      </div>
     </div>
   );
 }
