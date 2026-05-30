@@ -1,62 +1,56 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-
-const reasonOptions = [
-  "Just Exploring",
-  "Looking for Help",
-  "Working & Learning",
-  "Creator / Developer",
-  "Here to Connect",
-  "Just Saying Hi",
-];
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
-    const reason = formData.get("reason") as string;
-    const message = (formData.get("message") as string) || null;
+    const message = formData.get("message") as string;
 
-    try {
-      // Save to database
-      const { error } = await supabase
-        .from("contact_submissions")
-        .insert({ name, email, reason, message });
+    const newSubmission = {
+      id: `msg_${Date.now()}`,
+      name,
+      email,
+      message,
+      timestamp: new Date().toISOString()
+    };
 
-      if (error) throw error;
+    // Save to local storage
+    setTimeout(() => {
+      const existing = localStorage.getItem("ujwal_contact_submissions");
+      let submissions = [];
+      if (existing) {
+        try {
+          submissions = JSON.parse(existing);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      submissions.unshift(newSubmission);
+      localStorage.setItem("ujwal_contact_submissions", JSON.stringify(submissions));
 
-      // Also send to Formspree as backup/notification
-      await fetch("https://formspree.io/f/mjknjgqo", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error("Form submission error:", error);
-    } finally {
       setIsSubmitting(false);
-    }
+      setIsSubmitted(true);
+    }, 600);
   };
 
   if (isSubmitted) {
     return (
       <section className="w-full fade-in-up stagger-6">
-        <h2 className="section-heading text-center">Get in Touch</h2>
-        <div className="glass-card p-8 text-center">
-          <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Form Submitted Successfully!</h3>
-          <p className="text-muted-foreground">Thanks for reaching out. I'll get back to you soon!</p>
+        <h2 className="text-xl font-bold font-display text-center mb-4">{t("contact.title")}</h2>
+        <div className="glass-card p-8 text-center space-y-3">
+          <CheckCircle className="w-14 h-14 text-primary mx-auto animate-pulse-glow" />
+          <h3 className="text-lg font-bold">{t("contact.successMsg")}</h3>
+          <p className="text-xs text-muted-foreground">{t("contact.subtitle")}</p>
         </div>
       </section>
     );
@@ -64,72 +58,64 @@ const ContactSection = () => {
 
   return (
     <section className="w-full fade-in-up stagger-6">
-      <h2 className="section-heading text-center">Get in Touch</h2>
+      <h2 className="text-xl font-bold font-display text-center mb-4">{t("contact.title")}</h2>
       <form
         onSubmit={handleSubmit}
-        className="glass-card p-4 sm:p-5 space-y-3 sm:space-y-4"
+        className="glass-card p-5 space-y-4 border border-primary/10"
       >
         {/* Name */}
-        <div>
-          <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground/80 mb-1 sm:mb-1.5">
-            Name
+        <div className="space-y-1">
+          <label htmlFor="name" className="block text-xs font-semibold text-foreground/80">
+            {t("contact.nameLabel")}
           </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all text-sm sm:text-base"
-            placeholder="Your name"
+            className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all"
+            placeholder={t("contact.nameLabel")}
           />
         </div>
 
         {/* Email */}
-        <div>
-          <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground/80 mb-1 sm:mb-1.5">
-            Email
+        <div className="space-y-1">
+          <label htmlFor="email" className="block text-xs font-semibold text-foreground/80">
+            {t("contact.emailLabel")}
           </label>
           <input
             type="email"
             id="email"
             name="email"
             required
-            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all text-sm sm:text-base"
+            className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all"
             placeholder="your@email.com"
           />
         </div>
 
-        {/* Describe Yourself Dropdown */}
-        <div>
-          <label htmlFor="reason" className="block text-xs sm:text-sm font-medium text-foreground/80 mb-1 sm:mb-1.5">
-            Describe Yourself
+        {/* Message */}
+        <div className="space-y-1">
+          <label htmlFor="message" className="block text-xs font-semibold text-foreground/80">
+            {t("contact.msgLabel")}
           </label>
-          <select
-            id="reason"
-            name="reason"
+          <textarea
+            id="message"
+            name="message"
             required
-            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all appearance-none cursor-pointer text-sm sm:text-base"
-            defaultValue=""
-          >
-            <option value="" disabled className="text-muted-foreground">
-              Select an option
-            </option>
-            {reasonOptions.map((option) => (
-              <option key={option} value={option} className="bg-background text-foreground">
-                {option}
-              </option>
-            ))}
-          </select>
+            rows={4}
+            className="w-full px-3 py-2.5 rounded-xl bg-primary/5 border border-primary/10 text-foreground text-xs focus:outline-none focus:border-primary/45 transition-all resize-none"
+            placeholder="Type your message..."
+          />
         </div>
 
-        {/* Submit Button */}
+        {/* Submit */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="glass-button bg-primary/20 border-primary/40 hover:bg-primary/30 w-full py-3 sm:py-3.5 font-medium disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+          className="w-full bg-primary text-primary-foreground hover:opacity-90 font-semibold py-3 rounded-xl flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 transition-all hover:scale-102 text-xs"
         >
-          <Send className="w-4 h-4" />
-          <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+          <Send className="w-3.5 h-3.5" />
+          <span>{isSubmitting ? t("contact.submittingButton") : t("contact.submitButton")}</span>
         </button>
       </form>
     </section>
