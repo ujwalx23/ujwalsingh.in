@@ -237,7 +237,7 @@ const Home = () => {
       />
 
       {/* Hero Section */}
-      <section className="text-center py-10 md:py-16 fade-in-up flex flex-col items-center">
+      <section className="text-center pt-10 pb-2 md:pt-16 md:pb-4 fade-in-up flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary mb-5 animate-pulse-glow">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: "3s" }} />
           <span>{t("home.available")}</span>

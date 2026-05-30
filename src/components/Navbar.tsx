@@ -170,7 +170,7 @@ export function Navbar() {
           onPointerDown={() => setIsTouchingNav(true)}
           onPointerUp={() => setIsTouchingNav(false)}
           onPointerCancel={() => setIsTouchingNav(false)}
-          className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative"
+          className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative pb-2.5"
         >
           {!showMobileLangs ? (
             <>
