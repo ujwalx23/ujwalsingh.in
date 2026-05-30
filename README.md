@@ -1,74 +1,87 @@
-# Welcome to your Lovable project
+# ✨ Ujwal Singh | Personal Developer Portfolio
 
-## Project info
+Welcome to the repository for **ujwalsingh.in**—an elite, highly interactive, and fully responsive developer portfolio built with modern frontend technologies. 
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Designed with rich aesthetics, glassmorphism, fluid animations, and mobile-first responsiveness, this site highlights software engineering works, tech stack proficiencies, and reflections. It operates **entirely client-side**, requiring no active backend database.
 
-## How can I edit this code?
+🔗 **Production URL**: [ujwalsingh.in](https://ujwalsingh.in)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🌟 Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 1. 🌐 Multi-Language Client-Side Translation
+* Select from 5 different language profiles from the navbar dropdown:
+  * **English (EN)**
+  * **French (Français - FR)**
+  * **Spanish (Español - ES)**
+  * **Mandarin (中文 - ZH)**
+  * **Hindi (हिन्दी - HI)**
+* All page descriptions, skills tabs, timeline milestones, websites lists, and form placeholders translate instantly with a smooth fade-in effect.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 2. 🤖 Interactive AI Portfolio Assistant
+* A custom-designed floating AI chat widget sits at the bottom-right corner of the page.
+* It features glassmorphism, pulse glowing state animations, and simulated typing delays.
+* Predefined options help recruiters quickly learn about Ujwal's background, top projects, skills, and contact handles.
 
-**Use your preferred IDE**
+### 3. 🔑 Gated Secret Admin Panel (`/adminxus23`)
+* Access a local admin dashboard at the custom path `/adminxus23` protected by the password `newmatt23`.
+* **Thoughts Moderator**: Remove any static or guest thoughts from the public Reflections board. Deletion pushes the target ID to a local blacklist (`localStorage`), dynamically filtering it out site-wide.
+* **Contact Inbox**: Read, manage, and delete contact message submissions stored locally in `localStorage`.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 4. 🗂️ Projects Showcase & Dialog Details
+* Search, filter, and discover web apps, canvas games, and utilities in a responsive grid.
+* Clicking on any card opens a premium detailed modal rendering tech badges, core features checklists, and live links.
+* Features top works including the **Namami Vindhyavasini** temple portal (`https://vnamami.vercel.app/`).
 
-The only requirement is having Bun installed - [install Bun](https://bun.sh/docs/installation)
+### 5. ✍️ Local Thoughts Guestbook Board
+* Share a thought on the public wall! Users can type in custom notes, set a name, and select one of three colorful themes (Coral, Teal, Pink). 
+* Includes full local delete controls and floating vertical animations.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Technology Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* **Core**: [React 19](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/)
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/), Vanilla CSS transitions, custom cubic-bezier animations
+* **UI Components**: [shadcn-ui](https://ui.shadcn.com/) (Radix UI primitives)
+* **Icons**: [Lucide React](https://lucide.dev/)
+* **Package Manager**: [Bun](https://bun.sh/) (or NPM)
 
-# Step 3: Install the necessary dependencies.
-bun install
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-bun run dev
-```
+## 🚀 Running Locally
 
-**Edit a file directly in GitHub**
+Follow these steps to run the development server on your machine:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ujwalx23/ujwalsingh.in.git
+   cd ujwalsingh.in
+   ```
 
-**Use GitHub Codespaces**
+2. **Install dependencies**:
+   ```bash
+   # Using Bun (Recommended)
+   bun install
+   
+   # Or using NPM
+   npm install
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Start the development server**:
+   ```bash
+   # Using Bun
+   bun run dev
+   
+   # Or using NPM
+   npm run dev
+   ```
 
-## What technologies are used for this project?
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-This project is built with:
+---
 
-- Bun 1.3.4
-- Vite 7.2.7
-- TypeScript
-- React 19.2.1
-- shadcn-ui
-- Tailwind CSS
+## 📄 License & Attribution
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Designed and developed by **Ujwal Singh**. Feel free to fork, explore, and use this template as inspiration for your own portfolio.
