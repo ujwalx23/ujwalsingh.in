@@ -53,7 +53,7 @@ export function Navbar() {
   return (
     <div className="w-full relative z-[90]">
       {/* ─── DESKTOP HEADER NAVBAR ─── */}
-      <header className="hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[95%] max-w-5xl h-16 px-6 items-center justify-between glass-card border border-primary/10 shadow-lg">
+      <header className="hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[95%] max-w-5xl h-16 px-6 items-center justify-between glass-card overflow-visible border border-primary/10 shadow-lg">
         {/* Logo and Status */}
         <Link to="/" className="flex items-center gap-2 font-bold text-base hover:opacity-80 transition-opacity">
           <span className="text-primary text-lg">✨</span>
