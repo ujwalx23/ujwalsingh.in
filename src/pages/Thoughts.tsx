@@ -137,10 +137,10 @@ const Thoughts = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-6 items-start">
         
         {/* Form panel */}
-        <section className="md:col-span-1 glass-card p-5 border-primary/15 md:sticky md:top-24 space-y-4">
+        <section className="glass-card p-5 border-primary/15 lg:sticky lg:top-24 space-y-4">
           <div className="flex items-center gap-1.5">
             <PenTool className="w-4 h-4 text-primary" />
             <h2 className="text-base font-bold">{t("thoughts.formTitle")}</h2>
@@ -215,7 +215,7 @@ const Thoughts = () => {
         </section>
 
         {/* Board notes list */}
-        <section className="md:col-span-2 space-y-4">
+        <section className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-base font-bold flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-primary" /> {t("thoughts.notesBoard")}
@@ -240,7 +240,7 @@ const Thoughts = () => {
                   <div className="space-y-2">
                     <Quote className="w-5 h-5 text-primary/30 group-hover:scale-105 transition-transform" />
                     <blockquote className="text-xs sm:text-sm font-semibold leading-relaxed text-foreground/90">
-                      “{thought.quote}”
+                      "{thought.quote}"
                     </blockquote>
                   </div>
 
