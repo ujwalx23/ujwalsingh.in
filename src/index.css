@@ -391,3 +391,27 @@
 .animate-float-slow {
   animation: floatSlow 6s ease-in-out infinite;
 }
+
+/* Mobile navbar thin scrollbar */
+.mobile-nav-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.35) transparent;
+}
+
+.mobile-nav-scrollbar::-webkit-scrollbar {
+  height: 3px;
+}
+
+.mobile-nav-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.mobile-nav-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.35);
+  border-radius: 10px;
+}
+
+.mobile-nav-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.55);
+}

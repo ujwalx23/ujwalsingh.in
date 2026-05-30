@@ -15,12 +15,12 @@ const menuItems = [
   { key: "contact", url: "/contact", icon: Mail },
 ];
 
-const LANGUAGES: { code: Language; label: string }[] = [
-  { code: "en", label: "English (EN)" },
-  { code: "fr", label: "Français (FR)" },
-  { code: "es", label: "Español (ES)" },
-  { code: "zh", label: "中文 (ZH)" },
-  { code: "hi", label: "हिन्दी (HI)" },
+const LANGUAGES: { code: Language; label: string; nativeChar: string; nativeName: string }[] = [
+  { code: "en", label: "English (EN)", nativeChar: "A", nativeName: "English" },
+  { code: "fr", label: "Français (FR)", nativeChar: "É", nativeName: "Français" },
+  { code: "es", label: "Español (ES)", nativeChar: "Ñ", nativeName: "Español" },
+  { code: "zh", label: "中文 (ZH)", nativeChar: "中", nativeName: "中文" },
+  { code: "hi", label: "हिन्दी (HI)", nativeChar: "अ", nativeName: "हिन्दी" },
 ];
 
 export function Navbar() {
@@ -131,7 +131,7 @@ export function Navbar() {
 
       {/* ─── MOBILE SCROLLABLE TAB BAR (Relocated Capsule Nav) ─── */}
       <div className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[94%]">
-        <nav className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto scrollbar-none px-4 gap-4 justify-start relative">
+        <nav className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative">
           {!showMobileLangs ? (
             <>
               {/* Navigation Links */}
@@ -183,17 +183,19 @@ export function Navbar() {
               {LANGUAGES.map((lang) => (
                 <button
                   key={lang.code}
+                  type="button"
                   onClick={() => {
                     handleLanguageChange(lang.code);
                     setShowMobileLangs(false);
                   }}
-                  className={`flex flex-col items-center justify-center px-2.5 py-1 rounded-xl cursor-pointer transition-all shrink-0 text-xs font-bold ${
+                  className={`flex flex-col items-center justify-center px-3 py-1 rounded-xl cursor-pointer transition-all shrink-0 ${
                     language === lang.code
                       ? "bg-primary/20 text-primary border border-primary/20"
                       : "text-muted-foreground hover:text-foreground border border-transparent"
                   }`}
                 >
-                  <span className="uppercase">{lang.code}</span>
+                  <span className="text-base font-bold leading-none">{lang.nativeChar}</span>
+                  <span className="text-[8px] font-semibold mt-0.5 opacity-70">{lang.nativeName}</span>
                 </button>
               ))}
             </>
