@@ -29,6 +29,38 @@ export function Navbar() {
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [showMobileLangs, setShowMobileLangs] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [scrollThumbWidth, setScrollThumbWidth] = useState(0);
+  const [canScroll, setCanScroll] = useState(false);
+  const [isTouchingNav, setIsTouchingNav] = useState(false);
+
+  // Track mobile nav scroll position for custom indicator
+  useEffect(() => {
+    const nav = mobileNavRef.current;
+    if (!nav) return;
+
+    const updateScroll = () => {
+      const maxScroll = nav.scrollWidth - nav.clientWidth;
+      if (maxScroll > 0) {
+        setCanScroll(true);
+        setScrollProgress(nav.scrollLeft / maxScroll);
+        setScrollThumbWidth(Math.max(12, (nav.clientWidth / nav.scrollWidth) * 100));
+      } else {
+        setCanScroll(false);
+        setScrollProgress(0);
+        setScrollThumbWidth(100);
+      }
+    };
+
+    updateScroll();
+    nav.addEventListener("scroll", updateScroll, { passive: true });
+    window.addEventListener("resize", updateScroll);
+    return () => {
+      nav.removeEventListener("scroll", updateScroll);
+      window.removeEventListener("resize", updateScroll);
+    };
+  }, [showMobileLangs]);
 
   // Close desktop dropdown on click outside
   useEffect(() => {
@@ -131,7 +163,15 @@ export function Navbar() {
 
       {/* ─── MOBILE SCROLLABLE TAB BAR (Relocated Capsule Nav) ─── */}
       <div className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[94%]">
-        <nav className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative">
+        <nav
+          ref={mobileNavRef}
+          onTouchStart={() => setIsTouchingNav(true)}
+          onTouchEnd={() => setIsTouchingNav(false)}
+          onPointerDown={() => setIsTouchingNav(true)}
+          onPointerUp={() => setIsTouchingNav(false)}
+          onPointerCancel={() => setIsTouchingNav(false)}
+          className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative"
+        >
           {!showMobileLangs ? (
             <>
               {/* Navigation Links */}
@@ -211,6 +251,18 @@ export function Navbar() {
 
           {/* Scroll fade overlay inside capsule */}
           <div className="absolute right-1 top-1 bottom-1 w-10 pointer-events-none bg-gradient-to-l from-card/85 via-card/30 to-transparent rounded-r-2xl z-20" />
+
+          {canScroll && (
+            <div className="absolute left-4 right-4 bottom-1.5 h-1 rounded-full bg-primary/10 overflow-hidden pointer-events-none">
+              <div
+                className={`h-full rounded-full bg-primary transition-all duration-150 ${isTouchingNav ? "opacity-100" : "opacity-85"}`}
+                style={{
+                  width: `${scrollThumbWidth}%`,
+                  transform: `translateX(${scrollProgress * (100 - scrollThumbWidth)}%)`,
+                }}
+              />
+            </div>
+          )}
         </nav>
       </div>
     </div>
