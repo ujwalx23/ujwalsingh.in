@@ -392,26 +392,30 @@
   animation: floatSlow 6s ease-in-out infinite;
 }
 
-/* Mobile navbar thin scrollbar */
+/* Mobile navbar thin scrollbar - always visible */
 .mobile-nav-scrollbar {
+  overflow-x: scroll !important;
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--primary) / 0.35) transparent;
+  scrollbar-color: hsl(var(--primary) / 0.4) hsl(var(--primary) / 0.1);
 }
 
 .mobile-nav-scrollbar::-webkit-scrollbar {
-  height: 3px;
+  height: 4px;
+  display: block !important;
 }
 
 .mobile-nav-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+  background: hsl(var(--primary) / 0.08);
   border-radius: 10px;
+  margin: 0 12px;
 }
 
 .mobile-nav-scrollbar::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary) / 0.35);
+  background: hsl(var(--primary) / 0.4);
   border-radius: 10px;
+  min-width: 30px;
 }
 
 .mobile-nav-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.55);
+  background: hsl(var(--primary) / 0.6);
 }
