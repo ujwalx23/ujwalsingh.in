@@ -395,6 +395,9 @@
 /* Mobile navbar thin scrollbar - always visible */
 .mobile-nav-scrollbar {
   overflow-x: scroll !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--primary) / 0.4) hsl(var(--primary) / 0.1);
 }
