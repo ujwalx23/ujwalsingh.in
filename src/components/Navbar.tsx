@@ -170,7 +170,7 @@ export function Navbar() {
           onPointerDown={() => setIsTouchingNav(true)}
           onPointerUp={() => setIsTouchingNav(false)}
           onPointerCancel={() => setIsTouchingNav(false)}
-          className="w-full h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative pb-2.5"
+          className="w-full h-[72px] rounded-2xl glass-card border border-primary/15 shadow-xl flex items-start pt-2.5 overflow-x-auto mobile-nav-scrollbar px-4 gap-4 justify-start relative"
         >
           {!showMobileLangs ? (
             <>
@@ -195,7 +195,7 @@ export function Navbar() {
               })}
 
               {/* Divider */}
-              <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+              <div className="h-8 w-[1px] bg-primary/15 shrink-0 self-center" />
 
               {/* Language Button Toggle */}
               <button
@@ -217,7 +217,7 @@ export function Navbar() {
               </button>
 
               {/* Divider */}
-              <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+              <div className="h-8 w-[1px] bg-primary/15 shrink-0 self-center" />
 
               {/* Horizontal Language Options */}
               {LANGUAGES.map((lang) => (
@@ -242,10 +242,10 @@ export function Navbar() {
           )}
 
           {/* Divider */}
-          <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+          <div className="h-8 w-[1px] bg-primary/15 shrink-0 self-center" />
 
           {/* Theme Toggle */}
-          <div className="shrink-0 flex items-center justify-center">
+          <div className="shrink-0 flex items-center justify-center self-center">
             <ThemeToggle />
           </div>
 
@@ -253,7 +253,7 @@ export function Navbar() {
           <div className="absolute right-1 top-1 bottom-1 w-10 pointer-events-none bg-gradient-to-l from-card/85 via-card/30 to-transparent rounded-r-2xl z-20" />
 
           {canScroll && (
-            <div className="absolute left-4 right-4 bottom-1.5 h-1 rounded-full bg-primary/10 overflow-hidden pointer-events-none">
+            <div className="absolute left-4 right-4 bottom-2 h-1 rounded-full bg-primary/10 overflow-hidden pointer-events-none">
               <div
                 className={`h-full rounded-full bg-primary transition-all duration-150 ${isTouchingNav ? "opacity-100" : "opacity-85"}`}
                 style={{

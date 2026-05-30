@@ -228,7 +228,7 @@ const Home = () => {
                     "स्केलेबल एप्लिकेशन बनाने के लिए उपयोग किए जाने वाले आधुनिक...।";
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-16 px-1 sm:px-0 animate-in fade-in duration-300">
+    <div className="w-full max-w-6xl mx-auto space-y-6 md:space-y-16 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
         title="Ujwal Singh | Software Developer, Creator & AI Enthusiast"
         description="Official website of Ujwal Singh. Explore projects, connect on social media, and discover work in web development and artificial intelligence."
@@ -237,7 +237,7 @@ const Home = () => {
       />
 
       {/* Hero Section */}
-      <section className="text-center pt-10 pb-2 md:pt-16 md:pb-4 fade-in-up flex flex-col items-center">
+      <section className="text-center pt-6 pb-0 md:pt-16 md:pb-4 fade-in-up flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary mb-5 animate-pulse-glow">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: "3s" }} />
           <span>{t("home.available")}</span>
