@@ -11,7 +11,7 @@ const menuItems = [
   { key: "overview", url: "/", icon: Home },
   { key: "bio", url: "/about", icon: User },
   { key: "works", url: "/websites", icon: Globe },
-  { key: "reflections", url: "/guestbook", icon: Quote },
+  { key: "reflections", url: "/reflections", icon: Quote },
   { key: "contact", url: "/contact", icon: Mail },
 ];
 

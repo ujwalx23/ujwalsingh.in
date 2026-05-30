@@ -113,7 +113,7 @@ const Websites = () => {
     {
       name: "MediSoul",
       img: "/images/medisoul.png",
-      url: "https://medisoul.vercel.app/",
+      url: "https://cure23.vercel.app/",
       category: "ai",
       tech: ["React", "TypeScript", "Tailwind CSS", "Gemini API"],
       translations: {

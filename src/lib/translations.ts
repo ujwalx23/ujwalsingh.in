@@ -109,7 +109,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Overview",
       bio: "Bio",
       works: "Works",
-      reflections: "Guestbook",
+      reflections: "Reflections",
       contact: "Contact"
     },
     home: {
@@ -232,7 +232,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Aperçu",
       bio: "Bio",
       works: "Projets",
-      reflections: "Livre d'or",
+      reflections: "Réflexions",
       contact: "Contact"
     },
     home: {
@@ -355,7 +355,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Inicio",
       bio: "Biografía",
       works: "Proyectos",
-      reflections: "Libro de visitas",
+      reflections: "Reflexiones",
       contact: "Contacto"
     },
     home: {
@@ -478,7 +478,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "主页",
       bio: "简介",
       works: "作品",
-      reflections: "留言板",
+      reflections: "感悟",
       contact: "联系"
     },
     home: {
@@ -601,7 +601,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "अवलोकन",
       bio: "बायो",
       works: "कार्य",
-      reflections: "गेस्टबुक",
+      reflections: "विचार",
       contact: "संपर्क"
     },
     home: {

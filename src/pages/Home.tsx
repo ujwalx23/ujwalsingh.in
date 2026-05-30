@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { ExternalLink, ArrowRight, Sparkles, Monitor, Cpu, Palette } from "lucide-react";
+import { ExternalLink, ArrowRight, Sparkles, Monitor, Cpu, Palette, Quote, User, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
+import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
 
 const Typewriter = ({ words }: { words: string[] }) => {
   const [index, setIndex] = useState(0);
@@ -71,6 +72,48 @@ const socialLinks = [
 
 const Home = () => {
   const { t, language } = useLanguage();
+  const [featuredThoughts, setFeaturedThoughts] = useState<any[]>([]);
+
+  useEffect(() => {
+    // 1. Fetch custom thoughts
+    const savedCustom = localStorage.getItem("ujwal_custom_thoughts");
+    let custom = [];
+    if (savedCustom) {
+      try {
+        custom = JSON.parse(savedCustom);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // 2. Fetch blacklist
+    const savedBlacklist = localStorage.getItem("ujwal_deleted_thoughts");
+    let blacklist: any[] = [];
+    if (savedBlacklist) {
+      try {
+        blacklist = JSON.parse(savedBlacklist);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // Static fallback quotes
+    const staticThoughts = [
+      { id: 1, quote: "Be kind. It’s okay if someone doesn’t meet your expectations.", author: "Ujwal Singh" },
+      { id: 2, quote: "What if there is no other universe and this is the only one you get!?", author: "Ujwal Singh" },
+      { id: 3, quote: "Pain is certain. Pain will go, but success will remain.", author: "Anonymous" },
+      { id: 4, quote: "Khud ko akela hokar kiske paas dekhte ho?", author: "Anonymous" },
+      { id: 5, quote: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" },
+      { id: 6, quote: "Just keep going, even on days you feel low!", author: "Ujwal Singh" },
+    ];
+
+    const activeStatic = staticThoughts.filter(t => !blacklist.includes(t.id));
+    const activeCustom = custom.filter((t: any) => !blacklist.includes(t.id));
+
+    // Combine and extract first 3 thoughts
+    const combined = [...activeCustom, ...activeStatic].slice(0, 3);
+    setFeaturedThoughts(combined);
+  }, []);
 
   const projects = [
     {
@@ -101,7 +144,7 @@ const Home = () => {
                    language === "zh" ? "AI 驱动的医疗助手，提供即时健康分析与症状评估。" :
                    "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
       img: "/images/medisoul.png",
-      url: "https://medisoul.vercel.app/",
+      url: "https://cure23.vercel.app/",
     },
   ];
 
@@ -174,6 +217,31 @@ const Home = () => {
     }
   ];
 
+  // Localized preview section headers
+  const aboutMeTitle = language === "en" ? "About Me" :
+                       language === "fr" ? "À propos de moi" :
+                       language === "es" ? "Sobre mí" :
+                       language === "zh" ? "关于我" :
+                       "मेरे बारे में";
+
+  const readFullBio = language === "en" ? "Read Full Bio" :
+                      language === "fr" ? "Lire la bio complète" :
+                      language === "es" ? "Ver biografía completa" :
+                      language === "zh" ? "阅读完整个人简介" :
+                      "बायो देखें";
+
+  const thoughtsWallTitle = language === "en" ? "Recent Reflections" :
+                            language === "fr" ? "Réflexions récentes" :
+                            language === "es" ? "Reflexiones recientes" :
+                            language === "zh" ? "近期感悟" :
+                            "हाल के विचार";
+
+  const writeThoughtBtn = language === "en" ? "Write a Reflection" :
+                          language === "fr" ? "Écrire une réflexion" :
+                          language === "es" ? "Escribir una reflexión" :
+                          language === "zh" ? "发布感悟" :
+                          "विचार साझा करें";
+
   const focusTitle = language === "en" ? "Core Specializations" :
                      language === "fr" ? "Spécialisations de base" :
                      language === "es" ? "Especialidades principales" :
@@ -224,8 +292,48 @@ const Home = () => {
         ))}
       </section>
 
-      {/* Social Links */}
+      {/* About Me Preview Card Section */}
       <section className="fade-in-up stagger-2">
+        <div className="glass-card p-6 md:p-8 border border-primary/10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          <div className="shrink-0 relative group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-accent opacity-20 blur-xl rounded-2xl group-hover:opacity-30 transition-opacity duration-500" />
+            <img
+              src={ujwalPhoto}
+              alt="Ujwal Singh"
+              className="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-top border border-primary/15"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80";
+              }}
+            />
+            <div className="absolute -bottom-1 -right-1 z-20 glass-card px-2 py-0.5 rounded-lg flex items-center gap-1 text-[10px] font-semibold border-primary/10">
+              <MapPin className="w-2.5 h-2.5 text-primary" />
+              <span>India</span>
+            </div>
+          </div>
+          <div className="flex-1 text-center md:text-left space-y-3">
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold font-display flex items-center justify-center md:justify-start gap-1.5">
+                <User className="w-4.5 h-4.5 text-primary" /> {aboutMeTitle}
+              </h2>
+              <p className="text-muted-foreground text-[11px] font-semibold mt-0.5">{t("about.subtitle")}</p>
+            </div>
+            <p className="text-xs text-foreground/80 leading-relaxed max-w-xl">
+              {t("about.bioText")}
+            </p>
+            <div className="flex justify-center md:justify-start pt-1.5">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-1 text-primary hover:underline text-xs font-semibold"
+              >
+                <span>{readFullBio}</span> <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Links */}
+      <section className="fade-in-up stagger-3">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.connectTitle")}</h2>
@@ -252,7 +360,7 @@ const Home = () => {
       </section>
 
       {/* Capabilities/Focus Section */}
-      <section className="fade-in-up stagger-3">
+      <section className="fade-in-up stagger-4">
         <div className="mb-6">
           <h2 className="text-xl sm:text-2xl font-bold">{focusTitle}</h2>
           <p className="text-xs text-muted-foreground mt-0.5">{focusDesc}</p>
@@ -276,7 +384,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects Grid */}
-      <section className="fade-in-up stagger-4">
+      <section className="fade-in-up stagger-5">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.projectsTitle")}</h2>
@@ -321,8 +429,48 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Reflections Preview Section */}
+      <section className="fade-in-up stagger-6">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold">{thoughtsWallTitle}</h2>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              {language === "en" ? "Latest thoughts and greetings left by board visitors." :
+               language === "fr" ? "Dernières pensées et salutations laissées par les visiteurs." :
+               language === "es" ? "Últimos pensamientos y saludos dejados por los visitantes." :
+               language === "zh" ? "留言板访客留下的最新想法和问候。" :
+               "बोर्ड पर छोड़े गए नवीनतम विचार और शुभकामनाएं।"}
+            </p>
+          </div>
+          <Link to="/reflections" className="flex items-center gap-1 text-primary hover:underline text-xs sm:text-sm font-semibold">
+            <span>{writeThoughtBtn}</span> <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {featuredThoughts.map((t, idx) => (
+            <div
+              key={t.id}
+              className={`glass-card p-5 border border-primary/10 hover-lift relative overflow-hidden flex flex-col justify-between ${
+                t.gradient || "bg-card/60"
+              }`}
+            >
+              <div className="absolute top-2 right-2 text-primary/10">
+                <Quote className="w-12 h-12" />
+              </div>
+              <p className="text-xs text-foreground/90 italic leading-relaxed relative z-10 font-medium">
+                “{t.quote}”
+              </p>
+              <span className="block text-[10px] font-bold text-primary mt-4 self-end relative z-10">
+                — {t.author}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Simplified Contact Me Wrapper */}
-      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-5">
+      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-7">
         <ContactSection />
       </section>
     </div>
