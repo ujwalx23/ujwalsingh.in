@@ -124,7 +124,7 @@ const Thoughts = () => {
       <PageSEO
         title={t("thoughts.title")}
         description={t("thoughts.subtitle")}
-        path="/thoughts"
+        path="/guestbook"
         keywords="Ujwal Singh thoughts, quotes, reflections, motivation"
       />
 

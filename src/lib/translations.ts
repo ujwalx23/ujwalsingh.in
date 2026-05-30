@@ -88,6 +88,18 @@ export interface TranslationDict {
     submittingButton: string;
     successMsg: string;
     errorMsg: string;
+    infoTitle: string;
+    infoDesc: string;
+    responseTitle: string;
+    responseDesc: string;
+    namePlaceholder: string;
+    emailPlaceholder: string;
+    reasonLabel: string;
+    reasonPlaceholder: string;
+    reasonOptions: string[];
+    msgPlaceholder: string;
+    successTitle: string;
+    successDesc: string;
   };
 }
 
@@ -97,7 +109,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Overview",
       bio: "Bio",
       works: "Works",
-      reflections: "Reflections",
+      reflections: "Guestbook",
       contact: "Contact"
     },
     home: {
@@ -185,7 +197,7 @@ export const translations: Record<Language, TranslationDict> = {
       guestLabel: "Guest"
     },
     contact: {
-      title: "Get In Touch",
+      title: "Contact Me",
       subtitle: "Send a message and I'll get back to you.",
       nameLabel: "Your Name",
       emailLabel: "Your Email",
@@ -193,7 +205,26 @@ export const translations: Record<Language, TranslationDict> = {
       submitButton: "Send Message",
       submittingButton: "Sending...",
       successMsg: "Message sent successfully!",
-      errorMsg: "Something went wrong. Please try again."
+      errorMsg: "Something went wrong. Please try again.",
+      infoTitle: "Get in Touch",
+      infoDesc: "I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out.",
+      responseTitle: "Quick Response",
+      responseDesc: "I typically respond within 24-48 hours. For urgent matters, connect with me on social media for a faster response.",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "your@email.com",
+      reasonLabel: "Describe Yourself",
+      reasonPlaceholder: "Select an option",
+      reasonOptions: [
+        "Just Exploring",
+        "Looking for Help",
+        "Working & Learning",
+        "Creator / Developer",
+        "Here to Connect",
+        "Just Saying Hi"
+      ],
+      msgPlaceholder: "Your message...",
+      successTitle: "Message Sent!",
+      successDesc: "Thanks for reaching out. I'll get back to you soon!"
     }
   },
   fr: {
@@ -201,7 +232,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Aperçu",
       bio: "Bio",
       works: "Projets",
-      reflections: "Réflexions",
+      reflections: "Livre d'or",
       contact: "Contact"
     },
     home: {
@@ -289,15 +320,34 @@ export const translations: Record<Language, TranslationDict> = {
       guestLabel: "Invité"
     },
     contact: {
-      title: "Entrer en contact",
+      title: "Contactez-moi",
       subtitle: "Envoyez un message et je vous répondrai.",
-      nameLabel: "Votre nom",
-      emailLabel: "Votre e-mail",
-      msgLabel: "Votre message",
+      nameLabel: "Votre Nom",
+      emailLabel: "Votre E-mail",
+      msgLabel: "Votre Message",
       submitButton: "Envoyer le message",
       submittingButton: "Envoi en cours...",
-      successMsg: "Message envoyé avec succès!",
-      errorMsg: "Un problème est survenu. Veuillez réessayer."
+      successMsg: "Message envoyé avec succès !",
+      errorMsg: "Un problème est survenu. Veuillez réessayer.",
+      infoTitle: "Entrer en contact",
+      infoDesc: "J'aimerais avoir de vos nouvelles ! Que vous ayez une question, que vous vouliez collaborer ou simplement dire bonjour, n'hésitez pas à me contacter.",
+      responseTitle: "Réponse rapide",
+      responseDesc: "Je réponds généralement dans les 24 à 48 heures. Pour les questions urgentes, connectez-vous avec moi sur les réseaux sociaux pour une réponse plus rapide.",
+      namePlaceholder: "Votre nom",
+      emailPlaceholder: "votre@email.com",
+      reasonLabel: "Décrivez-vous",
+      reasonPlaceholder: "Sélectionnez une option",
+      reasonOptions: [
+        "Juste pour explorer",
+        "Besoin d'aide",
+        "Travail et apprentissage",
+        "Créateur / Développeur",
+        "Pour se connecter",
+        "Juste pour dire bonjour"
+      ],
+      msgPlaceholder: "Votre message...",
+      successTitle: "Message envoyé !",
+      successDesc: "Merci de m'avoir contacté. Je vous répondrai bientôt !"
     }
   },
   es: {
@@ -305,7 +355,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "Inicio",
       bio: "Biografía",
       works: "Proyectos",
-      reflections: "Reflexiones",
+      reflections: "Libro de visitas",
       contact: "Contacto"
     },
     home: {
@@ -393,15 +443,34 @@ export const translations: Record<Language, TranslationDict> = {
       guestLabel: "Invitado"
     },
     contact: {
-      title: "Contactar",
+      title: "Contáctame",
       subtitle: "Envía un mensaje y me pondré en contacto contigo.",
-      nameLabel: "Tu nombre",
-      emailLabel: "Tu correo electrónico",
-      msgLabel: "Tu mensaje",
+      nameLabel: "Tu Nombre",
+      emailLabel: "Tu Correo electrónico",
+      msgLabel: "Tu Mensaje",
       submitButton: "Enviar mensaje",
       submittingButton: "Enviando...",
       successMsg: "¡Mensaje enviado con éxito!",
-      errorMsg: "Algo salió mal. Por favor, inténtalo de nuevo."
+      errorMsg: "Algo salió mal. Por favor, inténtalo de nuevo.",
+      infoTitle: "Ponte en contacto",
+      infoDesc: "¡Me encantaría saber de ti! Ya sea que tengas una pregunta, quieras colaborar o simplemente decir hola, no dudes en comunicarte.",
+      responseTitle: "Respuesta rápida",
+      responseDesc: "Normalmente respondo dentro de 24-48 horas. Para asuntos urgentes, conéctate conmigo en las redes sociales para una respuesta más rápida.",
+      namePlaceholder: "Tu nombre",
+      emailPlaceholder: "tu@email.com",
+      reasonLabel: "Descríbete",
+      reasonPlaceholder: "Selecciona una opción",
+      reasonOptions: [
+        "Solo explorando",
+        "Buscando ayuda",
+        "Trabajando y aprendiendo",
+        "Creador / Desarrollador",
+        "Para conectar",
+        "Solo para decir hola"
+      ],
+      msgPlaceholder: "Tu mensaje...",
+      successTitle: "¡Mensaje enviado!",
+      successDesc: "Gracias por comunicarte. ¡Me pondré en contacto contigo pronto!"
     }
   },
   zh: {
@@ -409,7 +478,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "主页",
       bio: "简介",
       works: "作品",
-      reflections: "思考",
+      reflections: "留言板",
       contact: "联系"
     },
     home: {
@@ -497,15 +566,34 @@ export const translations: Record<Language, TranslationDict> = {
       guestLabel: "访客"
     },
     contact: {
-      title: "取得联系",
+      title: "联系我",
       subtitle: "发送消息，我会尽快给您回复。",
-      nameLabel: "姓名",
-      emailLabel: "邮箱",
-      msgLabel: "消息",
+      nameLabel: "您的姓名",
+      emailLabel: "您的电子邮箱",
+      msgLabel: "您的消息",
       submitButton: "发送消息",
       submittingButton: "正在发送...",
       successMsg: "消息发送成功！",
-      errorMsg: "发生了一些错误，请重试。"
+      errorMsg: "发生了一些错误，请重试。",
+      infoTitle: "取得联系",
+      infoDesc: "我很想收到您的来信！无论您有任何问题、想合作还是只想打个招呼，请随时与我联系。",
+      responseTitle: "快速回复",
+      responseDesc: "我通常在24-48小时内回复。如有紧急情况，请在社交媒体上与我联系以获得更快回复。",
+      namePlaceholder: "您的姓名",
+      emailPlaceholder: "your@email.com",
+      reasonLabel: "描述您自己",
+      reasonPlaceholder: "选择一个选项",
+      reasonOptions: [
+        "只是随便看看",
+        "寻求帮助",
+        "工作与学习",
+        "创作者 / 开发者",
+        "来结识朋友",
+        "只是打个招呼"
+      ],
+      msgPlaceholder: "您的消息...",
+      successTitle: "消息已发送！",
+      successDesc: "感谢您的联系。我很快就会回复您！"
     }
   },
   hi: {
@@ -513,7 +601,7 @@ export const translations: Record<Language, TranslationDict> = {
       overview: "अवलोकन",
       bio: "बायो",
       works: "कार्य",
-      reflections: "विचार",
+      reflections: "गेस्टबुक",
       contact: "संपर्क"
     },
     home: {
@@ -601,7 +689,7 @@ export const translations: Record<Language, TranslationDict> = {
       guestLabel: "अतिथि"
     },
     contact: {
-      title: "संपर्क करें",
+      title: "मुझसे संपर्क करें",
       subtitle: "एक संदेश भेजें और मैं आपसे जल्द ही संपर्क करूंगा।",
       nameLabel: "आपका नाम",
       emailLabel: "आपका ईमेल",
@@ -609,7 +697,26 @@ export const translations: Record<Language, TranslationDict> = {
       submitButton: "संदेश भेजें",
       submittingButton: "भेजा जा रहा है...",
       successMsg: "संदेश सफलतापूर्वक भेजा गया!",
-      errorMsg: "कुछ गलत हो गया। कृपया पुन: प्रयास करें।"
+      errorMsg: "कुछ गलत हो गया। कृपया पुन: प्रयास करें।",
+      infoTitle: "संपर्क में रहें",
+      infoDesc: "मुझे आपकी बात सुनना अच्छा लगेगा! चाहे आपका कोई सवाल हो, सहयोग करना चाहते हों, या सिर्फ नमस्ते कहना चाहते हों, बेझिझक संपर्क करें।",
+      responseTitle: "त्वरित प्रतिक्रिया",
+      responseDesc: "मैं आम तौर पर 24-48 घंटों के भीतर जवाब देता हूं। तत्काल मामलों के लिए, तेज़ प्रतिक्रिया के लिए सोशल मीडिया पर मुझसे जुड़ें।",
+      namePlaceholder: "आपका नाम",
+      emailPlaceholder: "आपका@ईमेल.कॉम",
+      reasonLabel: "अपने बारे में बताएं",
+      reasonPlaceholder: "एक विकल्प चुनें",
+      reasonOptions: [
+        "बस तलाश कर रहे हैं",
+        "मदद की तलाश में",
+        "काम और सीख रहे हैं",
+        "निर्माता / डेवलपर",
+        "जुड़ने के लिए यहाँ हैं",
+        "बस नमस्ते कहने के लिए"
+      ],
+      msgPlaceholder: "आपका संदेश...",
+      successTitle: "संदेश भेजा गया!",
+      successDesc: "संपर्क करने के लिए धन्यवाद। मैं जल्द ही आपसे संपर्क करूंगा!"
     }
   }
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ExternalLink, ArrowRight, Sparkles } from "lucide-react";
+import { ExternalLink, ArrowRight, Sparkles, Monitor, Cpu, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import PageSEO from "@/components/PageSEO";
@@ -39,7 +39,7 @@ const Typewriter = ({ words }: { words: string[] }) => {
   }, [subIndex, index, reverse, words]);
 
   return (
-    <span className="font-semibold text-primary">
+    <span className="font-semibold text-primary font-mono">
       {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
     </span>
   );
@@ -80,7 +80,7 @@ const Home = () => {
                    language === "es" ? "Portal de templo espiritual para reservas y darshans." :
                    language === "zh" ? "寺庙在线预约和虚拟拜访的灵性门户网站。" :
                    "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल।",
-      img: "https://images.unsplash.com/photo-1608976478516-e57a3e811124?auto=format&fit=crop&w=400&q=80",
+      img: "/images/namami.png",
       url: "https://vnamami.vercel.app/",
     },
     {
@@ -94,16 +94,97 @@ const Home = () => {
       url: "https://wanderlustadventures23.vercel.app/",
     },
     {
-      name: "CuteList",
-      description: language === "en" ? "Delightful task management board styled with pastel themes." :
-                   language === "fr" ? "Tableau de tâches avec des thèmes pastels." :
-                   language === "es" ? "Tablero de tareas con temas de colores pastel." :
-                   language === "zh" ? "带有柔和马卡龙色调的趣味任务管理板。" :
-                   "पेस्टल थीम के साथ डिज़ाइन किया गया प्यारा कार्य प्रबंधक बोर्ड।",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
-      url: "https://cute23.vercel.app/",
+      name: "MediSoul",
+      description: language === "en" ? "AI-powered medical assistant for instant health insights and symptom checking." :
+                   language === "fr" ? "Assistant médical alimenté par l'IA pour des informations de santé instantanées." :
+                   language === "es" ? "Asistente médico impulsado por IA para información de salud instantánea." :
+                   language === "zh" ? "AI 驱动的医疗助手，提供即时健康分析与症状评估。" :
+                   "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
+      img: "/images/medisoul.png",
+      url: "https://medisoul.vercel.app/",
     },
   ];
+
+  const capabilities = [
+    {
+      title: language === "en" ? "Full-Stack Development" :
+             language === "fr" ? "Développement Full-Stack" :
+             language === "es" ? "Desarrollo Full-Stack" :
+             language === "zh" ? "全栈开发" :
+             "फुल-स्टैक डेवलपमेंट",
+      desc: language === "en" ? "Designing clean, strictly-typed React and TypeScript ecosystems that scale efficiently." :
+            language === "fr" ? "Conception d'écosystèmes React et TypeScript propres et strictement typés." :
+            language === "es" ? "Diseño de ecosistemas React y TypeScript limpios y estrictamente tipados." :
+            language === "zh" ? "设计清晰、严格类型的 React 和 TypeScript 生态系统，以实现高效的系统扩展。" :
+            "स्वच्छ, स्पष्ट रूप से टाइप किए गए रिएक्ट और टाइपस्क्रिप्ट पारिस्थितिकी तंत्र का निर्माण।",
+      icon: Monitor
+    },
+    {
+      title: language === "en" ? "AI & Intelligent Systems" :
+             language === "fr" ? "IA et Systèmes Intelligents" :
+             language === "es" ? "IA y Sistemas Inteligentes" :
+             language === "zh" ? "人工智能与智能系统" :
+             "एआई और इंटेलिजेंट सिस्टम",
+      desc: language === "en" ? "Integrating client-side LLM completions, natural language bots, and smart features." :
+            language === "fr" ? "Intégration de complétions LLM côté client et de bots en langage naturel." :
+            language === "es" ? "Integración de finalizaciones de LLM en el cliente y bots de lenguaje natural." :
+            language === "zh" ? "集成客户端大语言模型(LLM)接口、自然语言处理机器人和智能化日常应用。" :
+            "क्लाइंट-साइड एआई, प्राकृतिक भाषा बॉट और स्मार्ट सुविधाओं का एकीकरण।",
+      icon: Cpu
+    },
+    {
+      title: language === "en" ? "Premium UI Design" :
+             language === "fr" ? "Design UI de Premium" :
+             language === "es" ? "Diseño UI de Premium" :
+             language === "zh" ? "高保真界面设计" :
+             "प्रीमियम यूआई डिजाइन",
+      desc: language === "en" ? "Crafting gorgeous glassmorphism panels, fluid keyframe animations, and micro-interactions." :
+            language === "fr" ? "Création de magnifiques panneaux de glassmorphisme et d'animations fluides." :
+            language === "es" ? "Creación de hermosos paneles de glassmorphism y animaciones fluidas." :
+            language === "zh" ? "精心制作精美毛玻璃效果、流畅的关键帧动画与极具质感的交互微动效。" :
+            "सुंदर ग्लासमोर्फिज्म पैनल, सहज कीफ़्रेम एनिमेशन और सूक्ष्म-संवाद डिजाइन।",
+      icon: Palette
+    }
+  ];
+
+  const metrics = [
+    {
+      value: "10+",
+      label: language === "en" ? "Digital Products" :
+             language === "fr" ? "Produits numériques" :
+             language === "es" ? "Productos digitales" :
+             language === "zh" ? "数字产品" :
+             "डिजिटल उत्पाद"
+    },
+    {
+      value: "5+",
+      label: language === "en" ? "Locales Translated" :
+             language === "fr" ? "Langues traduites" :
+             language === "es" ? "Idiomas traducidos" :
+             language === "zh" ? "支持语言" :
+             "अनुवादित भाषाएं"
+    },
+    {
+      value: "100%",
+      label: language === "en" ? "Offline Capable" :
+             language === "fr" ? "Hors ligne" :
+             language === "es" ? "Capaz fuera de línea" :
+             language === "zh" ? "离线支持" :
+             "ऑफ़लाइन सक्षम"
+    }
+  ];
+
+  const focusTitle = language === "en" ? "Core Specializations" :
+                     language === "fr" ? "Spécialisations de base" :
+                     language === "es" ? "Especialidades principales" :
+                     language === "zh" ? "核心技术领域" :
+                     "मुख्य विशेषज्ञता";
+
+  const focusDesc = language === "en" ? "Modern engineering patterns used to craft scalable applications." :
+                    language === "fr" ? "Modèles d'ingénierie modernes utilisés pour créer des applications évolutives." :
+                    language === "es" ? "Patrones de ingeniería modernos utilizados para crear aplicaciones escalables." :
+                    language === "zh" ? "用于构建可扩展应用程序的现代工程设计模式。" :
+                    "स्केलेबल एप्लिकेशन बनाने के लिए उपयोग किए जाने वाले आधुनिक इंजीनियरिंग पैटर्न।";
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-16 px-1 sm:px-0 animate-in fade-in duration-300">
@@ -117,7 +198,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="text-center py-10 md:py-16 fade-in-up flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary mb-5 animate-pulse-glow">
-          <Sparkles className="w-3.5 h-3.5" />
+          <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: "3s" }} />
           <span>{t("home.available")}</span>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-2 animate-gradient-shift">
@@ -129,8 +210,22 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Metrics Section */}
+      <section className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center fade-in-up stagger-1">
+        {metrics.map((metric) => (
+          <div key={metric.label} className="glass-card p-4 border border-primary/10">
+            <div className="text-2xl sm:text-3xl font-extrabold gradient-text font-display">
+              {metric.value}
+            </div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground font-semibold uppercase tracking-wider mt-1">
+              {metric.label}
+            </div>
+          </div>
+        ))}
+      </section>
+
       {/* Social Links */}
-      <section className="fade-in-up stagger-1">
+      <section className="fade-in-up stagger-2">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.connectTitle")}</h2>
@@ -156,8 +251,32 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Capabilities/Focus Section */}
+      <section className="fade-in-up stagger-3">
+        <div className="mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold">{focusTitle}</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">{focusDesc}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {capabilities.map((cap) => {
+            const Icon = cap.icon;
+            return (
+              <div key={cap.title} className="glass-card p-5 border border-primary/10 flex flex-col space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-sm sm:text-base">{cap.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mt-1">{cap.desc}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Featured Projects Grid */}
-      <section className="fade-in-up stagger-2">
+      <section className="fade-in-up stagger-4">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">{t("home.projectsTitle")}</h2>
@@ -203,7 +322,7 @@ const Home = () => {
       </section>
 
       {/* Simplified Contact Me Wrapper */}
-      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-3">
+      <section className="max-w-xl mx-auto py-4 fade-in-up stagger-5">
         <ContactSection />
       </section>
     </div>

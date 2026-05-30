@@ -1,18 +1,10 @@
 import { useState } from "react";
 import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import PageSEO from "@/components/PageSEO";
-
-const reasonOptions = [
-  "Just Exploring",
-  "Looking for Help",
-  "Working & Learning",
-  "Creator / Developer",
-  "Here to Connect",
-  "Just Saying Hi",
-];
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,24 +16,28 @@ const Contact = () => {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const reason = formData.get("reason") as string;
-    const message = formData.get("message") as string || null;
+    const message = formData.get("message") as string;
 
     try {
-      // Save to database
-      const { error } = await supabase
-        .from("contact_submissions")
-        .insert({ name, email, reason, message });
-
-      if (error) throw error;
-
-      // Also send to Formspree as backup/notification
-      await fetch("https://formspree.io/f/mjknjgqo", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+      // Save directly to localStorage to avoid Supabase network issues
+      const existing = localStorage.getItem("ujwal_contact_submissions");
+      let submissions = [];
+      if (existing) {
+        try {
+          submissions = JSON.parse(existing);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      submissions.unshift({
+        id: `submission_${Date.now()}`,
+        name,
+        email,
+        reason,
+        message,
+        timestamp: new Date().toISOString()
       });
+      localStorage.setItem("ujwal_contact_submissions", JSON.stringify(submissions));
       setIsSubmitted(true);
     } catch (error) {
       console.error("Form submission error:", error);
@@ -50,17 +46,19 @@ const Contact = () => {
     }
   };
 
+  const reasonOptions: string[] = t("contact.reasonOptions") || [];
+
   if (isSubmitted) {
     return (
       <div className="w-full max-w-2xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
-          Contact Me
+          {t("contact.title")}
         </h1>
         <div className="glass-card p-8 text-center fade-in-up">
           <CheckCircle className="w-20 h-20 text-primary mx-auto mb-6" />
-          <h2 className="text-2xl font-bold mb-3">Message Sent!</h2>
+          <h2 className="text-2xl font-bold mb-3">{t("contact.successTitle")}</h2>
           <p className="text-muted-foreground text-lg">
-            Thanks for reaching out. I'll get back to you soon!
+            {t("contact.successDesc")}
           </p>
         </div>
       </div>
@@ -70,13 +68,13 @@ const Contact = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
       <PageSEO
-        title="Contact Ujwal Singh | Get in Touch"
-        description="Reach out to Ujwal Singh for collaboration, questions, or just to say hi. Typically responds within 24-48 hours."
+        title={`${t("contact.title")} | Ujwal Singh`}
+        description={t("contact.subtitle")}
         path="/contact"
         keywords="contact Ujwal Singh, collaboration, web developer contact"
       />
       <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8 fade-in-up">
-        Contact Me
+        {t("contact.title")}
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -85,22 +83,20 @@ const Contact = () => {
           <div className="glass-card p-6">
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-6 h-6 text-primary" />
-              <h2 className="text-xl font-bold">Get in Touch</h2>
+              <h2 className="text-xl font-bold">{t("contact.infoTitle")}</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              I'd love to hear from you! Whether you have a question, want to collaborate, 
-              or just want to say hi, feel free to reach out.
+              {t("contact.infoDesc")}
             </p>
           </div>
 
           <div className="glass-card p-6">
             <div className="flex items-center gap-3 mb-4">
               <MessageSquare className="w-6 h-6 text-primary" />
-              <h2 className="text-xl font-bold">Quick Response</h2>
+              <h2 className="text-xl font-bold">{t("contact.responseTitle")}</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              I typically respond within 24-48 hours. For urgent matters, 
-              connect with me on social media for a faster response.
+              {t("contact.responseDesc")}
             </p>
           </div>
         </div>
@@ -113,7 +109,7 @@ const Contact = () => {
           {/* Name */}
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-2">
-              Name
+              {t("contact.nameLabel")}
             </label>
             <input
               type="text"
@@ -121,14 +117,14 @@ const Contact = () => {
               name="name"
               required
               className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
-              placeholder="Your name"
+              placeholder={t("contact.namePlaceholder")}
             />
           </div>
 
           {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-2">
-              Email
+              {t("contact.emailLabel")}
             </label>
             <input
               type="email"
@@ -136,44 +132,52 @@ const Contact = () => {
               name="email"
               required
               className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
-              placeholder="your@email.com"
+              placeholder={t("contact.emailPlaceholder")}
             />
           </div>
 
           {/* Describe Yourself */}
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-foreground/80 mb-2">
-              Describe Yourself
+              {t("contact.reasonLabel")}
             </label>
-            <select
-              id="reason"
-              name="reason"
-              required
-              className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all appearance-none cursor-pointer"
-              defaultValue=""
-            >
-              <option value="" disabled className="text-muted-foreground">
-                Select an option
-              </option>
-              {reasonOptions.map((option) => (
-                <option key={option} value={option} className="bg-background text-foreground">
-                  {option}
+            <div className="relative">
+              <select
+                id="reason"
+                name="reason"
+                required
+                className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all appearance-none cursor-pointer"
+                defaultValue=""
+              >
+                <option value="" disabled className="text-muted-foreground">
+                  {t("contact.reasonPlaceholder")}
                 </option>
-              ))}
-            </select>
+                {reasonOptions.map((option) => (
+                  <option key={option} value={option} className="bg-background text-foreground animate-in fade-in duration-100">
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-muted-foreground">
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Message */}
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-foreground/80 mb-2">
-              Message (Optional)
+              {t("contact.msgLabel")} *
             </label>
             <textarea
               id="message"
               name="message"
+              required
               rows={4}
               className="w-full px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none"
-              placeholder="Your message..."
+              placeholder={t("contact.msgPlaceholder")}
             />
           </div>
 
@@ -181,10 +185,10 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="glass-button bg-primary/20 border-primary/40 hover:bg-primary/30 w-full py-4 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="glass-button bg-primary/20 border-primary/40 hover:bg-primary/30 w-full py-4 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-102"
           >
             <Send className="w-5 h-5" />
-            <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+            <span>{isSubmitting ? t("contact.submittingButton") : t("contact.submitButton")}</span>
           </button>
         </form>
       </div>

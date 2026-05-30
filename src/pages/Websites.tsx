@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExternalLink, Search, SlidersHorizontal, Code, Globe, Sparkles } from "lucide-react";
+import { ExternalLink, Search, Code, Globe, Sparkles } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
 import {
@@ -28,14 +28,13 @@ interface Project {
 
 const Websites = () => {
   const { t, language } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const websites: Project[] = [
     {
       name: "Namami Vindhyavasini",
-      img: "https://images.unsplash.com/photo-1608976478516-e57a3e811124?auto=format&fit=crop&w=400&q=80",
+      img: "/images/namami.png",
       url: "https://vnamami.vercel.app/",
       category: "web",
       tech: ["React", "TypeScript", "Tailwind CSS"],
@@ -61,7 +60,7 @@ const Websites = () => {
         zh: {
           categoryLabel: "网页应用",
           description: "寺庙在线预约和虚拟拜访的灵性门户网站。",
-          longDescription: "为 Vindhyavasini 寺庙构建的现代化、高度优化的灵性门户网站。支持在线预约、祈祷仪式安排和音视频多媒体播放。",
+          longDescription: "为 Vindhyavasini 寺庙构建的现代化、高度优化的灵性门户网站。支持在线预约、祈祷仪式安排 and 音视频多媒体播放。",
           features: ["在线拜访安排", "祈祷音乐播放器", "交互式历史文化指南"]
         },
         hi: {
@@ -108,6 +107,45 @@ const Websites = () => {
           description: "भारत की सांस्कृतिक विरासत की खोज के लिए एक यात्रा मंच।",
           longDescription: "भारत भर में सांस्कृतिक और प्राकृतिक स्थलों को प्रदर्शित करने के लिए डिज़ाइन किया गया एक यात्रा गाइड मंच।",
           features: ["विशेष यात्रा कार्यक्रम", "इंटरैक्टिव गाइड", "रिस्पॉन्सिव मानचित्र"]
+        }
+      }
+    },
+    {
+      name: "MediSoul",
+      img: "/images/medisoul.png",
+      url: "https://medisoul.vercel.app/",
+      category: "ai",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Gemini API"],
+      translations: {
+        en: {
+          categoryLabel: "AI Tool",
+          description: "AI-powered medical assistant for instant health insights and symptom checking.",
+          longDescription: "An intelligent medical companion that provides instant symptom checkups, personalized health insights, and tracking records, powered by client-side AI modules.",
+          features: ["AI Health Analysis", "Quick Appointments mockup", "Health history tracking"]
+        },
+        fr: {
+          categoryLabel: "Outil IA",
+          description: "Assistant médical alimenté par l'IA pour des informations instantanées sur la santé.",
+          longDescription: "Un compagnon médical intelligent qui fournit des vérifications instantanées des symptômes et des informations de santé personnalisées.",
+          features: ["Analyse de santé IA", "Prise de rendez-vous rapide", "Suivi des antécédents médicaux"]
+        },
+        es: {
+          categoryLabel: "Herramienta de IA",
+          description: "Asistente médico impulsado por IA para información de salud instantánea.",
+          longDescription: "Un compañero médico inteligente que proporciona comprobaciones instantáneas de síntomas y registros de seguimiento.",
+          features: ["Análisis de salud por IA", "Citas rápidas", "Seguimiento de historial médico"]
+        },
+        zh: {
+          categoryLabel: "AI 工具",
+          description: "AI 驱动的医疗助手，提供即时健康分析与症状评估。",
+          longDescription: "一个智能医疗助手，可提供即时症状评估、个性化健康建议和健康追踪，采用轻量级客户端模型集成。",
+          features: ["AI 症状智能分析", "预约挂号指南", "个人健康记录追踪"]
+        },
+        hi: {
+          categoryLabel: "एआई उपकरण",
+          description: "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
+          longDescription: "एक बुद्धिमान चिकित्सा साथी जो एआई मॉड्यूल द्वारा संचालित त्वरित लक्षण जांच और स्वास्थ्य रिकॉर्ड ट्रैकिंग प्रदान करता है।",
+          features: ["एआई स्वास्थ्य विश्लेषण", "त्वरित अपॉइंटमेंट बुकिंग", "स्वास्थ्य इतिहास ट्रैकिंग"]
         }
       }
     },
@@ -179,7 +217,7 @@ const Websites = () => {
           categoryLabel: "网页应用",
           description: "带有柔和马卡龙色调的趣味任务管理板。",
           longDescription: "一个将任务管理趣味化的待办事项清单。配有粉嫩的配色主题、微交互动画和清脆的任务完成音效。",
-          features: ["任务完成音效反馈", "粉粉的主题切换", "本地数据持久化"]
+          features: ["任务完成音效反馈", "粉粉的主题切换", "本地 data 持久化"]
         },
         hi: {
           categoryLabel: "वेब ऐप",
@@ -227,61 +265,14 @@ const Websites = () => {
           features: ["एआई संक्षिप्त सारांश", "स्रोत सत्यापन सूचकांक", "बुकमार्क सुविधा"]
         }
       }
-    },
-    {
-      name: "LoopPlay",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828043282.png",
-      url: "https://loopplay23.vercel.app/",
-      category: "game",
-      tech: ["HTML5 Canvas", "React", "AudioSynth"],
-      translations: {
-        en: {
-          categoryLabel: "Game Arcade",
-          description: "Retro game arcade bundling 23 lightweight mini-games.",
-          longDescription: "Featuring canvas physics calculations, retro graphics, and chiptune audio playbacks compiled in a responsive mobile-friendly dashboard.",
-          features: ["23 playable retro titles", "Local leaderboard storage", "Touch layout support"]
-        },
-        fr: {
-          categoryLabel: "Arcade de Jeux",
-          description: "Arcade rétro regroupant 23 mini-jeux légers.",
-          longDescription: "Avec des calculs physiques sur canvas et des graphismes rétro compilés dans un tableau de bord réactif et adapté aux mobiles.",
-          features: ["23 mini-jeux rétro jouables", "Classement local sauvegardé", "Support des commandes tactiles"]
-        },
-        es: {
-          categoryLabel: "Salón de Juegos",
-          description: "Arcade de juegos retro con 23 minijuegos ligeros.",
-          longDescription: "Con física de Canvas, gráficos retro y sonidos chiptune de 8 bits compilados en una interfaz responsiva móvil.",
-          features: ["23 juegos retro jugables", "Puntuaciones guardadas localmente", "Controles táctiles responsivos"]
-        },
-        zh: {
-          categoryLabel: "游戏大厅",
-          description: "包含 23 款轻量级像素小游戏的游戏中心。",
-          longDescription: "集成了基于 Canvas 渲染的像素小游戏，包括打砖块、跑酷等，支持移动端自适应触控布局。",
-          features: ["23 款即开即玩像素游戏", "本地排行榜高分榜", "移动端触控优化"]
-        },
-        hi: {
-          categoryLabel: "गेम आर्केड",
-          description: "रेट्रो गेम आर्केड जिसमें 23 हल्के मिनी-गेम शामिल हैं।",
-          longDescription: "कैनवास भौतिकी गणना, रेट्रो ग्राफिक्स और चिप्यून संगीत से सुसज्जित एक मोबाइल-अनुकूल गेमिंग डैशबोर्ड।",
-          features: ["23 खेलने योग्य रेट्रो गेम", "स्थानीय स्कोरबोर्ड भंडारण", "टच लेआउट समर्थन"]
-        }
-      }
-    },
-  ];
-
-  const CATEGORIES = [
-    { value: "all", label: t("websites.all") },
-    { value: "web", label: t("websites.webApps") },
-    { value: "ai", label: t("websites.aiTools") },
-    { value: "game", label: t("websites.games") },
+    }
   ];
 
   const filteredWebsites = websites.filter((site) => {
-    const matchesCategory = activeCategory === "all" || site.category === activeCategory;
     const matchesSearch =
       site.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       site.tech.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
+    return matchesSearch;
   });
 
   return (
@@ -290,7 +281,7 @@ const Websites = () => {
         title={t("websites.title")}
         description={t("websites.subtitle")}
         path="/websites"
-        keywords="Ujwal Singh projects, web apps, Wanderlust Adventures, CuteList, Newsnap"
+        keywords="Ujwal Singh projects, web apps, Wanderlust Adventures, MediSoul, CuteList, Newsnap"
       />
       
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-primary/10">
@@ -314,24 +305,6 @@ const Websites = () => {
             className="w-full bg-background/50 border border-primary/10 rounded-xl pl-8 pr-4 py-2 text-xs focus:outline-none focus:border-primary/40 transition-all"
           />
         </div>
-      </div>
-
-      {/* Category Tabs */}
-      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-thin">
-        <SlidersHorizontal className="w-3.5 h-3.5 text-muted-foreground shrink-0 hidden sm:inline" />
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat.value}
-            onClick={() => setActiveCategory(cat.value)}
-            className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border cursor-pointer ${
-              activeCategory === cat.value
-                ? "bg-primary border-primary text-primary-foreground shadow-sm shadow-primary/15 scale-102"
-                : "bg-card/40 border-primary/10 hover:border-primary/25 text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
       </div>
 
       {/* Projects Grid */}
