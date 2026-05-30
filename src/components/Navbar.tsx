@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
-  Home, User, Globe, Quote, Mail, Languages, ChevronDown, Sparkles
+  Home, User, Globe, Quote, Mail, Languages, ChevronDown
 } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Language } from "@/lib/translations";
@@ -28,14 +28,11 @@ export function Navbar() {
   const location = useLocation();
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const mobileDropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown on click outside
+  // Close desktop dropdown on click outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      const clickedOutsideDesktop = dropdownRef.current && !dropdownRef.current.contains(event.target as Node);
-      const clickedOutsideMobile = mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target as Node);
-      if (clickedOutsideDesktop && clickedOutsideMobile) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setLangDropdownOpen(false);
       }
     }
@@ -119,41 +116,9 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* ─── MOBILE CONTROLS WIDGET ─── */}
-      <div className="md:hidden fixed top-22 right-4 z-[90] flex items-center gap-2 bg-card/90 backdrop-blur-md p-1.5 rounded-xl border border-primary/15 shadow-md">
-        {/* Mobile Language selector */}
-        <div className="relative" ref={mobileDropdownRef}>
-          <button
-            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-primary/10 bg-background/50 text-[10px] font-bold text-muted-foreground hover:text-foreground cursor-pointer"
-          >
-            <Languages className="w-3.5 h-3.5" />
-            <span className="uppercase">{language}</span>
-            <ChevronDown className={`w-2.5 h-2.5 transition-transform duration-300 ${langDropdownOpen ? "rotate-180" : ""}`} />
-          </button>
-
-          {langDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-36 py-1 rounded-xl bg-card/95 backdrop-blur-xl border border-primary/15 shadow-xl animate-in fade-in duration-200">
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => handleLanguageChange(lang.code)}
-                  className={`w-full text-left px-3 py-2 text-[11px] font-semibold hover:bg-primary/10 transition-colors cursor-pointer ${
-                    language === lang.code ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {lang.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <ThemeToggle />
-      </div>
-
-      {/* ─── MOBILE TOP TAB BAR (Relocated Capsule Nav) ─── */}
-      <nav className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[92%] h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center justify-around px-2">
+      {/* ─── MOBILE SCROLLABLE TAB BAR (Relocated Capsule Nav) ─── */}
+      <nav className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[90] w-[94%] h-16 rounded-2xl glass-card border border-primary/15 shadow-xl flex items-center overflow-x-auto scrollbar-none px-4 gap-4 justify-start">
+        {/* Navigation Links */}
         {menuItems.map((item) => {
           const isActive = location.pathname === item.url;
           const Icon = item.icon;
@@ -161,7 +126,7 @@ export function Navbar() {
             <Link
               key={item.key}
               to={item.url}
-              className={`flex flex-col items-center justify-center gap-1 py-1 px-2 rounded-xl transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center gap-1 py-1 px-2 rounded-xl transition-all cursor-pointer shrink-0 ${
                 isActive 
                   ? "text-primary scale-105" 
                   : "text-muted-foreground hover:text-foreground"
@@ -172,6 +137,32 @@ export function Navbar() {
             </Link>
           );
         })}
+
+        {/* Divider */}
+        <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+
+        {/* Language selector pills inside scrollable bar */}
+        {LANGUAGES.map((lang) => (
+          <button
+            key={lang.code}
+            onClick={() => handleLanguageChange(lang.code)}
+            className={`flex flex-col items-center justify-center px-2.5 py-1 rounded-xl cursor-pointer transition-all shrink-0 text-xs font-bold ${
+              language === lang.code
+                ? "bg-primary/20 text-primary border border-primary/20"
+                : "text-muted-foreground hover:text-foreground border border-transparent"
+            }`}
+          >
+            <span className="uppercase">{lang.code}</span>
+          </button>
+        ))}
+
+        {/* Divider */}
+        <div className="h-8 w-[1px] bg-primary/15 shrink-0" />
+
+        {/* Theme Toggle inside scrollable bar */}
+        <div className="shrink-0 flex items-center justify-center">
+          <ThemeToggle />
+        </div>
       </nav>
     </div>
   );

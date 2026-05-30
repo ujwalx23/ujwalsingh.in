@@ -294,6 +294,14 @@
 }
 
 @layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   .text-glow {
     text-shadow: 0 0 20px hsl(var(--primary) / 0.4);
   }
