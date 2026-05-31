@@ -123,7 +123,7 @@ const Home = () => {
                    language === "es" ? "Portal de templo espiritual para reservas y darshans." :
                    language === "zh" ? "寺庙在线预约和虚拟拜访的灵性门户网站。" :
                    "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल।",
-      img: "/images/namami.png",
+      img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://vnamami.vercel.app/",
     },
     {
@@ -143,7 +143,7 @@ const Home = () => {
                    language === "es" ? "Asistente médico impulsado por IA para información de salud instantánea." :
                    language === "zh" ? "AI 驱动的医疗助手，提供即时健康 analysis 与症状评估。" :
                    "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
-      img: "/images/medisoul.png",
+      img: `${import.meta.env.BASE_URL}images/medisoul.png`,
       url: "https://cure23.vercel.app/",
     },
   ];

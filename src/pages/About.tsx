@@ -130,7 +130,7 @@ const About = () => {
 
             <div className="flex justify-center md:justify-start pt-2">
               <a
-                href="/Ujwal_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Ujwal_Resume.pdf`}
                 download="Ujwal_Resume.pdf"
                 className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground hover:opacity-90 font-semibold px-4 py-2 rounded-xl text-xs transition-all hover:scale-102 shadow-md shadow-primary/10"
               >

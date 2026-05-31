@@ -47,14 +47,14 @@ const websites = [
     name: "Rim Weather Guide",
     description:
       "A weather forecasting platform providing accurate weather data and smart travel tips for any place in the world.",
-    img: "/images/rim-weather.png",
+    img: `${import.meta.env.BASE_URL}images/rim-weather.png`,
     url: "https://rim-weather-guide.vercel.app/",
   },
   {
     name: "Appliance Care (SIEMENS)",
     description:
       "A professional washing machine repair and service platform with booking, warranty tracking, and multi-brand support.",
-    img: "/images/appliance-care.png",
+    img: `${import.meta.env.BASE_URL}images/appliance-care.png`,
     url: "https://appliance-care.vercel.app/",
   },
 ];

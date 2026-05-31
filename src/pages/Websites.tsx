@@ -34,7 +34,7 @@ const Websites = () => {
   const websites: Project[] = [
     {
       name: "Namami Vindhyavasini",
-      img: "/images/namami.png",
+      img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://vnamami.vercel.app/",
       category: "web",
       tech: ["React", "TypeScript", "Tailwind CSS"],
@@ -112,7 +112,7 @@ const Websites = () => {
     },
     {
       name: "MediSoul",
-      img: "/images/medisoul.png",
+      img: `${import.meta.env.BASE_URL}images/medisoul.png`,
       url: "https://cure23.vercel.app/",
       category: "ai",
       tech: ["React", "TypeScript", "Tailwind CSS", "Gemini API"],

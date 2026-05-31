@@ -1,7 +1,7 @@
 import { Github, Code, BookOpen, FileDown } from "lucide-react";
 
 const platforms = [
-  { name: "My Resume", icon: FileDown, url: "/Ujwal_Resume.pdf", isDownload: true },
+  { name: "My Resume", icon: FileDown, url: `${import.meta.env.BASE_URL}Ujwal_Resume.pdf`, isDownload: true },
   { name: "GitHub", icon: Github, url: "https://github.com/ujwalx23", isDownload: false },
   { name: "LeetCode", icon: Code, url: "https://leetcode.com/u/UjwalSingh23/", isDownload: false },
   { name: "TakeUforward", icon: BookOpen, url: "https://takeuforward.org/profile/Ujwal%20Singh", isDownload: false },
