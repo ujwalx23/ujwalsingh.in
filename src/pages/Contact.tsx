@@ -30,11 +30,18 @@ const Contact = () => {
       saveContactSubmission(submission);
 
       // Telegram Bot Notification
-      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+      const botToken = "8405397791:AAGO3Zo9r2a6tjP9qg8AUSWFwcPeK2-bw60";
+      const chatId = "5835649452";
 
       if (botToken && chatId) {
-        const textMessage = `📩 *New Contact Form Submission*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n🏷️ *Reason:* ${reason}\n💬 *Message:* ${message}`;
+        const escapeHtml = (text: string) => {
+          return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+        };
+
+        const textMessage = `📩 <b>New Contact Form Submission</b>\n\n👤 <b>Name:</b> ${escapeHtml(name)}\n📧 <b>Email:</b> ${escapeHtml(email)}\n🏷️ <b>Reason:</b> ${escapeHtml(reason)}\n💬 <b>Message:</b> ${escapeHtml(message)}`;
         
         await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
           method: "POST",
@@ -44,7 +51,7 @@ const Contact = () => {
           body: JSON.stringify({
             chat_id: chatId,
             text: textMessage,
-            parse_mode: "Markdown",
+            parse_mode: "HTML",
           }),
         });
       }

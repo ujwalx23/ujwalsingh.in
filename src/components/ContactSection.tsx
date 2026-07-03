@@ -29,6 +29,37 @@ const ContactSection = () => {
     await new Promise((resolve) => setTimeout(resolve, 600));
     saveContactSubmission(newSubmission);
 
+    try {
+      // Telegram Bot Notification
+      const botToken = "8405397791:AAGO3Zo9r2a6tjP9qg8AUSWFwcPeK2-bw60";
+      const chatId = "5835649452";
+
+      if (botToken && chatId) {
+        const escapeHtml = (text: string) => {
+          return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+        };
+
+        const textMessage = `📩 <b>New Contact Form Submission</b>\n\n👤 <b>Name:</b> ${escapeHtml(name)}\n📧 <b>Email:</b> ${escapeHtml(email)}\n🏷️ <b>Reason:</b> ${escapeHtml(reason)}\n💬 <b>Message:</b> ${escapeHtml(message)}`;
+        
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: textMessage,
+            parse_mode: "HTML",
+          }),
+        });
+      }
+    } catch (error) {
+      console.error("Telegram notification error:", error);
+    }
+
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
