@@ -30,8 +30,8 @@ const Contact = () => {
       saveContactSubmission(submission);
 
       // Telegram Bot Notification
-      const botToken = "8405397791:AAGO3Zo9r2a6tjP9qg8AUSWFwcPeK2-bw60";
-      const chatId = "5835649452";
+      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
       if (botToken && chatId) {
         const escapeHtml = (text: string) => {
