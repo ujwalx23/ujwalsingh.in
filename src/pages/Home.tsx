@@ -358,7 +358,7 @@ const Home = () => {
                   <img
                     src={project.img}
                     alt={project.name}
-                    className="w-full h-full object-cover transition-transform duration-500"
+                    className="w-full h-full object-contain bg-muted/20 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80";
                     }}

@@ -362,7 +362,7 @@ const Websites = () => {
                   <img
                     src={site.img}
                     alt={site.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain bg-muted/20 group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80`;
                     }}
@@ -420,7 +420,7 @@ const Websites = () => {
                     <img
                       src={selectedProject.img}
                       alt={selectedProject.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain bg-muted/20"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80`;
                       }}
