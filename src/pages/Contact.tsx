@@ -29,29 +29,43 @@ const Contact = () => {
       });
       saveContactSubmission(submission);
 
-      // Telegram Bot Notification
-      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+      // Telegram Notification: Direct on Local Dev, Secure Serverless API on Prod
+      if (import.meta.env.DEV) {
+        const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+        const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+        if (botToken && chatId) {
+          const escapeHtml = (text: string) => {
+            return text
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;");
+          };
 
-      if (botToken && chatId) {
-        const escapeHtml = (text: string) => {
-          return text
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;");
-        };
+          const textMessage = `📩 <b>New Contact Form Submission (Local Dev)</b>\n\n👤 <b>Name:</b> ${escapeHtml(name)}\n📧 <b>Email:</b> ${escapeHtml(email)}\n🏷️ <b>Reason:</b> ${escapeHtml(reason)}\n💬 <b>Message:</b> ${escapeHtml(message)}`;
 
-        const textMessage = `📩 <b>New Contact Form Submission</b>\n\n👤 <b>Name:</b> ${escapeHtml(name)}\n📧 <b>Email:</b> ${escapeHtml(email)}\n🏷️ <b>Reason:</b> ${escapeHtml(reason)}\n💬 <b>Message:</b> ${escapeHtml(message)}`;
-        
-        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: textMessage,
+              parse_mode: "HTML",
+            }),
+          });
+        }
+      } else {
+        await fetch("/api/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            chat_id: chatId,
-            text: textMessage,
-            parse_mode: "HTML",
+            name,
+            email,
+            reason,
+            message,
           }),
         });
       }
