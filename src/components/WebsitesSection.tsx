@@ -9,18 +9,18 @@ const websites = [
     url: "https://wanderlustadventures23.vercel.app/",
   },
   {
-    name: "Delve Together",
-    description:
-      "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
-    url: "https://delvetogether.vercel.app",
-  },
-  {
     name: "CuteList",
     description:
       "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
     img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
     url: "https://cute23.vercel.app/",
+  },
+  {
+    name: "Ecocatch",
+    description:
+      "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering and biogas plant setups.",
+    img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
+    url: "https://ecocatch-website.vercel.app",
   },
   {
     name: "Newsnap",
@@ -56,6 +56,13 @@ const websites = [
       "A professional washing machine repair and service platform with booking, warranty tracking, and multi-brand support.",
     img: `${import.meta.env.BASE_URL}images/appliance-care.png`,
     url: "https://appliance-care.vercel.app/",
+  },
+  {
+    name: "Delve Together",
+    description:
+      "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
+    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
+    url: "https://delvetogether.vercel.app",
   },
 ];
 

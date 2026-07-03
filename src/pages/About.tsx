@@ -104,7 +104,7 @@ const About = () => {
             <img
               src={ujwalPhoto}
               alt="Ujwal Singh"
-              className="relative z-10 w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover object-top shadow-lg border-2 border-primary/20"
+              className="relative z-10 w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover object-top shadow-lg border-2 border-primary/20"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80";
               }}

@@ -421,3 +421,22 @@
 .mobile-nav-scrollbar::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.6);
 }
+
+/* Botpress webchat mobile height override */
+@media screen and (max-width: 767px) {
+  #bp-webchat-container, 
+  iframe#bp-webchat, 
+  .bpw-layout,
+  iframe[src*="botpress"] {
+    height: 50% !important;
+    max-height: 50vh !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    border-radius: 16px 16px 0 0 !important;
+    position: fixed !important;
+  }
+}
+

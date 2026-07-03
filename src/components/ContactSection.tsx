@@ -1,48 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, type FormEvent } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/siteConfig";
+import { createContactSubmission, saveContactSubmission } from "@/lib/contactUtils";
 
 const ContactSection = () => {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const reason = formData.get("reason") as string;
-    const message = formData.get("message") as string;
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const reason = (formData.get("reason") as string) || "";
+    const message = (formData.get("message") as string) || "";
 
-    const newSubmission = {
-      id: `msg_${Date.now()}`,
+    const newSubmission = createContactSubmission({
       name,
       email,
       reason,
       message,
-      timestamp: new Date().toISOString()
-    };
+    });
 
-    // Save to local storage
-    setTimeout(() => {
-      const existing = localStorage.getItem("ujwal_contact_submissions");
-      let submissions = [];
-      if (existing) {
-        try {
-          submissions = JSON.parse(existing);
-        } catch (err) {
-          console.error(err);
-        }
-      }
-      submissions.unshift(newSubmission);
-      localStorage.setItem("ujwal_contact_submissions", JSON.stringify(submissions));
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    saveContactSubmission(newSubmission);
 
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 600);
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
   const reasonOptions: string[] = t("contact.reasonOptions") || [];
@@ -63,6 +51,9 @@ const ContactSection = () => {
   return (
     <section className="w-full fade-in-up stagger-6">
       <h2 className="text-xl font-bold font-display text-center mb-4">{t("contact.title")}</h2>
+      <p className="text-xs text-muted-foreground text-center max-w-xl mx-auto mb-4">
+        Prefer email? <a href={CONTACT_MAILTO} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
+      </p>
       <form
         onSubmit={handleSubmit}
         className="glass-card p-5 space-y-4 border border-primary/10"

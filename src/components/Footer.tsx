@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Sparkles, Code2, Heart } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/siteConfig";
 
 const Footer = () => {
   const { language, t } = useLanguage();
@@ -115,6 +116,9 @@ const Footer = () => {
           </Link>
           <p className="text-xs text-muted-foreground leading-relaxed max-w-sm">
             {text.bio}
+          </p>
+          <p className="text-xs text-muted-foreground max-w-sm">
+            Email: <a href={CONTACT_MAILTO} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
           </p>
           <div className="flex items-center gap-3.5 pt-2">
             {socialLinks.map((social) => {

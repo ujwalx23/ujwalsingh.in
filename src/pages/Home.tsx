@@ -122,9 +122,19 @@ const Home = () => {
                    language === "fr" ? "Portail de temple spirituel pour les réservations et darshans." :
                    language === "es" ? "Portal de templo espiritual para reservas y darshans." :
                    language === "zh" ? "寺庙在线预约和虚拟拜访的灵性门户网站。" :
-                   "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल।",
+                   "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल。",
       img: `${import.meta.env.BASE_URL}images/namami.png`,
-      url: "https://vnamami.vercel.app/",
+      url: "https://namamivindhyavasini.in",
+    },
+    {
+      name: "Ecocatch",
+      description: language === "en" ? "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering." :
+                   language === "fr" ? "(En développement) Site officiel d'Ecocatch, spécialisée dans la valorisation énergétique." :
+                   language === "es" ? "(En desarrollo) Sitio web oficial de Ecocatch, especializada en ingeniería de valorización." :
+                   language === "zh" ? "(开发中) Ecocatch 官方网站，专注于垃圾发电工程与沼气提纯技术。" :
+                   "(विकास के अधीन) कचरे से ऊर्जा बनाने वाली इंजीनियरिंग में विशेषज्ञता रखने वाली कंपनी इकोकैच की आधिकारिक वेबसाइट。",
+      img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
+      url: "https://ecocatch-website.vercel.app",
     },
     {
       name: "Wanderlust Adventures",
@@ -132,19 +142,9 @@ const Home = () => {
                    language === "fr" ? "Plateforme de voyage pour explorer le patrimoine de l'Inde." :
                    language === "es" ? "Plataforma de viajes para explorar el patrimonio de la India." :
                    language === "zh" ? "用于探索印度文化遗产的旅游分享平台。" :
-                   "भारत की सांस्कृतिक विरासत की खोज के लिए एक यात्रा मंच।",
+                   "भारत की सांस्कृतिक विरासत की खोज के लिए एक यात्रा मंच。",
       img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
       url: "https://wanderlustadventures23.vercel.app/",
-    },
-    {
-      name: "MediSoul",
-      description: language === "en" ? "AI-powered medical assistant for instant health insights and symptom checking." :
-                   language === "fr" ? "Assistant médical alimenté par l'IA pour des informations de santé instantanées." :
-                   language === "es" ? "Asistente médico impulsado por IA para información de salud instantánea." :
-                   language === "zh" ? "AI 驱动的医疗助手，提供即时健康 analysis 与症状评估。" :
-                   "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
-      img: `${import.meta.env.BASE_URL}images/medisoul.png`,
-      url: "https://cure23.vercel.app/",
     },
   ];
 
@@ -253,30 +253,15 @@ const Home = () => {
 
       {/* About Me Preview Card Section */}
       <section className="fade-in-up stagger-1">
-        <div className="glass-card p-6 md:p-8 border border-primary/10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-          <div className="shrink-0 relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-accent opacity-20 blur-xl rounded-2xl group-hover:opacity-30 transition-opacity duration-500" />
-            <img
-              src={ujwalPhoto}
-              alt="Ujwal Singh"
-              className="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-top border border-primary/15"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80";
-              }}
-            />
-            <div className="absolute -bottom-1 -right-1 z-20 glass-card px-2 py-0.5 rounded-lg flex items-center gap-1 text-[10px] font-semibold border-primary/10">
-              <MapPin className="w-2.5 h-2.5 text-primary" />
-              <span>India</span>
-            </div>
-          </div>
-          <div className="flex-1 text-center md:text-left space-y-3">
+        <div className="glass-card p-6 md:p-8 border border-primary/10">
+          <div className="text-center md:text-left space-y-3">
             <div>
               <h2 className="text-lg sm:text-xl font-bold font-display flex items-center justify-center md:justify-start gap-1.5">
                 <User className="w-4.5 h-4.5 text-primary" /> {aboutMeTitle}
               </h2>
               <p className="text-muted-foreground text-[11px] font-semibold mt-0.5">{t("about.subtitle")}</p>
             </div>
-            <p className="text-xs text-foreground/80 leading-relaxed max-w-xl">
+            <p className="text-xs text-foreground/80 leading-relaxed max-w-3xl">
               {t("about.bioText")}
             </p>
             <div className="flex justify-center md:justify-start pt-1.5">
@@ -354,37 +339,52 @@ const Home = () => {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <a
-              key={project.name}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-lift glass-card overflow-hidden group flex flex-col h-full border-primary/10 hover:border-primary/25"
-            >
-              <div className="w-full h-40 bg-muted overflow-hidden relative border-b border-primary/5">
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80";
-                  }}
-                />
-              </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="font-bold text-base mb-1.5 flex items-center gap-1.5 group-hover:text-primary transition-colors">
-                    {project.name}
-                    <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform" />
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
+          {projects.map((project) => {
+            const isLocal = project.name === "MediSoul" || project.name === "Delve Together" || project.name === "Newsnap";
+            const CardComponent = isLocal ? "div" : "a";
+            return (
+              <CardComponent
+                key={project.name}
+                {...(!isLocal ? {
+                  href: project.url,
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                } : {})}
+                className={`glass-card overflow-hidden group flex flex-col h-full border-primary/10 ${
+                  !isLocal ? "hover-lift hover:border-primary/25 cursor-pointer" : ""
+                }`}
+              >
+                <div className="w-full h-40 bg-muted overflow-hidden relative border-b border-primary/5">
+                  <img
+                    src={project.img}
+                    alt={project.name}
+                    className="w-full h-full object-cover transition-transform duration-500"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80";
+                    }}
+                  />
+                  {isLocal && (
+                    <span className="absolute top-2.5 right-2.5 bg-primary/20 text-primary border border-primary/20 backdrop-blur-md text-[9px] font-semibold px-2 py-0.5 rounded-full">
+                      {language === "hi" ? "लोकल" : language === "zh" ? "本地" : "Local"}
+                    </span>
+                  )}
                 </div>
-              </div>
-            </a>
-          ))}
+                <div className="p-4 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-bold text-base mb-1.5 flex items-center gap-1.5 group-hover:text-primary transition-colors">
+                      {project.name}
+                      {!isLocal && (
+                        <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform" />
+                      )}
+                    </h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </CardComponent>
+            );
+          })}
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bot, X, Send, Sparkles, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CONTACT_EMAIL } from "@/lib/siteConfig";
 
 interface Message {
   sender: "bot" | "user";
@@ -33,7 +34,7 @@ const CHAT_OPTIONS: ChatOption[] = [
   {
     label: "How can I contact him?",
     value: "contact_info",
-    response: "You can reach out to Ujwal easily! 📬\n\n• Head to the Contact page on this site and send a message directly.\n• Find him on LinkedIn: linkedin.com/in/ujwalsingh23/\n• Or check his GitHub activity: github.com/ujwalx23\n\nHe is always open to collaborative opportunities, interesting project discussions, or talking about AI!"
+    response: `You can reach out to Ujwal easily! 📬\n\n• Email: ${CONTACT_EMAIL}\n• Head to the Contact page on this site and send a message directly.\n• Find him on LinkedIn: linkedin.com/in/ujwalsingh23/\n• Or check his GitHub activity: github.com/ujwalx23\n\nHe is always open to collaborative opportunities, interesting project discussions, or talking about AI!`
   },
   {
     label: "Share a fun fact!",
@@ -104,7 +105,7 @@ export function AIHelperBot() {
       setIsTyping(false);
       
       // Basic rule matching for custom questions
-      let botResponse = "That's an interesting question! I am Ujwal's offline helper assistant, so my responses are simple. Feel free to click one of my quick questions, check out the About Me page, or send him a message through the Contact Me page!";
+      let botResponse = `That's an interesting question! I am Ujwal's offline helper assistant, so my responses are simple. Feel free to click one of my quick questions, check out the About Me page, or email him directly at ${CONTACT_EMAIL}.`;
       
       if (currentInput.includes("who") || currentInput.includes("about") || currentInput.includes("name")) {
         botResponse = CHAT_OPTIONS.find(o => o.value === "who_is_ujwal")?.response || botResponse;
@@ -146,7 +147,7 @@ export function AIHelperBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-[360px] sm:w-[380px] h-[520px] rounded-2xl bg-card/85 backdrop-blur-xl border border-primary/20 shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 z-50">
+        <div className="fixed bottom-0 right-0 left-0 sm:absolute sm:bottom-0 sm:right-0 sm:left-auto w-full sm:w-[380px] h-[50vh] sm:h-[520px] rounded-t-2xl sm:rounded-2xl bg-card/85 backdrop-blur-xl border border-primary/20 shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 z-50">
           
           {/* Chat Header */}
           <div className="p-4 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-b border-primary/15 flex items-center justify-between">
@@ -164,6 +165,7 @@ export function AIHelperBot() {
             </div>
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close chat"
               className="p-1.5 rounded-lg text-muted-foreground hover:bg-primary/10 hover:text-foreground transition-colors cursor-pointer"
             >
               <X className="w-4 h-4" />

@@ -35,7 +35,7 @@ const Websites = () => {
     {
       name: "Namami Vindhyavasini",
       img: `${import.meta.env.BASE_URL}images/namami.png`,
-      url: "https://vnamami.vercel.app/",
+      url: "https://namamivindhyavasini.in",
       category: "web",
       tech: ["React", "TypeScript", "Tailwind CSS"],
       translations: {
@@ -99,7 +99,7 @@ const Websites = () => {
         zh: {
           categoryLabel: "网页应用",
           description: "用于探索印度文化遗产的旅游分享平台。",
-          longDescription: "一个旨在展示印度各地文化遗产和自然风光的旅游指南平台。采用客户端渲染实现极速响应。",
+          longDescription: "一个旨在展示印度各地 cultural 遗产和自然风光的旅游指南平台。采用客户端渲染实现极速响应。",
           features: ["策划旅行路线", "交互式景点导览", "响应式地图缩放"]
         },
         hi: {
@@ -107,6 +107,45 @@ const Websites = () => {
           description: "भारत की सांस्कृतिक विरासत की खोज के लिए एक यात्रा मंच।",
           longDescription: "भारत भर में सांस्कृतिक और प्राकृतिक स्थलों को प्रदर्शित करने के लिए डिज़ाइन किया गया एक यात्रा गाइड मंच।",
           features: ["विशेष यात्रा कार्यक्रम", "इंटरैक्टिव गाइड", "रिस्पॉन्सिव मानचित्र"]
+        }
+      }
+    },
+    {
+      name: "Ecocatch",
+      img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
+      url: "https://ecocatch-website.vercel.app",
+      category: "web",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "Official Website",
+          description: "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering.",
+          longDescription: "Official corporate platform for Ecocatch, displaying details about biogas & bioCNG plant setups, waste separators, mixing systems, and clean energy solutions.",
+          features: ["Clean energy catalog", "Waste separator highlights", "Service details mockup"]
+        },
+        fr: {
+          categoryLabel: "Site Officiel",
+          description: "(En développement) Site officiel d'Ecocatch, spécialisée dans la valorisation énergétique des déchets.",
+          longDescription: "Plateforme corporative officielle pour Ecocatch, présentant des informations sur les installations de biogaz, de bioGNV et les solutions d'énergie propre.",
+          features: ["Catalogue d'énergie propre", "Présentation des séparateurs", "Détails des services"]
+        },
+        es: {
+          categoryLabel: "Sitio Oficial",
+          description: "(En desarrollo) Sitio web oficial de Ecocatch, especializada en ingeniería de valorización energética.",
+          longDescription: "Plataforma corporativa oficial de Ecocatch, que muestra detalles sobre configuraciones de plantas de biogás, separadores de residuos y soluciones de energía limpia.",
+          features: ["Catálogo de energía limpia", "Destacados de separadores", "Detalles de servicios"]
+        },
+        zh: {
+          categoryLabel: "官方网站",
+          description: "(开发中) Ecocatch 官方网站，专注于垃圾发电工程与沼气提纯技术。",
+          longDescription: "Ecocatch 官方企业平台，展示关于沼气与生物天然气（BioCNG）建厂、废弃物分离器、搅拌混合系统和清洁能源解决方案的详细信息。",
+          features: ["清洁能源目录", "废弃物分离器展示", "服务详情介绍"]
+        },
+        hi: {
+          categoryLabel: "आधिकारिक वेबसाइट",
+          description: "(विकास के अधीन) कचरे से ऊर्जा बनाने वाली इंजीनियरिंग में विशेषज्ञता रखने वाली कंपनी इकोकैच की आधिकारिक वेबसाइट।",
+          longDescription: "इकोकैच के लिए आधिकारिक कॉर्पोरेट प्लेटफॉर्म, जिसमें बायोगैस और बायोसीएनजी प्लांट सेटअप, कचरा विभाजक और स्वच्छ ऊर्जा समाधानों के बारे में विवरण शामिल हैं।",
+          features: ["स्वच्छ ऊर्जा सूची", "कचरा विभाजक की मुख्य विशेषताएं", "सेवा विवरण मॉकअप"]
         }
       }
     },
@@ -139,52 +178,13 @@ const Websites = () => {
           categoryLabel: "AI 工具",
           description: "AI 驱动的医疗助手，提供即时健康分析与症状评估。",
           longDescription: "一个智能医疗助手，可提供即时症状评估、个性化健康建议和健康追踪，采用轻量级客户端模型集成。",
-          features: ["AI 症状智能分析", "预约挂号指南", "个人健康记录追踪"]
+          features: ["AI 症状智能 analysis", "预约挂号指南", "个人健康记录追踪"]
         },
         hi: {
           categoryLabel: "एआई उपकरण",
           description: "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
           longDescription: "एक बुद्धिमान चिकित्सा साथी जो एआई मॉड्यूल द्वारा संचालित त्वरित लक्षण जांच और स्वास्थ्य रिकॉर्ड ट्रैकिंग प्रदान करता है।",
           features: ["एआई स्वास्थ्य विश्लेषण", "त्वरित अपॉइंटमेंट बुकिंग", "स्वास्थ्य इतिहास ट्रैकिंग"]
-        }
-      }
-    },
-    {
-      name: "Delve Together",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
-      url: "https://delvetogether.vercel.app",
-      category: "web",
-      tech: ["Next.js", "Socket.io", "Supabase"],
-      translations: {
-        en: {
-          categoryLabel: "Web App",
-          description: "Collaborative rooms and panels for quiet world discussions.",
-          longDescription: "A focused discussion alternative space built to escape the noise of mainstream feeds. Provides live chat rooms and document boards.",
-          features: ["Live discussion rooms", "Shared notes dashboard", "Filtered categories"]
-        },
-        fr: {
-          categoryLabel: "App Web",
-          description: "Salons collaboratifs pour des discussions mondiales calmes.",
-          longDescription: "Un espace alternatif de discussion conçu pour échapper au bruit des réseaux sociaux. Offre des salons de chat en direct.",
-          features: ["Salons de discussion en direct", "Tableau de notes partagé", "Filtrage par catégories"]
-        },
-        es: {
-          categoryLabel: "App Web",
-          description: "Salas colaborativas para debates tranquilos del mundo.",
-          longDescription: "Un espacio alternativo para debates estructurados lejos del ruido de las redes sociales. Proporciona salas de chat en vivo.",
-          features: ["Salas de discusión en vivo", "Tablero de notas compartido", "Filtros por categorías"]
-        },
-        zh: {
-          categoryLabel: "网页应用",
-          description: "用于对全球性事务进行理性探讨的协作室与论坛。",
-          longDescription: "一个旨在过滤社交媒体噪音的深度讨论平台。提供实时的文字交流讨论房间和协作看板。",
-          features: ["实时协作讨论室", "共享看板仪表盘", "按兴趣过滤板块"]
-        },
-        hi: {
-          categoryLabel: "वेब ऐप",
-          description: "शांत चर्चाओं के लिए सहयोगी कमरे और पैनल।",
-          longDescription: "सोशल मीडिया के शोर से दूर, सार्थक चर्चाओं के लिए बनाया गया एक मंच। यह लाइव चैट रूम और दस्तावेज़ बोर्ड प्रदान करता है।",
-          features: ["लाइव चर्चा कक्ष", "साझा नोट्स डैशबोर्ड", "वर्गीकृत फ़िल्टर"]
         }
       }
     },
@@ -265,6 +265,45 @@ const Websites = () => {
           features: ["एआई संक्षिप्त सारांश", "स्रोत सत्यापन सूचकांक", "बुकमार्क सुविधा"]
         }
       }
+    },
+    {
+      name: "Delve Together",
+      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
+      url: "https://delvetogether.vercel.app",
+      category: "web",
+      tech: ["Next.js", "Socket.io", "Supabase"],
+      translations: {
+        en: {
+          categoryLabel: "Web App",
+          description: "Collaborative rooms and panels for quiet world discussions.",
+          longDescription: "A focused discussion alternative space built to escape the noise of mainstream feeds. Provides live chat rooms and document boards.",
+          features: ["Live discussion rooms", "Shared notes dashboard", "Filtered categories"]
+        },
+        fr: {
+          categoryLabel: "App Web",
+          description: "Salons collaboratifs pour des discussions mondiales calmes.",
+          longDescription: "Un espace alternatif de discussion conçu pour échapper au bruit des réseaux sociaux. Offre des salons de chat en direct.",
+          features: ["Salons de discussion en direct", "Tableau de notes partagé", "Filtrage par catégories"]
+        },
+        es: {
+          categoryLabel: "App Web",
+          description: "Salas colaborativas para debates tranquilos del mundo.",
+          longDescription: "Un espacio alternativo para debates estructurados lejos del ruido de las redes sociales. Proporciona salas de chat en vivo.",
+          features: ["Salas de discusión en vivo", "Tablero de notas compartido", "Filtros por categorías"]
+        },
+        zh: {
+          categoryLabel: "网页应用",
+          description: "用于对全球性事务进行理性探讨的协作室与论坛。",
+          longDescription: "一个旨在过滤社交媒体噪音的深度讨论平台。提供实时的文字交流讨论房间和协作看板。",
+          features: ["实时协作讨论室", "共享看板仪表盘", "按兴趣过滤板块"]
+        },
+        hi: {
+          categoryLabel: "वेब ऐप",
+          description: "शांत चर्चाओं के लिए सहयोगी कमरे और पैनल।",
+          longDescription: "सोशल मीडिया के शोर से दूर, सार्थक चर्चाओं के लिए बनाया गया एक मंच। यह लाइव चैट रूम और दस्तावेज़ बोर्ड प्रदान करता है।",
+          features: ["लाइव चर्चा कक्ष", "साझा नोट्स डैशबोर्ड", "वर्गीकृत फ़िल्टर"]
+        }
+      }
     }
   ];
 
@@ -337,7 +376,9 @@ const Websites = () => {
                   <div className="space-y-1">
                     <h3 className="font-bold text-sm sm:text-base flex items-center justify-between group-hover:text-primary transition-colors">
                       {site.name}
-                      <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform shrink-0" />
+                      {!(site.name === "MediSoul" || site.name === "Delve Together" || site.name === "Newsnap") && (
+                        <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform shrink-0" />
+                      )}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
                       {detail.description}
@@ -367,27 +408,15 @@ const Websites = () => {
 
       {/* Detail Dialog */}
       <Dialog open={selectedProject !== null} onOpenChange={(open) => !open && setSelectedProject(null)}>
-        <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl border border-primary/20 shadow-2xl p-5 rounded-2xl animate-in fade-in duration-300">
+        <DialogContent className="max-w-md md:max-w-3xl bg-card/95 backdrop-blur-xl border border-primary/20 shadow-2xl p-5 md:p-6 rounded-2xl animate-in fade-in duration-300">
           {selectedProject && (() => {
             const detail = selectedProject.translations[language] || selectedProject.translations["en"];
+            const isLocal = selectedProject.name === "MediSoul" || selectedProject.name === "Delve Together" || selectedProject.name === "Newsnap";
             return (
-              <>
-                <DialogHeader className="mb-2">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <Badge className="bg-primary/20 text-primary border border-primary/20 text-[10px] px-2 py-0.5 rounded-full font-semibold">
-                      {detail.categoryLabel}
-                    </Badge>
-                  </div>
-                  <DialogTitle className="text-xl font-bold flex items-center justify-between">
-                    {selectedProject.name}
-                  </DialogTitle>
-                  <DialogDescription className="text-xs text-muted-foreground">
-                    Project specifications.
-                  </DialogDescription>
-                </DialogHeader>
-
-                <div className="space-y-4">
-                  <div className="w-full h-36 rounded-xl overflow-hidden bg-muted border border-primary/10">
+              <div className="flex flex-col md:flex-row gap-5 md:gap-6 text-left">
+                {/* Left Side: Image on Desktop, Top on Mobile */}
+                <div className="w-full md:w-5/12 flex flex-col justify-start">
+                  <div className="w-full h-40 md:h-64 rounded-xl overflow-hidden bg-muted border border-primary/10">
                     <img
                       src={selectedProject.img}
                       alt={selectedProject.name}
@@ -397,66 +426,93 @@ const Websites = () => {
                       }}
                     />
                   </div>
+                </div>
 
-                  <div>
-                    <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1 flex items-center gap-1">
-                      <Globe className="w-3 h-3 text-primary" /> {t("websites.overview")}
-                    </h4>
-                    <p className="text-xs text-foreground/90 leading-relaxed">
-                      {detail.longDescription}
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
-                      <Sparkles className="w-3 h-3 text-primary" /> {t("websites.highlights")}
-                    </h4>
-                    <ul className="grid grid-cols-1 gap-1.5 text-xs text-foreground/80 pl-1">
-                      {detail.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
-                      <Code className="w-3 h-3 text-primary" /> {t("websites.techStack")}
-                    </h4>
-                    <div className="flex flex-wrap gap-1.5">
-                      {selectedProject.tech.map((t) => (
-                        <Badge
-                          key={t}
-                          variant="secondary"
-                          className="bg-muted text-foreground border border-border/80 text-[10px] px-2 py-0.5"
-                        >
-                          {t}
+                {/* Right Side: Details */}
+                <div className="flex-1 flex flex-col justify-between space-y-4">
+                  <div className="space-y-4">
+                    <DialogHeader className="mb-2">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <Badge className="bg-primary/20 text-primary border border-primary/20 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                          {detail.categoryLabel}
                         </Badge>
-                      ))}
+                      </div>
+                      <DialogTitle className="text-xl font-bold flex items-center justify-between">
+                        {selectedProject.name}
+                      </DialogTitle>
+                      <DialogDescription className="text-xs text-muted-foreground">
+                        Project specifications.
+                      </DialogDescription>
+                    </DialogHeader>
+
+                    <div>
+                      <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1 flex items-center gap-1">
+                        <Globe className="w-3 h-3 text-primary" /> {t("websites.overview")}
+                      </h4>
+                      <p className="text-xs text-foreground/90 leading-relaxed">
+                        {detail.longDescription}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
+                        <Sparkles className="w-3 h-3 text-primary" /> {t("websites.highlights")}
+                      </h4>
+                      <ul className="grid grid-cols-1 gap-1.5 text-xs text-foreground/80 pl-1">
+                        {detail.features.map((feat, idx) => (
+                          <li key={idx} className="flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
+                        <Code className="w-3 h-3 text-primary" /> {t("websites.techStack")}
+                      </h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        {selectedProject.tech.map((t) => (
+                          <Badge
+                            key={t}
+                            variant="secondary"
+                            className="bg-muted text-foreground border border-border/80 text-[10px] px-2 py-0.5"
+                          >
+                            {t}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="flex justify-end gap-2 mt-5 pt-3 border-t border-primary/10">
-                  <button
-                    onClick={() => setSelectedProject(null)}
-                    className="px-3.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl transition-all cursor-pointer"
-                  >
-                    {t("websites.close")}
-                  </button>
-                  <a
-                    href={selectedProject.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 text-xs font-semibold bg-primary text-primary-foreground hover:opacity-90 rounded-xl flex items-center gap-1 shadow-md shadow-primary/15 transition-all hover:scale-102"
-                  >
-                    <span>{t("websites.visitLive")}</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  <div className="flex justify-end gap-2 mt-5 pt-3 border-t border-primary/10">
+                    <button
+                      onClick={() => setSelectedProject(null)}
+                      className="px-3.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl transition-all cursor-pointer"
+                    >
+                      {t("websites.close")}
+                    </button>
+                    {isLocal ? (
+                      <span
+                        className="px-3.5 py-1.5 text-xs font-semibold bg-primary/10 text-primary border border-primary/20 rounded-xl flex items-center gap-1 cursor-default select-none"
+                      >
+                        {language === "hi" ? "लोकल" : language === "zh" ? "本地" : "Local"}
+                      </span>
+                    ) : (
+                      <a
+                        href={selectedProject.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3.5 py-1.5 text-xs font-semibold bg-primary text-primary-foreground hover:opacity-90 rounded-xl flex items-center gap-1 shadow-md shadow-primary/15 transition-all hover:scale-102"
+                      >
+                        <span>{t("websites.visitLive")}</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </>
+              </div>
             );
           })()}
         </DialogContent>

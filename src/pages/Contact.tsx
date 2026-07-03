@@ -1,43 +1,54 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Send, CheckCircle, Mail, MessageSquare } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/siteConfig";
+import { createContactSubmission, saveContactSubmission } from "@/lib/contactUtils";
 
 const Contact = () => {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const reason = formData.get("reason") as string;
-    const message = formData.get("message") as string;
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const reason = (formData.get("reason") as string) || "";
+    const message = (formData.get("message") as string) || "";
 
     try {
-      // Save directly to localStorage to avoid Supabase network issues
-      const existing = localStorage.getItem("ujwal_contact_submissions");
-      let submissions = [];
-      if (existing) {
-        try {
-          submissions = JSON.parse(existing);
-        } catch (err) {
-          console.error(err);
-        }
-      }
-      submissions.unshift({
-        id: `submission_${Date.now()}`,
+      const submission = createContactSubmission({
         name,
         email,
         reason,
         message,
-        timestamp: new Date().toISOString()
       });
-      localStorage.setItem("ujwal_contact_submissions", JSON.stringify(submissions));
+      saveContactSubmission(submission);
+
+      // Telegram Bot Notification
+      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
+      if (botToken && chatId) {
+        const textMessage = `📩 *New Contact Form Submission*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n🏷️ *Reason:* ${reason}\n💬 *Message:* ${message}`;
+        
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: textMessage,
+            parse_mode: "Markdown",
+          }),
+        });
+      }
+
       setIsSubmitted(true);
     } catch (error) {
       console.error("Form submission error:", error);
@@ -87,6 +98,9 @@ const Contact = () => {
             </div>
             <p className="text-muted-foreground leading-relaxed">
               {t("contact.infoDesc")}
+            </p>
+            <p className="text-sm text-foreground/80 mt-4">
+              Or email me directly at <a href={CONTACT_MAILTO} className="text-primary hover:underline">{CONTACT_EMAIL}</a> for business inquiries.
             </p>
           </div>
 
