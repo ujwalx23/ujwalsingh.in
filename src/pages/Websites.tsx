@@ -111,45 +111,6 @@ const Websites = () => {
       }
     },
     {
-      name: "Ecocatch",
-      img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
-      url: "https://ecocatch-website.vercel.app",
-      category: "web",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
-      translations: {
-        en: {
-          categoryLabel: "Official Website",
-          description: "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering.",
-          longDescription: "Official corporate platform for Ecocatch, displaying details about biogas & bioCNG plant setups, waste separators, mixing systems, and clean energy solutions.",
-          features: ["Clean energy catalog", "Waste separator highlights", "Service details mockup"]
-        },
-        fr: {
-          categoryLabel: "Site Officiel",
-          description: "(En développement) Site officiel d'Ecocatch, spécialisée dans la valorisation énergétique des déchets.",
-          longDescription: "Plateforme corporative officielle pour Ecocatch, présentant des informations sur les installations de biogaz, de bioGNV et les solutions d'énergie propre.",
-          features: ["Catalogue d'énergie propre", "Présentation des séparateurs", "Détails des services"]
-        },
-        es: {
-          categoryLabel: "Sitio Oficial",
-          description: "(En desarrollo) Sitio web oficial de Ecocatch, especializada en ingeniería de valorización energética.",
-          longDescription: "Plataforma corporativa oficial de Ecocatch, que muestra detalles sobre configuraciones de plantas de biogás, separadores de residuos y soluciones de energía limpia.",
-          features: ["Catálogo de energía limpia", "Destacados de separadores", "Detalles de servicios"]
-        },
-        zh: {
-          categoryLabel: "官方网站",
-          description: "(开发中) Ecocatch 官方网站，专注于垃圾发电工程与沼气提纯技术。",
-          longDescription: "Ecocatch 官方企业平台，展示关于沼气与生物天然气（BioCNG）建厂、废弃物分离器、搅拌混合系统和清洁能源解决方案的详细信息。",
-          features: ["清洁能源目录", "废弃物分离器展示", "服务详情介绍"]
-        },
-        hi: {
-          categoryLabel: "आधिकारिक वेबसाइट",
-          description: "(विकास के अधीन) कचरे से ऊर्जा बनाने वाली इंजीनियरिंग में विशेषज्ञता रखने वाली कंपनी इकोकैच की आधिकारिक वेबसाइट।",
-          longDescription: "इकोकैच के लिए आधिकारिक कॉर्पोरेट प्लेटफॉर्म, जिसमें बायोगैस और बायोसीएनजी प्लांट सेटअप, कचरा विभाजक और स्वच्छ ऊर्जा समाधानों के बारे में विवरण शामिल हैं।",
-          features: ["स्वच्छ ऊर्जा सूची", "कचरा विभाजक की मुख्य विशेषताएं", "सेवा विवरण मॉकअप"]
-        }
-      }
-    },
-    {
       name: "MediSoul",
       img: `${import.meta.env.BASE_URL}images/medisoul.png`,
       url: "https://cure23.vercel.app/",

@@ -16,13 +16,6 @@ const websites = [
     url: "https://cute23.vercel.app/",
   },
   {
-    name: "Ecocatch",
-    description:
-      "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering and biogas plant setups.",
-    img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
-    url: "https://ecocatch-website.vercel.app",
-  },
-  {
     name: "Newsnap",
     description:
       "A credibility-driven, short-form global news platform designed to provide trustworthy information.",

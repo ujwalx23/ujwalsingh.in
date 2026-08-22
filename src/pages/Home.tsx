@@ -127,16 +127,6 @@ const Home = () => {
       url: "https://namamivindhyavasini.in",
     },
     {
-      name: "Ecocatch",
-      description: language === "en" ? "(Under Development) Official company website for Ecocatch, specializing in waste-to-energy engineering." :
-                   language === "fr" ? "(En développement) Site officiel d'Ecocatch, spécialisée dans la valorisation énergétique." :
-                   language === "es" ? "(En desarrollo) Sitio web oficial de Ecocatch, especializada en ingeniería de valorización." :
-                   language === "zh" ? "(开发中) Ecocatch 官方网站，专注于垃圾发电工程与沼气提纯技术。" :
-                   "(विकास के अधीन) कचरे से ऊर्जा बनाने वाली इंजीनियरिंग में विशेषज्ञता रखने वाली कंपनी इकोकैच की आधिकारिक वेबसाइट。",
-      img: `${import.meta.env.BASE_URL}images/ecocatch.png`,
-      url: "https://ecocatch-website.vercel.app",
-    },
-    {
       name: "Wanderlust Adventures",
       description: language === "en" ? "A travel platform for exploring India's cultural heritage." :
                    language === "fr" ? "Plateforme de voyage pour explorer le patrimoine de l'Inde." :
