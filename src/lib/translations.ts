@@ -116,7 +116,12 @@ export const translations: Record<Language, TranslationDict> = {
       title: "Ujwal Singh",
       available: "Available for Collaborative Work",
       builds: "I build",
-      roles: ["web apps.", "AI-powered tools.", "fluid user interfaces.", "engaging games."],
+      roles: [
+        "scalable full-stack web applications.",
+        "enterprise SAP analytics & dashboards.",
+        "intelligent AI-powered solutions.",
+        "cloud-native database architectures."
+      ],
       connectTitle: "Connect With Me",
       connectDesc: "Let's build something creative together.",
       viewAll: "View All Profiles",
@@ -126,15 +131,15 @@ export const translations: Record<Language, TranslationDict> = {
     },
     about: {
       title: "Ujwal Singh",
-      subtitle: "Developer • Creator • AI Enthusiast",
-      bioText: "I specialize in building fast, responsive, and gorgeous web experiences. From crafting pixel-perfect frontend layouts to integrating client-side AI helper utilities, I focus on delivering scalable, premium digital products.",
+      subtitle: "Full-Stack Developer • Creator • SAP Certified (SAC)",
+      bioText: "I specialize in building fast, responsive, and gorgeous web experiences. From crafting pixel-perfect frontend layouts in React and TypeScript to integrating client-side AI helper utilities and enterprise data models, I focus on delivering scalable, premium digital products. Computer Engineering student and SAP Certified – Data Analyst (SAC).",
       resumePdf: "Resume PDF",
       gitTitle: "GitHub Activity",
       gitDesc: "My open-source contributions and coding activity",
       skillsTitle: "Skills & Proficiency",
       skillsDesc: "Click to inspect skill categories and view animated levels",
       timelineTitle: "My Timeline",
-      timelineDesc: "Click on timeline events to expand project details",
+      timelineDesc: "Milestones across software engineering, internships, and certifications",
       philosophyTitle: "Engineering Philosophy",
       philosophyDesc: "Core values that guide my coding and UI designing process",
       philosophyCleanTitle: "Clean Architecture",
@@ -147,22 +152,28 @@ export const translations: Record<Language, TranslationDict> = {
       factsDesc: "A few simple things that match my workspace vibes",
       timelineItems: [
         {
-          title: "Started Coding Journey",
-          period: "Early Days",
-          summary: "Learned web fundamentals: HTML5, CSS3, and JavaScript.",
-          details: "Built interactive web pages, simple calculating scripts, and mastered visual layouts. Discovered a deep passion for digital creation."
+          title: "Software Development Intern",
+          period: "Jul 2025 – Aug 2025",
+          summary: "Compozant · Remote",
+          details: "Developed and enhanced responsive web application features using React.js and JavaScript while following modern UI development practices. Contributed to UI improvements, debugging, SEO discoverability, and accessibility."
         },
         {
-          title: "Full-Stack Development",
-          period: "Growth Phase",
-          summary: "Adopted React, TypeScript, and modern frameworks.",
-          details: "Transitioned to building structured single-page apps, handling complex states, integrating node backends, and learning server deployments."
+          title: "Namami Vindhyavasini Temple Website",
+          period: "2024 – 2025",
+          summary: "Client Project · React, TypeScript, PostgreSQL, Supabase",
+          details: "Developed and deployed a production-ready website end-to-end for a real client. Built dynamic blogs, event management, custom administrative dashboard, and designed PostgreSQL schemas with REST APIs."
         },
         {
-          title: "Building Real Products",
-          period: "Current",
-          summary: "Creating live client apps and AI-powered platforms.",
-          details: "Currently developing fully offline-capable PWAs, integrating LLM completions, and optimizing database schema pipelines in Supabase."
+          title: "SAP Certified - Data Analyst (SAC)",
+          period: "2026",
+          summary: "Certified in SAP Analytics Cloud (C_SAC_2601) — SAP",
+          details: "Completed SAP Learning Journey: Story Design, Data Visualization, Data Modelling, Planning, Allocations, and Smart Predict."
+        },
+        {
+          title: "B.E. in Computer Engineering",
+          period: "2023 – 2027",
+          summary: "Shree L. R. Tiwari College of Engineering, Mumbai University",
+          details: "Pursuing Bachelor of Engineering in Computer Engineering. Maintaining strong academic performance with a CGPA of 8.13 / 10."
         }
       ]
     },
@@ -207,9 +218,9 @@ export const translations: Record<Language, TranslationDict> = {
       successMsg: "Message sent successfully!",
       errorMsg: "Something went wrong. Please try again.",
       infoTitle: "Get in Touch",
-      infoDesc: "I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out.",
+      infoDesc: "I'd love to hear from you! Whether you have a question, want to collaborate on a full-stack project, or just want to say hi, feel free to reach out.",
       responseTitle: "Quick Response",
-      responseDesc: "I typically respond within 24-48 hours. For urgent matters, connect with me on social media for a faster response.",
+      responseDesc: "I typically respond within 24-48 hours. For urgent matters, connect with me on LinkedIn or via email.",
       namePlaceholder: "Your name",
       emailPlaceholder: "your@email.com",
       reasonLabel: "Describe Yourself",
@@ -238,8 +249,13 @@ export const translations: Record<Language, TranslationDict> = {
     home: {
       title: "Ujwal Singh",
       available: "Disponible pour le travail collaboratif",
-      builds: "Je construis des",
-      roles: ["applications web.", "outils basés sur l'IA.", "interfaces fluides.", "jeux interactifs."],
+      builds: "Je conçois des",
+      roles: [
+        "applications web full-stack évolutives.",
+        "tableaux de bord et analyses SAP d'entreprise.",
+        "solutions intelligentes basées sur l'IA.",
+        "architectures de bases de données cloud."
+      ],
       connectTitle: "Se connecter avec moi",
       connectDesc: "Créons quelque chose de créatif ensemble.",
       viewAll: "Voir tous les profils",
@@ -249,15 +265,15 @@ export const translations: Record<Language, TranslationDict> = {
     },
     about: {
       title: "Ujwal Singh",
-      subtitle: "Développeur • Créateur • Passionné d'IA",
-      bioText: "Je me spécialise dans la création d'expériences web rapides, réactives et magnifiques. De la conception de mises en page frontend pixel-précises à l'intégration d'utilitaires d'aide à l'IA côté client.",
+      subtitle: "Développeur Full-Stack • Créateur • Certifié SAP (SAC)",
+      bioText: "Je me spécialise dans la création d'expériences web rapides, réactives et magnifiques. De la conception de mises en page frontend pixel-précises avec React et TypeScript à l'intégration d'outils IA et de modèles de données d'entreprise. Étudiant en génie informatique et certifié SAP (SAC).",
       resumePdf: "Recruter PDF",
       gitTitle: "Activité GitHub",
       gitDesc: "Mes contributions open-source et mon activité de codage",
       skillsTitle: "Compétences et aptitudes",
       skillsDesc: "Cliquez pour inspecter les catégories de compétences et voir les niveaux animés",
       timelineTitle: "Mon parcours",
-      timelineDesc: "Cliquez sur les événements pour développer les détails du projet",
+      timelineDesc: "Jalons clés en ingénierie logicielle, stages et certifications",
       philosophyTitle: "Philosophie d'ingénierie",
       philosophyDesc: "Valeurs fondamentales qui guident mon processus de codage et de conception UI",
       philosophyCleanTitle: "Architecture propre",
@@ -270,22 +286,28 @@ export const translations: Record<Language, TranslationDict> = {
       factsDesc: "Quelques choses simples qui correspondent à l'ambiance de mon espace de travail",
       timelineItems: [
         {
-          title: "Début du voyage de codage",
-          period: "Premiers jours",
-          summary: "Apprentissage des bases du web: HTML5, CSS3 et JavaScript.",
-          details: "Création de pages web interactives, scripts de calcul simples et maîtrise des mises en page visuelles."
+          title: "Stagiaire Développeur Logiciel",
+          period: "Juil 2025 – Août 2025",
+          summary: "Compozant · À distance",
+          details: "Développement d'interfaces responsives avec React.js et JavaScript. Optimisations SEO, accessibilité et travail en équipe agile."
         },
         {
-          title: "Développement Full-Stack",
-          period: "Phase de croissance",
-          summary: "Adoption de React, TypeScript et des frameworks modernes.",
-          details: "Transition vers la construction d'applications monopages structurées, la gestion d'états complexes et l'intégration de bases de données."
+          title: "Site Web Temple Namami Vindhyavasini",
+          period: "2024 – 2025",
+          summary: "Projet Client · React, TypeScript, PostgreSQL, Supabase",
+          details: "Déploiement complet en production d'une plateforme avec blog dynamique, gestion d'événements, panneau d'administration et API REST."
         },
         {
-          title: "Création de produits réels",
-          period: "Actuel",
-          summary: "Création d'applications clients en direct et de plateformes basées sur l'IA.",
-          details: "Développement de PWA entièrement autonomes hors ligne et optimisation des pipelines de schémas de base de données."
+          title: "Certifié SAP - Data Analyst (SAC)",
+          period: "2026",
+          summary: "Certifié SAP Analytics Cloud (C_SAC_2601) — SAP",
+          details: "Validation du parcours SAP: modélisation de données, Story Design, visualisation, planification et Smart Predict."
+        },
+        {
+          title: "Diplôme d'Ingénieur en Informatique",
+          period: "2023 – 2027",
+          summary: "Shree L. R. Tiwari College of Engineering, Université de Mumbai",
+          details: "Formation d'ingénieur en informatique. Moyenne académique actuelle (CGPA) : 8.13 / 10."
         }
       ]
     },
@@ -361,103 +383,114 @@ export const translations: Record<Language, TranslationDict> = {
     home: {
       title: "Ujwal Singh",
       available: "Disponible para trabajo colaborativo",
-      builds: "Yo construyo",
-      roles: ["aplicaciones web.", "herramientas de IA.", "interfaces fluidas.", "juegos interactivos."],
-      connectTitle: "Conéctate conmigo",
-      connectDesc: "Construyamos algo creativo juntos.",
-      viewAll: "Ver todos los perfiles",
-      projectsTitle: "Proyectos destacados",
-      projectsDesc: "Selección de plataformas web del lado del cliente y herramientas interactivas.",
-      exploreAll: "Explorar todo"
+      builds: "Desarrollo",
+      roles: [
+        "aplicaciones web full-stack escalables.",
+        "paneles y análisis de datos empresariales en SAP.",
+        "soluciones inteligentes impulsadas por IA.",
+        "arquitecturas de bases de datos en la nube."
+      ],
+      connectTitle: "Conéctate Conmigo",
+      connectDesc: "Creemos algo creativo juntos.",
+      viewAll: "Ver Todos los Perfiles",
+      projectsTitle: "Proyectos Destacados",
+      projectsDesc: "Selección de plataformas web e interactivas.",
+      exploreAll: "Explorar Todos"
     },
     about: {
       title: "Ujwal Singh",
-      subtitle: "Desarrollador • Creador • Entusiasta de la IA",
-      bioText: "Me especializo en crear experiencias web rápidas, responsivas y hermosas. Desde el diseño de interfaces frontend con píxeles perfectos hasta la integración de asistentes de IA del lado del cliente.",
+      subtitle: "Desarrollador Full-Stack • Creador • Certificado SAP (SAC)",
+      bioText: "Me especializo en crear experiencias web rápidas, responsivas y visualmente atractivas. Desde maquetación frontend en React y TypeScript hasta integración de utilidades de IA y modelos de datos empresariales. Estudiante de ingeniería en computación y certificado SAP (SAC).",
       resumePdf: "Currículum PDF",
       gitTitle: "Actividad en GitHub",
-      gitDesc: "Mis contribuciones de código abierto y actividad de desarrollo",
-      skillsTitle: "Habilidades y experiencia",
-      skillsDesc: "Haz clic para inspeccionar las categorías de habilidades y ver los niveles animados",
-      timelineTitle: "Mi trayectoria",
-      timelineDesc: "Haz clic en los hitos para ver detalles adicionales",
-      philosophyTitle: "Filosofía de desarrollo",
-      philosophyDesc: "Valores fundamentales que guían mi proceso de programación y diseño de interfaces",
-      philosophyCleanTitle: "Arquitectura limpia",
-      philosophyCleanDesc: "Escribir código estructurado y estrictamente tipado que escale limpiamente y sea fácil de mantener.",
-      philosophyUXTitle: "Usuario primero",
-      philosophyUXDesc: "Diseñar interfaces visualmente premium con animaciones fluidas y diseños responsivos.",
+      gitDesc: "Mis contribuciones open-source y actividad de código",
+      skillsTitle: "Habilidades y Competencias",
+      skillsDesc: "Haz clic para inspeccionar categorías de habilidades y ver niveles animados",
+      timelineTitle: "Mi Trayectoria",
+      timelineDesc: "Hitos en desarrollo de software, pasantías y certificaciones",
+      philosophyTitle: "Filosofía de Ingeniería",
+      philosophyDesc: "Valores fundamentales que guían mi proceso de código y diseño UI",
+      philosophyCleanTitle: "Arquitectura Limpia",
+      philosophyCleanDesc: "Escribir código estructurado y estrictamente tipado que escala limpiamente.",
+      philosophyUXTitle: "Usuario Primero",
+      philosophyUXDesc: "Crear interfaces premium con animaciones fluidas y diseño responsivo.",
       philosophyAITitle: "Integraciones de IA",
-      philosophyAIDesc: "Implementar automatización y procesamiento de lenguaje natural inteligente del lado del cliente.",
-      factsTitle: "Intereses y pasatiempos",
-      factsDesc: "Algunas cosas simples que encajan con mi espacio de trabajo",
+      philosophyAIDesc: "Implementación de procesamiento de lenguaje natural y automatización en el cliente.",
+      factsTitle: "Intereses y Ambiente",
+      factsDesc: "Pequeños detalles que definen mi espacio de trabajo",
       timelineItems: [
         {
-          title: "Inicio del viaje de programación",
-          period: "Primeros días",
-          summary: "Aprendí las bases de la web: HTML5, CSS3 y JavaScript.",
-          details: "Creé páginas web interactivas, scripts de cálculo sencillos y dominé el diseño visual."
+          title: "Pasantía en Desarrollo de Software",
+          period: "Jul 2025 – Ago 2025",
+          summary: "Compozant · Remoto",
+          details: "Desarrollo de características web con React.js y JavaScript, mejoras en accesibilidad, SEO y trabajo bajo metodologías ágiles."
         },
         {
-          title: "Desarrollo Full-Stack",
-          period: "Fase de crecimiento",
-          summary: "Adopté React, TypeScript y frameworks modernos.",
-          details: "Transición a la construcción de aplicaciones estructuradas de una sola página y gestión de estados complejos."
+          title: "Sitio Web Templo Namami Vindhyavasini",
+          period: "2024 – 2025",
+          summary: "Proyecto para Cliente · React, TypeScript, PostgreSQL, Supabase",
+          details: "Desarrollo y despliegue integral de una plataforma web con gestión de eventos, blog dinámico, panel de administración y APIs REST."
         },
         {
-          title: "Creación de productos reales",
-          period: "Actual",
-          summary: "Creación de aplicaciones de clientes y plataformas de IA.",
-          details: "Desarrollo de PWA completamente funcionales sin conexión y optimización de bases de datos."
+          title: "Certificado SAP - Data Analyst (SAC)",
+          period: "2026",
+          summary: "Certificado SAP Analytics Cloud (C_SAC_2601) — SAP",
+          details: "Completada la ruta oficial de SAP: modelado de datos, diseño de Stories, visualización, planificación y Smart Predict."
+        },
+        {
+          title: "Grado en Ingeniería en Computación",
+          period: "2023 – 2027",
+          summary: "Shree L. R. Tiwari College of Engineering, Universidad de Mumbai",
+          details: "Cursando Ingeniería en Computación. Promedio académico actual (CGPA): 8.13 / 10."
         }
       ]
     },
     websites: {
       title: "Mis Proyectos",
-      subtitle: "Aplicaciones del lado del cliente, plataformas de IA y juegos interactivos.",
-      searchPlaceholder: "Buscar proyectos...",
+      subtitle: "Aplicaciones del lado del cliente, plataformas de IA y juegos.",
+      searchPlaceholder: "Buscar proyectos o tecnologías...",
       all: "Todos",
-      webApps: "Aplicaciones",
-      aiTools: "Herramientas de IA",
+      webApps: "Apps Web",
+      aiTools: "Herramientas IA",
       games: "Juegos",
       overview: "Resumen",
-      highlights: "Aspectos destacados",
+      highlights: "Puntos Destacados",
       techStack: "Tecnologías",
-      visitLive: "Ver en vivo",
+      visitLive: "Ver en Vivo",
       close: "Cerrar",
-      noProjects: "No se encontraron proyectos que coincidan con tu búsqueda."
+      noProjects: "No se encontraron proyectos que coincidan con la búsqueda."
     },
     thoughts: {
-      title: "Muro de pensamientos",
-      subtitle: "Libro de visitas local y reflexiones cortas.",
-      formTitle: "Escribir una nota",
-      formDesc: "¡Comparte una reflexión o saludo en el muro! Se guarda localmente.",
+      title: "Muro de Reflexiones",
+      subtitle: "Libro de visitas local y pensamientos breves.",
+      formTitle: "Escribir una Nota",
+      formDesc: "¡Comparte una reflexión o saludo! Se almacena localmente.",
       formMsg: "Mensaje *",
-      formMsgPlaceholder: "Escribe tu pensamiento...",
+      formMsgPlaceholder: "Escribe tu reflexión o mensaje...",
       formName: "Nombre",
       formNamePlaceholder: "Invitado",
-      formTheme: "Color",
-      postButton: "Publicar en el muro",
-      notesBoard: "Notas activas",
+      formTheme: "Tema de Color",
+      postButton: "Publicar en el Muro",
+      notesBoard: "Notas Activas",
       notesCount: "Notas",
       guestLabel: "Invitado"
     },
     contact: {
       title: "Contáctame",
-      subtitle: "Envía un mensaje y me pondré en contacto contigo.",
+      subtitle: "Envíame un mensaje y me pondré en contacto contigo.",
       nameLabel: "Tu Nombre",
-      emailLabel: "Tu Correo electrónico",
+      emailLabel: "Tu Correo Electrónico",
       msgLabel: "Tu Mensaje",
-      submitButton: "Enviar mensaje",
+      submitButton: "Enviar Mensaje",
       submittingButton: "Enviando...",
       successMsg: "¡Mensaje enviado con éxito!",
-      errorMsg: "Algo salió mal. Por favor, inténtalo de nuevo.",
-      infoTitle: "Ponte en contacto",
-      infoDesc: "¡Me encantaría saber de ti! Ya sea que tengas una pregunta, quieras colaborar o simplemente decir hola, no dudes en comunicarte.",
-      responseTitle: "Respuesta rápida",
-      responseDesc: "Normalmente respondo dentro de 24-48 horas. Para asuntos urgentes, conéctate conmigo en las redes sociales para una respuesta más rápida.",
+      errorMsg: "Algo salió mal. Por favor, intenta de nuevo.",
+      infoTitle: "Ponte en Contacto",
+      infoDesc: "¡Me encantaría saber de ti! Ya sea para colaborar, hacer una pregunta o simplemente saludar.",
+      responseTitle: "Respuesta Rápida",
+      responseDesc: "Suelo responder en 24-48 horas. Para consultas urgentes, contáctame en LinkedIn.",
       namePlaceholder: "Tu nombre",
-      emailPlaceholder: "tu@email.com",
+      emailPlaceholder: "tu@correo.com",
       reasonLabel: "Descríbete",
       reasonPlaceholder: "Selecciona una opción",
       reasonOptions: [
@@ -465,17 +498,17 @@ export const translations: Record<Language, TranslationDict> = {
         "Buscando ayuda",
         "Trabajando y aprendiendo",
         "Creador / Desarrollador",
-        "Para conectar",
-        "Solo para decir hola"
+        "Conectar profesionalmente",
+        "Solo saludar"
       ],
-      msgPlaceholder: "Tu mensaje...",
-      successTitle: "¡Mensaje enviado!",
-      successDesc: "Gracias por comunicarte. ¡Me pondré en contacto contigo pronto!"
+      msgPlaceholder: "Escribe tu mensaje...",
+      successTitle: "¡Mensaje Enviado!",
+      successDesc: "Gracias por ponerte en contacto. ¡Te responderé muy pronto!"
     }
   },
   zh: {
     nav: {
-      overview: "主页",
+      overview: "概览",
       bio: "简介",
       works: "作品",
       reflections: "感悟",
@@ -483,70 +516,81 @@ export const translations: Record<Language, TranslationDict> = {
     },
     home: {
       title: "Ujwal Singh",
-      available: "开放合作项目",
-      builds: "我构建",
-      roles: ["网页应用。", "AI驱动工具。", "流畅用户界面。", "趣味交互游戏。"],
+      available: "随时可进行技术合作",
+      builds: "我专注于研发",
+      roles: [
+        "高可用高扩展的全栈 Web 应用程序。",
+        "企业级 SAP 分析仪表板与数据模型。",
+        "深度集成大模型的智能 AI 解决方案。",
+        "高性能云原生数据库系统与架构。"
+      ],
       connectTitle: "与我联系",
-      connectDesc: "让我们一起创造一些有趣的东西。",
-      viewAll: "查看所有个人主页",
+      connectDesc: "让我们携手打造兼具美感与性能的数字化产品。",
+      viewAll: "查看全部社交主页",
       projectsTitle: "精选项目",
-      projectsDesc: "精选客户端网页平台和交互式工具。",
+      projectsDesc: "精选前端 Web 应用、AI 辅助工具与交互系统。",
       exploreAll: "探索全部"
     },
     about: {
       title: "Ujwal Singh",
-      subtitle: "开发者 • 创造者 • AI爱好者",
-      bioText: "我专注于构建快速、响应迅速且美观的网页体验。从像素级精确的前端设计到集成客户端的智能AI辅助工具。",
-      resumePdf: "下载简历 PDF",
+      subtitle: "全栈开发工程师 • 创作者 • SAP 认证 (SAC)",
+      bioText: "我专注于打造极速、响应式且视觉惊艳的现代 Web 体验。从利用 React 和 TypeScript 构建高精度前端界面，到集成轻量级 AI 工具及企业级数据模型，我始终致力于交付可扩展的高品质数字产品。计算机工程专业学生，已获得 SAP Analytics Cloud (SAC) 官方认证。",
+      resumePdf: "下载个人简历 PDF",
       gitTitle: "GitHub 动态",
-      gitDesc: "我的开源贡献和编码活动",
-      skillsTitle: "专业技能",
-      skillsDesc: "点击以检查技能类别并查看动态进度",
-      timelineTitle: "我的历程",
-      timelineDesc: "点击时间线事件以查看项目详细信息",
-      philosophyTitle: "工程哲学",
-      philosophyDesc: "指引我编码和用户界面设计过程的核心价值观",
+      gitDesc: "开源项目贡献与代码仓库活动",
+      skillsTitle: "技术专长与熟练度",
+      skillsDesc: "点击检查技术分类并查看动画熟练度",
+      timelineTitle: "成长足迹",
+      timelineDesc: "工程开发、企业实习与专业认证历程",
+      philosophyTitle: "工程理念",
+      philosophyDesc: "指引我进行代码架构与用户界面设计的核心准则",
       philosophyCleanTitle: "整洁架构",
-      philosophyCleanDesc: "编写结构化、强类型的代码，以实现整洁的扩展和易于维护的系统。",
-      philosophyUXTitle: "用户至上",
-      philosophyUXDesc: "通过流畅的动画和自适应视口设计视觉效果出众的界面。",
-      philosophyAITitle: "人工智能集成",
-      philosophyAIDesc: "在客户端实施智能自然语言处理和自动化，以解决日常任务。",
-      factsTitle: "兴趣与心境",
-      factsDesc: "一些适合我工作空间氛围的简单事物",
+      philosophyCleanDesc: "编写结构良好、类型严谨的代码，确保系统高扩展性与易维护性。",
+      philosophyUXTitle: "用户至上设计",
+      philosophyUXDesc: "精心雕琢高保真视觉质感，打造流畅动画与极致响应。",
+      philosophyAITitle: "智能赋能",
+      philosophyAIDesc: "集成客户端自然语言处理与智能自动化，解决实际场景问题。",
+      factsTitle: "工作偏好与氛围",
+      factsDesc: "让我的开发工作更具专注度的几件小事",
       timelineItems: [
         {
-          title: "开始编码之旅",
-          period: "早期阶段",
-          summary: "学习了网页基础知识：HTML5、CSS3 和 JavaScript。",
-          details: "构建了交互式网页、简单的计算脚本，并掌握了视觉布局的技巧。"
+          title: "软件开发实习生",
+          period: "2025年7月 – 2025年8月",
+          summary: "Compozant · 远程",
+          details: "基于 React.js 和 JavaScript 开发与优化响应式页面，落实 SEO 优化实践与无障碍访问规范，在敏捷冲刺周期内与资深研发协同交付。"
         },
         {
-          title: "全栈开发学习",
-          period: "成长阶段",
-          summary: "开始采用 React、TypeScript 和现代开发框架。",
-          details: "转向构建结构化的单页应用、处理复杂状态并集成后端服务。"
+          title: "Namami Vindhyavasini 寺庙商业门户",
+          period: "2024 – 2025",
+          summary: "客户委托商业项目 · React, TypeScript, PostgreSQL, Supabase",
+          details: "全流程端到端交付上线。开发动态文章发布、活动管理、内容管理后台，并设计 PostgreSQL 数据模型与 REST API。"
         },
         {
-          title: "开发真实产品",
-          period: "当前阶段",
-          summary: "构建线上客户端应用和人工智能辅助平台。",
-          details: "目前正在开发完全支持离线的渐进式网页应用(PWA)并优化数据库系统。"
+          title: "SAP 认证数据分析师 (SAC)",
+          period: "2026",
+          summary: "SAP 官方认证：SAP Analytics Cloud (C_SAC_2601)",
+          details: "完成官方学习进阶：Story 设计、数据可视化、SAC 数据建模、计划功能与 Smart Predict 预测分析。"
+        },
+        {
+          title: "计算机工程学士在读",
+          period: "2023 – 2027",
+          summary: "孟买大学 Shree L. R. Tiwari 工程学院",
+          details: "主修计算机工程，学术成绩优良，当前累计绩点 (CGPA)：8.13 / 10。"
         }
       ]
     },
     websites: {
       title: "我的项目",
-      subtitle: "客户端应用、人工智能平台和画布游戏。",
-      searchPlaceholder: "搜索项目或工具...",
+      subtitle: "客户端应用、AI 平台与互动游戏。",
+      searchPlaceholder: "搜索项目或技术栈...",
       all: "全部",
       webApps: "网页应用",
       aiTools: "AI 工具",
-      games: "小游戏",
-      overview: "项目概述",
+      games: "互动娱乐",
+      overview: "项目概览",
       highlights: "核心亮点",
-      techStack: "技术栈",
-      visitLive: "访问网站",
+      techStack: "技术架构",
+      visitLive: "访问在线应用",
       close: "关闭",
       noProjects: "没有找到符合搜索条件的项。"
     },
@@ -576,19 +620,19 @@ export const translations: Record<Language, TranslationDict> = {
       successMsg: "消息发送成功！",
       errorMsg: "发生了一些错误，请重试。",
       infoTitle: "取得联系",
-      infoDesc: "我很想收到您的来信！无论您有任何问题、想合作还是只想打个招呼，请随时与我联系。",
+      infoDesc: "我很想收到您的来信！无论您有全栈项目合作、技术交流还是只想打个招呼，欢迎随时联络。",
       responseTitle: "快速回复",
-      responseDesc: "我通常在24-48小时内回复。如有紧急情况，请在社交媒体上与我联系以获得更快回复。",
+      responseDesc: "我通常在24-48小时内回复。如遇紧急事项，欢迎通过社交平台联系。",
       namePlaceholder: "您的姓名",
       emailPlaceholder: "your@email.com",
-      reasonLabel: "描述您自己",
+      reasonLabel: "关于您",
       reasonPlaceholder: "选择一个选项",
       reasonOptions: [
-        "只是随便看看",
+        "随便看看",
         "寻求帮助",
         "工作与学习",
         "创作者 / 开发者",
-        "来结识朋友",
+        "结识交流",
         "只是打个招呼"
       ],
       msgPlaceholder: "您的消息...",
@@ -607,8 +651,13 @@ export const translations: Record<Language, TranslationDict> = {
     home: {
       title: "उज्जवल सिंह",
       available: "सहयोगात्मक कार्य के लिए उपलब्ध",
-      builds: "मैं बनाता हूँ",
-      roles: ["वेब ऐप्स।", "एआई-संचालित उपकरण।", "सहज यूजर इंटरफेस।", "मजेदार गेम्स।"],
+      builds: "मैं निर्माण करता हूँ",
+      roles: [
+        "स्केलेबल फुल-स्टैक वेब एप्लिकेशन।",
+        "एंटरप्राइज एसएपी (SAP) एनालिटिक्स और डैशबोर्ड।",
+        "बुद्धिमान एआई-संचालित समाधान।",
+        "क्लाउड-नेटिव डेटाबेस आर्किटेक्चर।"
+      ],
       connectTitle: "मुझसे जुड़ें",
       connectDesc: "आइए मिलकर कुछ रचनात्मक बनाएं।",
       viewAll: "सभी प्रोफाइल देखें",
@@ -618,18 +667,18 @@ export const translations: Record<Language, TranslationDict> = {
     },
     about: {
       title: "उज्जवल सिंह",
-      subtitle: "डेवलपर • निर्माता • एआई उत्साही",
-      bioText: "मैं तेज, रिस्पॉन्सिव और खूबसूरत वेब अनुभव बनाने में माहिर हूं। पिक्सेल-परफेक्ट फ्रंटएंड लेआउट तैयार करने से लेकर क्लाइंट-साइड एआई टूल्स को एकीकृत करने तक, मैं प्रीमियम डिजिटल उत्पाद प्रदान करने पर ध्यान केंद्रित करता हूं।",
+      subtitle: "फुल-स्टैक डेवलपर • निर्माता • एसएपी प्रमाणित (SAC)",
+      bioText: "मैं तेज, रिस्पॉन्सिव और खूबसूरत वेब अनुभव बनाने में माहिर हूं। React और TypeScript में पिक्सेल-परफेक्ट फ्रंटएंड लेआउट तैयार करने से लेकर क्लाइंट-साइड एआई टूल्स और एंटरप्राइज डेटा मॉडल को एकीकृत करने तक, मेरा ध्यान प्रीमियम डिजिटल उत्पाद देने पर रहता है। कंप्यूटर इंजीनियरिंग के छात्र और एसएपी प्रमाणित – डेटा विश्लेषक (SAC)।",
       resumePdf: "बायोडाटा पीडीएफ",
       gitTitle: "गिटहब गतिविधि",
       gitDesc: "मेरा ओपन-सोर्स योगदान और कोडिंग गतिविधियां",
       skillsTitle: "कौशल और दक्षता",
       skillsDesc: "कौशल श्रेणियों का निरीक्षण करने और एनिमेटेड स्तरों को देखने के लिए क्लिक करें",
       timelineTitle: "मेरी समयरेखा",
-      timelineDesc: "परियोजना विवरण का विस्तार करने के लिए घटनाओं पर क्लिक करें",
+      timelineDesc: "सॉफ्टवेयर इंजीनियरिंग, इंटर्नशिप और प्रमाणपत्रों के मील के पत्थर",
       philosophyTitle: "इंजीनियरिंग दर्शन",
       philosophyDesc: "मुख्य सिद्धांत जो मेरी कोडिंग और डिजाइन प्रक्रिया का मार्गदर्शन करते हैं",
-      philosophyCleanTitle: "स्वच्छ वास्तुकला",
+      philosophyCleanTitle: "स्वच्छ वास्तुकla",
       philosophyCleanDesc: "व्यवस्थित, स्पष्ट रूप से टाइप किया गया कोड लिखना जो आसानी से स्केल हो और जिसका रख-रखाव आसान हो।",
       philosophyUXTitle: "यूजर फर्स्ट डिजाइन",
       philosophyUXDesc: "सुंदर एनिमेशन और रिस्पॉन्सिव लेआउट के साथ देखने में प्रीमियम इंटरफेस बनाना।",
@@ -639,22 +688,28 @@ export const translations: Record<Language, TranslationDict> = {
       factsDesc: "कुछ सरल चीजें जो मेरे कार्यक्षेत्र के अनुकूल हैं",
       timelineItems: [
         {
-          title: "कोडिंग यात्रा शुरू की",
-          period: "शुरुआती दिन",
-          summary: "वेब के बुनियादी सिद्धांत सीखे: HTML5, CSS3, और JavaScript।",
-          details: "इंटरैक्टिव वेब पेज, सरल गणना स्क्रिप्ट बनाए और दृश्य लेआउट पर महारत हासिल की।"
+          title: "सॉफ्टवेयर डेवलपमेंट इंटर्न",
+          period: "जुलाई 2025 – अगस्त 2025",
+          summary: "कंपोज़ेंट (Compozant) · रिमोट",
+          details: "React.js और JavaScript का उपयोग करके रिस्पॉन्सिव वेब फीचर्स विकसित किए। एसईओ और एक्सेसिबिलिटी पर काम करते हुए स्प्रिंट समयसीमा के भीतर योगदान दिया।"
         },
         {
-          title: "फुल-स्टैक डेवलपमेंट",
-          period: "विकास चरण",
-          summary: "React, TypeScript और आधुनिक फ्रेमवर्क को अपनाया।",
-          details: "व्यवस्थित सिंगल-पेज ऐप्स बनाने, जटिल स्टेट को प्रबंधित करने और नोड बैकएंड को एकीकृत करना सीखा।"
+          title: "नमामि विंध्यवासिनी मंदिर वेबसाइट",
+          period: "2024 – 2025",
+          summary: "क्लाइंट प्रोजेक्ट · React, TypeScript, PostgreSQL, Supabase",
+          details: "वास्तविक क्लाइंट के लिए संपूर्ण उत्पादन वेबसाइट विकसित और तैनात की। डायनामिक ब्लॉग, इवेंट प्रबंधन, व्यवस्थापक डैशबोर्ड और पोस्टग्रेएसक्यूएल स्कीमा डिजाइन किया।"
         },
         {
-          title: "वास्तविक उत्पाद बनाना",
-          period: "वर्तमान",
-          summary: "लाइव क्लाइंट ऐप्स और एआई-संचालित प्लेटफॉर्म विकसित करना।",
-          details: "पूरी तरह से ऑफ़लाइन काम करने में सक्षम PWAs विकसित करना और डेटाबेस को ऑप्टिमाइज़ करना।"
+          title: "एसएपी प्रमाणित - डेटा एनालिस्ट (SAC)",
+          period: "2026",
+          summary: "एसएपी एनालिटिक्स क्लाउड (C_SAC_2601) प्रमाणित — एसएपी",
+          details: "एसएपी लर्निंग जर्नी पूर्ण की: स्टोरी डिजाइन, डेटा विज़ुअलाइज़ेशन, डेटा मॉडलिंग, प्लानिंग और स्मार्ट प्रिडिक्ट।"
+        },
+        {
+          title: "कंप्यूटर इंजीनियरिंग में बी.ई.",
+          period: "2023 – 2027",
+          summary: "श्री एल. आर. तिवारी कॉलेज ऑफ इंजीनियरिंग, मुंबई विश्वविद्यालय",
+          details: "कंप्यूटर इंजीनियरिंग में बैचलर की पढ़ाई। वर्तमान सीजीपीए (CGPA): 8.13 / 10।"
         }
       ]
     },
@@ -701,7 +756,7 @@ export const translations: Record<Language, TranslationDict> = {
       infoTitle: "संपर्क में रहें",
       infoDesc: "मुझे आपकी बात सुनना अच्छा लगेगा! चाहे आपका कोई सवाल हो, सहयोग करना चाहते हों, या सिर्फ नमस्ते कहना चाहते हों, बेझिझक संपर्क करें।",
       responseTitle: "त्वरित प्रतिक्रिया",
-      responseDesc: "मैं आम तौर पर 24-48 घंटों के भीतर जवाब देता हूं। तत्काल मामलों के लिए, तेज़ प्रतिक्रिया के लिए सोशल मीडिया पर मुझसे जुड़ें।",
+      responseDesc: "मैं आम तौर पर 24-48 घंटों के भीतर जवाब देता हूं। तत्काल मामलों के लिए सोशल मीडिया पर मुझसे जुड़ें।",
       namePlaceholder: "आपका नाम",
       emailPlaceholder: "आपका@ईमेल.कॉम",
       reasonLabel: "अपने बारे में बताएं",

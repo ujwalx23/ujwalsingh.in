@@ -37,37 +37,62 @@ const Websites = () => {
       img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://namamivindhyavasini.in",
       category: "web",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
+      tech: ["React", "TypeScript", "PostgreSQL", "Supabase", "Tailwind CSS"],
       translations: {
         en: {
-          categoryLabel: "Web App",
-          description: "Spiritual temple portal for bookings and virtual darshans.",
-          longDescription: "A modern, highly optimized spiritual portal built for the Vindhyavasini temple. It streamlines darshan reservations, event schedules, devotional media content, and donations entirely client-side.",
-          features: ["Online Darshan scheduling", "Devotional audio player", "Interactive heritage guide"]
+          categoryLabel: "Client Project",
+          description: "Production temple portal end-to-end with dynamic blogs, event management, and administrative dashboard.",
+          longDescription: "Developed and deployed a production-ready website end-to-end for a real-world client using React and TypeScript with Supabase and PostgreSQL. Built data-driven features from scratch including dynamic blogs, event management, spiritual content, and an admin dashboard for content management. Designed the database schema and integrated REST APIs.",
+          features: [
+            "Production client deployment with Supabase & PostgreSQL",
+            "Dynamic blogs & spiritual event management CMS",
+            "Custom administrative dashboard for content updates",
+            "RESTful API integration for real-time workflows"
+          ]
         },
         fr: {
-          categoryLabel: "App Web",
-          description: "Portail de temple spirituel pour les réservations et darshans.",
-          longDescription: "Un portail spirituel moderne et hautement optimisé conçu pour le temple Vindhyavasini. Il rationalise les réservations de darshan, les horaires et les médias.",
-          features: ["Réservation de darshan en ligne", "Lecteur audio dévotionnel", "Guide patrimonial interactif"]
+          categoryLabel: "Projet Client",
+          description: "Portail de temple spirituel complet en production avec blog dynamique, gestion d'événements et tableau de bord admin.",
+          longDescription: "Développement et déploiement complet en production d'un site web pour un client réel avec React, TypeScript, Supabase et PostgreSQL. Conception du schéma de base de données et intégration des API REST pour les contenus dynamiques.",
+          features: [
+            "Déploiement en production avec Supabase et PostgreSQL",
+            "Gestion des événements et blogs dynamiques",
+            "Tableau de bord d'administration sur mesure",
+            "Intégration d'API REST pour les flux en temps réel"
+          ]
         },
         es: {
-          categoryLabel: "App Web",
-          description: "Portal de templo espiritual para reservas y darshans.",
-          longDescription: "Un portal espiritual moderno y optimizado construido para el templo Vindhyavasini. Agiliza las reservas de darshan, horarios y donaciones.",
-          features: ["Reserva de darshan en línea", "Reproductor de audio devocional", "Guía patrimonial interactiva"]
+          categoryLabel: "Proyecto Cliente",
+          description: "Portal de templo espiritual en producción con blogs dinámicos, gestión de eventos y panel de administración.",
+          longDescription: "Desarrollo y despliegue de un sitio web de producción para un cliente real utilizando React, TypeScript, Supabase y PostgreSQL. Diseño de esquemas de bases de datos y creación de panel de control administrativo.",
+          features: [
+            "Despliegue de producción con Supabase y PostgreSQL",
+            "Gestión de eventos y publicación de blogs",
+            "Panel de administración para gestión de contenidos",
+            "Integración de APIs REST en tiempo real"
+          ]
         },
         zh: {
-          categoryLabel: "网页应用",
-          description: "寺庙在线预约和虚拟拜访的灵性门户网站。",
-          longDescription: "为 Vindhyavasini 寺庙构建的现代化、高度优化的灵性门户网站。支持在线预约、祈祷仪式安排 and 音视频多媒体播放。",
-          features: ["在线拜访安排", "祈祷音乐播放器", "交互式历史文化指南"]
+          categoryLabel: "商业客户项目",
+          description: "基于 React、TypeScript、Supabase 与 PostgreSQL 开发的生产级客户商业门户，配备动态内容与管理后台。",
+          longDescription: "为真实客户独立交付端到端的生产级商业网站。基于 React 与 TypeScript，依托 Supabase 与 PostgreSQL 构建动态文章、法会活动安排及内容管理后台。负责数据表结构设计与 RESTful API 集成。",
+          features: [
+            "基于 Supabase 与 PostgreSQL 的生产环境全流程交付",
+            "动态博客发布与法会活动日程 CMS",
+            "高效的内容管理专用管理控制看板",
+            "支持实时业务流的 RESTful API 架构"
+          ]
         },
         hi: {
-          categoryLabel: "वेब ऐप",
-          description: "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल।",
-          longDescription: "विंध्यवासिनी मंदिर के लिए निर्मित एक आधुनिक, अत्यधिक अनुकूलित आध्यात्मिक पोर्टल। यह दर्शन बुकिंग, आरती समय सारणी, और दान सेवाओं को सुव्यवस्थित करता है।",
-          features: ["ऑनलाइन दर्शन बुकिंग", "भक्ति ऑडियो प्लेयर", "इंटरैक्टिव विरासत गाइड"]
+          categoryLabel: "क्लाइंट प्रोजेक्ट",
+          description: "डायनामिक ब्लॉग, इवेंट प्रबंधन और एडमिन डैशबोर्ड के साथ संपूर्ण प्रोडक्शन मंदिर पोर्टल।",
+          longDescription: "React, TypeScript, Supabase और PostgreSQL का उपयोग करके वास्तविक क्लाइंट के लिए संपूर्ण उत्पादन वेबसाइट विकसित और तैनात की। स्क्रैच से गतिशील ब्लॉग, इवेंट प्रबंधन और प्रशासनिक डैशबोर्ड का निर्माण किया।",
+          features: [
+            "Supabase और PostgreSQL के साथ प्रोडक्शन डिप्लॉयमेंट",
+            "डायनामिक ब्लॉग और इवेंट शेड्यूलिंग सीएमएस",
+            "सामग्री प्रबंधन के लिए कस्टम एडमिन डैशबोर्ड",
+            "रीयल-टाइम वर्कफ़्लो के लिए REST API एकीकरण"
+          ]
         }
       }
     },
@@ -115,37 +140,62 @@ const Websites = () => {
       img: `${import.meta.env.BASE_URL}images/medisoul.png`,
       url: "https://cure23.vercel.app/",
       category: "ai",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Gemini API"],
+      tech: ["AIML", "TypeScript", "AI Chatbot", "React", "Tailwind CSS"],
       translations: {
         en: {
-          categoryLabel: "AI Tool",
-          description: "AI-powered medical assistant for instant health insights and symptom checking.",
-          longDescription: "An intelligent medical companion that provides instant symptom checkups, personalized health insights, and tracking records, powered by client-side AI modules.",
-          features: ["AI Health Analysis", "Quick Appointments mockup", "Health history tracking"]
+          categoryLabel: "AI Healthcare",
+          description: "AI-powered medical companion with symptom analysis, health tracking & fine-tuned client AI chatbot.",
+          longDescription: "Developed an AI-powered medical companion providing symptom analysis, personalized health insights, and health history tracking through an interactive web application. Trained and fine-tuned the client-side AI chatbot using curated health and symptom datasets to improve the accuracy and relevance of AI-driven health analysis. Built Quick Appointments and health history features integrated into a unified healthcare experience.",
+          features: [
+            "Symptom analysis & personalized health insights",
+            "Fine-tuned client-side AI chatbot with curated datasets",
+            "Integrated Quick Appointments booking flow",
+            "Longitudinal health history & record tracking"
+          ]
         },
         fr: {
-          categoryLabel: "Outil IA",
-          description: "Assistant médical alimenté par l'IA pour des informations instantanées sur la santé.",
-          longDescription: "Un compagnon médical intelligent qui fournit des vérifications instantanées des symptômes et des informations de santé personnalisées.",
-          features: ["Analyse de santé IA", "Prise de rendez-vous rapide", "Suivi des antécédents médicaux"]
+          categoryLabel: "Santé IA",
+          description: "Compagnon médical IA avec analyse des symptômes, suivi de santé et chatbot IA affiné sur jeux de données.",
+          longDescription: "Compagnon médical propulsé par l'IA fournissant une analyse instantanée des symptômes, des conseils de santé personnalisés et un suivi d'historique médical. Chatbot IA client entraîné sur des données cliniques sélectionnées pour une précision accrue.",
+          features: [
+            "Analyse des symptômes et insights personnalisés",
+            "Chatbot IA client affiné sur données médicales",
+            "Module de prise de rendez-vous rapide",
+            "Suivi de l'historique et des dossiers de santé"
+          ]
         },
         es: {
-          categoryLabel: "Herramienta de IA",
-          description: "Asistente médico impulsado por IA para información de salud instantánea.",
-          longDescription: "Un compañero médico inteligente que proporciona comprobaciones instantáneas de síntomas y registros de seguimiento.",
-          features: ["Análisis de salud por IA", "Citas rápidas", "Seguimiento de historial médico"]
+          categoryLabel: "Salud IA",
+          description: "Compañero médico con IA para análisis de síntomas, historial de salud y chatbot afinado con datos médicos.",
+          longDescription: "Compañero médico inteligente impulsado por IA que proporciona análisis de síntomas, información de salud personalizada y seguimiento de antecedentes médicos. Chatbot entrenado con conjuntos de datos clínicos para mayor precisión diagnóstica.",
+          features: [
+            "Análisis inteligente de síntomas en tiempo real",
+            "Chatbot de IA ajustado con datos de salud seleccionados",
+            "Módulo de citas médicas rápidas",
+            "Seguimiento y control de historial clínico"
+          ]
         },
         zh: {
-          categoryLabel: "AI 工具",
-          description: "AI 驱动的医疗助手，提供即时健康分析与症状评估。",
-          longDescription: "一个智能医疗助手，可提供即时症状评估、个性化健康建议和健康追踪，采用轻量级客户端模型集成。",
-          features: ["AI 症状智能 analysis", "预约挂号指南", "个人健康记录追踪"]
+          categoryLabel: "智能医疗 AI",
+          description: "AI 智能医疗助手，提供症状分析、个性化健康洞察与基于专属健康数据集微调的客户端对话模型。",
+          longDescription: "基于 Web 技术构建的 AI 医疗辅助平台。通过在客户端结合精选医疗与症状数据集对 AI 聊天机器人进行专项微调，显著提升健康咨询的准确度与相关性。内置快速预约挂号与完整的个人病历健康历史追踪功能。",
+          features: [
+            "基于精准数据集微调的客户端健康对话模型",
+            "多维症状智能评估与个性化健康建议",
+            "整合式快速就医预约挂号流程",
+            "长期健康档案与病史数字化追踪"
+          ]
         },
         hi: {
-          categoryLabel: "एआई उपकरण",
-          description: "त्वरित स्वास्थ्य अंतर्दृष्टि के लिए एआई-संचालित चिकित्सा सहायक।",
-          longDescription: "एक बुद्धिमान चिकित्सा साथी जो एआई मॉड्यूल द्वारा संचालित त्वरित लक्षण जांच और स्वास्थ्य रिकॉर्ड ट्रैकिंग प्रदान करता है।",
-          features: ["एआई स्वास्थ्य विश्लेषण", "त्वरित अपॉइंटमेंट बुकिंग", "स्वास्थ्य इतिहास ट्रैकिंग"]
+          categoryLabel: "एआई स्वास्थ्य",
+          description: "लक्षण विश्लेषण, स्वास्थ्य इतिहास और विशेष फाइन-ट्यून एआई चैटबॉट के साथ चिकित्सा साथी।",
+          longDescription: "लक्षण विश्लेषण, व्यक्तिगत स्वास्थ्य अंतर्दृष्टि और स्वास्थ्य इतिहास ट्रैकिंग प्रदान करने वाला एआई-संचालित चिकित्सा साथी। स्वास्थ्य विश्लेषण की सटीकता में सुधार के लिए क्यूरेटेड डेटासेट का उपयोग करके क्लाइंट-साइड एआई चैटबॉट को प्रशिक्षित किया।",
+          features: [
+            "एआई लक्षण विश्लेषण और स्वास्थ्य अंतर्दृष्टि",
+            "क्यूरेटेड डेटासेट के साथ फाइन-ट्यून किया गया चैटबॉट",
+            "त्वरित अपॉइंटमेंट बुकिंग सुविधा",
+            "सुरक्षित स्वास्थ्य इतिहास और रिकॉर्ड ट्रैकिंग"
+          ]
         }
       }
     },

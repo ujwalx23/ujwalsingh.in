@@ -19,27 +19,27 @@ const CHAT_OPTIONS: ChatOption[] = [
   {
     label: "Who is Ujwal Singh?",
     value: "who_is_ujwal",
-    response: "Hi there! 👋 Ujwal Singh is a passionate software developer, creator, and AI enthusiast from India. He loves building modern, scalable web applications, experimenting with artificial intelligence tools, and crafting gorgeous user interfaces! 💻✨"
+    response: "Hi there! 👋 Ujwal Singh is a Full-Stack Developer, Computer Engineering student at Mumbai University (CGPA 8.13/10), and SAP Certified (SAC). He builds scalable web applications, client solutions with React, TypeScript & PostgreSQL, and crafts modern digital experiences! 🚀✨"
+  },
+  {
+    label: "Tell me about his SAP & Data Analytics skills",
+    value: "sap_skills",
+    response: "Ujwal holds the official SAP Certified – Data Analyst (SAP Analytics Cloud, 2026) credential! 🚀\n\n• SAP Analytics Cloud (SAC): Data Modelling, Story Design & Dashboarding, Data Blending, Planning, Data Actions & Allocations, Smart Predict, Live & Import Connections.\n• Enterprise Ecosystem: SAP S/4HANA, SAP Business Technology Platform (BTP), SAP Business Data Cloud (BDC), SAP Datasphere.\n• Data & Code: SQL, Python, PostgreSQL, Supabase."
   },
   {
     label: "What is his tech stack?",
     value: "tech_stack",
-    response: "Ujwal works with a modern and versatile stack! 🛠️\n\n• Frontend: React, TypeScript, Next.js, Tailwind CSS, Figma\n• Backend & Database: Node.js, Python, Supabase, PostgreSQL\n• Key Interests: AI/ML integrations, UI/UX design, building scalable web platforms."
+    response: "Ujwal works with a versatile full-stack & data stack! 🛠️\n\n• Frontend: React.js, TypeScript, Next.js, Tailwind CSS\n• Backend & Databases: PostgreSQL, Supabase, MongoDB, REST APIs, SQL, Python\n• Analytics & BI: SAP Analytics Cloud (SAC), S/4HANA, Datasphere\n• Tools & Cloud: Git/GitHub, Vercel, Botpress"
   },
   {
-    label: "Tell me about his top projects",
+    label: "Tell me about his top projects & experience",
     value: "top_projects",
-    response: "Here are some of Ujwal's favorite creations: 🌟\n\n1. 🧭 Wanderlust Adventures: A travel platform dedicated to exploring India's heritage & landscapes.\n2. 📝 CuteList: A delightful, cute task management app to manage daily chores.\n3. 🧠 MediSoul: An AI-powered medical companion providing instant health insights.\n4. 🕹️ LoopPlay: A lightweight game arcade with 23 addictive mini-games!"
+    response: "Here are Ujwal's key achievements: 🌟\n\n1. 🛕 Namami Vindhyavasini: Production temple portal built with React, TypeScript, Supabase, and PostgreSQL featuring dynamic blogs, event management, and admin dashboard.\n2. 🏥 MediSoul: AI-powered medical companion providing symptom analysis and health tracking with fine-tuned datasets.\n3. 💼 Compozant Internship (Jul–Aug 2025): Developed responsive web apps with React.js, SEO optimizations, and agile sprint delivery.\n4. 🎓 Education: B.E. in Computer Engineering from Mumbai University (8.13 CGPA)."
   },
   {
     label: "How can I contact him?",
     value: "contact_info",
-    response: `You can reach out to Ujwal easily! 📬\n\n• Email: ${CONTACT_EMAIL}\n• Head to the Contact page on this site and send a message directly.\n• Find him on LinkedIn: linkedin.com/in/ujwalsingh23/\n• Or check his GitHub activity: github.com/ujwalx23\n\nHe is always open to collaborative opportunities, interesting project discussions, or talking about AI!`
-  },
-  {
-    label: "Share a fun fact!",
-    value: "fun_fact",
-    response: "Here's a developer fun fact about Ujwal: ☔🎧\n\nHe writes his best code when it's raining outside, accompanied by lo-fi music or soft vibes. He believes coding is as much about finding the right peaceful space as it is about syntax!"
+    response: `You can reach out to Ujwal directly! 📬\n\n• Email: ujwalsingh426@gmail.com / ${CONTACT_EMAIL}\n• Phone: +91 7977339435\n• LinkedIn: linkedin.com/in/ujwalsingh23/\n• GitHub: github.com/ujwalx23\n\nHe is open to full-stack developer roles, client web projects, and collaborative engineering opportunities!`
   }
 ];
 
@@ -107,16 +107,16 @@ export function AIHelperBot() {
       // Basic rule matching for custom questions
       let botResponse = `That's an interesting question! I am Ujwal's offline helper assistant, so my responses are simple. Feel free to click one of my quick questions, check out the About Me page, or email him directly at ${CONTACT_EMAIL}.`;
       
-      if (currentInput.includes("who") || currentInput.includes("about") || currentInput.includes("name")) {
+      if (currentInput.includes("sap") || currentInput.includes("sac") || currentInput.includes("analytics") || currentInput.includes("certif")) {
+        botResponse = CHAT_OPTIONS.find(o => o.value === "sap_skills")?.response || botResponse;
+      } else if (currentInput.includes("who") || currentInput.includes("about") || currentInput.includes("name")) {
         botResponse = CHAT_OPTIONS.find(o => o.value === "who_is_ujwal")?.response || botResponse;
-      } else if (currentInput.includes("project") || currentInput.includes("work") || currentInput.includes("website")) {
+      } else if (currentInput.includes("project") || currentInput.includes("work") || currentInput.includes("website") || currentInput.includes("compozant") || currentInput.includes("namami")) {
         botResponse = CHAT_OPTIONS.find(o => o.value === "top_projects")?.response || botResponse;
       } else if (currentInput.includes("tech") || currentInput.includes("stack") || currentInput.includes("language") || currentInput.includes("skill")) {
         botResponse = CHAT_OPTIONS.find(o => o.value === "tech_stack")?.response || botResponse;
-      } else if (currentInput.includes("contact") || currentInput.includes("reach") || currentInput.includes("email") || currentInput.includes("linkedin")) {
+      } else if (currentInput.includes("contact") || currentInput.includes("reach") || currentInput.includes("email") || currentInput.includes("phone") || currentInput.includes("linkedin")) {
         botResponse = CHAT_OPTIONS.find(o => o.value === "contact_info")?.response || botResponse;
-      } else if (currentInput.includes("fact") || currentInput.includes("fun") || currentInput.includes("rain")) {
-        botResponse = CHAT_OPTIONS.find(o => o.value === "fun_fact")?.response || botResponse;
       }
 
       const botMsg: Message = {

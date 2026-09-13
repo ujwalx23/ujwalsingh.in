@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { 
   Download, MapPin, GraduationCap, Briefcase, Code2, Gamepad2, 
-  CloudRain, Music, ChevronDown, ChevronUp, Database, Sparkles, Layout, ShieldAlert
+  CloudRain, Music, ChevronDown, ChevronUp, Database, Sparkles, Layout,
+  Award, BarChart3, HelpCircle
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import ujwalPhoto from "@/assets/ujwal-photo-3.jpg";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -15,54 +17,78 @@ interface Skill {
 
 interface SkillCategory {
   id: string;
-  nameKey: string;
+  name: string;
   icon: React.ComponentType<{ className?: string }>;
   skills: Skill[];
 }
 
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: "frontend",
-    nameKey: "nav.overview", // we can map keys dynamically
+    id: "web_fullstack",
+    name: "Web & Full-Stack",
     icon: Layout,
     skills: [
-      { name: "React / Vite", percentage: 95, level: "Advanced" },
+      { name: "React.js / Vite", percentage: 95, level: "Advanced" },
       { name: "TypeScript", percentage: 90, level: "Advanced" },
-      { name: "Next.js", percentage: 80, level: "Intermediate" },
-      { name: "Tailwind CSS", percentage: 95, level: "Advanced" },
-      { name: "Figma UI Design", percentage: 75, level: "Intermediate" },
+      { name: "Tailwind CSS & Modern UI", percentage: 95, level: "Advanced" },
+      { name: "Git, GitHub & Vercel Deployment", percentage: 92, level: "Advanced" },
+      { name: "Botpress & Client AI Integration", percentage: 85, level: "Intermediate" },
     ]
   },
   {
-    id: "backend",
-    nameKey: "nav.bio",
+    id: "sap_analytics",
+    name: "SAP Analytics & BI",
+    icon: BarChart3,
+    skills: [
+      { name: "Story Design & Dashboarding", percentage: 95, level: "Advanced" },
+      { name: "Data Modelling (Dimensions & Measures)", percentage: 92, level: "Advanced" },
+      { name: "Data Blending & Planning Models", percentage: 88, level: "Advanced" },
+      { name: "Smart Predict & Live/Import Connections", percentage: 86, level: "Advanced" },
+      { name: "Data Actions & Allocations", percentage: 85, level: "Intermediate" },
+      { name: "SAP S/4HANA & BTP Integration", percentage: 80, level: "Intermediate" },
+    ]
+  },
+  {
+    id: "databases_programming",
+    name: "Databases & Backend",
     icon: Database,
     skills: [
-      { name: "Node.js / Express", percentage: 85, level: "Intermediate" },
-      { name: "Supabase Backend", percentage: 88, level: "Advanced" },
-      { name: "Python Automation", percentage: 78, level: "Intermediate" },
-      { name: "SQL & Databases", percentage: 75, level: "Intermediate" },
-    ]
-  },
-  {
-    id: "ai_tools",
-    nameKey: "nav.works",
-    icon: Sparkles,
-    skills: [
-      { name: "AI API Integrations", percentage: 82, level: "Intermediate" },
-      { name: "PWA Offline Caching", percentage: 85, level: "Advanced" },
-      { name: "Git Version Control", percentage: 90, level: "Advanced" },
+      { name: "SQL (PostgreSQL & Relational Queries)", percentage: 92, level: "Advanced" },
+      { name: "Python (Data Analysis & Automation)", percentage: 88, level: "Advanced" },
+      { name: "Supabase Backend & Auth", percentage: 90, level: "Advanced" },
+      { name: "PostgreSQL Database Schema Design", percentage: 88, level: "Advanced" },
+      { name: "MongoDB", percentage: 78, level: "Intermediate" },
     ]
   }
 ];
 
-const timelineIcons = [GraduationCap, Code2, Briefcase];
+const timelineIcons = [Briefcase, Code2, Award, GraduationCap];
 const funFactIcons = [CloudRain, Gamepad2, Music];
+
+const FAQS = [
+  {
+    q: "What roles and opportunities are you currently open to?",
+    a: "I am actively seeking roles as a Full-Stack Developer, Frontend Engineer, or Software Engineer. I am also open to enterprise data analysis / SAP BI projects and selective freelance web development."
+  },
+  {
+    q: "What tech stack do you specialize in?",
+    a: "My core stack centers around React, TypeScript, Next.js, and modern styling on the frontend, combined with PostgreSQL, Supabase, Python, and REST APIs on the backend. I also hold an official SAP Certified – Data Analyst (SAC) credential."
+  },
+  {
+    q: "How do you approach real-world client projects?",
+    a: "I lead projects end-to-end: starting from client requirement discovery, designing normalized PostgreSQL schemas, structuring backend APIs in Supabase, and delivering responsive, SEO-optimized React interfaces (such as the Namami Vindhyavasini portal)."
+  },
+  {
+    q: "How fast do you respond to project inquiries?",
+    a: "I typically respond within 24 to 48 hours. For urgent inquiries or recruiter discussions, feel free to reach out directly via email at ujwalsingh426@gmail.com or connect with me on LinkedIn."
+  }
+];
 
 const About = () => {
   const { t, language } = useLanguage();
-  const [activeTab, setActiveTab] = useState("frontend");
-  const [expandedTimeline, setExpandedTimeline] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState("web_fullstack");
+  const [expandedTimeline, setExpandedTimeline] = useState<number | null>(0);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [progressTrigger, setProgressTrigger] = useState(false);
 
   useEffect(() => {
@@ -88,10 +114,10 @@ const About = () => {
   return (
     <div className="w-full max-w-4xl mx-auto space-y-12 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
-        title={t("about.title")}
-        description={t("about.bioText")}
+        title="About Ujwal Singh | Full-Stack Developer & Software Engineer"
+        description="Learn about Ujwal Singh: Full-Stack Developer, Computer Engineering student at Mumbai University (CGPA 8.13), and SAP Certified (SAC)."
         path="/about"
-        keywords="Ujwal Singh about, developer bio, AI enthusiast, resume"
+        keywords="Ujwal Singh bio, Full-Stack Developer, Software Engineer, React, TypeScript, PostgreSQL, SAP Certified, SAC, Mumbai University, resume"
       />
 
       {/* Hero Header */}
@@ -103,7 +129,7 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-accent opacity-25 blur-xl rounded-2xl group-hover:opacity-40 transition-opacity duration-500 animate-pulse-glow" />
             <img
               src={ujwalPhoto}
-              alt="Ujwal Singh"
+              alt="Ujwal Singh - Full-Stack Developer and Software Engineer"
               className="relative z-10 w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover object-top shadow-lg border-2 border-primary/20"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80";
@@ -117,10 +143,21 @@ const About = () => {
 
           <div className="text-center md:text-left flex-1 space-y-3">
             <div>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
+                  Full-Stack Developer
+                </span>
+                <span className="text-[10px] font-semibold text-foreground/80 px-2.5 py-0.5 rounded-full bg-primary/5 border border-primary/15">
+                  SAP Certified (SAC)
+                </span>
+                <span className="text-[10px] font-semibold text-muted-foreground px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">
+                  CGPA: 8.13 / 10
+                </span>
+              </div>
               <h1 className="text-2xl sm:text-3xl font-bold gradient-text">
                 {t("about.title")}
               </h1>
-              <p className="text-muted-foreground text-xs sm:text-sm font-semibold">
+              <p className="text-muted-foreground text-xs sm:text-sm font-semibold mt-0.5">
                 {t("about.subtitle")}
               </p>
             </div>
@@ -128,7 +165,7 @@ const About = () => {
               {t("about.bioText")}
             </p>
 
-            <div className="flex justify-center md:justify-start pt-2">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
               <a
                 href={`${import.meta.env.BASE_URL}Ujwal_Resume.pdf`}
                 download="Ujwal_Resume.pdf"
@@ -137,6 +174,12 @@ const About = () => {
                 <Download className="w-3.5 h-3.5" />
                 <span>{t("about.resumePdf")}</span>
               </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-1.5 glass-button text-foreground hover:text-primary font-semibold px-4 py-2 rounded-xl text-xs transition-all border border-primary/20"
+              >
+                <span>Hire / Get in Touch</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -182,10 +225,6 @@ const About = () => {
         <div className="flex border-b border-primary/10 gap-3 overflow-x-auto pb-1 mb-5">
           {SKILL_CATEGORIES.map(cat => {
             const Icon = cat.icon;
-            // Map name keys to navigation terms
-            const label = cat.id === "frontend" ? t("websites.all") :
-                          cat.id === "backend" ? t("websites.webApps") :
-                          t("websites.aiTools");
             return (
               <button
                 key={cat.id}
@@ -197,7 +236,7 @@ const About = () => {
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
-                <span>{label}</span>
+                <span>{cat.name}</span>
               </button>
             );
           })}
@@ -224,7 +263,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Expandable Journey Timeline */}
+      {/* Expandable Journey & Experience Timeline */}
       <section className="glass-card p-6 md:p-8 border border-primary/10 fade-in-up stagger-2">
         <h2 className="text-lg sm:text-xl font-bold mb-1">{t("about.timelineTitle")}</h2>
         <p className="text-xs text-muted-foreground mb-5">{t("about.timelineDesc")}</p>
@@ -279,8 +318,49 @@ const About = () => {
         </div>
       </section>
 
+      {/* Interactive FAQ Section (Launch Checklist Item 4) */}
+      <section className="glass-card p-6 md:p-8 border border-primary/10 fade-in-up stagger-3 space-y-4">
+        <div>
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-2">
+            <HelpCircle className="w-5 h-5 text-primary" />
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xs text-muted-foreground">Quick answers regarding recruitment, technical stack, and client delivery.</p>
+        </div>
+
+        <div className="space-y-3">
+          {FAQS.map((faq, idx) => {
+            const isOpen = expandedFaq === idx;
+            return (
+              <div
+                key={idx}
+                className="border border-primary/10 rounded-xl overflow-hidden bg-card/30 transition-colors"
+              >
+                <button
+                  type="button"
+                  onClick={() => setExpandedFaq(isOpen ? null : idx)}
+                  className="w-full text-left p-4 flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold text-foreground hover:text-primary transition-colors cursor-pointer"
+                >
+                  <span>{faq.q}</span>
+                  {isOpen ? (
+                    <ChevronUp className="w-4 h-4 text-primary shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4 text-muted-foreground shrink-0" />
+                  )}
+                </button>
+                {isOpen && (
+                  <div className="p-4 pt-0 text-xs text-muted-foreground leading-relaxed border-t border-primary/5 animate-in fade-in duration-200">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Simplified Personal Fun Facts */}
-      <section className="glass-card p-6 md:p-8 border border-primary/10 fade-in-up stagger-3">
+      <section className="glass-card p-6 md:p-8 border border-primary/10 fade-in-up stagger-4">
         <h2 className="text-lg sm:text-xl font-bold mb-4">{t("about.factsTitle")}</h2>
         <div className="grid grid-cols-3 gap-3">
           {currentInterests.map((text, i) => {

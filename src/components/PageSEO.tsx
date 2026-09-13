@@ -60,7 +60,7 @@ const PageSEO = ({ title, description, path, keywords, jsonLd }: PageSEOProps) =
     }
 
     return () => {
-      document.title = "Ujwal Singh | Software Developer, Creator & AI Enthusiast";
+      document.title = "Ujwal Singh | SAP Data Analyst, SAC Certified & Full-Stack Developer";
       const existingScript = document.querySelector('script[data-page-seo]');
       if (existingScript) existingScript.remove();
     };

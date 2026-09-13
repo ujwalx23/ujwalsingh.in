@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ExternalLink, ArrowRight, Sparkles, Monitor, Cpu, Palette, Quote, User, MapPin } from "lucide-react";
+import { ExternalLink, ArrowRight, Sparkles, Monitor, Cpu, Palette, Quote, User, MapPin, Award, BarChart3, CheckCircle2, Database, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactSection from "@/components/ContactSection";
 import PageSEO from "@/components/PageSEO";
@@ -118,21 +118,31 @@ const Home = () => {
   const projects = [
     {
       name: "Namami Vindhyavasini",
-      description: language === "en" ? "Spiritual temple portal for bookings and virtual darshans." :
-                   language === "fr" ? "Portail de temple spirituel pour les réservations et darshans." :
-                   language === "es" ? "Portal de templo espiritual para reservas y darshans." :
-                   language === "zh" ? "寺庙在线预约和虚拟拜访的灵性门户网站。" :
-                   "ऑनलाइन बुकिंग और आभासी दर्शन के लिए आध्यात्मिक मंदिर पोर्टल。",
+      description: language === "en" ? "Production client temple portal with dynamic blogs, event management, and custom admin dashboard using React, TypeScript, and Supabase." :
+                   language === "fr" ? "Portail client en production avec blog dynamique, gestion d'événements et tableau de bord admin avec React, Supabase et PostgreSQL." :
+                   language === "es" ? "Portal de templo en producción con gestión de eventos, blogs dinámicos y panel de administración con React, Supabase y PostgreSQL." :
+                   language === "zh" ? "基于 React、TypeScript、Supabase 与 PostgreSQL 开发的生产级客户商业门户，配备动态内容与管理后台。" :
+                   "रिएक्ट, टाइपस्क्रिप्ट, पोस्टग्रेएसक्यूएल और सुपरबेस के साथ वास्तविक क्लाइंट के लिए संपूर्ण प्रोडक्शन मंदिर पोर्टल।",
       img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://namamivindhyavasini.in",
     },
     {
+      name: "MediSoul",
+      description: language === "en" ? "AI-powered medical companion providing symptom analysis, health tracking, and custom fine-tuned client-side AI chatbot." :
+                   language === "fr" ? "Compagnon médical IA avec analyse des symptômes, suivi de santé et chatbot IA client affiné sur jeux de données." :
+                   language === "es" ? "Compañero médico con IA para análisis de síntomas, seguimiento de salud y chatbot afinado con datos médicos." :
+                   language === "zh" ? "AI 智能医疗助手，提供症状分析、个性化健康洞察与基于专属健康数据集微调的客户端对话模型。" :
+                   "एआई-संचालित चिकित्सा साथी जो लक्षण विश्लेषण, स्वास्थ्य इतिहास और विशेष फाइन-ट्यून एआई चैटबॉट प्रदान करता है।",
+      img: `${import.meta.env.BASE_URL}images/medisoul.png`,
+      url: "https://cure23.vercel.app/",
+    },
+    {
       name: "Wanderlust Adventures",
-      description: language === "en" ? "A travel platform for exploring India's cultural heritage." :
-                   language === "fr" ? "Plateforme de voyage pour explorer le patrimoine de l'Inde." :
-                   language === "es" ? "Plataforma de viajes para explorar el patrimonio de la India." :
-                   language === "zh" ? "用于探索印度文化遗产的旅游分享平台。" :
-                   "भारत की सांस्कृतिक विरासत की खोज के लिए एक यात्रा मंच。",
+      description: language === "en" ? "A modern travel platform for exploring India's cultural heritage landmarks and scenic landscapes." :
+                   language === "fr" ? "Plateforme de voyage moderne pour explorer le patrimoine culturel et les paysages emblématiques de l'Inde." :
+                   language === "es" ? "Plataforma de viajes moderna para descubrir el patrimonio cultural y paisajes de la India." :
+                   language === "zh" ? "用于探索印度丰富历史文化遗产与壮丽自然景观的现代化旅游导览应用。" :
+                   "भारत की समृद्ध सांस्कृतिक विरासत और दर्शनीय स्थलों की खोज के लिए एक आधुनिक यात्रा मंच।",
       img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
       url: "https://wanderlustadventures23.vercel.app/",
     },
@@ -153,6 +163,19 @@ const Home = () => {
       icon: Monitor
     },
     {
+      title: language === "en" ? "SAP Analytics Cloud (SAC)" :
+             language === "fr" ? "SAP Analytics Cloud (SAC)" :
+             language === "es" ? "SAP Analytics Cloud (SAC)" :
+             language === "zh" ? "SAP 分析云 (SAC)" :
+             "एसएपी एनालिटिक्स क्लाउड (SAC)",
+      desc: language === "en" ? "Certified analytical data modelling, interactive story dashboards, and enterprise BI reporting." :
+            language === "fr" ? "Modélisation de données analytiques certifiée, tableaux de bord interactifs et reporting décisionnel d'entreprise." :
+            language === "es" ? "Modelado analítico de datos certificado, paneles de control interactivos e informes de BI empresarial." :
+            language === "zh" ? "官方认证数据建模、交互式故事仪表板呈现与企业级商务智能(BI)报表分析。" :
+            "प्रमाणित एनालिटिकल डेटा मॉडलिंग, इंटरैक्टिव स्टोरी डैशबोर्ड और एंटरप्राइज बीआई रिपोर्टिंग।",
+      icon: BarChart3
+    },
+    {
       title: language === "en" ? "AI & Intelligent Systems" :
              language === "fr" ? "IA et Systèmes Intelligents" :
              language === "es" ? "IA y Sistemas Inteligentes" :
@@ -164,19 +187,6 @@ const Home = () => {
             language === "zh" ? "集成客户端大语言模型(LLM)接口、自然语言处理机器人和智能化日常应用。" :
             "क्लाइंट-साइड एआई, प्राकृतिक भाषा बॉट और स्मार्ट सुविधाओं का एकीकरण।",
       icon: Cpu
-    },
-    {
-      title: language === "en" ? "Premium UI Design" :
-             language === "fr" ? "Design UI de Premium" :
-             language === "es" ? "Diseño UI de Premium" :
-             language === "zh" ? "高保真界面设计" :
-             "प्रीमियम यूआई डिजाइन",
-      desc: language === "en" ? "Crafting gorgeous glassmorphism panels, fluid keyframe animations, and micro-interactions." :
-            language === "fr" ? "Création de magnifiques panneaux de glassmorphisme et d'animations fluides." :
-            language === "es" ? "Creación de hermosos paneles de glassmorphism y animaciones fluidas." :
-            language === "zh" ? "精心制作精美毛玻璃效果、流畅的关键帧动画与极具质感的交互微动效。" :
-            "सुंदर ग्लासमोर्फिज्म पैनल, सहज कीफ़्रेम एनिमेशन और सूक्ष्म-संवाद डिजाइन।",
-      icon: Palette
     }
   ];
 
@@ -221,9 +231,9 @@ const Home = () => {
     <div className="w-full max-w-6xl mx-auto space-y-6 md:space-y-16 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
         title="Ujwal Singh | Software Developer, Creator & AI Enthusiast"
-        description="Official website of Ujwal Singh. Explore projects, connect on social media, and discover work in web development and artificial intelligence."
+        description="Official website of Ujwal Singh, full-stack software developer, creator, and AI enthusiast. Explore projects, social links, and web engineering."
         path="/"
-        keywords="Ujwal Singh, software developer, AI enthusiast, web developer, portfolio"
+        keywords="Ujwal Singh, software developer, full stack developer, AI enthusiast, web developer portfolio"
       />
 
       {/* Hero Section */}
@@ -246,6 +256,14 @@ const Home = () => {
         <div className="glass-card p-6 md:p-8 border border-primary/10">
           <div className="text-center md:text-left space-y-3">
             <div>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
+                  Full-Stack Developer
+                </span>
+                <span className="text-[10px] font-semibold text-muted-foreground px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">
+                  SAP Certified (SAC)
+                </span>
+              </div>
               <h2 className="text-lg sm:text-xl font-bold font-display flex items-center justify-center md:justify-start gap-1.5">
                 <User className="w-4.5 h-4.5 text-primary" /> {aboutMeTitle}
               </h2>
