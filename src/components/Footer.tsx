@@ -91,12 +91,17 @@ const Footer = () => {
   const menuItems = [
     { label: text.nav.overview, url: "/" },
     { label: text.nav.bio, url: "/about" },
-    { label: text.nav.works, url: "/websites" },
-    { label: text.nav.reflections, url: "/reflections" },
+    { label: text.nav.works, url: "/projects" },
+    { label: "Research & Publications", url: "/research" },
+    { label: "Certifications", url: "/certifications" },
+    { label: "Skills Matrix", url: "/skills" },
+    { label: "Experience", url: "/experience" },
+    { label: "Technical Blog", url: "/blog" },
+    { label: "Resume / CV", url: "/resume" },
+    { label: "Connect With Me", url: "/social" },
     { label: text.nav.contact, url: "/contact" },
-    { label: "Privacy Policy", url: "/privacy" },
-    { label: "Terms of Service", url: "/terms" },
   ];
+
 
   const socialLinks = [
     { icon: Linkedin, url: "https://www.linkedin.com/in/ujwalsingh23/", name: "LinkedIn" },
@@ -131,7 +136,7 @@ const Footer = () => {
                   key={social.name}
                   href={social.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="w-8 h-8 rounded-xl bg-primary/5 hover:bg-primary/10 border border-primary/10 hover:border-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105"
                   title={social.name}
                 >

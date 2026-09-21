@@ -5,7 +5,8 @@ export interface TranslationDict {
     overview: string;
     bio: string;
     works: string;
-    reflections: string;
+    reflections?: string;
+    connect: string;
     contact: string;
   };
   home: {
@@ -110,6 +111,7 @@ export const translations: Record<Language, TranslationDict> = {
       bio: "Bio",
       works: "Works",
       reflections: "Reflections",
+      connect: "Connect",
       contact: "Contact"
     },
     home: {
@@ -244,6 +246,7 @@ export const translations: Record<Language, TranslationDict> = {
       bio: "Bio",
       works: "Projets",
       reflections: "Réflexions",
+      connect: "Connecter",
       contact: "Contact"
     },
     home: {
@@ -378,6 +381,7 @@ export const translations: Record<Language, TranslationDict> = {
       bio: "Biografía",
       works: "Proyectos",
       reflections: "Reflexiones",
+      connect: "Conectar",
       contact: "Contacto"
     },
     home: {
@@ -512,6 +516,7 @@ export const translations: Record<Language, TranslationDict> = {
       bio: "简介",
       works: "作品",
       reflections: "感悟",
+      connect: "连接",
       contact: "联系"
     },
     home: {
@@ -646,6 +651,7 @@ export const translations: Record<Language, TranslationDict> = {
       bio: "बायो",
       works: "कार्य",
       reflections: "विचार",
+      connect: "जुड़ें",
       contact: "संपर्क"
     },
     home: {

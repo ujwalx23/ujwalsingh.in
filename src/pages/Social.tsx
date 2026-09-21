@@ -82,18 +82,24 @@ const Social = () => {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-10">
       <PageSEO
-        title="Social Links | Ujwal Singh on LinkedIn, GitHub, Instagram & More"
-        description="Connect with Ujwal Singh across social media platforms — LinkedIn, GitHub, Instagram, X, Discord, YouTube, ORCID, and coding profiles."
+        title="Connect with Ujwal Singh | Official Developer & Social Network"
+        description="Official verified social and developer profiles of Ujwal Singh: GitHub, LinkedIn, ORCID, X (Twitter), LeetCode, TakeUforward, YouTube, Quora, Reddit, Discord, Threads, Instagram, and Pinterest."
         path="/social"
-        keywords="Ujwal Singh social media, LinkedIn, GitHub, Instagram, ORCID"
+        keywords="Ujwal Singh, connect with Ujwal, Ujwal Singh social, GitHub ujwalx23, LinkedIn ujwalsingh23, ORCID 0009-0004-0490-010X, LeetCode UjwalSingh23"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Connect", path: "/social" }]}
       />
-      <h1 className="text-3xl md:text-4xl font-bold gradient-text fade-in-up">
-        Social Links
-      </h1>
+      <div className="space-y-2">
+        <h1 className="text-3xl md:text-4xl font-bold gradient-text fade-in-up">
+          Connect With Ujwal Singh
+        </h1>
+        <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
+          Official developer profiles, research identity, coding handles, and verified network across the web.
+        </p>
+      </div>
 
       {/* Social Media */}
       <section className="fade-in-up">
-        <h2 className="text-2xl font-bold mb-6">Social Media</h2>
+        <h2 className="text-2xl font-bold mb-6">Social & Professional Networks</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {socialLinks.map((link, index) => {
             const IconComponent = link.icon;
@@ -102,7 +108,7 @@ const Social = () => {
                 key={link.name}
                 href={link.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 className="glass-card-hover flex items-center gap-3 p-4 min-h-[70px]"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
@@ -125,7 +131,7 @@ const Social = () => {
                 key={platform.name}
                 href={platform.url}
                 target={platform.isDownload ? "_self" : "_blank"}
-                rel={platform.isDownload ? undefined : "noopener noreferrer"}
+                rel={platform.isDownload ? undefined : "me noopener noreferrer"}
                 download={platform.isDownload ? "Ujwal_Resume.pdf" : undefined}
                 className="glass-card-hover flex flex-col items-center justify-center gap-3 p-5 min-h-[100px]"
                 style={{ animationDelay: `${index * 0.05}s` }}

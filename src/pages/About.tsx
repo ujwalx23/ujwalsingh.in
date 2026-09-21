@@ -79,6 +79,10 @@ const FAQS = [
     a: "I lead projects end-to-end: starting from client requirement discovery, designing normalized PostgreSQL schemas, structuring backend APIs in Supabase, and delivering responsive, SEO-optimized React interfaces (such as the Namami Vindhyavasini portal)."
   },
   {
+    q: "Have you published any research papers in Artificial Intelligence or Healthcare?",
+    a: "Yes. I authored and published 'Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems' on TechRxiv (powered by IEEE) in February 2026 (DOI: 10.36227/techrxiv.177006061.17458864/v1). The paper examines how AI software architectures provide accessible non-clinical triage and decision support while establishing strict patient privacy standards and clinical referral boundaries."
+  },
+  {
     q: "How fast do you respond to project inquiries?",
     a: "I typically respond within 24 to 48 hours. For urgent inquiries or recruiter discussions, feel free to reach out directly via email at ujwalsingh426@gmail.com or connect with me on LinkedIn."
   }

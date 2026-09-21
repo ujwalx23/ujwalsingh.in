@@ -1,4 +1,54 @@
+# Robots.txt for https://ujwalsingh.in
+# Official personal website of Ujwal Singh
+
+User-agent: Googlebot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: Applebot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /adminxus23
+Disallow: /api/
+
 User-agent: *
 Allow: /
+Disallow: /adminxus23
+Disallow: /api/
 
 Sitemap: https://ujwalsingh.in/sitemap.xml

@@ -37,6 +37,11 @@ const CHAT_OPTIONS: ChatOption[] = [
     response: "Here are Ujwal's key achievements: 🌟\n\n1. 🛕 Namami Vindhyavasini: Production temple portal built with React, TypeScript, Supabase, and PostgreSQL featuring dynamic blogs, event management, and admin dashboard.\n2. 🏥 MediSoul: AI-powered medical companion providing symptom analysis and health tracking with fine-tuned datasets.\n3. 💼 Compozant Internship (Jul–Aug 2025): Developed responsive web apps with React.js, SEO optimizations, and agile sprint delivery.\n4. 🎓 Education: B.E. in Computer Engineering from Mumbai University (8.13 CGPA)."
   },
   {
+    label: "Tell me about his published research paper",
+    value: "research_paper",
+    response: "Ujwal authored & published an official research paper titled:\n'Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems' on TechRxiv (powered by IEEE) in February 2026! 🔬✨\n\n• DOI: 10.36227/techrxiv.177006061.17458864/v1\n• TechRxiv Article: https://www.techrxiv.org/doi/full/10.36227/techrxiv.177006061.17458864/v1\n• ORCID: 0009-0004-0490-010X\n• Key Finding: Demonstrates how assistive AI triage can democratize healthcare support while strictly deferring clinical diagnosis to certified doctors."
+  },
+  {
     label: "How can I contact him?",
     value: "contact_info",
     response: `You can reach out to Ujwal directly! 📬\n\n• Email: ujwalsingh426@gmail.com / ${CONTACT_EMAIL}\n• Phone: +91 7977339435\n• LinkedIn: linkedin.com/in/ujwalsingh23/\n• GitHub: github.com/ujwalx23\n\nHe is open to full-stack developer roles, client web projects, and collaborative engineering opportunities!`

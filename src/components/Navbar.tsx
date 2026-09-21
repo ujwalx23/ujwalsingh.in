@@ -1,19 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
-  Home, User, Globe, Quote, Mail, Languages, ChevronDown
+  Home, User, Globe, Share2, Mail, Languages, ChevronDown, FileText, BookOpen
 } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Language } from "@/lib/translations";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const menuItems = [
-  { key: "overview", url: "/", icon: Home },
-  { key: "bio", url: "/about", icon: User },
-  { key: "works", url: "/websites", icon: Globe },
-  { key: "reflections", url: "/reflections", icon: Quote },
-  { key: "contact", url: "/contact", icon: Mail },
+  { key: "overview", url: "/", icon: Home, label: "Home" },
+  { key: "bio", url: "/about", icon: User, label: "About" },
+  { key: "works", url: "/projects", icon: Globe, label: "Projects" },
+  { key: "research", url: "/research", icon: FileText, label: "Research" },
+  { key: "blog", url: "/blog", icon: BookOpen, label: "Blog" },
+  { key: "connect", url: "/social", icon: Share2, label: "Connect" },
+  { key: "contact", url: "/contact", icon: Mail, label: "Contact" },
 ];
+
 
 const LANGUAGES: { code: Language; label: string; nativeChar: string; nativeName: string }[] = [
   { code: "en", label: "English (EN)", nativeChar: "A", nativeName: "English" },
@@ -110,11 +113,12 @@ export function Navbar() {
                     : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
                 }`}
               >
-                {t(`nav.${item.key}`)}
+                {item.label && (t(`nav.${item.key}`) === `nav.${item.key}` || !t(`nav.${item.key}`)) ? item.label : t(`nav.${item.key}`)}
                 {isActive && (
                   <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 )}
               </Link>
+
             );
           })}
         </nav>
@@ -189,8 +193,9 @@ export function Navbar() {
                     }`}
                   >
                     <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? "scale-110" : ""}`} />
-                    <span className="text-[9px] font-bold tracking-wider">{t(`nav.${item.key}`)}</span>
+                    <span className="text-[9px] font-bold tracking-wider">{item.label && (t(`nav.${item.key}`) === `nav.${item.key}` || !t(`nav.${item.key}`)) ? item.label : t(`nav.${item.key}`)}</span>
                   </Link>
+
                 );
               })}
 

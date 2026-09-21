@@ -32,9 +32,9 @@ const websites = [
   {
     name: "MediSoul",
     description:
-      "(Under Development) An AI-powered personal medical companion that provides instant health insights, symptom checking, and track records.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827917348.png",
-    url: "https://medisoul23.vercel.app/",
+      "AI-powered medical companion providing health insights and symptom checking. Practical implementation of Ujwal Singh's published TechRxiv AI healthcare research (DOI: 10.36227/techrxiv.177006061.17458864/v1).",
+    img: `${import.meta.env.BASE_URL}images/medisoul.png`,
+    url: "https://cure23.vercel.app/",
   },
   {
     name: "Rim Weather Guide",

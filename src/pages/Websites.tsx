@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { ExternalLink, Search, Code, Globe, Sparkles } from "lucide-react";
+import { ExternalLink, Search, Code, Globe, Sparkles, Database, ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
+import { PERSON_ID, SITE_URL } from "@/lib/schemaGraph";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +18,8 @@ interface Project {
   url: string;
   category: "web" | "game" | "ai";
   tech: string[];
+  role?: string;
+  architecture?: string;
   // Translatable content
   translations: Record<string, {
     description: string;
@@ -25,6 +28,7 @@ interface Project {
     features: string[];
   }>;
 }
+
 
 const Websites = () => {
   const { t, language } = useLanguage();
@@ -144,13 +148,13 @@ const Websites = () => {
       translations: {
         en: {
           categoryLabel: "AI Healthcare",
-          description: "AI-powered medical companion with symptom analysis, health tracking & fine-tuned client AI chatbot.",
-          longDescription: "Developed an AI-powered medical companion providing symptom analysis, personalized health insights, and health history tracking through an interactive web application. Trained and fine-tuned the client-side AI chatbot using curated health and symptom datasets to improve the accuracy and relevance of AI-driven health analysis. Built Quick Appointments and health history features integrated into a unified healthcare experience.",
+          description: "AI medical companion with symptom analysis, health tracking & fine-tuned client chatbot. Grounded in published TechRxiv research (DOI: 10.36227/techrxiv.177006061.17458864/v1).",
+          longDescription: "Developed an AI-powered medical companion providing symptom analysis, personalized health insights, and health history tracking through an interactive web application. Serves as the real-world software implementation of Ujwal Singh's research published on TechRxiv ('Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems', DOI: 10.36227/techrxiv.177006061.17458864/v1). Built client-side conversational AI fine-tuned on curated clinical symptom datasets with strict triage boundaries.",
           features: [
-            "Symptom analysis & personalized health insights",
-            "Fine-tuned client-side AI chatbot with curated datasets",
-            "Integrated Quick Appointments booking flow",
-            "Longitudinal health history & record tracking"
+            "Practical implementation of published TechRxiv AI research",
+            "Symptom analysis & personalized non-clinical triage insights",
+            "Fine-tuned client-side AI chatbot with curated clinical datasets",
+            "Longitudinal health history & confidential record tracking"
           ]
         },
         fr: {
@@ -325,24 +329,48 @@ const Websites = () => {
     return matchesSearch;
   });
 
+  const projectSchemas = websites.map(site => ({
+    "@type": "SoftwareApplication",
+    "@id": `${SITE_URL}/projects#${site.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+    name: site.name,
+    description: site.translations.en.description,
+    applicationCategory: site.category === "ai" ? "HealthApplication" : "WebApplication",
+    operatingSystem: "All (Web Browser)",
+    url: site.url,
+    author: {
+      "@id": PERSON_ID
+    }
+  }));
+
   return (
     <div className="w-full max-w-6xl mx-auto space-y-8 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
-        title={t("websites.title")}
-        description={t("websites.subtitle")}
-        path="/websites"
-        keywords="Ujwal Singh projects, web apps, Wanderlust Adventures, MediSoul, CuteList, Newsnap"
+        title="Software Projects & Web Applications | Ujwal Singh"
+        description="Explore production web applications, client solutions, and AI platforms built by Ujwal Singh, including Namami Vindhyavasini, MediSoul, and Wanderlust Adventures."
+        path="/projects"
+        keywords="Ujwal Singh projects, Namami Vindhyavasini, MediSoul, Wanderlust Adventures, Newsnap, CuteList, Delve Together, full stack applications"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" }
+        ]}
+        extraNodes={projectSchemas}
       />
       
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-primary/10">
         <div>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
+              Portfolio & Works
+            </span>
+          </div>
           <h1 className="text-2xl sm:text-3xl font-bold gradient-text">
             {t("websites.title")}
           </h1>
           <p className="text-muted-foreground text-xs mt-0.5">
-            {t("websites.subtitle")}
+            Production client applications, AI-driven health companions, and interactive web tools.
           </p>
         </div>
+
 
         {/* Search */}
         <div className="relative w-full sm:w-64">
