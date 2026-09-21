@@ -1,0 +1,32 @@
+/* Humans.txt – Following the humanstxt.org standard */
+
+/* AUTHOR */
+Name: Ujwal Singh
+Role: Full-Stack Developer & Software Engineer
+Location: Mumbai, Maharashtra, India
+Website: https://ujwalsingh.in
+GitHub: https://github.com/ujwalx23
+LinkedIn: https://www.linkedin.com/in/ujwalsingh23/
+ORCID: https://orcid.org/0009-0004-0490-010X
+X (Twitter): https://x.com/UJWALSINGH23
+Email: ujwalsingh426@gmail.com
+
+/* CREDENTIALS */
+Education: B.E. Computer Engineering, Shree L. R. Tiwari College of Engineering (University of Mumbai), CGPA 8.13 / 10
+Certification: SAP Certified Data Analyst – SAP Analytics Cloud (C_SAC_2601)
+Research: TechRxiv – "Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems" (DOI: 10.36227/techrxiv.177006061.17458864/v1)
+
+/* TECHNOLOGY COLOPHON */
+Frontend: React 19, TypeScript, Vite, Tailwind CSS
+Backend / Database: Supabase, PostgreSQL, REST APIs
+Analytics & BI: SAP Analytics Cloud (SAC)
+Package Manager: Bun / NPM
+Hosting / Deployment: Vercel
+PWA: Workbox / VitePWA
+Icons: Lucide React
+UI Components: shadcn-ui (Radix UI)
+
+/* SITE */
+Language: en, fr, es, zh, hi
+Last update: 2026-09-21
+Standards: HTML5, CSS3, WCAG 2.1 AA

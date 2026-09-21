@@ -24,14 +24,25 @@ interface PageSEOProps {
 }
 
 const BASE_URL = "https://ujwalsingh.in";
-const DEFAULT_IMAGE = "https://ujwalsingh.in/images/pwa-icon-512.png";
+// Default to the branded OG social card for rich link previews
+const DEFAULT_OG_IMAGE = "https://ujwalsingh.in/og-card.jpg";
+
+// hreflang language mapping — same URL serves all 5 languages via client-side i18n
+const HREFLANG_LOCALES = [
+  { hreflang: "en", lang: "en" },
+  { hreflang: "fr", lang: "fr" },
+  { hreflang: "es", lang: "es" },
+  { hreflang: "zh-Hans", lang: "zh" },
+  { hreflang: "hi", lang: "hi" },
+  { hreflang: "x-default", lang: "en" },
+];
 
 const PageSEO = ({
   title,
   description,
   path,
   keywords,
-  image = DEFAULT_IMAGE,
+  image = DEFAULT_OG_IMAGE,
   type = "website",
   jsonLd,
   breadcrumbs,
@@ -53,30 +64,51 @@ const PageSEO = ({
       el.setAttribute("content", content);
     };
 
+    // Helper to set/create link tags
+    const setLink = (rel: string, hreflang: string | undefined, href: string) => {
+      const selector = hreflang
+        ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+        : `link[rel="${rel}"]`;
+      let el = document.querySelector(selector) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        if (hreflang) el.setAttribute("hreflang", hreflang);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
     // Clean path ensuring leading slash
     const cleanPath = path.startsWith("/") ? path : `/${path}`;
     const fullUrl = `${BASE_URL}${cleanPath === "/" ? "" : cleanPath}`;
+    const resolvedImage = image.startsWith("http") ? image : `${BASE_URL}${image}`;
 
     // Standard SEO Tags
     setMeta("name", "description", description);
     setMeta("name", "author", "Ujwal Singh");
     if (keywords) setMeta("name", "keywords", keywords);
 
-    // Open Graph Tags
+    // Open Graph Tags — uses branded OG social card
     setMeta("property", "og:title", title);
     setMeta("property", "og:description", description);
     setMeta("property", "og:url", fullUrl);
     setMeta("property", "og:type", type);
     setMeta("property", "og:site_name", "Ujwal Singh");
-    setMeta("property", "og:image", image.startsWith("http") ? image : `${BASE_URL}${image}`);
+    setMeta("property", "og:image", resolvedImage);
+    setMeta("property", "og:image:width", "1200");
+    setMeta("property", "og:image:height", "630");
+    setMeta("property", "og:image:alt", "Ujwal Singh – Full-Stack Developer & Software Engineer | ujwalsingh.in");
+    setMeta("property", "og:locale", "en_US");
 
-    // Twitter Card Tags
+    // Twitter Card Tags — summary_large_image shows full branded card
     setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:site", "@UJWALSINGH23");
     setMeta("name", "twitter:creator", "@UJWALSINGH23");
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
-    setMeta("name", "twitter:image", image.startsWith("http") ? image : `${BASE_URL}${image}`);
+    setMeta("name", "twitter:image", resolvedImage);
+    setMeta("name", "twitter:image:alt", "Ujwal Singh – Full-Stack Developer & Software Engineer");
 
     // Academic Citation Metadata (Google Scholar, Perplexity & AI Search)
     if (academicMeta) {
@@ -102,6 +134,15 @@ const PageSEO = ({
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", fullUrl);
+
+    // hreflang Alternate Tags — informs Google which language editions exist
+    // The site uses client-side i18n so all locales resolve to the same URL
+    HREFLANG_LOCALES.forEach(({ hreflang }) => {
+      setLink("alternate", hreflang, fullUrl);
+    });
+
+    // humans.txt link tag for developer crawlers
+    setLink("author", undefined, `${BASE_URL}/humans.txt`);
 
     // Schema.org Structured Data
     const effectiveJsonLd =
@@ -132,4 +173,3 @@ const PageSEO = ({
 };
 
 export default PageSEO;
-

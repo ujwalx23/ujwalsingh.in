@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.png", "pwa-icon-192.png", "pwa-icon-512.png", "Ujwal_Resume.pdf"],
+      includeAssets: ["favicon.png", "pwa-icon-192.png", "pwa-icon-512.png", "Ujwal_Resume.pdf", "og-card.jpg", "llms.txt", "humans.txt", "rss.xml"],
       manifest: {
         name: "Ujwal Singh | Social",
         short_name: "Ujwal Social",
@@ -81,5 +81,30 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Core React runtime — cached separately, never changes
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+          // Radix UI & shadcn component primitives
+          "vendor-ui": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-select",
+          ],
+          // Lucide icons tree-shaken chunk
+          "vendor-icons": ["lucide-react"],
+          // TanStack Query (data fetching)
+          "vendor-query": ["@tanstack/react-query"],
+        },
+      },
+    },
+    // Raise warning threshold to reduce noise, real splitting already applied
+    chunkSizeWarningLimit: 600,
   },
 }));
