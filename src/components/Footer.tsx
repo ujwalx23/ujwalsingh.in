@@ -198,11 +198,20 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="max-w-6xl mx-auto pt-6 border-t border-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-[11px] font-semibold text-muted-foreground">
-          <span>© {currentYear} Ujwal Singh. All rights reserved.</span>
+          <span>&copy; {currentYear} Ujwal Singh. All rights reserved.</span>
           <span>•</span>
           <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
           <span>•</span>
           <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+          <span>•</span>
+          <a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1.5 text-primary/80">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+              <circle cx="5" cy="19" r="1" fill="currentColor" />
+            </svg>
+            <span>RSS Feed</span>
+          </a>
         </div>
         <p className="text-[10px] text-muted-foreground/80 flex items-center gap-1.5">
           <span>{text.handcrafted}</span>
