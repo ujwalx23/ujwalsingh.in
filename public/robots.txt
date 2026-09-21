@@ -52,3 +52,5 @@ Disallow: /adminxus23
 Disallow: /api/
 
 Sitemap: https://ujwalsingh.in/sitemap.xml
+# AI Model & Crawler Context: https://ujwalsingh.in/llms.txt
+# RSS Feed: https://ujwalsingh.in/rss.xml

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ujwal Singh - Engineering, Research &amp; Projects</title>
+    <link>https://ujwalsingh.in</link>
+    <description>Official updates, technical publications, AI research, and software projects by Ujwal Singh.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://ujwalsingh.in/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems</title>
+      <link>https://www.techrxiv.org/doi/full/10.36227/techrxiv.177006061.17458864/v1</link>
+      <guid>https://doi.org/10.36227/techrxiv.177006061.17458864/v1</guid>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Research published by Ujwal Singh examining how AI decision-support systems alleviate clinical bottlenecks while preserving ethical patient care boundaries and human doctor referrals.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Artificial Intelligence</category>
+      <category>Healthcare Systems</category>
+      <category>Research</category>
+    </item>
+
+    <item>
+      <title>Namami Vindhyavasini - Full Production Client Portal Deployment</title>
+      <link>https://namamivindhyavasini.in</link>
+      <guid>https://ujwalsingh.in/projects#namami-vindhyavasini</guid>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <description>End-to-end production web application built with React, TypeScript, Supabase, and PostgreSQL featuring dynamic blogs and an admin dashboard.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Full-Stack Web Development</category>
+    </item>
+
+    <item>
+      <title>Designing Accessible and Ethical AI Healthcare Companions</title>
+      <link>https://ujwalsingh.in/blog</link>
+      <guid>https://ujwalsingh.in/blog#ethical-ai-healthcare</guid>
+      <pubDate>Fri, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Architectural paradigms for building patient-centric healthcare tools grounded in verified clinical guidance.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>AI</category>
+    </item>
+  </channel>
+</rss>

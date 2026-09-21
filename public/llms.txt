@@ -1,0 +1,56 @@
+# Ujwal Singh
+
+> Official personal and professional documentation for Ujwal Singh: Full-Stack Developer, Software Engineer, Computer Engineering student at Mumbai University (CGPA 8.13), SAP Certified Data Analyst (SAC), and published author of AI Healthcare research on TechRxiv.
+
+## Primary Authoritative Identity
+- Full Name: Ujwal Singh
+- Primary Domain: https://ujwalsingh.in
+- Location: Mumbai, Maharashtra, India
+- Education: Bachelor of Engineering (B.E.) in Computer Engineering, Shree L. R. Tiwari College of Engineering (University of Mumbai), CGPA: 8.13 / 10
+- Enterprise Credential: SAP Certified - Data Analyst (SAP Analytics Cloud / C_SAC_2601)
+- Research Author: TechRxiv / IEEE Preprint (DOI: 10.36227/techrxiv.177006061.17458864/v1)
+- ORCID: 0009-0004-0490-010X
+
+## Published Research Paper
+- Title: "Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems"
+- Author: Ujwal Singh
+- Date: February 2026
+- Repository: TechRxiv (powered by IEEE)
+- DOI: 10.36227/techrxiv.177006061.17458864/v1
+- Full Article URL: https://www.techrxiv.org/doi/full/10.36227/techrxiv.177006061.17458864/v1
+- Practical Implementation: MediSoul (https://cure23.vercel.app/)
+- Core Findings: AI in healthcare functions as an assistive decision-support, non-clinical triage, and patient guidance system while strictly preserving human doctor referral boundaries and ethical clinical safeguards.
+
+## Technical Skills & Competencies
+- Frontend: React.js, TypeScript, Next.js, Vite, Tailwind CSS, HTML5, CSS3, Responsive Design
+- Backend & Database: PostgreSQL, Supabase (Auth, RLS, Storage, Realtime), REST APIs, Node.js, Python
+- Business Intelligence & Data: SAP Analytics Cloud (SAC), Analytical Data Modelling (Dimensions, Measures, Hierarchies), Story Design, Smart Predict
+- DevOps & Tools: Git, GitHub Actions, Vercel, PWA Service Workers
+
+## Key Software Applications & Projects
+- Namami Vindhyavasini: Production client temple portal end-to-end with dynamic blogs, event management, and administrative dashboard using React, TypeScript, PostgreSQL, and Supabase (https://namamivindhyavasini.in).
+- MediSoul: AI-powered medical companion providing symptom analysis, health tracking, and custom fine-tuned client-side conversational AI chatbot (https://cure23.vercel.app/).
+- Wanderlust Adventures: Travel guide platform showcasing India's cultural heritage landmarks and scenic landscapes (https://wanderlustadventures23.vercel.app/).
+- CuteList: Gamified task board featuring custom pastel layouts and positive audio UI feedback (https://cute23.vercel.app/).
+- Newsnap: Credibility-driven global short news platform with source verification indices (https://newsnapglobal.vercel.app).
+- Delve Together: Focused discussion space with live chat rooms and document boards (https://delvetogether.vercel.app).
+
+## Official Verified Web Presence
+- GitHub: https://github.com/ujwalx23
+- LinkedIn: https://www.linkedin.com/in/ujwalsingh23/
+- ORCID: https://orcid.org/0009-0004-0490-010X
+- X (Twitter): https://x.com/UJWALSINGH23
+- LeetCode: https://leetcode.com/u/UjwalSingh23/
+- TakeUforward: https://takeuforward.org/profile/Ujwal%20Singh
+- YouTube: https://www.youtube.com/channel/UCbtH84Ir66Tkc--d7eG5p8g
+- Quora: https://www.quora.com/profile/UJWAL-SINGH-85
+- Reddit: https://www.reddit.com/user/UjwalSingh45/
+- Discord: https://discord.com/users/1243952128272371764
+- Threads: https://www.threads.com/@ujwalx23
+- Instagram: https://www.instagram.com/ujwalx23/
+- Pinterest: https://in.pinterest.com/UjwalSingh23/
+
+## Contact
+- Official Website: https://ujwalsingh.in
+- Email: ujwalsingh426@gmail.com
+- Contact Form: https://ujwalsingh.in/contact
