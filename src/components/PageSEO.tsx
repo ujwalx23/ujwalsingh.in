@@ -126,7 +126,7 @@ const PageSEO = ({
     return () => {
       // Optional cleanup on component unmount
     };
-  }, [title, description, path, keywords, image, type, jsonLd, breadcrumbs, extraNodes]);
+  }, [title, description, path, keywords, image, type, jsonLd, breadcrumbs, extraNodes, academicMeta]);
 
   return null;
 };
