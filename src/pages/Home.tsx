@@ -167,6 +167,35 @@ const Home = () => {
                    "रिएक्ट, टाइपस्क्रिप्ट, पोस्टग्रेएसक्यूएल और सुपरबेस के साथ वास्तविक क्लाइंट के लिए संपूर्ण प्रोडक्शन मंदिर पोर्टल।",
       img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://namamivindhyavasini.in",
+      hasLiveUrl: true,
+    },
+    {
+      name: "SecureCloud",
+      category: "client",
+      badge: "Zero-Knowledge Cloud",
+      tags: ["React", "TypeScript", "AES-256-GCM", "RSA-2048 PKI"],
+      description: language === "en" ? "Zero-knowledge encrypted cloud storage command center with AES-256-GCM hardware encryption, RSA-2048 PKI key distribution, and audit telemetry." :
+                   language === "fr" ? "Centre de commande de stockage cloud chiffré zero-knowledge avec AES-256-GCM et gestion de clés RSA-2048." :
+                   language === "es" ? "Centro de almacenamiento en la nube cifrado zero-knowledge con AES-256-GCM y distribución de claves RSA-2048." :
+                   language === "zh" ? "基于零知识证明架构的高安全加密云存储中心，支持硬件级 AES-256-GCM 与 RSA-2048 密钥分发。" :
+                   "AES-256-GCM और RSA-2048 कुंजी वितरण के साथ ज़ीरो-नॉलेज एन्क्रिप्टेड क्लाउड स्टोरेज कमांड सेंटर।",
+      img: `${import.meta.env.BASE_URL}images/securecloud.png`,
+      url: "https://securexcloud.vercel.app/",
+      hasLiveUrl: true,
+    },
+    {
+      name: "Wanderlust Adventures",
+      category: "web",
+      badge: "Web Platform",
+      tags: ["React", "Interactive Maps", "Tailwind CSS"],
+      description: language === "en" ? "Modern immersive travel platform showcasing India's cultural heritage landmarks and scenic landscapes." :
+                   language === "fr" ? "Plateforme de voyage moderne pour explorer le patrimoine culturel et les paysages emblématiques de l'Inde." :
+                   language === "es" ? "Plataforma de viajes moderna para descubrir el patrimonio cultural y paisajes de la India." :
+                   language === "zh" ? "用于探索印度丰富历史文化遗产与壮丽自然景观的现代化旅游导览应用。" :
+                   "भारत की समृद्ध सांस्कृतिक विरासत और दर्शनीय स्थलों की खोज के लिए एक आधुनिक यात्रा मंच।",
+      img: `${import.meta.env.BASE_URL}images/wanderlust.png`,
+      url: "https://wanderlustadventures23.vercel.app/",
+      hasLiveUrl: true,
     },
     {
       name: "MediSoul",
@@ -179,20 +208,8 @@ const Home = () => {
                    language === "zh" ? "AI 智能医疗助手，提供症状分析、个性化健康洞察与基于专属健康数据集微调的客户端对话模型。" :
                    "एआई-संचालित चिकित्सा साथी जो लक्षण विश्लेषण, स्वास्थ्य इतिहास और विशेष फाइन-ट्यून एआई चैटबॉट प्रदान करता है।",
       img: `${import.meta.env.BASE_URL}images/medisoul.png`,
-      url: "https://cure23.vercel.app/",
-    },
-    {
-      name: "Wanderlust Adventures",
-      category: "web",
-      badge: "Web Platform",
-      tags: ["React", "Interactive Maps", "Tailwind CSS"],
-      description: language === "en" ? "Modern immersive travel platform showcasing India's cultural heritage landmarks and scenic landscapes." :
-                   language === "fr" ? "Plateforme de voyage moderne pour explorer le patrimoine culturel et les paysages emblématiques de l'Inde." :
-                   language === "es" ? "Plataforma de viajes moderna para descubrir el patrimonio cultural y paisajes de la India." :
-                   language === "zh" ? "用于探索印度丰富历史文化遗产与壮丽自然景观的现代化旅游导览应用。" :
-                   "भारत की समृद्ध सांस्कृतिक विरासत और दर्शनीय स्थलों की खोज के लिए एक आधुनिक यात्रा मंच।",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
-      url: "https://wanderlustadventures23.vercel.app/",
+      url: "",
+      hasLiveUrl: false,
     },
     {
       name: "CuteList",
@@ -204,8 +221,23 @@ const Home = () => {
                    language === "es" ? "Tablero de tareas lúdico con temas pastel y retroalimentación de audio." :
                    language === "zh" ? "带有柔和马卡龙色调的趣味任务管理板，配备完成音效与状态持久化。" :
                    "पेस्टल थीम और सकारात्मक ऑडियो प्रतिक्रिया के साथ डिज़ाइन किया गया प्यारा कार्य प्रबंधक बोर्ड।",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
+      img: `${import.meta.env.BASE_URL}images/cutelist.png`,
       url: "https://cute23.vercel.app/",
+      hasLiveUrl: true,
+    },
+    {
+      name: "CogniScan (Cognitive Mind)",
+      category: "ai",
+      badge: "AI Cognitive Health",
+      tags: ["React", "TypeScript", "Cognitive Assessment", "Stroop Test"],
+      description: language === "en" ? "AI-powered cognitive health screening testing memory recall, reaction time, pattern matching, and executive function." :
+                   language === "fr" ? "Évaluation cognitive propulsée par l'IA testant la mémoire, le temps de réaction et les fonctions exécutives." :
+                   language === "es" ? "Plataforma de evaluación cognitiva con IA para memoria, tiempo de reacción y funciones ejecutivas." :
+                   language === "zh" ? "基于 AI 的认知健康评估系统，快速测试工作记忆、反应时延与斯特鲁普任务执行功能。" :
+                   "वर्ड रिकॉल, रिएक्शन टाइम और स्ट्रूप टेस्ट के माध्यम से मानसिक तीक्ष्णता का विश्लेषण करने वाला एआई ऐप।",
+      img: `${import.meta.env.BASE_URL}images/cogniscan.png`,
+      url: "https://cognitivemind.vercel.app",
+      hasLiveUrl: true,
     },
     {
       name: "Newsnap",
@@ -217,8 +249,9 @@ const Home = () => {
                    language === "es" ? "Noticias globales resumidas con clasificación de credibilidad para asegurar objetividad." :
                    language === "zh" ? "以可信度为核心的全球短新闻简报，附带信誉评级以确保事实客观性。" :
                    "विश्वसनीयता-संचालित वैश्विक लघु समाचार स्नैपशॉट और स्रोत सत्यापन सूचकांक।",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
-      url: "https://newsnapglobal.vercel.app",
+      img: `${import.meta.env.BASE_URL}images/newsnap.png`,
+      url: "",
+      hasLiveUrl: false,
     },
     {
       name: "Delve Together",
@@ -230,8 +263,23 @@ const Home = () => {
                    language === "es" ? "Salas de debate colaborativas con tableros de notas compartidos en tiempo real." :
                    language === "zh" ? "用于对全球事务进行理性探讨的实时协作交流室与共享看板平台。" :
                    "सार्थक चर्चाओं के लिए सहयोगी कमरे, दस्तावेज़ बोर्ड और लाइव चैट रूम।",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
+      img: `${import.meta.env.BASE_URL}images/delve.png`,
       url: "https://delvetogether.vercel.app",
+      hasLiveUrl: true,
+    },
+    {
+      name: "Climora Weather App",
+      category: "web",
+      badge: "Weather Intelligence",
+      tags: ["React", "TypeScript", "Weather API", "Air Quality (AQI)"],
+      description: language === "en" ? "Modern weather intelligence portal with real-time micro-climate metrics, dangerous AQI air quality alerts, and solar tracking." :
+                   language === "fr" ? "Portail météo moderne avec alertes de qualité de l'air (IQA), vitesse du vent et suivi solaire." :
+                   language === "es" ? "Portal meteorológico moderno con alertas críticas de calidad del aire (AQI) y pronóstico en tiempo real." :
+                   language === "zh" ? "现代化高精度气象情报门户，提供实时微气候、重度空气质量（AQI）预警与日照追踪。" :
+                   "वास्तविक समय मौसम पूर्वानुमान, खतरनाक वायु गुणवत्ता (AQI) अलर्ट और सौर ट्रैकिंग ऐप।",
+      img: `${import.meta.env.BASE_URL}images/climora.png`,
+      url: "https://blueweather.vercel.app",
+      hasLiveUrl: true,
     }
   ];
 
@@ -589,19 +637,24 @@ const Home = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedProjects.map((project) => {
+            const hasLink = project.hasLiveUrl !== false && Boolean(project.url);
+            const CardWrapper = hasLink ? "a" : Link;
+            const wrapperProps = hasLink
+              ? { href: project.url, target: "_blank", rel: "noopener noreferrer" }
+              : { to: "/projects" };
+
             return (
-              <a
+              <CardWrapper
                 key={project.name}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(wrapperProps as any)}
                 className="glass-card overflow-hidden group flex flex-col h-full border border-primary/10 hover-lift hover:border-primary/30 transition-all cursor-pointer"
               >
                 <div className="w-full h-44 bg-muted overflow-hidden relative border-b border-primary/10">
                   <img
                     src={project.img}
                     alt={project.name}
-                    className="w-full h-full object-contain bg-muted/20 group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top bg-muted/20 group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80";
                     }}
@@ -614,7 +667,13 @@ const Home = () => {
                   <div>
                     <h3 className="font-bold text-base mb-1.5 flex items-center justify-between group-hover:text-primary transition-colors">
                       <span>{project.name}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 group-hover:text-primary transition-transform" />
+                      {hasLink ? (
+                        <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 group-hover:text-primary transition-transform" />
+                      ) : (
+                        <span className="text-[10px] font-normal text-muted-foreground/80 px-1.5 py-0.5 rounded bg-muted/60">
+                          Case Study
+                        </span>
+                      )}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
                       {project.description}
@@ -628,7 +687,7 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
-              </a>
+              </CardWrapper>
             );
           })}
         </div>

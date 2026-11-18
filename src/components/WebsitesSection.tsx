@@ -1,61 +1,76 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const websites = [
+  {
+    name: "Namami Vindhyavasini",
+    description:
+      "A production temple portal and pilgrimage platform with dynamic blogs, event management, and administrative dashboard for a real-world client.",
+    img: `${import.meta.env.BASE_URL}images/namami.png`,
+    url: "https://namamivindhyavasini.in",
+    hasLiveUrl: true,
+  },
+  {
+    name: "SecureCloud",
+    description:
+      "A zero-knowledge cryptographic cloud platform designed for ultra-secure document storage with per-file AES-256-GCM hardware encryption and RSA-2048 PKI key distribution.",
+    img: `${import.meta.env.BASE_URL}images/securecloud.png`,
+    url: "https://securexcloud.vercel.app/",
+    hasLiveUrl: true,
+  },
   {
     name: "Wanderlust Adventures",
     description:
       "A travel platform dedicated to exploring the cultural heritage, landscapes, and adventures across India.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
+    img: `${import.meta.env.BASE_URL}images/wanderlust.png`,
     url: "https://wanderlustadventures23.vercel.app/",
-  },
-  {
-    name: "CuteList",
-    description:
-      "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
-    url: "https://cute23.vercel.app/",
-  },
-  {
-    name: "Newsnap",
-    description:
-      "A credibility-driven, short-form global news platform designed to provide trustworthy information.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
-    url: "https://newsnapglobal.vercel.app",
-  },
-  {
-    name: "LoopPlay",
-    description:
-      "A personal arcade featuring 23 addictive, lightweight mini-games designed for quick bursts of fun and replayability.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828043282.png",
-    url: "https://loopplay23.vercel.app/",
+    hasLiveUrl: true,
   },
   {
     name: "MediSoul",
     description:
       "AI-powered medical companion providing health insights and symptom checking. Practical implementation of Ujwal Singh's published TechRxiv AI healthcare research (DOI: 10.36227/techrxiv.177006061.17458864/v1).",
     img: `${import.meta.env.BASE_URL}images/medisoul.png`,
-    url: "https://cure23.vercel.app/",
+    hasLiveUrl: false,
   },
   {
-    name: "Rim Weather Guide",
+    name: "CuteList",
     description:
-      "A weather forecasting platform providing accurate weather data and smart travel tips for any place in the world.",
-    img: `${import.meta.env.BASE_URL}images/rim-weather.png`,
-    url: "https://rim-weather-guide.vercel.app/",
+      "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
+    img: `${import.meta.env.BASE_URL}images/cutelist.png`,
+    url: "https://cute23.vercel.app/",
+    hasLiveUrl: true,
   },
   {
-    name: "Appliance Care (SIEMENS)",
+    name: "CogniScan (Cognitive Mind)",
     description:
-      "A professional washing machine repair and service platform with booking, warranty tracking, and multi-brand support.",
-    img: `${import.meta.env.BASE_URL}images/appliance-care.png`,
-    url: "https://appliance-care.vercel.app/",
+      "An AI-powered cognitive health assessment platform evaluating memory retention, reaction latency, pattern matching, and executive function.",
+    img: `${import.meta.env.BASE_URL}images/cogniscan.png`,
+    url: "https://cognitivemind.vercel.app",
+    hasLiveUrl: true,
+  },
+  {
+    name: "Newsnap",
+    description:
+      "A credibility-driven, short-form global news platform designed to provide trustworthy information.",
+    img: `${import.meta.env.BASE_URL}images/newsnap.png`,
+    hasLiveUrl: false,
   },
   {
     name: "Delve Together",
     description:
       "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
-    img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
+    img: `${import.meta.env.BASE_URL}images/delve.png`,
     url: "https://delvetogether.vercel.app",
+    hasLiveUrl: true,
+  },
+  {
+    name: "Climora Weather App",
+    description:
+      "A modern weather intelligence portal with real-time micro-climate metrics, dangerous AQI air quality alerts, and solar tracking.",
+    img: `${import.meta.env.BASE_URL}images/climora.png`,
+    url: "https://blueweather.vercel.app",
+    hasLiveUrl: true,
   },
 ];
 
@@ -67,35 +82,53 @@ const WebsitesSection = () => {
       </h2>
 
       <div className="flex flex-col gap-6">
-        {websites.map((site) => (
-          <a
-            key={site.name}
-            href={site.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.03]"
-          >
-            {/* Image */}
-            <div className="w-full bg-muted flex justify-center items-center">
-              <img
-                src={site.img}
-                alt={site.name}
-                className="w-full sm:w-auto max-h-80 object-contain"
-              />
-            </div>
+        {websites.map((site) => {
+          const hasLink = site.hasLiveUrl && Boolean(site.url);
+          const Wrapper = hasLink ? "a" : Link;
+          const wrapperProps = hasLink
+            ? { href: site.url, target: "_blank", rel: "noopener noreferrer" }
+            : { to: "/projects" };
 
-            {/* Text */}
-            <div className="p-5 flex flex-col gap-3">
-              <h3 className="font-semibold text-lg sm:text-xl tracking-wide">
-                {site.name}
-              </h3>
+          return (
+            <Wrapper
+              key={site.name}
+              {...(wrapperProps as any)}
+              className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-[1.02] border border-primary/10 hover:border-primary/25 block"
+            >
+              {/* Image */}
+              <div className="w-full h-56 sm:h-72 bg-muted overflow-hidden">
+                <img
+                  src={site.img}
+                  alt={site.name}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src =
+                      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80";
+                  }}
+                />
+              </div>
 
-              <p className="text-base sm:text-lg opacity-85 leading-7">
-                {site.description}
-              </p>
-            </div>
-          </a>
-        ))}
+              {/* Text */}
+              <div className="p-5 flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-lg sm:text-xl tracking-wide">
+                    {site.name}
+                  </h3>
+                  {!hasLink && (
+                    <span className="text-[10px] text-muted-foreground px-2 py-0.5 rounded bg-muted/60 border border-border/50">
+                      Private Case Study
+                    </span>
+                  )}
+                </div>
+
+                <p className="text-sm opacity-85 leading-relaxed">
+                  {site.description}
+                </p>
+              </div>
+            </Wrapper>
+          );
+        })}
       </div>
     </section>
   );

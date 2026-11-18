@@ -15,7 +15,8 @@ import { Badge } from "@/components/ui/badge";
 interface Project {
   name: string;
   img: string;
-  url: string;
+  url?: string;
+  hasLiveUrl?: boolean;
   category: "web" | "game" | "ai";
   tech: string[];
   role?: string;
@@ -29,7 +30,6 @@ interface Project {
   }>;
 }
 
-
 const Websites = () => {
   const { t, language } = useLanguage();
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -40,6 +40,7 @@ const Websites = () => {
       name: "Namami Vindhyavasini",
       img: `${import.meta.env.BASE_URL}images/namami.png`,
       url: "https://namamivindhyavasini.in",
+      hasLiveUrl: true,
       category: "web",
       tech: ["React", "TypeScript", "PostgreSQL", "Supabase", "Tailwind CSS"],
       translations: {
@@ -101,9 +102,75 @@ const Websites = () => {
       }
     },
     {
+      name: "SecureCloud",
+      img: `${import.meta.env.BASE_URL}images/securecloud.png`,
+      url: "https://securexcloud.vercel.app/",
+      hasLiveUrl: true,
+      category: "web",
+      tech: ["React", "TypeScript", "AES-256-GCM", "RSA-2048 PKI", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "Cloud Security",
+          description: "Zero-knowledge encrypted cloud storage command center with AES-256-GCM, RSA-2048 PKI key distribution, and audit telemetry.",
+          longDescription: "A production-ready zero-knowledge cryptographic cloud platform designed for ultra-secure document storage and sharing. Built with per-file AES-256-GCM hardware encryption, RSA-2048 asymmetric key distribution, SHA-256 integrity streams, and real-time audit telemetry ensuring total data privacy without server-side decryption.",
+          features: [
+            "AES-256-GCM client-side authenticated encryption",
+            "RSA-2048 asymmetric key wrapping & PKI distribution",
+            "Zero-knowledge cryptographic isolation & SHA-256 digests",
+            "Real-time encrypted storage metrics & audit telemetry"
+          ]
+        },
+        fr: {
+          categoryLabel: "Sécurité Cloud",
+          description: "Centre de commande de stockage cloud chiffré zero-knowledge avec AES-256-GCM et distribution de clés RSA-2048.",
+          longDescription: "Plateforme cloud cryptographique zero-knowledge conçue pour le stockage et le partage hautement sécurisés de documents avec chiffrement matériel AES-256-GCM et gestion PKI RSA-2048.",
+          features: [
+            "Chiffrement authentifié client AES-256-GCM",
+            "Distribution et encapsulation de clés RSA-2048",
+            "Isolation cryptographique sans connaissance serveur",
+            "Télémétrie d'audit et métriques de stockage chiffrées"
+          ]
+        },
+        es: {
+          categoryLabel: "Seguridad Cloud",
+          description: "Centro de almacenamiento en la nube cifrado zero-knowledge con AES-256-GCM y distribución de claves RSA-2048.",
+          longDescription: "Plataforma en la nube criptográfica de conocimiento cero para almacenamiento y transferencia ultrasegura de documentos, impulsada por cifrado AES-256-GCM y envoltura de claves asimétricas RSA-2048.",
+          features: [
+            "Cifrado autenticado del lado del cliente AES-256-GCM",
+            "Distribución de claves asimétricas RSA-2048",
+            "Aislamiento criptográfico zero-knowledge",
+            "Telemetría de auditoría y métricas en tiempo real"
+          ]
+        },
+        zh: {
+          categoryLabel: "云端安全",
+          description: "基于零知识证明架构的高安全加密云存储中心，支持 AES-256-GCM 与 RSA-2048 密钥分发。",
+          longDescription: "具备生产级零知识加密能力的云存储平台。采用单文件硬件级 AES-256-GCM 载荷加密与 RSA-2048 非对称公钥密钥包装体系，杜绝服务端明文泄露，并提供实时审计遥测看板。",
+          features: [
+            "客户端硬件级 AES-256-GCM 认证加密",
+            "RSA-2048 非对称密钥包装与 PKI 信任链",
+            "零知识加密隔离与 SHA-256 数据流校验",
+            "实时加密存储遥测与合规审计日志"
+          ]
+        },
+        hi: {
+          categoryLabel: "क्लाउड सुरक्षा",
+          description: "AES-256-GCM और RSA-2048 कुंजी वितरण के साथ ज़ीरो-नॉलेज एन्क्रिप्टेड क्लाउड स्टोरेज कमांड सेंटर।",
+          longDescription: "अति-सुरक्षित दस्तावेज़ भंडारण और साझाकरण के लिए डिज़ाइन किया गया एक उत्पादन-तैयार ज़ीरो-नॉलेज क्रिप्टोग्राफ़िक क्लाउड प्लेटफ़ॉर्म। AES-256-GCM हार्डवेयर एन्क्रिप्शन और RSA-2048 असममित कुंजी वितरण के साथ निर्मित।",
+          features: [
+            "क्लाइंट-साइड AES-256-GCM प्रमाणित एन्क्रिप्शन",
+            "RSA-2048 असममित कुंजी रैपिंग और वितरण",
+            "ज़ीरो-नॉलेज क्रिप्टोग्राफ़िक अलगाव और SHA-256 सत्यापन",
+            "रीयल-टाइम एन्क्रिप्टेड स्टोरेज मेट्रिक्स और ऑडिट टेलीमेट्री"
+          ]
+        }
+      }
+    },
+    {
       name: "Wanderlust Adventures",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827943351.png",
+      img: `${import.meta.env.BASE_URL}images/wanderlust.png`,
       url: "https://wanderlustadventures23.vercel.app/",
+      hasLiveUrl: true,
       category: "web",
       tech: ["React", "TypeScript", "Tailwind CSS"],
       translations: {
@@ -142,7 +209,7 @@ const Websites = () => {
     {
       name: "MediSoul",
       img: `${import.meta.env.BASE_URL}images/medisoul.png`,
-      url: "https://cure23.vercel.app/",
+      hasLiveUrl: false,
       category: "ai",
       tech: ["AIML", "TypeScript", "AI Chatbot", "React", "Tailwind CSS"],
       translations: {
@@ -205,10 +272,11 @@ const Websites = () => {
     },
     {
       name: "CuteList",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766827964162.png",
+      img: `${import.meta.env.BASE_URL}images/cutelist.png`,
       url: "https://cute23.vercel.app/",
+      hasLiveUrl: true,
       category: "web",
-      tech: ["React", "LocalStorage", "Tailwind"],
+      tech: ["React", "LocalStorage", "Tailwind CSS"],
       translations: {
         en: {
           categoryLabel: "Web App",
@@ -243,9 +311,74 @@ const Websites = () => {
       }
     },
     {
+      name: "CogniScan (Cognitive Mind)",
+      img: `${import.meta.env.BASE_URL}images/cogniscan.png`,
+      url: "https://cognitivemind.vercel.app",
+      hasLiveUrl: true,
+      category: "ai",
+      tech: ["React", "TypeScript", "AI Cognitive Health", "Neuro-Metrics", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "AI Cognitive Health",
+          description: "AI-powered cognitive health assessment testing memory, reaction time, pattern matching, and executive function.",
+          longDescription: "An AI-powered cognitive health screening and assessment platform (CogniScan) designed to evaluate memory retention, reaction latency, pattern recognition, and executive function through interactive clinical tasks (Word Recall, Reaction Time, Pattern Match, Stroop Test) in under 2 minutes.",
+          features: [
+            "Interactive Stroop Effect & rapid reaction time tests",
+            "Word recall memory retention evaluation",
+            "Visual pattern recognition & executive function scoring",
+            "Instant AI-generated cognitive baseline report"
+          ]
+        },
+        fr: {
+          categoryLabel: "Santé Cognitive IA",
+          description: "Évaluation de la santé cognitive assistée par IA testant la mémoire, le temps de réaction et les fonctions exécutives.",
+          longDescription: "Plateforme d'évaluation cognitive propulsée par l'IA (CogniScan) évaluant la rétention de mémoire, la latence de réaction et la reconnaissance de formes en moins de 2 minutes.",
+          features: [
+            "Tests interactifs de temps de réaction et effet Stroop",
+            "Évaluation de la mémoire et rappel de mots",
+            "Reconnaissance de motifs visuels et fonctions exécutives",
+            "Rapport cognitif instantané généré par IA"
+          ]
+        },
+        es: {
+          categoryLabel: "Salud Cognitiva IA",
+          description: "Evaluación de salud cognitiva con IA que evalúa memoria, tiempo de reacción y funciones ejecutivas.",
+          longDescription: "Plataforma de evaluación cognitiva impulsada por IA (CogniScan) diseñada para medir memoria, latencia de reacción y reconocimiento de patrones en menos de 2 minutos.",
+          features: [
+            "Pruebas de efecto Stroop y tiempo de reacción rápido",
+            "Evaluación de retención y memoria de palabras",
+            "Reconocimiento de patrones y funciones ejecutivas",
+            "Informe de referencia cognitiva generado por IA"
+          ]
+        },
+        zh: {
+          categoryLabel: "认知健康 AI",
+          description: "基于 AI 的认知健康评估系统，快速测试工作记忆、反应时延、模式识别与执行功能。",
+          longDescription: "AI 驱动的认知健康筛查评估平台（CogniScan）。在 2 分钟内通过词语回忆、反应时测试、模式匹配与斯特鲁普（Stroop）测试等多项经典范式评估脑机认知健康基线。",
+          features: [
+            "交互式 Stroop 干扰效应与毫秒级反应时测试",
+            "短期记忆与多重词语回忆评估",
+            "视知觉模式匹配与执行决策功能打分",
+            "AI 实时综合认知基线评估报告"
+          ]
+        },
+        hi: {
+          categoryLabel: "संज्ञानात्मक स्वास्थ्य AI",
+          description: "मेमोरी, प्रतिक्रिया समय, पैटर्न पहचान और कार्यकारी कार्य का परीक्षण करने वाला एआई संज्ञानात्मक मूल्यांकन।",
+          longDescription: "2 मिनट में वर्ड रिकॉल, रिएक्शन टाइम, पैटर्न मैच और स्ट्रूप टेस्ट के माध्यम से मानसिक तीक्ष्णता और संज्ञानात्मक स्वास्थ्य का त्वरित विश्लेषण करने वाला एआई-संचालित प्लेटफ़ॉर्म (CogniScan)।",
+          features: [
+            "स्ट्रूप टेस्ट और त्वरित प्रतिक्रिया समय परीक्षण",
+            "शब्द स्मृति और स्मरण शक्ति मूल्यांकन",
+            "विज़ुअल पैटर्न पहचान और कार्यकारी कार्य स्कोरिंग",
+            "एआई द्वारा तुरंत तैयार संज्ञानात्मक रिपोर्ट"
+          ]
+        }
+      }
+    },
+    {
       name: "Newsnap",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828023996.png",
-      url: "https://newsnapglobal.vercel.app",
+      img: `${import.meta.env.BASE_URL}images/newsnap.png`,
+      hasLiveUrl: false,
       category: "web",
       tech: ["React", "News API", "Vercel"],
       translations: {
@@ -283,8 +416,9 @@ const Websites = () => {
     },
     {
       name: "Delve Together",
-      img: "https://bpglrwgwxuwbskvrpqhc.supabase.co/storage/v1/object/public/memories/a1829453-e745-4ef0-897a-1840fd48913b/1766828003355.png",
+      img: `${import.meta.env.BASE_URL}images/delve.png`,
       url: "https://delvetogether.vercel.app",
+      hasLiveUrl: true,
       category: "web",
       tech: ["Next.js", "Socket.io", "Supabase"],
       translations: {
@@ -319,6 +453,71 @@ const Websites = () => {
           features: ["लाइव चर्चा कक्ष", "साझा नोट्स डैशबोर्ड", "वर्गीकृत फ़िल्टर"]
         }
       }
+    },
+    {
+      name: "Climora Weather App",
+      img: `${import.meta.env.BASE_URL}images/climora.png`,
+      url: "https://blueweather.vercel.app",
+      hasLiveUrl: true,
+      category: "web",
+      tech: ["React", "TypeScript", "Weather API", "Air Quality (AQI)", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "Weather Intelligence",
+          description: "Modern weather intelligence portal with real-time micro-climate metrics, dangerous AQI air quality alerts, and solar tracking.",
+          longDescription: "A modern, responsive weather intelligence platform providing accurate local forecasts, dangerous AQI air quality health alerts, wind velocity, atmospheric pressure, UV index, and solar golden-hour tracking with clean, high-contrast dark mode interfaces.",
+          features: [
+            "Real-time micro-climate temperature & feels-like analysis",
+            "Critical air quality (AQI) hazard alerts & health precautions",
+            "Atmospheric metrics: humidity, wind speed, visibility & pressure",
+            "Solar tracking with golden-hour and UV index indices"
+          ]
+        },
+        fr: {
+          categoryLabel: "Météo Intelligente",
+          description: "Portail météo moderne avec alertes de qualité de l'air (IQA), vitesse du vent et suivi solaire.",
+          longDescription: "Plateforme météo moderne et réactive offrant des prévisions locales précises, des alertes de qualité de l'air (IQA), et un suivi de l'indice UV et des heures dorées.",
+          features: [
+            "Température en temps réel et analyse du ressenti",
+            "Alertes de pollution et qualité de l'air dangereuse (AQI)",
+            "Données atmosphériques: humidité, vent, visibilité, pression",
+            "Suivi solaire avec indice UV et heure dorée"
+          ]
+        },
+        es: {
+          categoryLabel: "Meteorología Inteligente",
+          description: "Portal meteorológico moderno con alertas de calidad del aire (AQI), velocidad del viento y seguimiento solar.",
+          longDescription: "Plataforma meteorológica moderna que proporciona pronósticos locales precisos, alertas de calidad del aire crítico (AQI), presión atmosférica y cálculo de índice UV.",
+          features: [
+            "Temperatura en tiempo real y sensación térmica",
+            "Alertas críticas de calidad del aire (AQI) y salud",
+            "Métricas atmosféricas: viento, humedad, visibilidad",
+            "Seguimiento solar con índice UV y hora dorada"
+          ]
+        },
+        zh: {
+          categoryLabel: "智能气象应用",
+          description: "现代化高精度气象情报门户，提供实时微气候、重度空气质量（AQI）预警与日照紫外线追踪。",
+          longDescription: "现代响应式智能天气平台，支持全球精确定位天气预报、空气质量（AQI）健康告警、风速气压、紫外线指数和摄影黄金时刻日照轨迹分析。",
+          features: [
+            "实时微气候温度与体感温湿度精确计算",
+            "高污染空气质量（AQI）危险预警提示",
+            "全方位气象指标：风速、湿度、能见度与气压",
+            "日照追踪系统支持紫外线指数与摄影黄金时刻"
+          ]
+        },
+        hi: {
+          categoryLabel: "मौसम विज्ञान वेब ऐप",
+          description: "वास्तविक समय मौसम पूर्वानुमान, खतरनाक वायु गुणवत्ता (AQI) अलर्ट और सौर ट्रैकिंग के साथ आधुनिक मौसम ऐप।",
+          longDescription: "सटीक स्थानीय मौसम पूर्वानुमान, खतरनाक एक्यूआई (AQI) वायु गुणवत्ता स्वास्थ्य चेतावनी, हवा की गति, आर्द्रता, और यूवी इंडेक्स ट्रैकिंग प्रदान करने वाला आधुनिक मौसम ऐप (Climora)।",
+          features: [
+            "रीयल-टाइम तापमान और 'फील्स लाइक' विश्लेषण",
+            "खतरनाक वायु गुणवत्ता (AQI) चेतावनी और स्वास्थ्य सलाह",
+            "वायुमंडलीय मेट्रिक्स: आर्द्रता, हवा की गति, दृश्यता और दबाव",
+            "यूवी इंडेक्स और सूर्योदय/सूर्यास्त ट्रैकिंग"
+          ]
+        }
+      }
     }
   ];
 
@@ -336,7 +535,7 @@ const Websites = () => {
     description: site.translations.en.description,
     applicationCategory: site.category === "ai" ? "HealthApplication" : "WebApplication",
     operatingSystem: "All (Web Browser)",
-    url: site.url,
+    ...(site.url ? { url: site.url } : {}),
     author: {
       "@id": PERSON_ID
     }
@@ -346,9 +545,9 @@ const Websites = () => {
     <div className="w-full max-w-6xl mx-auto space-y-8 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
         title="Software Projects & Web Applications | Ujwal Singh"
-        description="Explore production web applications, client solutions, and AI platforms built by Ujwal Singh, including Namami Vindhyavasini, MediSoul, and Wanderlust Adventures."
+        description="Explore production web applications, client solutions, and AI platforms built by Ujwal Singh, including Namami Vindhyavasini, SecureCloud, Wanderlust Adventures, CogniScan, Climora Weather, and Delve Together."
         path="/projects"
-        keywords="Ujwal Singh projects, Namami Vindhyavasini, MediSoul, Wanderlust Adventures, Newsnap, CuteList, Delve Together, full stack applications"
+        keywords="Ujwal Singh projects, Namami Vindhyavasini, SecureCloud, Wanderlust Adventures, CogniScan, Climora Weather, MediSoul, Newsnap, CuteList, Delve Together, full stack applications"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Projects", path: "/projects" }
@@ -367,10 +566,9 @@ const Websites = () => {
             {t("websites.title")}
           </h1>
           <p className="text-muted-foreground text-xs mt-0.5">
-            Production client applications, AI-driven health companions, and interactive web tools.
+            Production client applications, zero-knowledge cloud architectures, and interactive web tools.
           </p>
         </div>
-
 
         {/* Search */}
         <div className="relative w-full sm:w-64">
@@ -393,31 +591,28 @@ const Websites = () => {
             return (
               <div
                 key={site.name}
-                onClick={() => setSelectedProject(site)}
-                className="hover-lift glass-card overflow-hidden group cursor-pointer flex flex-col h-full hover:border-primary/25 border border-primary/10"
+                className="hover-lift glass-card overflow-hidden group flex flex-col h-full hover:border-primary/25 border border-primary/10"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-full h-36 bg-muted overflow-hidden relative border-b border-primary/5">
+                <div className="w-full h-40 bg-muted overflow-hidden relative border-b border-primary/5">
                   <img
                     src={site.img}
                     alt={site.name}
-                    className="w-full h-full object-contain bg-muted/20 group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top bg-muted/20 group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80`;
                     }}
                   />
-                  <Badge className="absolute top-2.5 right-2.5 bg-background/80 text-foreground border border-primary/15 backdrop-blur-md text-[9px] hover:bg-background/90 px-1.5 py-0.5">
+                  <Badge className="absolute top-2.5 right-2.5 bg-background/85 text-foreground border border-primary/15 backdrop-blur-md text-[9px] hover:bg-background/95 px-2 py-0.5 shadow-sm">
                     {detail.categoryLabel}
                   </Badge>
                 </div>
 
                 <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
                   <div className="space-y-1">
-                    <h3 className="font-bold text-sm sm:text-base flex items-center justify-between group-hover:text-primary transition-colors">
+                    <h3 className="font-bold text-sm sm:text-base group-hover:text-primary transition-colors">
                       {site.name}
-                      {!(site.name === "MediSoul" || site.name === "Delve Together" || site.name === "Newsnap") && (
-                        <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform shrink-0" />
-                      )}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
                       {detail.description}
@@ -433,6 +628,24 @@ const Websites = () => {
                         {t}
                       </span>
                     ))}
+                  </div>
+
+                  {/* Bottom action row */}
+                  <div className="flex items-center justify-between pt-1">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(site)}
+                      className="inline-flex items-center gap-1.5 bg-primary/10 hover:bg-primary/20 text-primary font-semibold px-3 py-1.5 rounded-lg text-xs transition-all border border-primary/20 cursor-pointer"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>Visit Live</span>
+                    </button>
+
+                    {site.hasLiveUrl === false && (
+                      <span className="text-[10px] font-medium text-muted-foreground px-2 py-0.5 rounded bg-muted/60 border border-border/50">
+                        {site.name === "Newsnap" ? "Local" : "Case Study"}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -450,16 +663,16 @@ const Websites = () => {
         <DialogContent className="max-w-md md:max-w-3xl bg-card/95 backdrop-blur-xl border border-primary/20 shadow-2xl p-5 md:p-6 rounded-2xl animate-in fade-in duration-300">
           {selectedProject && (() => {
             const detail = selectedProject.translations[language] || selectedProject.translations["en"];
-            const isLocal = selectedProject.name === "MediSoul" || selectedProject.name === "Delve Together" || selectedProject.name === "Newsnap";
             return (
               <div className="flex flex-col md:flex-row gap-5 md:gap-6 text-left">
                 {/* Left Side: Image on Desktop, Top on Mobile */}
                 <div className="w-full md:w-5/12 flex flex-col justify-start">
-                  <div className="w-full h-40 md:h-64 rounded-xl overflow-hidden bg-muted border border-primary/10">
+                  <div className="w-full h-44 md:h-64 rounded-xl overflow-hidden bg-muted border border-primary/10 shadow-sm">
                     <img
                       src={selectedProject.img}
                       alt={selectedProject.name}
-                      className="w-full h-full object-contain bg-muted/20"
+                      className="w-full h-full object-cover object-top bg-muted/20"
+                      loading="lazy"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80`;
                       }}
@@ -480,7 +693,7 @@ const Websites = () => {
                         {selectedProject.name}
                       </DialogTitle>
                       <DialogDescription className="text-xs text-muted-foreground">
-                        Project specifications.
+                        Production specifications & engineering architecture.
                       </DialogDescription>
                     </DialogHeader>
 
@@ -498,56 +711,49 @@ const Websites = () => {
                         <Sparkles className="w-3 h-3 text-primary" /> {t("websites.highlights")}
                       </h4>
                       <ul className="grid grid-cols-1 gap-1.5 text-xs text-foreground/80 pl-1">
-                        {detail.features.map((feat, idx) => (
-                          <li key={idx} className="flex items-center gap-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                            <span>{feat}</span>
+                        {detail.features.map((feature, i) => (
+                          <li key={i} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/80 shrink-0" />
+                            <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
+                      <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1 flex items-center gap-1">
                         <Code className="w-3 h-3 text-primary" /> {t("websites.techStack")}
                       </h4>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-1">
                         {selectedProject.tech.map((t) => (
-                          <Badge
+                          <span
                             key={t}
-                            variant="secondary"
-                            className="bg-muted text-foreground border border-border/80 text-[10px] px-2 py-0.5"
+                            className="text-[9px] font-semibold bg-primary/10 text-primary px-2 py-0.5 rounded-md border border-primary/20"
                           >
                             {t}
-                          </Badge>
+                          </span>
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex justify-end gap-2 mt-5 pt-3 border-t border-primary/10">
-                    <button
-                      onClick={() => setSelectedProject(null)}
-                      className="px-3.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl transition-all cursor-pointer"
-                    >
-                      {t("websites.close")}
-                    </button>
-                    {isLocal ? (
-                      <span
-                        className="px-3.5 py-1.5 text-xs font-semibold bg-primary/10 text-primary border border-primary/20 rounded-xl flex items-center gap-1 cursor-default select-none"
-                      >
-                        {language === "hi" ? "लोकल" : language === "zh" ? "本地" : "Local"}
-                      </span>
-                    ) : (
+                  {/* Actions */}
+                  <div className="pt-2 flex items-center justify-between border-t border-primary/10">
+                    {selectedProject.hasLiveUrl !== false && selectedProject.url ? (
                       <a
                         href={selectedProject.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3.5 py-1.5 text-xs font-semibold bg-primary text-primary-foreground hover:opacity-90 rounded-xl flex items-center gap-1 shadow-md shadow-primary/15 transition-all hover:scale-102"
+                        className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground font-semibold px-4 py-2 rounded-xl text-xs hover:opacity-90 transition-all shadow-sm"
                       >
-                        <span>{t("websites.visitLive")}</span>
+                        <span>Visit Live Project</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
+                    ) : (
+                      <div className="inline-flex items-center gap-1.5 bg-muted/60 text-muted-foreground font-medium px-4 py-2 rounded-xl text-xs border border-border/60">
+                        <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                        <span>Private Prototype / Research Case Study</span>
+                      </div>
                     )}
                   </div>
                 </div>

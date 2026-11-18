@@ -6,8 +6,68 @@
     <link>https://ujwalsingh.in</link>
     <description>Official updates, technical publications, AI research, and software projects by Ujwal Singh.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 09:30:00 GMT</lastBuildDate>
     <atom:link href="https://ujwalsingh.in/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Engineering the Encrypted Cloud: Zero-Trust Architecture, KMS &amp; Confidential Computing</title>
+      <link>https://ujwalsingh.in/blog#engineering-encrypted-secure-cloud-zero-trust-confidential-computing</link>
+      <guid>https://ujwalsingh.in/blog#engineering-encrypted-secure-cloud-zero-trust-confidential-computing</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Constructing high-security cloud environments with envelope encryption, Cloud KMS, Zero-Trust network micro-segmentation, and hardware Confidential Computing enclaves.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Cloud &amp; Security</category>
+    </item>
+
+    <item>
+      <title>Technical SEO Case Study: How I Engineered Search Dominance for Namami Vindhyavasini</title>
+      <link>https://ujwalsingh.in/blog#technical-seo-case-study-optimizing-namami-vindhyavasini-production-portal</link>
+      <guid>https://ujwalsingh.in/blog#technical-seo-case-study-optimizing-namami-vindhyavasini-production-portal</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+      <description>End-to-end technical SEO, connected Schema.org entity graphs, Core Web Vitals speed optimization, and indexing strategy executed for namamivindhyavasini.in.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Technical SEO</category>
+    </item>
+
+    <item>
+      <title>Architecting Intelligent AI Tutors: Adaptive Learning Graphs, RAG &amp; Socratic Dialogue</title>
+      <link>https://ujwalsingh.in/blog#architecting-intelligent-ai-tutors-adaptive-pedagogy-rag-socratic-models</link>
+      <guid>https://ujwalsingh.in/blog#architecting-intelligent-ai-tutors-adaptive-pedagogy-rag-socratic-models</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Building personalized AI tutoring systems using Bayesian Knowledge Tracing, prerequisite concept graphs, Socratic prompting guardrails, and verified RAG.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Artificial Intelligence</category>
+    </item>
+
+    <item>
+      <title>Megawatts Over Manpower: How Hyperscale Data Centers and Compute Automation Indirectly Impact Jobs</title>
+      <link>https://ujwalsingh.in/blog#how-hyperscale-data-centers-and-ai-compute-are-indirectly-reshaping-jobs</link>
+      <guid>https://ujwalsingh.in/blog#how-hyperscale-data-centers-and-ai-compute-are-indirectly-reshaping-jobs</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A critical analysis of the AI infrastructure boom: why massive data centers employ surprisingly few humans, and how centralized compute indirectly displaces traditional operational roles.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Tech Policy &amp; Careers</category>
+    </item>
+
+    <item>
+      <title>Modern Database Engineering: Relational Integrity, Distributed NoSQL, and Vector Scale</title>
+      <link>https://ujwalsingh.in/blog#modern-database-architecture-sql-nosql-vectors-distributed-scale</link>
+      <guid>https://ujwalsingh.in/blog#modern-database-architecture-sql-nosql-vectors-distributed-scale</guid>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
+      <description>A deep architectural dive into modern data persistence: balancing ACID relational schemas with distributed NoSQL scale, B-Tree/GIN indexing, and pgvector HNSW similarity.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Web Engineering</category>
+    </item>
+
+    <item>
+      <title>The Paradigm Shift in AI Video Generation &amp; Automated Post-Production</title>
+      <link>https://ujwalsingh.in/blog#next-gen-ai-video-generation-and-automated-editing</link>
+      <guid>https://ujwalsingh.in/blog#next-gen-ai-video-generation-and-automated-editing</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Diffusion transformers in generative video synthesis, spatio-temporal latent patch encoding, temporal consistency, neural inpainting, and building programmatic automated editing pipelines.</description>
+      <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
+      <category>Artificial Intelligence</category>
+    </item>
 
     <item>
       <title>Exploring the Role of Artificial Intelligence in Convenient and Accessible Healthcare Support Systems</title>
@@ -33,12 +93,12 @@
 
     <item>
       <title>Designing Accessible and Ethical AI Healthcare Companions</title>
-      <link>https://ujwalsingh.in/blog</link>
-      <guid>https://ujwalsingh.in/blog#ethical-ai-healthcare</guid>
+      <link>https://ujwalsingh.in/blog#accessible-ethical-ai-healthcare-support-systems</link>
+      <guid>https://ujwalsingh.in/blog#accessible-ethical-ai-healthcare-support-systems</guid>
       <pubDate>Fri, 15 Jan 2026 00:00:00 GMT</pubDate>
       <description>Architectural paradigms for building patient-centric healthcare tools grounded in verified clinical guidance.</description>
       <author>ujwalsingh426@gmail.com (Ujwal Singh)</author>
-      <category>AI</category>
+      <category>Artificial Intelligence</category>
     </item>
   </channel>
 </rss>
