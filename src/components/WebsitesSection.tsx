@@ -58,18 +58,18 @@ const websites = [
     url: "https://climorainfo.vercel.app/",
   },
   {
-    name: "Newsnap",
-    description:
-      "A credibility-driven, short-form global news platform designed to provide trustworthy information.",
-    img: `${import.meta.env.BASE_URL}images/newsnap.png`,
-    url: "https://newsnapglobal.vercel.app",
-  },
-  {
     name: "Delve Together",
     description:
       "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
     img: `${import.meta.env.BASE_URL}images/delve.png`,
     url: "https://delvetogether.vercel.app",
+  },
+  {
+    name: "LoopPlay",
+    description:
+      "An interactive personal arcade of 23 lightweight, addictive mini-games across memory, reflex, and skill categories designed for quick bursts of fun.",
+    img: `${import.meta.env.BASE_URL}images/loopplay.png`,
+    url: "https://loopplay23.vercel.app/",
   },
   {
     name: "Appliance Care (SIEMENS)",

@@ -498,45 +498,6 @@ const Websites = () => {
       }
     },
     {
-      name: "Newsnap",
-      img: `${import.meta.env.BASE_URL}images/newsnap.png`,
-      url: "https://newsnapglobal.vercel.app",
-      category: "web",
-      tech: ["React", "News API", "Vercel"],
-      translations: {
-        en: {
-          categoryLabel: "Web App",
-          description: "Credibility-driven global short news snapshots.",
-          longDescription: "Aggregates global world events into short summaries with citation ranks to ensure factual, objective info representation.",
-          features: ["AI objective summaries", "Source verification index", "Bookmarks support"]
-        },
-        fr: {
-          categoryLabel: "App Web",
-          description: "Actualités mondiales courtes basées sur la crédibilité.",
-          longDescription: "Agrège les événements mondiaux en résumés courts avec des indices de crédibilité des sources pour des informations fiables.",
-          features: ["Résumés objectifs IA", "Index de vérification de source", "Favoris et signets"]
-        },
-        es: {
-          categoryLabel: "App Web",
-          description: "Noticias globales resumidas impulsadas por credibilidad.",
-          longDescription: "Agrupa eventos mundiales en resúmenes cortos con clasificación de credibilidad para asegurar información objetiva.",
-          features: ["Resúmenes objetivos de IA", "Índice de fuentes verificadas", "Soporte de marcadores"]
-        },
-        zh: {
-          categoryLabel: "网页应用",
-          description: "以可信度为核心的全球短新闻简报。",
-          longDescription: "将全球发生的事件聚合成简短的新闻快报，并附带信誉度评级以确保信息的真实和客观性。",
-          features: ["AI 客观事实总结", "信息源信誉度评级", "新闻收藏夹功能"]
-        },
-        hi: {
-          categoryLabel: "वेब ऐप",
-          description: "विश्वसनीयता-संचालित वैश्विक लघु समाचार स्नैपशॉट।",
-          longDescription: "वैश्विक घटनाओं को संक्षिप्त सारांशों में संकलित करता है और समाचार की विश्वसनीयता रैंकिंग प्रदान करता है।",
-          features: ["एआई संक्षिप्त सारांश", "स्रोत सत्यापन सूचकांक", "बुकमार्क सुविधा"]
-        }
-      }
-    },
-    {
       name: "Delve Together",
       img: `${import.meta.env.BASE_URL}images/delve.png`,
       url: "https://delvetogether.vercel.app",
@@ -574,6 +535,70 @@ const Websites = () => {
           features: ["लाइव चर्चा कक्ष", "साझा नोट्स डैशबोर्ड", "वर्गीकृत फ़िल्टर"]
         }
       }
+    },
+    {
+      name: "LoopPlay",
+      img: `${import.meta.env.BASE_URL}images/loopplay.png`,
+      url: "https://loopplay23.vercel.app/",
+      category: "game",
+      tech: ["React", "TypeScript", "HTML5 Canvas", "Web Audio API", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "Arcade Games",
+          description: "Personal online arcade of 23 lightweight, addictive mini-games designed for quick bursts of fun and high replayability.",
+          longDescription: "An interactive web arcade offering 23 lightweight, responsive mini-games spanning memory, reflex, skill, math, and party categories. Engineered entirely client-side with smooth HTML5 Canvas animations, audio synthesizers, and daily challenge modes.",
+          features: [
+            "23 addictive client-side mini-games across 6 categories",
+            "Memory, reflex, skill, fun, math & party game modes",
+            "Game of the Day daily challenges & randomized play",
+            "Lightweight, instant-loading responsive arcade engine"
+          ]
+        },
+        fr: {
+          categoryLabel: "Jeux d'Arcade",
+          description: "Arcade en ligne de 23 mini-jeux légers et captivants conçus pour des sessions de jeu rapides.",
+          longDescription: "Une salle d'arcade interactive proposant 23 mini-jeux fluides et réactifs dans les catégories mémoire, réflexe, habileté et mathématiques.",
+          features: [
+            "23 mini-jeux légers répartis en 6 catégories",
+            "Modes de jeu mémoire, réflexe, habileté et party",
+            "Défis quotidiens 'Jeu du jour'",
+            "Moteur de jeu rapide et ultra-réactif"
+          ]
+        },
+        es: {
+          categoryLabel: "Juegos Arcade",
+          description: "Salón arcade personal con 23 minijuegos ligeros y adictivos para partidas rápidas y diversión sin fin.",
+          longDescription: "Plataforma interactiva de juegos arcade que ofrece 23 minijuegos receptivos en categorías de memoria, reflejos, habilidad y matemáticas.",
+          features: [
+            "23 minijuegos rápidos en 6 categorías temáticas",
+            "Modos de memoria, reflejos, agilidad mental y retos",
+            "Desafíos diarios del 'Juego del día'",
+            "Animaciones fluidas y carga instantánea"
+          ]
+        },
+        zh: {
+          categoryLabel: "街机娱乐",
+          description: "集成 23 款轻量级趣味迷你小游戏的个人专属网页街机厅，主打快速解压与高复玩性。",
+          longDescription: "基于 React 与 Canvas 构建的轻量级网页游戏互动中心。精选 23 款涵盖记忆力、反应速度、微操技能、趣味益智与聚会派对主题的游戏模块，配有每日挑战与即时音频反馈。",
+          features: [
+            "覆盖 6 大分类的 23 款高流畅度小游戏",
+            "记忆、反应、微操、数学与聚会挑战模式",
+            "每日精选游戏与随机推荐系统",
+            "轻量架构即开即玩零延迟"
+          ]
+        },
+        hi: {
+          categoryLabel: "आर्केड गेम्स",
+          description: "त्वरित मनोरंजन और अंतहीन खेल के लिए डिज़ाइन किए गए 23 लत लगाने वाले मिनी-गेम का व्यक्तिगत आर्केड।",
+          longDescription: "मेमोरी, रिफ्लेक्स, कौशल, गणित और पार्टी श्रेणियों में 23 रिस्पॉन्सिव मिनी-गेम पेश करने वाला एक इंटरैक्टिव वेब आर्केड प्लेटफ़ॉर्म।",
+          features: [
+            "6 श्रेणियों में 23 मजेदार मिनी-गेम्स",
+            "मेमोरी, रिफ्लेक्स और कौशल चुनौतियाँ",
+            "गेम ऑफ द डे दैनिक चुनौतियाँ",
+            "त्वरित लोडिंग और सहज गेमप्ले अनुभव"
+          ]
+        }
+      }
     }
   ];
 
@@ -601,9 +626,9 @@ const Websites = () => {
     <div className="w-full max-w-6xl mx-auto space-y-8 px-1 sm:px-0 animate-in fade-in duration-300">
       <PageSEO
         title="Software Projects & Web Applications | Ujwal Singh"
-        description="Explore production web applications, client solutions, and AI platforms built by Ujwal Singh, including Namami Vindhyavasini, SecureCloud, CognitiveMind, Wine Quality Predictor, Climora, Wanderlust Adventures, MediSoul, CuteList, Newsnap, and Delve Together."
+        description="Explore production web applications, client solutions, and AI platforms built by Ujwal Singh, including Namami Vindhyavasini, SecureCloud, CognitiveMind, Wine Quality Predictor, Climora, Wanderlust Adventures, MediSoul, CuteList, Delve Together, and LoopPlay."
         path="/projects"
-        keywords="Ujwal Singh projects, Namami Vindhyavasini, SecureCloud, CognitiveMind, Wine Quality Predictor, Climora, Wanderlust Adventures, MediSoul, Newsnap, CuteList, Delve Together, full stack applications"
+        keywords="Ujwal Singh projects, Namami Vindhyavasini, SecureCloud, CognitiveMind, Wine Quality Predictor, Climora, Wanderlust Adventures, MediSoul, CuteList, Delve Together, LoopPlay, full stack applications"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Projects", path: "/projects" }

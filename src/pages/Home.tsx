@@ -126,7 +126,7 @@ const allSocialPlatforms = [
 
 const Home = () => {
   const { t, language } = useLanguage();
-  const [projectCategory, setProjectCategory] = useState<"all" | "client" | "ai" | "web">("all");
+  const [projectCategory, setProjectCategory] = useState<"all" | "client" | "ai" | "web" | "game">("all");
   const [copiedCitation, setCopiedCitation] = useState<string | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
@@ -260,19 +260,6 @@ const Home = () => {
       url: "https://climorainfo.vercel.app/",
     },
     {
-      name: "Newsnap",
-      category: "web",
-      badge: "News Platform",
-      tags: ["React", "News API", "Source Verification"],
-      description: language === "en" ? "Credibility-driven global short news platform aggregating world events with source citation rankings." :
-                   language === "fr" ? "Actualités mondiales courtes avec indices de crédibilité des sources pour informations fiables." :
-                   language === "es" ? "Noticias globales resumidas con clasificación de credibilidad para asegurar objetividad." :
-                   language === "zh" ? "以可信度为核心的全球短新闻简报，附带信誉评级以确保事实客观性。" :
-                   "विश्वसनीयता-संचालित वैश्विक लघु समाचार स्नैपशॉट और स्रोत सत्यापन सूचकांक।",
-      img: `${import.meta.env.BASE_URL}images/newsnap.png`,
-      url: "https://newsnapglobal.vercel.app",
-    },
-    {
       name: "Delve Together",
       category: "web",
       badge: "Collaborative Space",
@@ -284,6 +271,19 @@ const Home = () => {
                    "सार्थक चर्चाओं के लिए सहयोगी कमरे, दस्तावेज़ बोर्ड और लाइव चैट रूम।",
       img: `${import.meta.env.BASE_URL}images/delve.png`,
       url: "https://delvetogether.vercel.app",
+    },
+    {
+      name: "LoopPlay",
+      category: "game",
+      badge: "Arcade Mini-Games",
+      tags: ["React", "TypeScript", "Canvas", "Mini-Games"],
+      description: language === "en" ? "Interactive personal arcade of 23 lightweight, addictive mini-games designed for quick bursts of fun and high replayability." :
+                   language === "fr" ? "Arcade en ligne de 23 mini-jeux légers et captivants pour des sessions de jeu rapides." :
+                   language === "es" ? "Salón arcade personal de 23 minijuegos ligeros y adictivos para partidas rápidas y diversión sin fin." :
+                   language === "zh" ? "集成 23 款轻量趣味小游戏的个人专属网页街机厅，主打即开即玩与高复玩性。" :
+                   "त्वरित मनोरंजन के लिए 23 हल्के और मजेदार मिनी-गेम्स का व्यक्तिगत ऑनलाइन आर्केड।",
+      img: `${import.meta.env.BASE_URL}images/loopplay.png`,
+      url: "https://loopplay23.vercel.app/",
     }
   ];
 
@@ -636,6 +636,17 @@ const Home = () => {
             }`}
           >
             Web Apps ({allProjects.filter(p => p.category === "web").length})
+          </button>
+          <button
+            type="button"
+            onClick={() => setProjectCategory("game")}
+            className={`px-3 py-1 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+              projectCategory === "game"
+                ? "bg-primary text-primary-foreground shadow-sm shadow-primary/20"
+                : "bg-card/60 text-muted-foreground hover:text-foreground border border-primary/10"
+            }`}
+          >
+            Games ({allProjects.filter(p => p.category === "game").length})
           </button>
         </div>
 
