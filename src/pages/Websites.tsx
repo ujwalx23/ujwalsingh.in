@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExternalLink, Search, Code, Globe, Sparkles, Database, ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import { ExternalLink, Search, Code, Globe, Sparkles, Database, ShieldCheck, CheckCircle2, ArrowRight, Info } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 import { useLanguage } from "@/hooks/useLanguage";
 import { PERSON_ID, SITE_URL } from "@/lib/schemaGraph";
@@ -664,28 +664,73 @@ const Websites = () => {
                   <Badge className="absolute top-2.5 right-2.5 bg-background/85 text-foreground border border-primary/15 backdrop-blur-md text-[9px] hover:bg-background/95 px-2 py-0.5 shadow-sm">
                     {detail.categoryLabel}
                   </Badge>
+                  {/* Subtle hover prompt */}
+                  <div className="absolute inset-0 bg-background/50 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                    <span className="text-[11px] font-semibold bg-card/95 text-foreground border border-primary/25 px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1.5">
+                      <Info className="w-3.5 h-3.5 text-primary" /> View Details
+                    </span>
+                  </div>
                 </div>
 
                 <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
                   <div className="space-y-1">
                     <h3 className="font-bold text-sm sm:text-base flex items-center justify-between group-hover:text-primary transition-colors">
                       <span>{site.name}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-transform shrink-0" />
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedProject(site);
+                        }}
+                        className="p-1 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                        title="View project overview & specs"
+                        aria-label={`View info for ${site.name}`}
+                      >
+                        <Info className="w-3.5 h-3.5 text-primary" />
+                      </button>
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
                       {detail.description}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1 pt-2 border-t border-primary/5">
-                    {site.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[9px] font-semibold bg-primary/5 border border-primary/10 text-primary px-1.5 py-0.5 rounded-md"
+                  <div className="space-y-3 pt-2 border-t border-primary/5">
+                    <div className="flex flex-wrap gap-1">
+                      {site.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[9px] font-semibold bg-primary/5 border border-primary/10 text-primary px-1.5 py-0.5 rounded-md"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Action Buttons: Visit Live and Project Info */}
+                    <div className="flex items-center gap-2 pt-1">
+                      <a
+                        href={site.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary text-primary-foreground font-semibold px-3 py-2 rounded-xl text-xs hover:bg-primary/90 transition-all shadow-sm group/btn"
                       >
-                        {t}
-                      </span>
-                    ))}
+                        <span>{t("websites.visitLive") || "Visit Live"}</span>
+                        <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                      </a>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedProject(site);
+                        }}
+                        className="inline-flex items-center justify-center gap-1 px-3 py-2 rounded-xl text-xs font-semibold bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 transition-all cursor-pointer"
+                        title="View project overview and specs"
+                      >
+                        <Info className="w-3.5 h-3.5" />
+                        <span>Info</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -778,16 +823,23 @@ const Websites = () => {
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-2 flex items-center justify-between border-t border-primary/10">
+                  <div className="pt-3 flex items-center justify-between border-t border-primary/10">
                     <a
                       href={selectedProject.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground font-semibold px-4 py-2 rounded-xl text-xs hover:opacity-90 transition-all shadow-sm"
+                      className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground font-semibold px-4 py-2 rounded-xl text-xs hover:bg-primary/90 transition-all shadow-sm group/live"
                     >
                       <span>Visit Live Project</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <ExternalLink className="w-3.5 h-3.5 group-hover/live:translate-x-0.5 transition-transform" />
                     </a>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(null)}
+                      className="px-3 py-1.5 rounded-xl text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-all cursor-pointer"
+                    >
+                      {t("websites.close") || "Close"}
+                    </button>
                   </div>
                 </div>
               </div>

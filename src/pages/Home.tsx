@@ -673,12 +673,20 @@ const Home = () => {
                       {project.description}
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-1.5 pt-2 border-t border-primary/10">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-primary/5 text-primary/90 border border-primary/10">
-                        {tag}
+                  <div className="space-y-3 pt-2 border-t border-primary/10">
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-primary/5 text-primary/90 border border-primary/10">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between pt-1 text-xs font-semibold text-primary">
+                      <span className="inline-flex items-center gap-1 group-hover:underline">
+                        <span>Visit Live Project</span>
+                        <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                       </span>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </a>
