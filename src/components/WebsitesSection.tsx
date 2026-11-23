@@ -23,6 +23,20 @@ const websites = [
     url: "https://wanderlustadventures23.vercel.app/",
   },
   {
+    name: "CuteList",
+    description:
+      "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
+    img: `${import.meta.env.BASE_URL}images/cutelist.png`,
+    url: "https://cute23.vercel.app/",
+  },
+  {
+    name: "Wine Quality Predictor",
+    description:
+      "An interactive machine learning predictor estimating wine quality based on physicochemical laboratory properties using a trained Logistic Regression model.",
+    img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
+    url: "https://winetestmodel.vercel.app/predict",
+  },
+  {
     name: "MediSoul",
     description:
       "AI-powered medical companion providing health insights and symptom checking. Practical implementation of Ujwal Singh's published TechRxiv AI healthcare research (DOI: 10.36227/techrxiv.177006061.17458864/v1).",
@@ -30,11 +44,18 @@ const websites = [
     url: "https://cure23.vercel.app/",
   },
   {
-    name: "CuteList",
+    name: "CognitiveMind",
     description:
-      "A task management app designed to help users manage their daily responsibilities in a cute and organized way.",
-    img: `${import.meta.env.BASE_URL}images/cutelist.png`,
-    url: "https://cute23.vercel.app/",
+      "An AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline in under 3 minutes.",
+    img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
+    url: "https://cognitivemind.vercel.app",
+  },
+  {
+    name: "Climora",
+    description:
+      "A live weather intelligence platform with real-time atmospheric tracking and personalized activity suggestions tailored to current conditions.",
+    img: `${import.meta.env.BASE_URL}images/climora.png`,
+    url: "https://climorainfo.vercel.app/",
   },
   {
     name: "Newsnap",
@@ -49,27 +70,6 @@ const websites = [
       "A calm, collaborative space for understanding world events through live rooms and discussion, away from the noise of social media.",
     img: `${import.meta.env.BASE_URL}images/delve.png`,
     url: "https://delvetogether.vercel.app",
-  },
-  {
-    name: "CognitiveMind",
-    description:
-      "An AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline in under 3 minutes.",
-    img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
-    url: "https://cognitivemind.vercel.app",
-  },
-  {
-    name: "Wine Quality Predictor",
-    description:
-      "An interactive machine learning predictor estimating wine quality based on physicochemical laboratory properties using a trained Logistic Regression model.",
-    img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
-    url: "https://winetestmodel.vercel.app/predict",
-  },
-  {
-    name: "Climora",
-    description:
-      "A live weather intelligence platform with real-time atmospheric tracking and personalized activity suggestions tailored to current conditions.",
-    img: `${import.meta.env.BASE_URL}images/climora.png`,
-    url: "https://climorainfo.vercel.app/",
   },
   {
     name: "Appliance Care (SIEMENS)",

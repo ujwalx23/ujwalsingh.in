@@ -203,6 +203,109 @@ const Websites = () => {
       }
     },
     {
+      name: "CuteList",
+      img: `${import.meta.env.BASE_URL}images/cutelist.png`,
+      url: "https://cute23.vercel.app/",
+      category: "web",
+      tech: ["React", "LocalStorage", "Tailwind CSS"],
+      translations: {
+        en: {
+          categoryLabel: "Web App",
+          description: "Delightful task manager app with custom themes.",
+          longDescription: "A gamified task board featuring custom pastel layouts, positive audio feedback triggers, and smooth list transition cards.",
+          features: ["Audio feedback system", "Pastel layout selector", "Persistence state"]
+        },
+        fr: {
+          categoryLabel: "App Web",
+          description: "Gestionnaire de tâches avec des thèmes pastels.",
+          longDescription: "Un tableau de tâches ludique comprenant des mises en page pastel personnalisées et des animations fluides.",
+          features: ["Retour audio positif", "Sélecteur de thèmes pastels", "Sauvegarde locale"]
+        },
+        es: {
+          categoryLabel: "App Web",
+          description: "Gestor de tareas con temas de colores pastel.",
+          longDescription: "Un tablero de tareas gamificado con temas pastel personalizados y retroalimentación de audio al completar tareas.",
+          features: ["Sistema de sonidos positivos", "Selector de temas pastel", "Persistencia local"]
+        },
+        zh: {
+          categoryLabel: "网页应用",
+          description: "带有柔和马卡龙色调的趣味任务管理板。",
+          longDescription: "一个将任务管理趣味化的待办事项清单。配有粉嫩的配色主题、微交互动画和清脆的任务完成音效。",
+          features: ["任务完成音效反馈", "粉粉的主题切换", "本地 data 持久化"]
+        },
+        hi: {
+          categoryLabel: "वेब ऐप",
+          description: "पेस्टल थीम के साथ डिज़ाइन किया गया प्यारा कार्य प्रबंधक बोर्ड।",
+          longDescription: "एक मजेदार कार्य बोर्ड जिसमें कस्टम पेस्टल लेआउट, सकारात्मक ऑडियो प्रतिक्रिया, और चिकने चेकलिस्ट कार्ड शामिल हैं।",
+          features: ["ऑडियो प्रतिक्रिया प्रणाली", "पेस्टल थीम चयनकर्ता", "स्थानीय डेटा भंडारण"]
+        }
+      }
+    },
+    {
+      name: "Wine Quality Predictor",
+      img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
+      url: "https://winetestmodel.vercel.app/predict",
+      category: "ai",
+      tech: ["Machine Learning", "Python", "Logistic Regression", "React", "FastAPI"],
+      translations: {
+        en: {
+          categoryLabel: "Machine Learning",
+          description: "Interactive machine learning predictor estimating wine quality based on physicochemical laboratory properties.",
+          longDescription: "An interactive Machine Learning web application featuring a trained Logistic Regression model on real-world physicochemical wine attributes (acidity, residual sugar, sulfur dioxide, density, pH, alcohol) to predict quality in real time with dynamic sliders.",
+          features: [
+            "Trained Logistic Regression predictive ML model",
+            "Real-time interactive physicochemical attribute sliders",
+            "Instant quality probability estimation",
+            "Model interpretation & benchmark presets"
+          ]
+        },
+        fr: {
+          categoryLabel: "Machine Learning",
+          description: "Prédicteur interactif de machine learning évaluant la qualité du vin à partir de paramètres physico-chimiques.",
+          longDescription: "Application web interactive de machine learning utilisant un modèle de régression logistique entraîné sur des données physico-chimiques réelles pour prédire la qualité du vin en temps réel.",
+          features: [
+            "Modèle prédictif entraîné par régression logistique",
+            "Curseurs interactifs de paramètres en temps réel",
+            "Estimation instantanée des probabilités",
+            "Préréglages d'exemples de test"
+          ]
+        },
+        es: {
+          categoryLabel: "Machine Learning",
+          description: "Predictor interactivo de machine learning que estima la calidad del vino según variables fisicoquímicas.",
+          longDescription: "Aplicación web interactiva de aprendizaje automático con un modelo de regresión logística entrenado para predecir la calidad del vino en función de parámetros de laboratorio en tiempo real.",
+          features: [
+            "Modelo predictivo de regresión logística entrenado",
+            "Controles deslizantes de parámetros en tiempo real",
+            "Cálculo instantáneo de probabilidad de calidad",
+            "Ejemplos predefinidos para pruebas rápidas"
+          ]
+        },
+        zh: {
+          categoryLabel: "机器学习 ML",
+          description: "基于理化指标的交互式葡萄酒品质机器学习预测平台。",
+          longDescription: "基于真实实验室理化数据训练的逻辑回归机器学习 Web 应用。用户可通过实时交互式滑块调节酸度、糖分、密度与酒精度，即时计算并预测酒品优良概率。",
+          features: [
+            "基于真实数据训练的逻辑回归机器学习模型",
+            "实时多维理化指标交互滑块",
+            "即时输出品质评级与置信度概率",
+            "内置典型优质与低分样本预设"
+          ]
+        },
+        hi: {
+          categoryLabel: "मशीन लर्निंग",
+          description: "भौतिक-रासायनिक प्रयोगशाला गुणों के आधार पर शराब की गुणवत्ता का अनुमान लगाने वाला मशीन लर्निंग प्रिडिक्टर।",
+          longDescription: "वास्तविक प्रयोगशाला विशेषताओं के आधार पर प्रशिक्षित लॉजिस्टिक रिग्रेशन मॉडल का उपयोग करके वास्तविक समय में गुणवत्ता की भविष्यवाणी करने वाला एमएल एप्लिकेशन।",
+          features: [
+            "प्रशिक्षित लॉजिस्टिक रिग्रेशन प्रेडिक्टिव मॉडल",
+            "वास्तविक समय में विशेषता स्लाइडर्स",
+            "त्वरित गुणवत्ता संभावना अनुमान",
+            "त्वरित परीक्षण के लिए पूर्व-निर्धारित नमूने"
+          ]
+        }
+      }
+    },
+    {
       name: "MediSoul",
       img: `${import.meta.env.BASE_URL}images/medisoul.png`,
       url: "https://cure23.vercel.app/",
@@ -267,41 +370,130 @@ const Websites = () => {
       }
     },
     {
-      name: "CuteList",
-      img: `${import.meta.env.BASE_URL}images/cutelist.png`,
-      url: "https://cute23.vercel.app/",
-      category: "web",
-      tech: ["React", "LocalStorage", "Tailwind CSS"],
+      name: "CognitiveMind",
+      img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
+      url: "https://cognitivemind.vercel.app",
+      category: "ai",
+      tech: ["React", "TypeScript", "AI Healthcare", "Cognitive Assessment", "Tailwind CSS"],
       translations: {
         en: {
-          categoryLabel: "Web App",
-          description: "Delightful task manager app with custom themes.",
-          longDescription: "A gamified task board featuring custom pastel layouts, positive audio feedback triggers, and smooth list transition cards.",
-          features: ["Audio feedback system", "Pastel layout selector", "Persistence state"]
+          categoryLabel: "AI Healthcare",
+          description: "AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline.",
+          longDescription: "An AI-powered cognitive health screening and assessment platform designed to analyze memory, attention, and reaction patterns in under 3 minutes. Focuses on privacy-first early detection, pattern recognition, and non-invasive cognitive health monitoring.",
+          features: [
+            "AI-powered cognitive assessment under 3 minutes",
+            "Memory analysis & pattern recognition",
+            "Reaction time & attention metrics",
+            "Privacy-first non-invasive health evaluation"
+          ]
         },
         fr: {
-          categoryLabel: "App Web",
-          description: "Gestionnaire de tâches avec des thèmes pastels.",
-          longDescription: "Un tableau de tâches ludique comprenant des mises en page pastel personnalisées et des animations fluides.",
-          features: ["Retour audio positif", "Sélecteur de thèmes pastels", "Sauvegarde locale"]
+          categoryLabel: "Santé IA",
+          description: "Plateforme d'évaluation cognitive propulsée par l'IA analysant la mémoire et l'attention pour détecter le déclin cognitif précoce.",
+          longDescription: "Plateforme d'évaluation de la santé cognitive utilisant l'intelligence artificielle pour évaluer la mémoire, l'attention et les temps de réaction en moins de 3 minutes.",
+          features: [
+            "Évaluation cognitive par IA en moins de 3 minutes",
+            "Analyse de la mémoire et reconnaissance de motifs",
+            "Mesures du temps de réaction et de l'attention",
+            "Évaluation respectueuse de la vie privée"
+          ]
         },
         es: {
-          categoryLabel: "App Web",
-          description: "Gestor de tareas con temas de colores pastel.",
-          longDescription: "Un tablero de tareas gamificado con temas pastel personalizados y retroalimentación de audio al completar tareas.",
-          features: ["Sistema de sonidos positivos", "Selector de temas pastel", "Persistencia local"]
+          categoryLabel: "Salud IA",
+          description: "Plataforma de evaluación cognitiva con IA para analizar memoria y atención para la detección temprana del deterioro cognitivo.",
+          longDescription: "Plataforma de evaluación de la salud cognitiva con inteligencia artificial para analizar memoria, patrones de atención y velocidad de reacción en menos de 3 minutes.",
+          features: [
+            "Evaluación cognitiva con IA en menos de 3 minutos",
+            "Análisis de memoria y reconocimiento de patrones",
+            "Métricas de tiempo de reacción y atención",
+            "Evaluación segura enfocada en la privacidad"
+          ]
         },
         zh: {
-          categoryLabel: "网页应用",
-          description: "带有柔和马卡龙色调的趣味任务管理板。",
-          longDescription: "一个将任务管理趣味化的待办事项清单。配有粉嫩的配色主题、微交互动画和清脆的任务完成音效。",
-          features: ["任务完成音效反馈", "粉粉的主题切换", "本地 data 持久化"]
+          categoryLabel: "认知健康 AI",
+          description: "基于 AI 的认知健康早期筛查平台，通过记忆、注意力及反应模式分析早期认知变化。",
+          longDescription: "基于人工智能的认知健康筛查工具，在 3 分钟内综合测试用户的记忆力、注意力和反应模式，以隐私优先的方式提供非侵入式早期筛查支持。",
+          features: [
+            "3 分钟快速 AI 认知能力评估",
+            "记忆分析与模式识别算法",
+            "注意力与反应时间精准度量",
+            "隐私优先的非侵入式健康监测"
+          ]
         },
         hi: {
-          categoryLabel: "वेब ऐप",
-          description: "पेस्टल थीम के साथ डिज़ाइन किया गया प्यारा कार्य प्रबंधक बोर्ड।",
-          longDescription: "एक मजेदार कार्य बोर्ड जिसमें कस्टम पेस्टल लेआउट, सकारात्मक ऑडियो प्रतिक्रिया, और चिकने चेकलिस्ट कार्ड शामिल हैं।",
-          features: ["ऑडियो प्रतिक्रिया प्रणाली", "पेस्टल थीम चयनकर्ता", "स्थानीय डेटा भंडारण"]
+          categoryLabel: "एआई स्वास्थ्य",
+          description: "स्मृति, ध्यान और प्रतिक्रिया पैटर्न का विश्लेषण करके प्रारंभिक संज्ञानात्मक गिरावट का पता लगाने वाला एआई प्लेटफॉर्म।",
+          longDescription: "3 मिनट से कम समय में स्मृति, ध्यान और प्रतिक्रिया पैटर्न का विश्लेषण करने के लिए डिज़ाइन किया गया एक एआई-संचालित संज्ञानात्मक स्वास्थ्य मूल्यांकन मंच।",
+          features: [
+            "3 मिनट में एआई-संचालित संज्ञानात्मक मूल्यांकन",
+            "स्मृति विश्लेषण और पैटर्न पहचान",
+            "प्रतिक्रिया समय और ध्यान मेट्रिक्स",
+            "गोपनीयता-केंद्रित गैर-आक्रामक स्वास्थ्य मूल्यांकन"
+          ]
+        }
+      }
+    },
+    {
+      name: "Climora",
+      img: `${import.meta.env.BASE_URL}images/climora.png`,
+      url: "https://climorainfo.vercel.app/",
+      category: "web",
+      tech: ["React", "Weather API", "Activity Engine", "Tailwind CSS", "TypeScript"],
+      translations: {
+        en: {
+          categoryLabel: "Weather & Lifestyle",
+          description: "Live real-time weather intelligence platform with personalized activity suggestions tailored to atmospheric conditions.",
+          longDescription: "A modern, responsive weather forecasting and lifestyle recommendation platform. Delivers live temperature, humidity, UV index, and golden hour tracking coupled with an intelligent activity recommender based on current weather conditions.",
+          features: [
+            "Real-time live weather & atmospheric telemetry",
+            "Contextual activity suggestions based on weather",
+            "UV index, wind speed, visibility & humidity analytics",
+            "Sunrise, sunset & golden hour tracking"
+          ]
+        },
+        fr: {
+          categoryLabel: "Météo & Style de Vie",
+          description: "Plateforme météo en direct avec suggestions d'activités personnalisées selon les conditions climatiques.",
+          longDescription: "Plateforme moderne de prévisions météorologiques offrant la température en temps réel, l'indice UV et des recommandations d'activités adaptées aux conditions météo.",
+          features: [
+            "Données météo en direct et en temps réel",
+            "Suggestions d'activités adaptées au climat",
+            "Indice UV, vent, humidité et heure dorée",
+            "Interface moderne et intuitive"
+          ]
+        },
+        es: {
+          categoryLabel: "Clima y Actividades",
+          description: "Plataforma meteorológica en vivo con sugerencias de actividades adaptadas a las condiciones climáticas.",
+          longDescription: "Plataforma moderna de pronóstico del tiempo que proporciona métricas en vivo (temperatura, índice UV, humedad) y sugerencias inteligentes de actividades según el clima.",
+          features: [
+            "Datos meteorológicos en vivo y en tiempo real",
+            "Sugerencias de actividades según el clima",
+            "Índice UV, viento, visibilidad y hora dorada",
+            "Diseño elegante y adaptable"
+          ]
+        },
+        zh: {
+          categoryLabel: "天气与生活推荐",
+          description: "实时天气情报与根据气象条件定制的智能户外及日常活动建议平台。",
+          longDescription: "现代化的实时天气预报与生活方式建议应用。提供高精度实时温度、体感分析、紫外线指数、黄金时刻追踪，并根据天气状况动态推荐适宜活动。",
+          features: [
+            "全天候实时气象与环境数据追踪",
+            "根据天气自动生成的智能活动建议",
+            "紫外线指数、风速、能见度与湿度分析",
+            "日出日落与黄金时刻监测"
+          ]
+        },
+        hi: {
+          categoryLabel: "मौसम और गतिविधियाँ",
+          description: "मौसम की स्थिति के अनुसार व्यक्तिगत गतिविधि सुझावों के साथ लाइव मौसम प्लेटफॉर्म।",
+          longDescription: "एक आधुनिक मौसम पूर्वानुमान और जीवन शैली मंच जो तापमान, आर्द्रता, यूवी सूचकांक और मौसम के अनुसार बुद्धिमान गतिविधि सुझाव प्रदान करता है।",
+          features: [
+            "रीयल-टाइम लाइव मौसम डेटा और विश्लेषण",
+            "मौसम के आधार पर प्रासंगिक गतिविधि सुझाव",
+            "यूवी इंडेक्स, हवा की गति और आर्द्रता ट्रैकिंग",
+            "सूर्योदय, सूर्यास्त और गोल्डन ऑवर विवरण"
+          ]
         }
       }
     },
@@ -380,198 +572,6 @@ const Websites = () => {
           description: "शांत चर्चाओं के लिए सहयोगी कमरे और पैनल।",
           longDescription: "सोशल मीडिया के शोर से दूर, सार्थक चर्चाओं के लिए बनाया गया एक मंच। यह लाइव चैट रूम और दस्तावेज़ बोर्ड प्रदान करता है।",
           features: ["लाइव चर्चा कक्ष", "साझा नोट्स डैशबोर्ड", "वर्गीकृत फ़िल्टर"]
-        }
-      }
-    },
-    {
-      name: "CognitiveMind",
-      img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
-      url: "https://cognitivemind.vercel.app",
-      category: "ai",
-      tech: ["React", "TypeScript", "AI Healthcare", "Cognitive Assessment", "Tailwind CSS"],
-      translations: {
-        en: {
-          categoryLabel: "AI Healthcare",
-          description: "AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline.",
-          longDescription: "An AI-powered cognitive health screening and assessment platform designed to analyze memory, attention, and reaction patterns in under 3 minutes. Focuses on privacy-first early detection, pattern recognition, and non-invasive cognitive health monitoring.",
-          features: [
-            "AI-powered cognitive assessment under 3 minutes",
-            "Memory analysis & pattern recognition",
-            "Reaction time & attention metrics",
-            "Privacy-first non-invasive health evaluation"
-          ]
-        },
-        fr: {
-          categoryLabel: "Santé IA",
-          description: "Plateforme d'évaluation cognitive propulsée par l'IA analysant la mémoire et l'attention pour détecter le déclin cognitif précoce.",
-          longDescription: "Plateforme d'évaluation de la santé cognitive utilisant l'intelligence artificielle pour évaluer la mémoire, l'attention et les temps de réaction en moins de 3 minutes.",
-          features: [
-            "Évaluation cognitive par IA en moins de 3 minutes",
-            "Analyse de la mémoire et reconnaissance de motifs",
-            "Mesures du temps de réaction et de l'attention",
-            "Évaluation respectueuse de la vie privée"
-          ]
-        },
-        es: {
-          categoryLabel: "Salud IA",
-          description: "Plataforma de evaluación cognitiva con IA para analizar memoria y atención para la detección temprana del deterioro cognitivo.",
-          longDescription: "Plataforma de evaluación de la salud cognitiva con inteligencia artificial para analizar memoria, patrones de atención y velocidad de reacción en menos de 3 minutos.",
-          features: [
-            "Evaluación cognitiva con IA en menos de 3 minutos",
-            "Análisis de memoria y reconocimiento de patrones",
-            "Métricas de tiempo de reacción y atención",
-            "Evaluación segura enfocada en la privacidad"
-          ]
-        },
-        zh: {
-          categoryLabel: "认知健康 AI",
-          description: "基于 AI 的认知健康早期筛查平台，通过记忆、注意力及反应模式分析早期认知变化。",
-          longDescription: "基于人工智能的认知健康筛查工具，在 3 分钟内综合测试用户的记忆力、注意力和反应模式，以隐私优先的方式提供非侵入式早期筛查支持。",
-          features: [
-            "3 分钟快速 AI 认知能力评估",
-            "记忆分析与模式识别算法",
-            "注意力与反应时间精准度量",
-            "隐私优先的非侵入式健康监测"
-          ]
-        },
-        hi: {
-          categoryLabel: "एआई स्वास्थ्य",
-          description: "स्मृति, ध्यान और प्रतिक्रिया पैटर्न का विश्लेषण करके प्रारंभिक संज्ञानात्मक गिरावट का पता लगाने वाला एआई प्लेटफॉर्म।",
-          longDescription: "3 मिनट से कम समय में स्मृति, ध्यान और प्रतिक्रिया पैटर्न का विश्लेषण करने के लिए डिज़ाइन किया गया एक एआई-संचालित संज्ञानात्मक स्वास्थ्य मूल्यांकन मंच।",
-          features: [
-            "3 मिनट में एआई-संचालित संज्ञानात्मक मूल्यांकन",
-            "स्मृति विश्लेषण और पैटर्न पहचान",
-            "प्रतिक्रिया समय और ध्यान मेट्रिक्स",
-            "गोपनीयता-केंद्रित गैर-आक्रामक स्वास्थ्य मूल्यांकन"
-          ]
-        }
-      }
-    },
-    {
-      name: "Wine Quality Predictor",
-      img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
-      url: "https://winetestmodel.vercel.app/predict",
-      category: "ai",
-      tech: ["Machine Learning", "Python", "Logistic Regression", "React", "FastAPI"],
-      translations: {
-        en: {
-          categoryLabel: "Machine Learning",
-          description: "Interactive machine learning predictor estimating wine quality based on physicochemical laboratory properties.",
-          longDescription: "An interactive Machine Learning web application featuring a trained Logistic Regression model on real-world physicochemical wine attributes (acidity, residual sugar, sulfur dioxide, density, pH, alcohol) to predict quality in real time with dynamic sliders.",
-          features: [
-            "Trained Logistic Regression predictive ML model",
-            "Real-time interactive physicochemical attribute sliders",
-            "Instant quality probability estimation",
-            "Model interpretation & benchmark presets"
-          ]
-        },
-        fr: {
-          categoryLabel: "Machine Learning",
-          description: "Prédicteur interactif de machine learning évaluant la qualité du vin à partir de paramètres physico-chimiques.",
-          longDescription: "Application web interactive de machine learning utilisant un modèle de régression logistique entraîné sur des données physico-chimiques réelles pour prédire la qualité du vin en temps réel.",
-          features: [
-            "Modèle prédictif entraîné par régression logistique",
-            "Curseurs interactifs de paramètres en temps réel",
-            "Estimation instantanée des probabilités",
-            "Préréglages d'exemples de test"
-          ]
-        },
-        es: {
-          categoryLabel: "Machine Learning",
-          description: "Predictor interactivo de machine learning que estima la calidad del vino según variables fisicoquímicas.",
-          longDescription: "Aplicación web interactiva de aprendizaje automático con un modelo de regresión logística entrenado para predecir la calidad del vino en función de parámetros de laboratorio en tiempo real.",
-          features: [
-            "Modelo predictivo de regresión logística entrenado",
-            "Controles deslizantes de parámetros en tiempo real",
-            "Cálculo instantáneo de probabilidad de calidad",
-            "Ejemplos predefinidos para pruebas rápidas"
-          ]
-        },
-        zh: {
-          categoryLabel: "机器学习 ML",
-          description: "基于理化指标的交互式葡萄酒品质机器学习预测平台。",
-          longDescription: "基于真实实验室理化数据训练的逻辑回归机器学习 Web 应用。用户可通过实时交互式滑块调节酸度、糖分、密度与酒精度，即时计算并预测酒品优良概率。",
-          features: [
-            "基于真实数据训练的逻辑回归机器学习模型",
-            "实时多维理化指标交互滑块",
-            "即时输出品质评级与置信度概率",
-            "内置典型优质与低分样本预设"
-          ]
-        },
-        hi: {
-          categoryLabel: "मशीन लर्निंग",
-          description: "भौतिक-रासायनिक प्रयोगशाला गुणों के आधार पर शराब की गुणवत्ता का अनुमान लगाने वाला मशीन लर्निंग प्रिडिक्टर।",
-          longDescription: "वास्तविक प्रयोगशाला विशेषताओं के आधार पर प्रशिक्षित लॉजिस्टिक रिग्रेशन मॉडल का उपयोग करके वास्तविक समय में गुणवत्ता की भविष्यवाणी करने वाला एमएल एप्लिकेशन।",
-          features: [
-            "प्रशिक्षित लॉजिस्टिक रिग्रेशन प्रेडिक्टिव मॉडल",
-            "वास्तविक समय में विशेषता स्लाइडर्स",
-            "त्वरित गुणवत्ता संभावना अनुमान",
-            "त्वरित परीक्षण के लिए पूर्व-निर्धारित नमूने"
-          ]
-        }
-      }
-    },
-    {
-      name: "Climora",
-      img: `${import.meta.env.BASE_URL}images/climora.png`,
-      url: "https://climorainfo.vercel.app/",
-      category: "web",
-      tech: ["React", "Weather API", "Activity Engine", "Tailwind CSS", "TypeScript"],
-      translations: {
-        en: {
-          categoryLabel: "Weather & Lifestyle",
-          description: "Live real-time weather intelligence platform with personalized activity suggestions tailored to atmospheric conditions.",
-          longDescription: "A modern, responsive weather forecasting and lifestyle recommendation platform. Delivers live temperature, humidity, UV index, and golden hour tracking coupled with an intelligent activity recommender based on current weather conditions.",
-          features: [
-            "Real-time live weather & atmospheric telemetry",
-            "Contextual activity suggestions based on weather",
-            "UV index, wind speed, visibility & humidity analytics",
-            "Sunrise, sunset & golden hour tracking"
-          ]
-        },
-        fr: {
-          categoryLabel: "Météo & Style de Vie",
-          description: "Plateforme météo en direct avec suggestions d'activités personnalisées selon les conditions climatiques.",
-          longDescription: "Plateforme moderne de prévisions météorologiques offrant la température en temps réel, l'indice UV et des recommandations d'activités adaptées aux conditions météo.",
-          features: [
-            "Données météo en direct et en temps réel",
-            "Suggestions d'activités adaptées au climat",
-            "Indice UV, vent, humidité et heure dorée",
-            "Interface moderne et intuitive"
-          ]
-        },
-        es: {
-          categoryLabel: "Clima y Actividades",
-          description: "Plataforma meteorológica en vivo con sugerencias de actividades adaptadas a las condiciones climáticas.",
-          longDescription: "Plataforma moderna de pronóstico del tiempo que proporciona métricas en vivo (temperatura, índice UV, humedad) y sugerencias inteligentes de actividades según el clima.",
-          features: [
-            "Datos meteorológicos en vivo y en tiempo real",
-            "Sugerencias de actividades según el clima",
-            "Índice UV, viento, visibilidad y hora dorada",
-            "Diseño elegante y adaptable"
-          ]
-        },
-        zh: {
-          categoryLabel: "天气与生活推荐",
-          description: "实时天气情报与根据气象条件定制的智能户外及日常活动建议平台。",
-          longDescription: "现代化的实时天气预报与生活方式建议应用。提供高精度实时温度、体感分析、紫外线指数、黄金时刻追踪，并根据天气状况动态推荐适宜活动。",
-          features: [
-            "全天候实时气象与环境数据追踪",
-            "根据天气自动生成的智能活动建议",
-            "紫外线指数、风速、能见度与湿度分析",
-            "日出日落与黄金时刻监测"
-          ]
-        },
-        hi: {
-          categoryLabel: "मौसम और गतिविधियाँ",
-          description: "मौसम की स्थिति के अनुसार व्यक्तिगत गतिविधि सुझावों के साथ लाइव मौसम प्लेटफॉर्म।",
-          longDescription: "एक आधुनिक मौसम पूर्वानुमान और जीवन शैली मंच जो तापमान, आर्द्रता, यूवी सूचकांक और मौसम के अनुसार बुद्धिमान गतिविधि सुझाव प्रदान करता है।",
-          features: [
-            "रीयल-टाइम लाइव मौसम डेटा और विश्लेषण",
-            "मौसम के आधार पर प्रासंगिक गतिविधि सुझाव",
-            "यूवी इंडेक्स, हवा की गति और आर्द्रता ट्रैकिंग",
-            "सूर्योदय, सूर्यास्त और गोल्डन ऑवर विवरण"
-          ]
         }
       }
     }
