@@ -51,6 +51,27 @@ const websites = [
     url: "https://delvetogether.vercel.app",
   },
   {
+    name: "CognitiveMind",
+    description:
+      "An AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline in under 3 minutes.",
+    img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
+    url: "https://cognitivemind.vercel.app",
+  },
+  {
+    name: "Wine Quality Predictor",
+    description:
+      "An interactive machine learning predictor estimating wine quality based on physicochemical laboratory properties using a trained Logistic Regression model.",
+    img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
+    url: "https://winetestmodel.vercel.app/predict",
+  },
+  {
+    name: "Climora",
+    description:
+      "A live weather intelligence platform with real-time atmospheric tracking and personalized activity suggestions tailored to current conditions.",
+    img: `${import.meta.env.BASE_URL}images/climora.png`,
+    url: "https://climorainfo.vercel.app/",
+  },
+  {
     name: "Appliance Care (SIEMENS)",
     description:
       "A professional washing machine repair and service platform with booking, warranty tracking, and multi-brand support.",

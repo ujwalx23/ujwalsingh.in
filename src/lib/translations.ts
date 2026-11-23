@@ -109,7 +109,7 @@ export const translations: Record<Language, TranslationDict> = {
     nav: {
       overview: "Overview",
       bio: "Bio",
-      works: "Works",
+      works: "Projects",
       reflections: "Reflections",
       connect: "Connect",
       contact: "Contact"

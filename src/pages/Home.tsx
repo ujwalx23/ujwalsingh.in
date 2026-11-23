@@ -245,6 +245,45 @@ const Home = () => {
                    "सार्थक चर्चाओं के लिए सहयोगी कमरे, दस्तावेज़ बोर्ड और लाइव चैट रूम।",
       img: `${import.meta.env.BASE_URL}images/delve.png`,
       url: "https://delvetogether.vercel.app",
+    },
+    {
+      name: "CognitiveMind",
+      category: "ai",
+      badge: "AI Cognitive Health",
+      tags: ["React", "AI Healthcare", "Cognitive Assessment", "TypeScript"],
+      description: language === "en" ? "AI-powered cognitive assessment platform analyzing memory, attention, and reaction patterns to detect early cognitive decline." :
+                   language === "fr" ? "Plateforme d'évaluation cognitive par IA analysant la mémoire et l'attention pour détecter le déclin cognitif." :
+                   language === "es" ? "Plataforma de evaluación cognitiva con IA para analizar memoria y atención para la detección temprana del deterioro cognitivo." :
+                   language === "zh" ? "基于 AI 的认知健康早期筛查平台，通过记忆、注意力及反应模式分析早期认知变化。" :
+                   "स्मृति, ध्यान और प्रतिक्रिया पैटर्न का विश्लेषण करने वाला एआई संज्ञानात्मक मूल्यांकन मंच।",
+      img: `${import.meta.env.BASE_URL}images/cognitivemind.png`,
+      url: "https://cognitivemind.vercel.app",
+    },
+    {
+      name: "Wine Quality Predictor",
+      category: "ai",
+      badge: "Machine Learning",
+      tags: ["Python", "Machine Learning", "FastAPI", "React", "Logistic Regression"],
+      description: language === "en" ? "Interactive machine learning web application predicting wine quality based on physicochemical laboratory properties." :
+                   language === "fr" ? "Prédicteur interactif de machine learning évaluant la qualité du vin selon ses paramètres physico-chimiques." :
+                   language === "es" ? "Predictor interactivo de machine learning para estimar la calidad del vino según variables fisicoquímicas." :
+                   language === "zh" ? "基于理化指标与逻辑回归模型的交互式葡萄酒品质机器学习预测平台。" :
+                   "भौतिक-रासायनिक प्रयोगशाला गुणों के आधार पर शराब की गुणवत्ता का अनुमान लगाने वाला एमएल प्रिडिक्टर।",
+      img: `${import.meta.env.BASE_URL}images/wine-quality.png`,
+      url: "https://winetestmodel.vercel.app/predict",
+    },
+    {
+      name: "Climora",
+      category: "web",
+      badge: "Live Weather & Lifestyle",
+      tags: ["React", "Weather API", "Activity Engine", "Tailwind CSS"],
+      description: language === "en" ? "Live weather intelligence and forecasting platform with real-time condition tracking and personalized activity suggestions." :
+                   language === "fr" ? "Plateforme météo en direct avec suggestions d'activités personnalisées selon le climat." :
+                   language === "es" ? "Plataforma de clima en vivo con sugerencias inteligentes de actividades según el tiempo." :
+                   language === "zh" ? "实时天气监测与生活方式智能建议平台，根据天气状况动态推荐适宜活动。" :
+                   "लाइव मौसम पूर्वानुमान और मौसम की स्थिति के आधार पर व्यक्तिगत गतिविधि सुझाव देने वाला प्लेटफ़ॉर्म।",
+      img: `${import.meta.env.BASE_URL}images/climora.png`,
+      url: "https://climorainfo.vercel.app/",
     }
   ];
 
